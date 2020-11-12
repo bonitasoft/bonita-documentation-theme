@@ -3,7 +3,6 @@
     <div class="navbar-brand">
       <div class="navbar-item">
         <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
-        <a href="{{{or site.url (or siteRootUrl siteRootPath)}}}">{{site.title}}</a>
       </div>
 
       <div class="navbar-item hide-for-print">
@@ -20,18 +19,28 @@
 
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-          {{#each site.components}}
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="#">{{{./title}}}</a>
-              <div class="navbar-dropdown">
-                {{#each ./versions}}
-                  <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-                {{/each}}
-              </div>
-            </div>
-          {{/each}}
+        <div class="navbar-item-orphan is-hoverable">
+          <a href="#" class="">Getting started</a>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item-orphan is-hoverable">
+          <a href="#" class="">Community</a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        {{#each site.components}}
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">{{{./title}}}</a>
+          <div class="navbar-dropdown">
+            {{#each ./versions}}
+            <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+            {{/each}}
+          </div>
+        </div>
+        {{/each}}
       </div>
     </div>
-
   </nav>
 </header>
