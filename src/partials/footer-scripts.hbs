@@ -1,0 +1,21 @@
+<script src="{{{uiRootPath}}}/js/site.js"></script>
+<script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    // Your apiKey and indexName will be given to you once
+    // we create your config
+    apiKey: '8b16fe941025bb59db192dce337bc486',
+    indexName: 'test_BONITA',
+    appId: 'LMVLEZKT54', // Should be only included if you are running DocSearch on your own.
+    // Replace inputSelector with a CSS selector
+    // matching your search input
+    inputSelector: '#search-query',
+    // Set debug to true to inspect the dropdown
+    debug: false,
+    algoliaOptions: {
+      'facetFilters': ["tags:{{page.version}}", "tags:{{page.component.name}}"]
+    },
+  });
+</script>
