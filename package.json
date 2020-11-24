@@ -54,5 +54,9 @@
     "typeface-roboto-mono": "0.0.75",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "mdbootstrap": "^4.19.1"
   }
 }

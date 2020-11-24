@@ -353,3 +353,28 @@ body {
         width: 200px;
     }
 }
+
+.search-form {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.md-form input[type="text"]:not(.browser-default) {
+  border-bottom-color: #ffffff85;
+  color: var(--navbar-font-color);
+}
+
+.active-white input.form-control[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid var(--navbar-font-color);
+  box-shadow: 0 1px 0 0 var(--navbar-font-color);
+}
+
+.search-icon {
+  background: url(../img/search.svg) no-repeat 50% 45%;
+    background-size: contain;
+    display: block;
+    height: 3.5rem;
+    padding: 0;
+    width: 9.5rem;
+    opacity: 0.6
+}
