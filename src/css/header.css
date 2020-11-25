@@ -348,6 +348,11 @@ body {
     opacity: 1;
 }
 
+.search-bar::placeholder {
+  color: var(--navbar-unfocused-font-color);
+  font-style: italic;
+}
+
 .search-icon {
     background: url(../img/search.svg) no-repeat;
     background-size: contain;
@@ -365,10 +370,6 @@ body {
 .search-item:focus-within,
 .search-item:hover {
   opacity: 1;
-}
-
-.search-bar::placeholder {
-    color: var(--navbar-font-color);
 }
 
 @media screen and (min-width: 769px) {
