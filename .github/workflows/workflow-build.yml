@@ -12,6 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: Install npm modules
+        run: npm install
       - name: Bundle documentation theme
         run: gulp bundle
