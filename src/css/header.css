@@ -391,6 +391,10 @@ body {
         display: flex;
     }
 
+    .navbar-brand .search-item {
+        display: none;
+    }
+
     .navbar-menu {
         padding: 0.5rem 0;
     }
