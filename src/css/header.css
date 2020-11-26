@@ -264,17 +264,38 @@ body {
 /* Colors for small screens */
 @media screen and (max-width: 1023px) {
   .navbar-menu {
-    background: var(--navbar-background);
+    background: var(--color-smoke-30);
   }
 
   .navbar-menu.is-active {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   }
 
+  .navbar-end > .navbar-item-orphan {
+    display: none;
+  }
+
+  .navbar-dropdown .navbar-item {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  }
+
+  .navbar-end .navbar-link {
+    font-weight: bold;
+  }
+
+  .navbar-dropdown {
+    background-color: transparent;
+  }
+
   .navbar-end > .navbar-item,
   .navbar-end .navbar-link,
+  .navbar-dropdown .navbar-item,
   .navbar-end .navbar-item-orphan a {
-    color: var(--navbar-font-color);
+    color: var(--color-blue-bonita);
   }
 
   .navbar-end > a.navbar-item:hover,
@@ -282,8 +303,8 @@ body {
   .navbar-end .navbar-item-orphan:hover,
   .navbar-end .navbar-item-orphan:hover a,
   .navbar-dropdown .navbar-item:hover {
-    color: var(--color-blue-bonita);
-    background-color: var(--navbar-font-color);
+    color: var(--color-white);
+    background-color: var(--color-blue-bonita);
   }
 }
 
