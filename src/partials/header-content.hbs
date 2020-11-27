@@ -5,12 +5,6 @@
         <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
       </div>
 
-      <div class="navbar-item search-item hide-for-print">
-        {{!-- Algolia search bar --}}
-        <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
-        <i class="search-icon" aria-hidden="true"></i>
-      </div>
-
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -19,41 +13,23 @@
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end hide-sm">
-        <div class="navbar-item-orphan is-hoverable">
-          <a href="#" class="">Getting started</a>
-        </div>
-        <div class="navbar-item-orphan is-hoverable">
-          <a href="#" class="">Community</a>
-        </div>
-        {{#each site.components}}
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">{{{./title}}}</a>
-          <div class="navbar-dropdown">
-            {{#each ./versions}}
-            <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-            {{/each}}
-          </div>
-        </div>
-        {{/each}}
+      <div class="navbar-item-orphan is-hoverable">
+        <a href="#" class="">Getting started</a>
       </div>
+      <div class="navbar-item-orphan is-hoverable">
+        <a href="#" class="">Community</a>
+      </div>
+      {{#each site.components}}
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="#">{{{./title}}}</a>
+      </div>
+      {{/each}}
+    </div>
 
-      <div class="navbar-end hide-lg">
-        {{#each site.components}}
-        <div class="navbar-item has-dropdown is-hoverable">
-          <details>
-            <summary>
-              <a class="navbar-link" href="#">{{{./title}}}</a>
-            </summary>
-            <div class="navbar-dropdown">
-              {{#each ./versions}}
-              <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-              {{/each}}
-            </div>
-          </details>
-        </div>
-        {{/each}}
-      </div>
+    <div class="navbar-item search-item hide-for-print">
+      {{!-- Algolia search bar --}}
+      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+      <i class="search-icon" aria-hidden="true"></i>
     </div>
   </nav>
 </header>
