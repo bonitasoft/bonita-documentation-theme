@@ -19,18 +19,13 @@
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
+      <div class="navbar-end hide-sm">
         <div class="navbar-item-orphan is-hoverable">
           <a href="#" class="">Getting started</a>
         </div>
-      </div>
-      <div class="navbar-end">
         <div class="navbar-item-orphan is-hoverable">
           <a href="#" class="">Community</a>
         </div>
-      </div>
-
-      <div class="navbar-end">
         {{#each site.components}}
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="#">{{{./title}}}</a>
@@ -39,6 +34,23 @@
             <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
             {{/each}}
           </div>
+        </div>
+        {{/each}}
+      </div>
+
+      <div class="navbar-end hide-lg">
+        {{#each site.components}}
+        <div class="navbar-item has-dropdown is-hoverable">
+          <details>
+            <summary>
+              <a class="navbar-link" href="#">{{{./title}}}</a>
+            </summary>
+            <div class="navbar-dropdown">
+              {{#each ./versions}}
+              <a class="navbar-item" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+              {{/each}}
+            </div>
+          </details>
         </div>
         {{/each}}
       </div>

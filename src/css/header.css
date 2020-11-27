@@ -6,6 +6,23 @@ body {
   padding-top: var(--navbar-height);
 }
 
+/******************   */
+/***** Navbar ******/
+/******************   */
+.bonita-logo {
+  background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
+  background-size: contain;
+  display: block;
+  height: 3.5rem;
+  padding: 0;
+  width: 9.5rem;
+  opacity: 0.6;
+}
+
+.bonita-logo:hover {
+  opacity: 1;
+}
+
 .navbar {
   background: var(--navbar-background);
   color: var(--navbar-font-color);
@@ -71,18 +88,45 @@ body {
   margin: 0.25rem 0;
 }
 
-.bonita-logo {
-  background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
-  background-size: contain;
-  display: block;
-  height: 3.5rem;
-  padding: 0;
-  width: 9.5rem;
-  opacity: 0.6;
+/***********************   */
+/***** Navbar item ******/
+/***********************   */
+
+.navbar-menu {
+  display: none;
 }
 
-.bonita-logo:hover {
-  opacity: 1;
+.navbar-item,
+.navbar-link,
+.navbar-item-orphan {
+  display: block;
+  line-height: var(--doc-line-height);
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.navbar-link {
+  padding-right: 2.5em;
+}
+
+.navbar-item {
+  flex: none;
+  color: var(--color-white);
+}
+
+.navbar-item.has-dropdown {
+  padding: 0;
+}
+
+.navbar-item .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: block;
+}
+
+.navbar-dropdown .navbar-item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /******************   */
@@ -142,47 +186,6 @@ body {
   transform-origin: left bottom;
 }
 
-/***********************   */
-/***** Navbar item ******/
-/***********************   */
-
-.navbar-menu {
-  display: none;
-}
-
-.navbar-item,
-.navbar-link,
-.navbar-item-orphan {
-  display: block;
-  line-height: var(--doc-line-height);
-  padding: 0.5rem 1rem;
-  position: relative;
-}
-
-.navbar-link {
-  padding-right: 2.5em;
-}
-
-.navbar-item {
-  flex: none;
-  color: var(--color-white);
-}
-
-.navbar-item.has-dropdown {
-  padding: 0;
-}
-
-.navbar-item .icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  display: block;
-}
-
-.navbar-dropdown .navbar-item {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 /******************   */
 /***** Search ******/
 /******************   */
@@ -199,7 +202,7 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 1.8;
-  width: 20rem;
+  width: 10rem;
   opacity: 1;
 }
 
@@ -214,7 +217,7 @@ body {
   display: block;
   height: 1rem;
   padding: 0;
-  width: 5rem;
+  width: 1rem;
   opacity: inherit;
 }
 
@@ -346,6 +349,18 @@ body {
     align-items: stretch;
   }
 
+  .navbar-dropdown {
+    border: 1px solid var(--navbar-menu-border-color);
+    border-top: none;
+    border-radius: 0 0 0.25rem 0.25rem;
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    position: absolute;
+    background-color: var(--navbar-background);
+  }
+
   .navbar-item.is-hoverable:hover .navbar-dropdown {
     display: block;
   }
@@ -370,17 +385,6 @@ body {
     margin-left: auto;
   }
 
-  .navbar-dropdown {
-    border: 1px solid var(--navbar-menu-border-color);
-    border-top: none;
-    border-radius: 0 0 0.25rem 0.25rem;
-    display: none;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    position: absolute;
-  }
-
   .navbar-dropdown .navbar-item {
     padding: 0.5rem 1rem;
     white-space: nowrap;
@@ -403,6 +407,14 @@ body {
     background-color: var(--navbar-unfocused-font-color);
     color: var(--color-blue-bonita);
   }
+
+  details {
+    display: none;
+  }
+
+  .hide-lg {
+    display: none;
+  }
 }
 
 /* Layout for small screens */
@@ -424,6 +436,24 @@ body {
     display: block;
     max-height: var(--nav-height);
     overflow-y: auto;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  summary {
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  summary:focus {
+    outline-style: none;
+  }
+
+  summary .navbar-link {
+    padding: 0;
+    display: inline;
   }
 }
 
