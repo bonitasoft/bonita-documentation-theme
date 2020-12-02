@@ -16,3 +16,9 @@ jobs:
         run: npm install
       - name: Bundle documentation theme
         run: gulp bundle
+      - name: Upload ui bundle
+        uses: actions/upload-artifact@v2
+        with:
+          name: bonita-documentation-ui-bundle
+          path: build/ui-bundle.zip
+          retention-days: 7
