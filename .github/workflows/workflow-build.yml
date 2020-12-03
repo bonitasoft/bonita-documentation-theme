@@ -16,10 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Display node and npm version
-        run: |
-          node --version
-          npm --version
       - name: Install npm modules
         run: npm ci
       - name: Bundle documentation theme
