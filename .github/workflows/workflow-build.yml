@@ -12,6 +12,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Display node and npm version
+        run: |
+          node --version
+          npm --version
       - name: Install npm modules
         run: npm ci
       - name: Bundle documentation theme
@@ -28,5 +32,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: bonita-documentation-ui-preview
-          path: public/_
+          path: public
           retention-days: 7
