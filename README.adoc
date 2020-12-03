@@ -2,8 +2,9 @@
 
 NOTE: Readme in progress
 
-This project produce the UI bundle used by the Bonita documentation website.
-It has been generated using the [Antora default UI](https://gitlab.com/antora/antora-ui-default).
+This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io]
+repository to build the Bonita documentation website. +
+It is based on the https://gitlab.com/antora/antora-ui-default[Antora default UI].
 
 == Usage
 
@@ -12,3 +13,8 @@ TODO: how to use the bundle in the antora conf file
 == Development
 
 TODO
+
+A static or live preview of the theme is available, see the xref:docs/modules/ROOT/pages/build-preview-ui.adoc[build-preview-ui]
+documentation.
+
+To build the bundle to be used in the Antora playbook, run `gulp bundle`.
