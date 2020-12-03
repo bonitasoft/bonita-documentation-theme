@@ -430,9 +430,9 @@ body {
   }
 
   .input-container input:focus ~ .search {
-    right: 5px;
+    right: 0.2rem;
     background: var(--color-blue-bonita);
-    border: 1px solid var(--color-white);
+    border: none;
     z-index: 6;
   }
 
