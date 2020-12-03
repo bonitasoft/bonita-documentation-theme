@@ -190,7 +190,7 @@ body {
   opacity: 1;
 }
 
-.algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
+.algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
   max-height: calc(100vh - 3.25rem);
 }
 
@@ -232,7 +232,7 @@ body {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   }
 
-  .navbar-dropdown .navbar-item {
+  .navbar-menu .navbar-item {
     background-color: var(--color-white);
     border: 2px solid var(--color-white);
     border-radius: 5px;
@@ -244,21 +244,16 @@ body {
     font-weight: bold;
   }
 
-  .navbar-dropdown {
-    background-color: transparent;
-  }
-
-  .navbar-menu > .navbar-item,
   .navbar-menu .navbar-link,
   .navbar-dropdown .navbar-item,
-  .navbar-menu .navbar-item-orphan a {
+  .navbar-menu .navbar-item a {
     color: var(--color-blue-bonita);
   }
 
   .navbar-menu > a.navbar-item:hover,
   .navbar-menu .navbar-link:hover,
-  .navbar-menu .navbar-item-orphan:hover,
-  .navbar-menu .navbar-item-orphan:hover a,
+  .navbar-menu .navbar-item:hover,
+  .navbar-menu .navbar-item:hover a,
   .navbar-dropdown .navbar-item:hover {
     color: var(--color-white);
     background-color: var(--color-blue-bonita);
