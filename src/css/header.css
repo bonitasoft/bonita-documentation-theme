@@ -6,6 +6,28 @@ body {
   padding-top: var(--navbar-height);
 }
 
+/*******************
+******* Logo *******
+********************/
+
+.bonita-logo {
+  background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
+  background-size: contain;
+  display: block;
+  height: 3.5rem;
+  padding: 0;
+  width: 9.5rem;
+  opacity: 0.6;
+}
+
+.bonita-logo:hover {
+  opacity: 1;
+}
+
+/*******************
+****** Mavbar ******
+********************/
+
 .navbar {
   background: var(--navbar-background);
   color: var(--navbar-font-color);
@@ -47,47 +69,26 @@ body {
   font-size: calc(22 / var(--rem-base) * 1rem);
 }
 
-.navbar-brand .separator {
-  padding: 0 0.375rem;
+/************************
+****** Navbar menu ******
+*************************/
+
+.navbar-menu {
+  display: none;
 }
 
-.navbar-brand .navbar-item + .navbar-item {
-  -ms-flex-positive: 0;
-  -webkit-box-flex: 0;
-  flex-grow: 0;
-  -ms-flex-pack: start;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
-}
-
-.navbar-dropdown {
-  background-color: var(--navbar-background);
-}
-
-.navbar-divider {
-  background-color: var(--navbar-menu-border-color);
-  border: none;
-  height: 1px;
-  margin: 0.25rem 0;
-}
-
-.bonita-logo {
-  background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
-  background-size: contain;
+.navbar-item {
   display: block;
-  height: 3.5rem;
-  padding: 0;
-  width: 9.5rem;
-  opacity: 0.6;
+  line-height: var(--doc-line-height);
+  padding: 0.5rem;
+  position: relative;
+  flex: none;
+  color: var(--color-white);
 }
 
-.bonita-logo:hover {
-  opacity: 1;
-}
-
-/******************   */
-/***** Burger ******/
-/******************   */
+/*******************
+****** Burger ******
+********************/
 
 .navbar-burger {
   color: var(--navbar-font-color);
@@ -97,7 +98,6 @@ body {
   line-height: 1;
   height: var(--navbar-height);
   position: relative;
-  /* width: var(--navbar-height); */
   width: 2.75rem;
   margin-left: auto;
   padding: 0;
@@ -142,47 +142,6 @@ body {
   transform-origin: left bottom;
 }
 
-/***********************   */
-/***** Navbar item ******/
-/***********************   */
-
-.navbar-menu {
-  display: none;
-}
-
-.navbar-item,
-.navbar-link,
-.navbar-item-orphan {
-  display: block;
-  line-height: var(--doc-line-height);
-  padding: 0.5rem 1rem;
-  position: relative;
-}
-
-.navbar-link {
-  padding-right: 2.5em;
-}
-
-.navbar-item {
-  flex: none;
-  color: var(--color-white);
-}
-
-.navbar-item.has-dropdown {
-  padding: 0;
-}
-
-.navbar-item .icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  display: block;
-}
-
-.navbar-dropdown .navbar-item {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 /******************   */
 /***** Search ******/
 /******************   */
@@ -199,7 +158,7 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 1.8;
-  width: 20rem;
+  width: 15rem;
   opacity: 1;
 }
 
@@ -214,7 +173,7 @@ body {
   display: block;
   height: 1rem;
   padding: 0;
-  width: 5rem;
+  width: 1rem;
   opacity: inherit;
 }
 
@@ -227,35 +186,30 @@ body {
   opacity: 1;
 }
 
-.algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
+.algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
   max-height: calc(100vh - 3.25rem);
 }
 
-/*************************   */
-/***** Media Queries ******/
-/*************************   */
+/**************************
+****** Media Queries ******
+***************************/
 
 /* Colors for large screens */
 @media screen and (min-width: 1024px) {
-  .navbar-end > .navbar-item,
-  .navbar-end .navbar-link,
-  .navbar-end .navbar-item-orphan a {
+  .navbar-menu > .navbar-item,
+  .navbar-menu .navbar-link {
     color: var(--navbar-unfocused-font-color);
   }
 
-  .navbar-end > a.navbar-item:hover,
-  .navbar-end .navbar-link:hover,
-  .navbar-end .navbar-item-orphan:hover,
-  .navbar-item.has-dropdown:hover .navbar-link {
-    color: var(--color-white);
+  .navbar-menu .navbar-item:hover {
     border-top: 4px solid var(--navbar-unfocused-font-color);
   }
 
-  .navbar-end .navbar-item-orphan a:hover {
+  .navbar-menu .navbar-item a:hover {
     color: var(--color-white);
   }
 
-  .navbar-end .navbar-link::after {
+  .navbar-menu .navbar-link::after {
     border-color: var(--navbar-unfocused-font-color);
     text-decoration: underline;
   }
@@ -264,123 +218,77 @@ body {
 /* Colors for small screens */
 @media screen and (max-width: 1023px) {
   .navbar-menu {
-    background: var(--navbar-background);
+    background: var(--color-smoke-30);
   }
 
   .navbar-menu.is-active {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   }
 
-  .navbar-end > .navbar-item,
-  .navbar-end .navbar-link,
-  .navbar-end .navbar-item-orphan a {
-    color: var(--navbar-font-color);
+  .navbar-menu .navbar-item {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   }
 
-  .navbar-end > a.navbar-item:hover,
-  .navbar-end .navbar-link:hover,
-  .navbar-end .navbar-item-orphan:hover,
-  .navbar-end .navbar-item-orphan:hover a,
-  .navbar-dropdown .navbar-item:hover {
+  .navbar-menu .navbar-link {
+    font-weight: bold;
+  }
+
+  .navbar-menu .navbar-link,
+  .navbar-dropdown .navbar-item,
+  .navbar-menu .navbar-item a {
     color: var(--color-blue-bonita);
-    background-color: var(--navbar-font-color);
+  }
+
+  .navbar-menu > a.navbar-item:hover,
+  .navbar-menu .navbar-link:hover,
+  .navbar-menu .navbar-item:hover,
+  .navbar-menu .navbar-item:hover a,
+  .navbar-dropdown .navbar-item:hover {
+    color: var(--color-white);
+    background-color: var(--color-blue-bonita);
   }
 }
 
 /* Layout for large screens */
 @media screen and (min-width: 1024px) {
   .navbar,
-  .navbar-menu,
-  .navbar-end {
+  .navbar-menu {
     align-items: stretch;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .navbar-brand {
+  .navbar-menu {
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
-  }
-
-  .navbar-menu {
-    -ms-flex-positive: 0;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
   }
 
   .navbar-burger {
     display: none;
   }
 
-  .navbar-item,
-  .navbar-link,
-  .navbar-item-orphan {
+  .navbar-item {
     align-items: center;
     display: flex;
-  }
-
-  .navbar-item.has-dropdown {
-    align-items: stretch;
   }
 
   .navbar-item.is-hoverable:hover .navbar-dropdown {
     display: block;
   }
 
-  .navbar-link::after {
-    border-width: 0 0 1px 1px;
-    border-style: solid;
-    content: " ";
-    display: block;
-    height: 0.5em;
-    pointer-events: none;
-    position: absolute;
-    transform: rotate(-45deg);
-    width: 0.5em;
-    margin-top: -0.375em;
-    right: 1.125em;
-    top: 50%;
-  }
-
-  .navbar-end {
-    justify-content: flex-end;
-    margin-left: auto;
-  }
-
-  .navbar-dropdown {
-    border: 1px solid var(--navbar-menu-border-color);
-    border-top: none;
-    border-radius: 0 0 0.25rem 0.25rem;
-    display: none;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    position: absolute;
-  }
-
-  .navbar-dropdown .navbar-item {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-  }
-
-  .navbar-dropdown .navbar-item:last-child {
-    border-radius: inherit;
-  }
-
-  .navbar-dropdown a.navbar-item {
-    padding-right: 3rem;
-  }
-
-  .navbar-dropdown.is-right {
-    left: auto;
-    right: 0;
-  }
-
-  .navbar-dropdown a.navbar-item:hover {
+  a.navbar-item:hover {
     background-color: var(--navbar-unfocused-font-color);
     color: var(--color-blue-bonita);
+  }
+
+  .input-container {
+    display: none;
   }
 }
 
@@ -391,7 +299,7 @@ body {
     display: flex;
   }
 
-  .navbar-brand .search-item {
+  .search-item {
     display: none;
   }
 
@@ -403,6 +311,152 @@ body {
     display: block;
     max-height: var(--nav-height);
     overflow-y: auto;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  summary {
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  summary:focus {
+    outline-style: none;
+  }
+
+  summary .navbar-link {
+    padding: 0;
+    display: inline;
+  }
+
+  .input-container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 2rem;
+    bottom: 0;
+    width: 92%;
+    height: 100px;
+    transition: 0.2s;
+  }
+
+  .input-container .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    opacity: 0.6;
+  }
+
+  .input-container .search:hover {
+    cursor: pointer;
+  }
+
+  .input-container .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 8px;
+    right: 0;
+    bottom: 0;
+    left: 8px;
+    width: 5px;
+    height: 2px;
+    background: var(--color-white);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+
+  .input-container .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -3px;
+    right: 0;
+    bottom: 0;
+    left: -3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    transition: all 0.5s;
+  }
+
+  .input-container input {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    height: 35px;
+    outline: none;
+    border: 1px soild var(--color-white);
+    background: var(--color-white);
+    color: var(--color-blue-bonita);
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  .input-container input:hover {
+    cursor: pointer;
+  }
+
+  .input-container:focus-within {
+    width: 100%;
+    right: 0;
+  }
+
+  .input-container input:focus {
+    width: 99%;
+    opacity: 1;
+    cursor: text;
+    border: 1px solid var(--color-blue-bonita);
+    background: var(--color-white);
+    color: var(--color-blue-bonita);
+  }
+
+  .input-container input:focus ~ .search {
+    right: 0.2rem;
+    background: var(--color-blue-bonita);
+    border: none;
+    z-index: 6;
+  }
+
+  .input-container input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 15px;
+  }
+
+  .input-container input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    border: none;
+    background: var(--color-white);
+    border-radius: 0%;
+    transform: rotate(-45deg);
+  }
+
+  .input-container input::placeholder {
+    color: var(--color-blue-bonita);
+    opacity: 0.5;
+    font-weight: bolder;
   }
 }
 
