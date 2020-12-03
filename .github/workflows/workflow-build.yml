@@ -13,12 +13,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install npm modules
-        run: npm install
+        run: npm ci
       - name: Bundle documentation theme
         run: gulp bundle
-      - name: Upload ui bundle
+      - name: Upload UI bundle
         uses: actions/upload-artifact@v2
         with:
           name: bonita-documentation-ui-bundle
           path: build/ui-bundle.zip
+          retention-days: 7
+      - name: Build preview
+        run: gulp preview:build
+      - name: Upload preview
+        uses: actions/upload-artifact@v2
+        with:
+          name: bonita-documentation-ui-preview
+          path: public/_
           retention-days: 7
