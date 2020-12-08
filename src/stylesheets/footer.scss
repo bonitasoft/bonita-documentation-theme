@@ -5,11 +5,11 @@ footer.footer {
   line-height: var(--footer-line-height);
   padding: 1.5rem;
 }
-
-.footer p {
-  margin: 0.5rem 0;
-}
-
-.footer a {
-  color: var(--footer-link-font-color);
+.footer {
+  p {
+    margin: 0.5rem 0;
+  }
+  a {
+    color: var(--footer-link-font-color);
+  }
 }

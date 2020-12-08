@@ -1,0 +1,96 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: var(--body-font-size);
+  height: 100%;
+}
+
+body {
+  background: var(--body-background);
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  height: 100%;
+  line-height: var(--body-line-height);
+  margin: 0;
+}
+
+* {
+  box-sizing: inherit;
+
+  &:before {
+    box-sizing: inherit;
+  }
+
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: var(--body-font-size--desktop);
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    background-color: none;
+  }
+}
+
+code {
+  font-family: var(--monospace-font-family);
+}
+
+kbd {
+  font-family: var(--monospace-font-family);
+}
+
+pre {
+  font-family: var(--monospace-font-family);
+}
+
+b {
+  font-weight: var(--body-font-weight-bold);
+}
+
+dt {
+  font-weight: var(--body-font-weight-bold);
+}
+
+strong {
+  font-weight: var(--body-font-weight-bold);
+
+  strong {
+    font-weight: normal;
+  }
+}
+
+th {
+  font-weight: var(--body-font-weight-bold);
+}
+
+em {
+  em {
+    font-style: normal;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: var(--body-line-height);
+  margin: 0;
+
+  &:-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+}
