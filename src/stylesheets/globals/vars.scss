@@ -1,4 +1,4 @@
-&:root {
+:root {
   --color-white: #fff;
   --color-smoke-10: #fefefe;
   --color-smoke-30: #fafafa;
@@ -129,4 +129,6 @@
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
+
+  --border-radius: .3rem;
 }

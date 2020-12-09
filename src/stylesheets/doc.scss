@@ -330,7 +330,7 @@
       border-radius: 0.5rem;
       padding: 0.75rem;
       > {
-        &:first-child {
+        :first-child {
           margin-top: 0;
         }
       }
@@ -436,7 +436,7 @@
         text-align: center;
       }
       > {
-        &:not(.title) {
+        :not(.title) {
           &:first-child {
             margin-top: 0;
           }
@@ -496,7 +496,7 @@
       padding: 0.5rem;
     }
     > {
-      &:not(thead) {
+      :not(thead) {
         th {
           border-top: 1px solid var(--table-border-color);
           border-bottom: 1px solid var(--table-border-color);
@@ -544,7 +544,7 @@
       background: var(--admonition-background);
       width: 100%;
       > {
-        &:first-child {
+        :first-child {
           margin: 0;
         }
       }
@@ -724,11 +724,11 @@
     >table {
       >tr {
         > {
-          &:first-child {
+          :first-child {
             padding: 0.25em 0.5rem 0;
             vertical-align: top;
           }
-          &:last-child {
+          :last-child {
             padding: 0.25rem 0;
           }
         }
@@ -736,11 +736,11 @@
       >tbody {
         >tr {
           > {
-            &:first-child {
+            :first-child {
               padding: 0.25em 0.5rem 0;
               vertical-align: top;
             }
-            &:last-child {
+            :last-child {
               padding: 0.25rem 0;
             }
           }
