@@ -10,30 +10,43 @@
         <span></span>
         <span></span>
       </button>
+
+      <div class="input-container">
+        <input type="text" placeholder="Search Docs">
+        <div class="search"></div>
+      </div>
     </div>
 
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-item is-hoverable">
-        <a href="#" class="navbar-link">Getting started</a>
+    <div id="app">
+      <div class="search-content">
+        <fieldset>
+          <input type="text" id="search-bar" placeholder="Search..." />
+          <div class="icons-container">
+            <div id="search-icon"></div>
+          </div>
+        </fieldset>
       </div>
-      <div class="navbar-item is-hoverable">
-        <a href="#" class="navbar-link">Community</a>
-      </div>
-      {{#each site.components}}
-      <div class="navbar-item is-hoverable">
-        <a class="navbar-link" href="#">{{{./title}}}</a>
-      </div>
-      {{/each}}
-    </div>
 
-    <div class="navbar-item search-item hide-for-print">
-      {{!-- Algolia search bar --}}
-      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
-      <i class="search-icon" aria-hidden="true"></i>
-    </div>
-    <div class="input-container">
-      <input type="text" placeholder="Search Docs">
-      <div class="search"></div>
-    </div>
+
+
+      <div id="topbar-nav" class="navbar-menu">
+        <div class="navbar-item is-hoverable">
+          <a href="#" class="navbar-link">Getting started</a>
+        </div>
+        <div class="navbar-item is-hoverable">
+          <a href="#" class="navbar-link">Community</a>
+        </div>
+        {{#each site.components}}
+        <div class="navbar-item is-hoverable">
+          <a class="navbar-link" href="#">{{{./title}}}</a>
+        </div>
+        {{/each}}
+      </div>
+
+      <div class="navbar-item search-item hide-for-print">
+        {{!-- Algolia search bar --}}
+        <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+        <i class="search-icon" aria-hidden="true"></i>
+      </div>
   </nav>
 </header>
