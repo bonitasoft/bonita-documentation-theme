@@ -4,112 +4,114 @@ $shiny-green: #22b194;
 $nice-green: rgba(100, 211, 189, 0.877);
 
 #app {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-/*Parent Container*/
+/* Parent Container */
 .search-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .search-title {
-    color: $shiny-green;
-    font-weight: 400;
-    /*Absolute Position for Animation*/
-    position: absolute;
-    top: -7em; /*< Start way of top*/
-    width: 15em;
-    opacity: 0; /*< hidden by default (when the input is not expanded)*/
-    transition: all, 0.62s ease-in-out; /*< all transition to be applied on any change*/
-    /*To toggle text animation and make it visibale*/
-    &.show {
-      top: -3.4em;
-      opacity: 1;
-    }
-  }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 
-  fieldset {
-    outline: 0;
-    border: 0;
-    position: relative;
-  }
+	.search-title {
+		color: $shiny-green;
+		font-weight: 400;
+		/* Absolute Position for Animation */
+		position: absolute;
+		top: -7em; /* < Start way of top */
+		width: 15em;
+		opacity: 0; /* < hidden by default (when the input is not expanded) */
+		transition: all, 0.62s ease-in-out; /* < all transition to be applied on any change */
+		/* To toggle text animation and make it visibale */
+		&.show {
+			top: -3.4em;
+			opacity: 1;
+		}
+	}
 
-  #search-bar {
-    /*Add some cool style to the input*/
-    height: 2.8em;
-    /*Start shrink*/
-    width: 2.8em;
-    padding: 8px;
-    font-size: 16px;
-    border: 0;
-    border-radius: 4px;
-    color: #535c68;
-    box-shadow: 0px 3px 19px 3px rgba(15, 15, 15, 0.2);
-    /*Setup some transition for the expand animation*/
-    transition: all, 0.7s;
-    //on Focus Expand it
-    &:focus {
-      outline: 0;
-      /*We just need to change the width*/
-      width: 20em;
-      border: 1px solid $nice-green;
-      box-shadow: 0px 0px 10px 0.3px $nice-green;
-      &::-webkit-input-placeholder {
-        /*Show it on input expand*/
-        opacity: 0.8;
-      }
-    }
-    /*Add placeholder style (Only for Chrome)*/
-    &::-webkit-input-placeholder {
-      /*Start hidden since the input is shrunk*/
-      opacity: 0;
-      font-size: 16px;
-      color: #535c68;
-      width: 1px;
-    }
-  }
+	fieldset {
+		outline: 0;
+		border: 0;
+		position: relative;
+	}
 
-  .icons-container {
-    /*Absolute positioning for putting it inside the input to look like a button icon*/
-    position: absolute;
-    top: 11px;
-    right: 21px;
-    width: 32px;
-    height: 31px;
-    cursor: pointer;
-    /*We create the Search Icon with borders and the after CSS peudo-element*/
-    #search-icon {
-      /*Search icon (Circle)*/
-      position: relative;
-      top: 5px;
-      left: 8px;
-      width: 60%;
-      height: 60%;
-      opacity: 1;
-      border-radius: 50%;
-      border: 3px solid $shiny-green;
-      transition: opacity 0.25s ease, transform 0.43s ease-in-out;
-      box-shadow: 0px 0px 1px 0.2px rgba(170, 229, 218, 0.761);
-      /*Search Icon (line)*/
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -9px;
-        right: -2px;
-        width: 4px;
-        border-radius: 3px;
-        transform: rotate(-35deg);
-        height: 10px;
-        background-color: $shiny-green;
-        box-shadow: 0px 0px 1px 0.2px rgba(170, 229, 218, 0.761);
-      }
-    }
-  }
+	#search-bar {
+		/* Add some cool style to the input */
+		height: 2.8em;
+		/* Start shrink */
+		width: 2.8em;
+		padding: 8px;
+		font-size: 16px;
+		border: 0;
+		border-radius: 4px;
+		color: #535c68;
+		box-shadow: 0 3px 19px 3px rgba(15, 15, 15, 0.2);
+		/* Setup some transition for the expand animation */
+		transition: all, 0.7s;
+		//on Focus Expand it
+		&:focus {
+			outline: 0;
+			/* We just need to change the width */
+			width: 20em;
+			border: 1px solid $nice-green;
+			box-shadow: 0 0 10px 0.3px $nice-green;
+
+			&::-webkit-input-placeholder {
+				/* Show it on input expand */
+				opacity: 0.8;
+			}
+		}
+		/* Add placeholder style (Only for Chrome) */
+		&::-webkit-input-placeholder {
+			/* Start hidden since the input is shrunk */
+			opacity: 0;
+			font-size: 16px;
+			color: #535c68;
+			width: 1px;
+		}
+	}
+
+	.icons-container {
+		/* Absolute positioning for putting it inside the input to look like a button icon */
+		position: absolute;
+		top: 11px;
+		right: 21px;
+		width: 32px;
+		height: 31px;
+		cursor: pointer;
+		/* We create the Search Icon with borders and the after CSS peudo-element */
+		#search-icon {
+			/* Search icon (Circle) */
+			position: relative;
+			top: 5px;
+			left: 8px;
+			width: 60%;
+			height: 60%;
+			opacity: 1;
+			border-radius: 50%;
+			border: 3px solid $shiny-green;
+			transition: opacity 0.25s ease, transform 0.43s ease-in-out;
+			box-shadow: 0 0 1px 0.2px rgba(170, 229, 218, 0.761);
+			/* Search Icon (line) */
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -9px;
+				right: -2px;
+				width: 4px;
+				border-radius: 3px;
+				transform: rotate(-35deg);
+				height: 10px;
+				background-color: $shiny-green;
+				box-shadow: 0 0 1px 0.2px rgba(170, 229, 218, 0.761);
+			}
+		}
+	}
 }
