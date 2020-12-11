@@ -1,30 +1,30 @@
 @media screen and (max-width: 1023px) {
-	aside.toc.sidebar {
-		display: none;
-	}
+  aside.toc.sidebar {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-	main {
-		flex: auto;
-		min-width: 0;
+  main {
+    flex: auto;
+    min-width: 0;
 
-		> .content {
-			display: flex;
-		}
-	}
+    > .content {
+      display: flex;
+    }
+  }
 
-	aside.toc.embedded {
-		display: none;
-	}
+  aside.toc.embedded {
+    display: none;
+  }
 
-	aside.toc.sidebar {
-		flex: 0 0 var(--toc-width);
-	}
+  aside.toc.sidebar {
+    flex: 0 0 var(--toc-width);
+  }
 }
 
 @media screen and (min-width: 1216px) {
-	aside.toc.sidebar {
-		flex-basis: var(--toc-width--widescreen);
-	}
+  aside.toc.sidebar {
+    flex-basis: var(--toc-width--widescreen);
+  }
 }

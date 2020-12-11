@@ -1,109 +1,109 @@
 @page {
-	margin: 0.5in;
+  margin: 0.5in;
 }
 
 @media print {
-	.hide-for-print {
-		display: none !important;
-	}
+  .hide-for-print {
+    display: none !important;
+  }
 
-	html {
-		font-size: var(--body-font-size--print);
-	}
+  html {
+    font-size: var(--body-font-size--print);
+  }
 
-	a {
-		color: inherit !important;
-		text-decoration: underline;
-	}
+  a {
+    color: inherit !important;
+    text-decoration: underline;
+  }
 
-	a.bare {
-		text-decoration: none;
-	}
+  a.bare {
+    text-decoration: none;
+  }
 
-	a[href^="#"] {
-		text-decoration: none;
-	}
+  a[href^="#"] {
+    text-decoration: none;
+  }
 
-	a[href^="mailto:"] {
-		text-decoration: none;
-	}
+  a[href^="mailto:"] {
+    text-decoration: none;
+  }
 
-	tr {
-		page-break-inside: avoid;
-	}
+  tr {
+    page-break-inside: avoid;
+  }
 
-	img {
-		page-break-inside: avoid;
-	}
+  img {
+    page-break-inside: avoid;
+  }
 
-	object {
-		page-break-inside: avoid;
-	}
+  object {
+    page-break-inside: avoid;
+  }
 
-	svg {
-		page-break-inside: avoid;
-	}
+  svg {
+    page-break-inside: avoid;
+  }
 
-	thead {
-		display: table-header-group;
-	}
+  thead {
+    display: table-header-group;
+  }
 
-	pre {
-		hyphens: none;
-		white-space: pre-wrap;
-	}
+  pre {
+    hyphens: none;
+    white-space: pre-wrap;
+  }
 
-	body {
-		padding-top: 2rem;
-	}
+  body {
+    padding-top: 2rem;
+  }
 
-	.navbar {
-		background: none;
-		color: inherit;
-		position: absolute;
+  .navbar {
+    background: none;
+    color: inherit;
+    position: absolute;
 
-		* {
-			color: inherit !important;
-		}
-	}
+    * {
+      color: inherit !important;
+    }
+  }
 
-	#topbar-nav {
-		display: none;
-	}
+  #topbar-nav {
+    display: none;
+  }
 
-	.nav-container {
-		display: none;
-	}
+  .nav-container {
+    display: none;
+  }
 
-	.toolbar {
-		display: none;
-	}
+  .toolbar {
+    display: none;
+  }
 
-	.doc {
-		color: inherit;
-		margin: auto;
-		max-width: none;
-		padding-bottom: 2rem;
+  .doc {
+    color: inherit;
+    margin: auto;
+    max-width: none;
+    padding-bottom: 2rem;
 
-		.listingblock {
-			code[data-lang] {
-				::before {
-					display: block;
-				}
-			}
-		}
-	}
+    .listingblock {
+      code[data-lang] {
+        ::before {
+          display: block;
+        }
+      }
+    }
+  }
 
-	footer.footer {
-		background: none;
-		border-top: 1px solid var(--panel-border-color);
-		color: var(--quote-attribution-font-color);
-		padding: 0.5rem;
-	}
+  footer.footer {
+    background: none;
+    border-top: 1px solid var(--panel-border-color);
+    color: var(--quote-attribution-font-color);
+    padding: 0.5rem;
+  }
 
-	.footer {
-		* {
-			color: inherit;
-		}
-	}
+  .footer {
+    * {
+      color: inherit;
+    }
+  }
 }

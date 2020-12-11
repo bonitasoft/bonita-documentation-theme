@@ -1,7 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "indentation": "tab",
+    "indentation": 2,
     "number-leading-zero": null,
     "comment-empty-line-before": null,
     "no-descending-specificity": null,

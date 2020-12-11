@@ -1,9 +1,9 @@
 .body {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 @media screen and (min-width: 1024px) {
-	.body {
-		display: flex;
-	}
+  .body {
+    display: flex;
+  }
 }
