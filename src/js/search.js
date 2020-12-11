@@ -12,6 +12,6 @@ searchBar.onblur = function () {
 }
 
 searchBar.onkeydown = function (e) {
-  //If key name is Enter show alert with current input value
-  if (e.key === 'Enter') alert('Searching for: ' + this.value)
+  // search behavior -> should be handled by algolia
+  // if (e.key === 'Enter') alert('Searching for: ' + this.value)
 }
