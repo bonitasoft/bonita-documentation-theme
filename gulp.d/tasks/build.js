@@ -17,39 +17,6 @@ sass.compiler = require('node-sass')
 module.exports = (src, dest, preview) => () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
-  // const postcssPlugins = [
-  //   require('@csstools/postcss-sass')
-  //   postcssImport,
-  //   (css, { messages, opts: { file } }) =>
-  //     Promise.all(
-  //       messages
-  //         .reduce((accum, { file: depPath, type }) => (type === 'dependency' ? accum.concat(depPath) : accum), [])
-  //         .map((importedPath) => fs.stat(importedPath).then(({ mtime }) => mtime))
-  //     ).then((mtimes) => {
-  //       const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max))
-  //       if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
-  //     }),
-  //   postcssUrl([
-  //     {
-  //       filter: '**/~typeface-*/files/*',
-  //       url: (asset) => {
-  //         const relpath = asset.pathname.substr(1)
-  //         const abspath = require.resolve(relpath)
-  //         const basename = ospath.basename(abspath)
-  //         const destpath = ospath.join(dest, 'font', basename)
-  //         if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)
-  //         return path.join('..', 'font', basename)
-  //       },
-  //     },
-  //   ]),
-  //   postcssVar({ preserve: preview }),
-  //   preview ? postcssCalc : () => {},
-  //   autoprefixer,
-  //   preview
-  //     ? () => {}
-  //     : (css, result) => cssnano({ preset: 'default' })
-  //     (css, result).then(() => postcssPseudoElementFixer(css, result)),
-  // ]
   const postcssPlugins = [require('@csstools/postcss-sass'), autoprefixer()]
 
   function scss () {

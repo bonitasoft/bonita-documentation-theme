@@ -17,7 +17,7 @@ const serverConfig = { host: '0.0.0.0', port: 5252, livereload }
 const task = require('./gulp.d/tasks')
 const glob = {
   all: [srcDir, previewSrcDir],
-  css: `${srcDir}/stylesheets/**/*.scss`,
+  scss: `${srcDir}/stylesheets/**/*.scss`,
   js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/{helpers,js}/**/*.js`],
 }
 
@@ -31,6 +31,13 @@ const lintJsTask = createTask({
   name: 'lint:js',
   desc: 'Lint the JavaScript source files using eslint (JavaScript Standard Style)',
   call: task.lintJs(glob.js),
+})
+
+// eslint-disable-next-line no-unused-vars
+const lintScssTask = createTask({
+  name: 'lint:scss',
+  desc: 'Lint the JavaScript source files using eslint (JavaScript Standard Style)',
+  call: task.lintScss(glob.scss),
 })
 
 const lintTask = createTask({
