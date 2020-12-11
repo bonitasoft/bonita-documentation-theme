@@ -1,5 +1,4 @@
 :root {
-  /* colors */
   --color-white: #fff;
   --color-smoke-10: #fefefe;
   --color-smoke-30: #fafafa;
@@ -18,25 +17,21 @@
   --color-black: #000;
   --color-blue-bonita: #083355;
   --color-unfocused: #ffffff85;
-
-  /* fonts */
-  --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
-  --body-font-size: 1.0625em; /* 17px */
-  --body-font-size--desktop: 1.125em; /* 18px */
-  --body-font-size--print: 0.9375em; /* 15px */
+  --rem-base: 18;
+  --body-font-size: 1.0625em;
+  --body-font-size--desktop: 1.125em;
+  --body-font-size--print: 0.9375em;
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
   --body-font-family: "Roboto", sans-serif;
   --body-font-weight-bold: 500;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;
-  /* base */
   --body-background: var(--color-white);
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-thumb-color: var(--color-gray-10);
-  /* navbar */
-  --navbar-background: var(--color-blue-bonita); /* (--color-jet-80); */
+  --navbar-background: var(--color-blue-bonita);
   --navbar-font-color: var(--color-white);
   --navbar-unfocused-font-color: var(--color-unfocused);
   --navbar_hover-background: var(--color-black);
@@ -47,7 +42,6 @@
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu_hover-background: var(--color-smoke-50);
-  /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);
   --nav-line-height: 1.35;
@@ -55,19 +49,16 @@
   --nav-muted-color: var(--color-gray-70);
   --nav-panel-divider-color: var(--color-smoke-90);
   --nav-secondary-background: var(--color-smoke-70);
-  /* toolbar */
   --toolbar-background: var(--panel-background);
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-gray-70);
   --toolbar-muted-color: var(--color-gray-30);
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
-  /* toc */
   --toc-font-color: var(--nav-muted-color);
   --toc-heading-font-color: var(--doc-font-color);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
-  /* admonitions */
   --caution-color: #a0439c;
   --caution-on-color: var(--color-white);
   --important-color: #d32f2f;
@@ -78,7 +69,6 @@
   --tip-on-color: var(--color-white);
   --warning-color: #e18114;
   --warning-on-color: var(--color-white);
-  /* doc */
   --doc-font-color: var(--color-jet-50);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
@@ -114,12 +104,10 @@
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-90);
   --table-border-color: var(--panel-border-color);
-  /* footer */
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-90);
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
-  /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
@@ -135,14 +123,12 @@
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
-  /* --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop--large: calc(1656 / var(--rem-base) * 1rem); */
   --doc-max-width: 100%;
   --doc-max-width--desktop: 100%;
-
-  /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
+
+  --border-radius: .3rem;
 }

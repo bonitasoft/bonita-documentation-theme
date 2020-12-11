@@ -3,5 +3,10 @@
   "rules": {
     "comment-empty-line-before": null,
     "no-descending-specificity": null,
-  }
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true,
+  },
+  "plugins": [
+  "stylelint-scss"
+  ],
 }

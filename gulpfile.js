@@ -17,7 +17,7 @@ const serverConfig = { host: '0.0.0.0', port: 5252, livereload }
 const task = require('./gulp.d/tasks')
 const glob = {
   all: [srcDir, previewSrcDir],
-  css: `${srcDir}/css/**/*.css`,
+  scss: `${srcDir}/stylesheets/**/*.scss`,
   js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/{helpers,js}/**/*.js`],
 }
 
@@ -27,22 +27,23 @@ const cleanTask = createTask({
   call: task.remove(['build', 'public']),
 })
 
-const lintCssTask = createTask({
-  name: 'lint:css',
-  desc: 'Lint the CSS source files using stylelint (standard config)',
-  call: task.lintCss(glob.css),
-})
-
 const lintJsTask = createTask({
   name: 'lint:js',
   desc: 'Lint the JavaScript source files using eslint (JavaScript Standard Style)',
   call: task.lintJs(glob.js),
 })
 
+// eslint-disable-next-line no-unused-vars
+const lintScssTask = createTask({
+  name: 'lint:scss',
+  desc: 'Lint the JavaScript source files using eslint (JavaScript Standard Style)',
+  call: task.lintScss(glob.scss),
+})
+
 const lintTask = createTask({
   name: 'lint',
-  desc: 'Lint the CSS and JavaScript source files',
-  call: parallel(lintCssTask, lintJsTask),
+  desc: 'Lint the JavaScript source files',
+  call: parallel(lintJsTask),
 })
 
 const formatTask = createTask({
