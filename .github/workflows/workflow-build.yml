@@ -8,17 +8,29 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
       - name: Install npm modules
-        run: npm install
+        run: npm ci
       - name: Bundle documentation theme
         run: gulp bundle
-      - name: Upload ui bundle
+      - name: Upload UI bundle
         uses: actions/upload-artifact@v2
         with:
-          name: bonita-documentation-ui-bundle
+          name: ui-bundle-${{github.sha}}
           path: build/ui-bundle.zip
+          retention-days: 7
+      - name: Build preview
+        run: gulp preview:build
+      - name: Upload preview
+        uses: actions/upload-artifact@v2
+        with:
+          name: ui-preview-${{github.sha}}
+          path: public
           retention-days: 7
