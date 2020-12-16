@@ -1,9 +1,18 @@
 // grid layout
+.card-section::after {
+  content: "";
+  background-image: var(--card-icon);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 .card-section .sectionbody {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 1rem;
+  margin-top: 1rem;
 }
 
 .card-section-2col .sectionbody {
@@ -43,8 +52,6 @@
   display: block;
 }
 
-// styling
-
 .card a {
   border-radius: var(--border-radius);
   color: inherit;
@@ -57,89 +64,35 @@
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 1.2rem;
-  }
+
+   }
 }
 
-// styling learn
-
-.card-learn a {
-  border: solid 1px #cacbcc;
-  border-left: solid 3px #53536B;
-  color: var(--color-text-light);
-
-  .card-title {
-    margin-bottom: .8rem;
-  }
-
-  &:hover {
-    border-color: #B8BFF4;
-    border-left-color: #4E5EE4;
-    box-shadow: 0 6px 12px 0 rgba(60, 60, 60, 0.09);
-
-    .card-title {
-      color: #4E5EE4;
-    }
-  }
-}
-
-// styling product cards
-
-.card-primary + .card-secondary {
-  grid-column-start: 1; // show secondary cards in a separate line
-}
-
-.card-primary a, .card-secondary a {
-  box-shadow: 0 5px 10px 0 rgba(60, 60, 60, 0.1);
-
-  &:hover {
-    box-shadow: 0 5px 10px 0 rgba(60, 60, 60, 0.3);
-  }
-
-  .card-title::before {
-    content: "";
-    background-image: var(--card-icon);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1.2em;
-    height: 1.2em;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: .6em;
-  }
-}
-
-.card-primary a {
-  min-height: 17rem;
-  color: white;
+.card-index a {
+  border: 2px solid var(--card-index-border);
   position: relative;
   padding-top: 3em;
   padding-bottom: 2em;
   overflow: hidden; // hide background image
+  text-decoration: none;
 
   .card-title {
     font-size: 1.2em;
+    text-align: center;
   }
 
   &::before {
-    display: block;
-    width: 95px;
-    height: 70px;
-    position: absolute;
-    bottom: 30px;
-    right: -20px;
-    content: "";
-    background-image: url(../../img/cards.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    transition: all 0.2s, transform 0.2s;
+    transform: translateY(0);
+    position: relative;
+    box-shadow: none;
+    top: 0;
   }
 
-  &::after {
-    content: "Get started >";
-    font-family: var(--heading);
-    font-weight: var(--weight-bold);
-    font-size: .8em;
-    text-transform: uppercase;
-    letter-spacing: .05em;
+  &:hover {
+    transform: translateY(-3px);
+    top: -3px;
+    box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
   }
 }
 
@@ -150,17 +103,4 @@
   &:hover {
     border-color: #dfdfe0;
   }
-}
-
-
-.card-contracts a {
-  background-image: linear-gradient(45deg, #6746d6 0%, #a134d1 100%);
-}
-
-.card-upgrades-js a {
-  background-image: linear-gradient(-134deg, #3677ff 0%, #1ecff7 100%);
-}
-
-.card-defender a {
-  background-image: linear-gradient(-135deg, #00e1d4 0%, #00c7f2 100%);
 }
