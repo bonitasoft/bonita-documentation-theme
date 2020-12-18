@@ -86,17 +86,14 @@
     padding-bottom: 2rem;
 
     .listingblock {
-
       code[data-lang] {
-
-        &
         ::before {
           display: block;
         }
-
       }
     }
   }
+
   footer.footer {
     background: none;
     border-top: 1px solid var(--panel-border-color);
@@ -105,10 +102,8 @@
   }
 
   .footer {
-
     * {
       color: inherit;
     }
-
   }
 }

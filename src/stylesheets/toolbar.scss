@@ -10,15 +10,18 @@
   position: sticky;
   top: var(--navbar-height);
   z-index: var(--z-index-toolbar);
-a {
-  color: inherit;
+
+  a {
+    color: inherit;
+  }
+
+  .edit-this-page {
+    a {
+      color: var(--toolbar-muted-color);
+    }
+  }
 }
-.edit-this-page {
-a {
-  color: var(--toolbar-muted-color);
-}
-}
-}
+
 .nav-toggle {
   background: url(../img/menu.svg) no-repeat 50% 47.5%;
   background-size: 49%;
@@ -30,10 +33,12 @@ a {
   width: 2.5rem;
   margin-right: -0.25rem;
 }
+
 .nav-toggle.is-active {
   background-image: url(../img/back.svg);
   background-size: 41.5%;
 }
+
 .home-link {
   background: url(../img/home-o.svg) no-repeat 50% 45%;
   background-size: 50%;
@@ -41,21 +46,26 @@ a {
   height: 2.5rem;
   padding: 0;
   width: 2.5rem;
-&:hover {
-   background-image: url(../img/home.svg);
- }
+
+  &:hover {
+    background-image: url(../img/home.svg);
+  }
 }
+
 .home-link.is-current {
   background-image: url(../img/home.svg);
 }
+
 .edit-this-page {
   display: none;
   padding-right: 0.5rem;
 }
+
 @media screen and (min-width: 1024px) {
   .nav-toggle {
     display: none;
   }
+
   .edit-this-page {
     display: block;
   }

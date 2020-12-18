@@ -1,31 +1,15 @@
-/*******************
-******* Logo *******
-********************/
-/*******************
-****** Mavbar ******
-********************/
-/************************
-****** Navbar menu ******
-*************************/
-/*******************
-****** Burger ******
-********************/
-/******************   */
-/***** Search ******/
-/******************   */
-/**************************
-****** Media Queries ******
-***************************/
-/* Colors for large screens */
-/* Colors for small screens */
-/* Layout for large screens */
-/* Layout for small screens */
 html.is-clipped--navbar {
   overflow-y: hidden;
 }
+
 body {
   padding-top: var(--navbar-height);
 }
+
+/*******************
+******* Logo *******
+********************/
+
 .bonita-logo {
   background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
   background-size: contain;
@@ -34,10 +18,16 @@ body {
   padding: 0;
   width: 9.5rem;
   opacity: 0.6;
+
   &:hover {
     opacity: 1;
   }
 }
+
+/*******************
+****** Mavbar ******
+********************/
+
 .navbar {
   background: var(--navbar-background);
   color: var(--navbar-font-color);
@@ -48,6 +38,7 @@ body {
   width: 100%;
   word-wrap: break-word;
   z-index: var(--z-index-navbar);
+
   .button {
     display: inline-flex;
     align-items: center;
@@ -59,29 +50,33 @@ body {
     padding: 0 0.75em;
     white-space: nowrap;
   }
+
   a {
     text-decoration: none;
   }
 }
+
 .navbar-brand {
   align-items: stretch;
   display: flex;
   flex-shrink: 0;
   height: var(--navbar-height);
-  .navbar-item {
-    &:first-child {
-      color: var(--navbar-font-color);
-      font-size: calc(22 / var(--rem-base) * 1rem);
-      a {
-        color: var(--navbar-font-color);
-        font-size: calc(22 / var(--rem-base) * 1rem);
-      }
-    }
+
+  .navbar-item:first-child,
+  .navbar-item:first-child a {
+    color: var(--navbar-font-color);
+    font-size: calc(22 / var(--rem-base) * 1rem);
   }
 }
+
+/************************
+****** Navbar menu ******
+*************************/
+
 .navbar-menu {
   display: none;
 }
+
 .navbar-item {
   display: block;
   line-height: var(--doc-line-height);
@@ -90,6 +85,11 @@ body {
   flex: none;
   color: var(--color-white);
 }
+
+/*******************
+****** Burger ******
+********************/
+
 .navbar-burger {
   color: var(--navbar-font-color);
   background: none;
@@ -99,8 +99,8 @@ body {
   height: var(--navbar-height);
   position: relative;
   width: 2.75rem;
-  margin-left: auto;
   padding: 0;
+
   span {
     background: var(--navbar-font-color);
     display: block;
@@ -110,34 +110,41 @@ body {
     position: absolute;
     top: 50%;
     width: 15px;
-    &:nth-child(1) {
-      margin-top: -6px;
-    }
-    &:nth-child(2) {
-      margin-top: -1px;
-    }
-    &:nth-child(3) {
-      margin-top: 4px;
-    }
+  }
+
+  span:nth-child(1) {
+    margin-top: -6px;
+  }
+
+  span:nth-child(2) {
+    margin-top: -1px;
+  }
+
+  span:nth-child(3) {
+    margin-top: 4px;
+  }
+
+  .is-active span:nth-child(1) {
+    margin-left: -5px;
+    transform: rotate(45deg);
+    transform-origin: left top;
+  }
+
+  .is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .is-active span:nth-child(3) {
+    margin-left: -5px;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
   }
 }
-.navbar-burger.is-active {
-  span {
-    &:nth-child(1) {
-      margin-left: -5px;
-      transform: rotate(45deg);
-      transform-origin: left top;
-    }
-    &:nth-child(2) {
-      opacity: 0;
-    }
-    &:nth-child(3) {
-      margin-left: -5px;
-      transform: rotate(-45deg);
-      transform-origin: left bottom;
-    }
-  }
-}
+
+/******************   */
+/***** Search ******/
+/******************   */
+
 .search-bar {
   font-family: inherit;
   font-size: 0.85rem;
@@ -152,11 +159,13 @@ body {
   line-height: 1.8;
   width: 15rem;
   opacity: 1;
+
   &::placeholder {
     color: var(--navbar-unfocused-font-color);
     font-style: italic;
   }
 }
+
 .search-icon {
   background: url(../img/search.svg) no-repeat;
   background-size: contain;
@@ -166,157 +175,169 @@ body {
   width: 1rem;
   opacity: inherit;
 }
+
 .search-item {
   opacity: 0.6;
-  &:focus-within {
-    opacity: 1;
-  }
+
+  &:focus-within,
   &:hover {
     opacity: 1;
   }
 }
-.algolia-autocomplete {
-  .ds-dropdown-menu {
-    [class^="ds-dataset-"] {
-      max-height: calc(100vh - 3.25rem);
-    }
-  }
+
+.algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
+  max-height: calc(100vh - 3.25rem);
 }
+
+/**************************
+****** Media Queries ******
+***************************/
+
+/* Colors for large screens */
 @media screen and (min-width: 1024px) {
   .navbar-menu {
-    >.navbar-item {
+    > .navbar-item {
       color: var(--navbar-unfocused-font-color);
+
+      &:hover {
+        border-top: 4px solid var(--navbar-unfocused-font-color);
+      }
+
+      a:hover {
+        color: var(--color-white);
+      }
     }
+
     .navbar-link {
       color: var(--navbar-unfocused-font-color);
+
       &::after {
         border-color: var(--navbar-unfocused-font-color);
         text-decoration: underline;
       }
     }
-    .navbar-item {
-      &:hover {
-        border-top: 4px solid var(--navbar-unfocused-font-color);
-      }
-      a {
-        &:hover {
-          color: var(--color-white);
-        }
-      }
-    }
-    align-items: stretch;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    -ms-flex-positive: 1;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-  }
-  .navbar {
-    align-items: stretch;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .navbar-burger {
-    display: none;
-  }
-  .navbar-item {
-    align-items: center;
-    display: flex;
-  }
-  .navbar-item.is-hoverable {
-    &:hover {
-      .navbar-dropdown {
-        display: block;
-      }
-    }
-  }
-  a.navbar-item {
-    &:hover {
-      background-color: var(--navbar-unfocused-font-color);
-      color: var(--color-blue-bonita);
-    }
-  }
-  .input-container {
-    display: none;
   }
 }
+/* Colors for small screens */
 @media screen and (max-width: 1023px) {
   .navbar-menu {
     background: var(--color-smoke-30);
-    padding: 0.5rem 0;
+
     .navbar-item {
       background-color: var(--color-white);
       border: 2px solid var(--color-white);
       border-radius: 5px;
       margin: 10px;
       box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-      a {
-        color: var(--color-blue-bonita);
-      }
-      &:hover {
-        color: var(--color-white);
-        background-color: var(--color-blue-bonita);
-        a {
-          color: var(--color-white);
-          background-color: var(--color-blue-bonita);
-        }
-      }
     }
+
     .navbar-link {
       font-weight: bold;
-      color: var(--color-blue-bonita);
-      &:hover {
-        color: var(--color-white);
-        background-color: var(--color-blue-bonita);
-      }
     }
-    >a.navbar-item {
-      &:hover {
+
+    .navbar-link,
+    .navbar-item a {
+      color: var(--color-blue-bonita);
+    }
+
+    > a.navbar-item:hover,
+    .navbar-link:hover,
+    .navbar-item:hover,
+    .navbar-menu .navbar-item:hover a {
+      background-color: var(--color-blue-bonita);
+
+      .navbar-link {
         color: var(--color-white);
-        background-color: var(--color-blue-bonita);
       }
     }
   }
+
   .navbar-menu.is-active {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  }
+}
+
+/* Layout for large screens */
+@media screen and (min-width: 1024px) {
+  .navbar,
+  .navbar-menu {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar-menu {
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar-item {
+    align-items: center;
+    display: flex;
+  }
+
+  a.navbar-item:hover {
+    background-color: var(--navbar-unfocused-font-color);
+    color: var(--color-blue-bonita);
+  }
+
+  .input-container,
+  .search-content { // input container will probably need to be removed
+    display: none;
+  }
+}
+
+/* Layout for small screens */
+@media screen and (max-width: 1023px) {
+  .navbar-brand .navbar-item {
+    align-items: center;
+    display: flex;
+  }
+
+  .bonita-logo {
+    background: url(../img/bonitasoft-logo-mobile.svg) no-repeat 50% 45%;
+    opacity: 1;
+    background-size: contain;
+  }
+
+  .search-item {
+    display: none;
+  }
+
+  .search-content {
+    display: flex;
+  }
+
+  .navbar-menu {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-menu.is-active {
     display: block;
     max-height: var(--nav-height);
     overflow-y: auto;
   }
-  .navbar-dropdown {
-    .navbar-item {
-      color: var(--color-blue-bonita);
-      &:hover {
-        color: var(--color-white);
-        background-color: var(--color-blue-bonita);
-      }
-    }
-  }
-  .navbar-brand {
-    .navbar-item {
-      align-items: center;
-      display: flex;
-    }
-  }
-  .search-item {
-    display: none;
-  }
-  .hide-sm {
-    display: none;
-  }
+
   summary {
     padding-left: 10px;
     margin-bottom: 10px;
-    &:focus {
-      outline-style: none;
-    }
-    .navbar-link {
-      padding: 0;
-      display: inline;
-    }
   }
+
+  summary:focus {
+    outline-style: none;
+  }
+
+  summary .navbar-link {
+    padding: 0;
+    display: inline;
+  }
+
   .input-container {
     position: absolute;
     margin: auto;
@@ -327,6 +348,7 @@ body {
     width: 92%;
     height: 100px;
     transition: 0.2s;
+
     .search {
       position: absolute;
       margin: auto;
@@ -339,9 +361,11 @@ body {
       transition: all 1s;
       z-index: 4;
       opacity: 0.6;
+
       &:hover {
         cursor: pointer;
       }
+
       &::before {
         content: "";
         position: absolute;
@@ -356,6 +380,7 @@ body {
         transform: rotate(45deg);
         transition: all 0.5s;
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -371,6 +396,7 @@ body {
         transition: all 0.5s;
       }
     }
+
     input {
       position: absolute;
       margin: auto;
@@ -389,9 +415,11 @@ body {
       transition: all 1s;
       opacity: 0;
       z-index: 5;
+
       &:hover {
         cursor: pointer;
       }
+
       &:focus {
         width: 99%;
         opacity: 1;
@@ -399,56 +427,48 @@ body {
         border: 1px solid var(--color-blue-bonita);
         background: var(--color-white);
         color: var(--color-blue-bonita);
-        ~ {
-          .search {
-            right: 0.2rem;
-            background: var(--color-blue-bonita);
-            border: none;
-            z-index: 6;
-            &::before {
-              top: 0;
-              left: 0;
-              width: 15px;
-            }
-            &::after {
-              top: 0;
-              left: 0;
-              width: 15px;
-              height: 2px;
-              border: none;
-              background: var(--color-white);
-              border-radius: 0%;
-              transform: rotate(-45deg);
-            }
-          }
-        }
       }
+
+      &:focus ~ .search {
+        right: 0.2rem;
+        background: var(--color-blue-bonita);
+        border: none;
+        z-index: 6;
+      }
+
+      &:focus ~ .search::before {
+        top: 0;
+        left: 0;
+        width: 15px;
+      }
+
+      &:focus ~ .search::after {
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 2px;
+        border: none;
+        background: var(--color-white);
+        border-radius: 0%;
+        transform: rotate(-45deg);
+      }
+
       &::placeholder {
         color: var(--color-blue-bonita);
         opacity: 0.5;
         font-weight: bolder;
       }
     }
-    &:focus-within {
-      width: 100%;
-      right: 0;
-    }
   }
 }
+
 @media screen and (max-width: 768px) {
-  .navbar-brand {
-    .navbar-item {
-      + {
-        .navbar-item {
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-    }
+  .navbar-brand .navbar-item + .navbar-item {
+    padding-left: 0;
+    padding-right: 0;
   }
-  .algolia-autocomplete {
-    .ds-dropdown-menu {
-      min-width: calc(100vw - 2.75rem) !important;
-    }
+
+  .algolia-autocomplete .ds-dropdown-menu {
+    min-width: calc(100vw - 2.75rem) !important;
   }
 }

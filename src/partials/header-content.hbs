@@ -1,15 +1,28 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <div class="navbar-item">
-        <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
-      </div>
-
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <div class="navbar-item">
+        <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
+      </div>
+
+      {{!-- <div class="input-container">
+        <input type="text" placeholder="Search Docs">
+        <div class="search"></div>
+      </div> --}}
+    </div>
+
+    <div class="search-content">
+      <fieldset>
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <div class="icons-container">
+          <div id="search-icon"></div>
+        </div>
+      </fieldset>
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
@@ -30,11 +43,6 @@
       {{!-- Algolia search bar --}}
       <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
       <i class="search-icon" aria-hidden="true"></i>
-    </div>
-
-    <div class="input-container">
-      <input type="text" placeholder="Search Docs">
-      <div class="search"></div>
     </div>
   </nav>
 </header>
