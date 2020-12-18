@@ -4,7 +4,6 @@ var searchIcon = document.getElementById('search-icon')
 var searchBar = document.getElementById('search-bar')
 
 searchIcon.onclick = function () {
-  console.log('PROUT')
   //Focus Search Bar (Expand it).
   searchBar.focus()
 }

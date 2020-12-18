@@ -10,7 +10,7 @@ $nice-blue: rgb(54, 147, 209);
   right: 0;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: auto;
 
   fieldset {
     outline: 0;
@@ -20,15 +20,15 @@ $nice-blue: rgb(54, 147, 209);
   }
 
   #search-bar {
-    height: 2.2em;
+    height: 2.6em;
     width: 2.2em;
     font-size: 16px;
     border: 0;
     border-radius: 4px;
     color: var(--color-white);
-    background-color: var(--color-blue-bonita);
+    background-color: inherit;
     right: 0;
-    top: -0.6em;
+    top: -0.9em;
     position: absolute;
     box-shadow: 0 3px 19px 3px rgba(15, 15, 15, 0.2);
     transition: all, 0.7s;
@@ -37,20 +37,36 @@ $nice-blue: rgb(54, 147, 209);
     &:focus {
       outline: 0;
       width: 100%;
-      border: 1px solid var(--color-white);
-      box-shadow: 0 0 10px 0.3px var(--color-white);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-blue-bonita);
+      color: var(--color-blue-bonita);
+      padding: 10px;
 
       &::-webkit-input-placeholder {
         opacity: 0.8;
       }
     }
+
     /* Add placeholder style (Only for Chrome) */
     &::-webkit-input-placeholder {
       /* Start hidden since the input is shrunk */
       opacity: 0;
       font-size: 16px;
-      color: var(--color-white);
+      color: var(--color-blue-bonita);
       width: 1px;
+    }
+  }
+
+  &:focus-within {
+    width: 100%;
+
+    .icons-container #search-icon {
+      border-color: var(--color-blue-bonita);
+
+      &::after {
+        background-color: var(--color-blue-bonita);
+        border-color: var(--color-blue-bonita);
+      }
     }
   }
 
@@ -75,7 +91,6 @@ $nice-blue: rgb(54, 147, 209);
       border-radius: 50%;
       border: 3px solid var(--color-white);
       transition: opacity 0.25s ease, transform 0.43s ease-in-out;
-      box-shadow: 0 0 1px 0.2px rgba(170, 229, 218, 0.761);
       /* Search Icon (line) */
       &::after {
         content: "";
@@ -87,7 +102,6 @@ $nice-blue: rgb(54, 147, 209);
         transform: rotate(-35deg);
         height: 10px;
         background-color: var(--color-white);
-        box-shadow: 0 0 1px 0.2px rgba(170, 229, 218, 0.761);
       }
     }
   }

@@ -244,8 +244,11 @@ body {
     .navbar-link:hover,
     .navbar-item:hover,
     .navbar-menu .navbar-item:hover a {
-      color: var(--color-white);
       background-color: var(--color-blue-bonita);
+
+      .navbar-link {
+        color: var(--color-white);
+      }
     }
   }
 
