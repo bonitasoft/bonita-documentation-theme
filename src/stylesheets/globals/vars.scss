@@ -17,6 +17,7 @@
   --color-jet-80: #191919;
   --color-black: #000;
   --color-blue-bonita: #083355;
+  --color-red-bonita: #e22936;
   --color-unfocused: #ffffff85;
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -117,7 +118,9 @@
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
+  --nav-panel-height--desktop: calc(
+    var(--nav-height--desktop) - var(--drawer-height)
+  );
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
@@ -131,6 +134,6 @@
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
 
-  --border-radius: .3rem;
+  --border-radius: 0.3rem;
   --card-index-border: #ebf2f2;
 }
