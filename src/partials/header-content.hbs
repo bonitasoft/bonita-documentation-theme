@@ -26,15 +26,15 @@
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-item is-hoverable">
+      {{!-- <div class="navbar-item is-hoverable">
         <a href="#" class="navbar-link">Getting started</a>
-      </div>
+      </div> --}}
       <div class="navbar-item is-hoverable">
-        <a href="#" class="navbar-link">Community</a>
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
       </div>
       {{#each site.components}}
       <div class="navbar-item is-hoverable">
-        <a class="navbar-link" href="#">{{{./title}}}</a>
+        <a class="navbar-link" href="{{{./latestVersion.url}}}">{{{./title}}}</a>
       </div>
       {{/each}}
     </div>
