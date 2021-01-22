@@ -46,7 +46,6 @@
     "highlight.js": "~9.18",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
-    "node-sass": "^4.12.0",
     "postcss-calc": "~7.0",
     "postcss-custom-properties": "~9.1",
     "postcss-import": "~12.0",
@@ -64,6 +63,6 @@
     "vinyl-fs": "~3.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2"
+    "node-sass": "^5.0.0"
   }
 }

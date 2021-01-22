@@ -14,6 +14,7 @@ footer {
       font-size: 1.3rem;
       font-weight: normal;
       margin-right: 1rem;
+      text-align: center;
     }
 
     input {
@@ -32,10 +33,10 @@ footer {
       height: 2rem;
       border: none;
       margin: 0;
-      margin-right: 0.5rem;
       font-size: 0.7rem;
       background-color: var(--color-red-bonita);
       color: var(--color-white);
+      font-weight: bold;
     }
   }
 
@@ -54,11 +55,13 @@ footer {
         line-height: 1.2rem;
       }
     }
+
     .social-links,
     .footer-footer {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
 
       ul {
         list-style-type: none;
@@ -92,11 +95,62 @@ footer {
     }
 
     .footer-footer {
-      font-size: 0.6rem;
+      display: block;
+      font-size: 0.7rem;
 
       a {
         text-decoration: none;
         color: var(--color-white);
+      }
+
+      .footer-bonita-logo {
+        background: url(../img/bonitasoft-logo.svg) no-repeat;
+        background-size: contain;
+        height: 2rem;
+        width: 7rem;
+        margin: 1rem auto;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    padding: 1rem 2rem;
+
+    .footer-header {
+      flex-direction: column;
+
+      h3 {
+        margin-right: 0;
+      }
+
+      input {
+        width: 100%;
+
+        &::placeholder {
+          text-align: center;
+        }
+      }
+
+      button {
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+
+    .footer-body {
+      margin-top: 1rem;
+
+      .footer-content {
+        padding: 0;
+      }
+
+      .social-links {
+        ul {
+          padding: 0;
+        }
       }
     }
   }
