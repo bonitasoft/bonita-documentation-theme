@@ -13,17 +13,34 @@ const uglify = require('gulp-uglify')
 const vfs = require('vinyl-fs')
 const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
+const ospath = require('path')
+const path = ospath.posix
+const postcssUrl = require('postcss-url')
 
 module.exports = (src, dest, preview) => () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
-  const postcssPlugins = [require('@csstools/postcss-sass'), autoprefixer()]
+  const postcssPlugins = [require('@csstools/postcss-sass'),
+    autoprefixer(),
+    postcssUrl({
+      filter: '**/~typeface-*/files/*',
+      url: (asset) => {
+        const relpath = asset.pathname.substr(1)
+        const abspath = require.resolve(relpath)
+        const basename = ospath.basename(abspath)
+        const destpath = ospath.join(dest, 'font', basename)
+        if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)
+        return path.join('..', 'font', basename)
+      },
+    })]
 
   function scss () {
     return vfs
       .src('stylesheets/site.scss', { ...opts, sourcemaps })
       .pipe(postcss(postcssPlugins))
-      .pipe(sass())
+      .pipe(sass(sass({
+        includePaths: ['./node_modules'],
+      })))
   }
 
   return merge(
