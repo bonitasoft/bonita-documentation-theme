@@ -146,3 +146,8 @@
     return selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el
   }
 })()
+
+function toggleDarkThemeMode () {
+  var element = document.body
+  element.classList.toggle('dark-mode')
+}
