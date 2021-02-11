@@ -39,6 +39,11 @@
       {{/each}}
     </div>
 
+    {{!-- Dark theme --}}
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    </div>
+
     <div class="navbar-item search-item hide-for-print">
       {{!-- Algolia search bar --}}
       <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">

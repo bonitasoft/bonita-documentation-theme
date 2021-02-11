@@ -25,7 +25,7 @@ body {
 }
 
 /*******************
-****** Mavbar ******
+****** Navbar ******
 ********************/
 
 .navbar {
@@ -149,9 +149,9 @@ body {
   font-family: inherit;
   font-size: 0.85rem;
   background-color: transparent;
-  color: var(--navbar-font-color);
+  color: var(--color-focused);
   border: none;
-  border-bottom: 1px solid var(--navbar-font-color);
+  border-bottom: 1px solid var(--color-focused);
   border-radius: 0;
   outline: none;
   -webkit-box-shadow: none;
@@ -204,7 +204,7 @@ body {
       }
 
       a:hover {
-        color: var(--color-white);
+        color: var(--navbar-focused-font-color);
       }
     }
 
