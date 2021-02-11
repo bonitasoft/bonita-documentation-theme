@@ -305,7 +305,7 @@ html.is-clipped--nav {
 
 input[type="checkbox"] {
   position: relative;
-  width: 3.5rem;
+  width: 2.5rem;
   height: 1rem;
   -webkit-appearance: none;
   background: var(--color-white);
@@ -332,16 +332,5 @@ input[type="checkbox"]::before {
 }
 
 input:checked[type="checkbox"]::before {
-  left: 2.5rem;
-}
-
-.dark-mode {
-  * {
-    background-color: var(--color-blue-bonita);
-    color: var(--color-white);
-  }
-
-  .toolbar {
-    background-color: var(--color-blue-bonita);
-  }
+  left: 1.5rem;
 }
