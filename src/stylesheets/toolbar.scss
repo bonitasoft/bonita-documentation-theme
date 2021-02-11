@@ -40,20 +40,13 @@
 }
 
 .home-link {
-  background: url(../img/home-o.svg) no-repeat 50% 45%;
-  background-size: 50%;
   display: block;
-  height: 2.5rem;
   padding: 0;
-  width: 2.5rem;
+  fill: var(--color-jet-50);
 
   &:hover {
-    background-image: url(../img/home.svg);
+    fill: var(--color-black);
   }
-}
-
-.home-link.is-current {
-  background-image: url(../img/home.svg);
 }
 
 .edit-this-page {

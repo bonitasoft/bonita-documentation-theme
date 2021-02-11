@@ -1,4 +1,5 @@
 :root {
+  // Light color set
   --color-white-light: #fff;
   --color-text-light-light: #556;
   --color-smoke-10-light: #fefefe;
@@ -19,28 +20,34 @@
   --color-blue-bonita-light: #083355;
   --color-red-bonita-light: #e22936;
   --color-unfocused-light: #ffffff85;
-
-  --color-white-dark: #000;
+  --color-focused-light: #fff;
+  --color-link-light: #1565c0;
+  --color-link-hover-light: #104d92;
+  // Dark color set
+  --color-white-dark: #1a202d;
   --color-text-light-dark: #556;
-  --color-smoke-10-dark: #fefefe;
-  --color-smoke-30-dark: #fafafa;
-  --color-smoke-50-dark: #f5f5f5;
-  --color-smoke-70-dark: #f0f0f0;
-  --color-smoke-90-dark: #e1e1e1;
-  --color-gray-10-dark: #c1c1c1;
-  --color-gray-30-dark: #8e8e8e;
-  --color-gray-50-dark: #808080;
-  --color-gray-70-dark: #5d5d5d;
+  --color-smoke-10-dark: #141a28;
+  --color-smoke-30-dark: #192030;
+  --color-smoke-50-dark: #212a3f;
+  --color-smoke-70-dark: #27314a;
+  --color-smoke-90-dark: #2b3652;
+  --color-gray-10-dark: #5d5d5d;
+  --color-gray-30-dark: #808080;
+  --color-gray-50-dark: #8e8e8e;
+  --color-gray-70-dark: #c1c1c1;
   --color-jet-20-dark: #4a4a4a;
   --color-jet-30-dark: #424242;
-  --color-jet-50-dark: #333;
-  --color-jet-70-dark: #222;
-  --color-jet-80-dark: #191919;
-  --color-black-dark: #000;
-  --color-blue-bonita-dark: #1a202d;
+  --color-jet-50-dark: #d8d8d8;
+  --color-jet-70-dark: #dadada;
+  --color-jet-80-dark: #dcdcdc;
+  --color-black-dark: #fff;
+  --color-blue-bonita-dark: #202635;
   --color-red-bonita-dark: #e22936;
   --color-unfocused-dark: #ffffff85;
-
+  --color-focused-dark: #fff;
+  --color-link-dark: #e0cb2e;
+  --color-link-hover-dark: #f9e236;
+  // Used color set -> Updated with light / dakr values depending on the user choice
   --color-white: var(--color-white-light);
   --color-text-light: var(--color-text-light-light);
   --color-smoke-10: var(--color-smoke-10-light);
@@ -61,7 +68,10 @@
   --color-blue-bonita: var(--color-blue-bonita-light);
   --color-red-bonita: var(--color-red-bonita-light);
   --color-unfocused: var(--color-unfocused-light);
-
+  --color-focused: var(--color-focused-light);
+  --color-link: var(--link-color-light);
+  --color-link-hover: var(--link-color-hover-light);
+  // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
   --body-font-size--desktop: 1.125em;
@@ -79,6 +89,7 @@
   --navbar-background: var(--color-blue-bonita);
   --navbar-font-color: var(--color-white);
   --navbar-unfocused-font-color: var(--color-unfocused);
+  --navbar-focused-font-color: var(--color-focused);
   --navbar_hover-background: var(--color-black);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
@@ -124,13 +135,13 @@
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
-  --link_hover-font-color: #104d92;
+  --link-font-color: var(--color-link);
+  --link_hover-font-color: var(--color-link-hover);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--panel-background);
+  --admonition-background: var(--color-smoke-70);
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
@@ -161,9 +172,7 @@
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(
-    var(--nav-height--desktop) - var(--drawer-height)
-  );
+  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
@@ -176,7 +185,6 @@
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
-
   --border-radius: 0.3rem;
   --card-index-border: #ebf2f2;
 }

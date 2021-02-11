@@ -169,9 +169,13 @@ function toggleDarkThemeMode (checkbox) {
     updateCSSProperty('--color-jet-50', '--color-jet-50-dark')
     updateCSSProperty('--color-jet-70', '--color-jet-70-dark')
     updateCSSProperty('--color-jet-80', '--color-jet-80-dark')
+    updateCSSProperty('--color-black', '--color-black-dark')
     updateCSSProperty('--color-blue-bonita', '--color-blue-bonita-dark')
     updateCSSProperty('--color-red-bonita', '--color-red-bonita-dark')
     updateCSSProperty('--color-unfocused', '--color-unfocused-dark')
+    updateCSSProperty('--color-focused', '--color-focused-dark')
+    updateCSSProperty('--color-link', '--color-link-dark')
+    updateCSSProperty('--color-link-hover', '--color-link-hover-dark')
   } else {
     updateCSSProperty('--color-white', '--color-white-light')
     updateCSSProperty('--color-text-light', '--color-text-light')
@@ -189,8 +193,12 @@ function toggleDarkThemeMode (checkbox) {
     updateCSSProperty('--color-jet-50', '--color-jet-50-light')
     updateCSSProperty('--color-jet-70', '--color-jet-70-light')
     updateCSSProperty('--color-jet-80', '--color-jet-80-light')
+    updateCSSProperty('--color-black', '--color-black-light')
     updateCSSProperty('--color-blue-bonita', '--color-blue-bonita-light')
     updateCSSProperty('--color-red-bonita', '--color-red-bonita-light')
     updateCSSProperty('--color-unfocused', '--color-unfocused-light')
+    updateCSSProperty('--color-focused', '--color-focused-light')
+    updateCSSProperty('--color-link', '--color-link-light')
+    updateCSSProperty('--color-link-hover', '--color-link-hover-light')
   }
 }
