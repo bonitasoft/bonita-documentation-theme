@@ -1,7 +1,7 @@
 footer {
   display: block;
   background-color: var(--color-blue-bonita);
-  color: var(--color-white);
+  color: var(--color-focused);
   padding: 5rem;
   padding-bottom: 2rem;
 
@@ -35,7 +35,7 @@ footer {
       margin: 0;
       font-size: 0.7rem;
       background-color: var(--color-red-bonita);
-      color: var(--color-white);
+      color: var(--color-focused);
       font-weight: bold;
     }
   }
@@ -72,20 +72,20 @@ footer {
           font-size: 0.8rem;
 
           a {
-            color: var(--color-white);
+            color: var(--color-focused);
             text-decoration: none;
 
             svg {
               height: 1.2rem;
               width: 1.2rem;
-              fill: var(--color-white);
+              fill: var(--color-focused);
             }
           }
         }
       }
 
       .border-right li {
-        border-right: 0.1rem solid var(--color-white);
+        border-right: 0.1rem solid var(--color-focused);
         line-height: 0.2rem;
 
         &:last-child {
@@ -100,7 +100,7 @@ footer {
 
       a {
         text-decoration: none;
-        color: var(--color-white);
+        color: var(--color-focused);
       }
 
       .footer-bonita-logo {
