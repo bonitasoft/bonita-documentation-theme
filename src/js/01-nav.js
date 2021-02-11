@@ -148,9 +148,12 @@
 })()
 
 function updateCSSProperty (propertyToUpdate, propertyValue) {
-  document.documentElement.style.setProperty(propertyToUpdate, getComputedStyle(document.body).getPropertyValue(propertyValue))
+  document.documentElement.style.setProperty(propertyToUpdate,
+    // eslint-disable-next-line no-undef
+    getComputedStyle(document.body).getPropertyValue(propertyValue))
 }
 
+// eslint-disable-next-line no-unused-vars
 function toggleDarkThemeMode (checkbox) {
   if (checkbox.checked) {
     updateCSSProperty('--color-white', '--color-white-dark')
