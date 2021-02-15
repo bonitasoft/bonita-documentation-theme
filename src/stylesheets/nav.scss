@@ -337,6 +337,14 @@ input:checked[type="checkbox"]::before {
   left: 1.5rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .theme-switch-wrapper {
+    position: absolute;
+    right: 0;
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 767px) {
   input[type="checkbox"] {
     border: 0.1rem solid var(--color-blue-bonita);
