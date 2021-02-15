@@ -341,6 +341,7 @@ input:checked[type="checkbox"]::before {
   .theme-switch-wrapper {
     position: absolute;
     right: 0;
+    top: 0;
     width: auto;
   }
 }

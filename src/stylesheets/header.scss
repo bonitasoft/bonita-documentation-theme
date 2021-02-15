@@ -221,7 +221,7 @@ body {
 /* Colors for small screens */
 @media screen and (max-width: 1023px) {
   .navbar-menu {
-    background: var(--color-smoke-30);
+    background: var(--color-smoke-50);
 
     .navbar-item {
       background-color: var(--color-white);
@@ -237,14 +237,14 @@ body {
 
     .navbar-link,
     .navbar-item a {
-      color: var(--color-blue-bonita);
+      color: var(--color-nav-item);
     }
 
     > a.navbar-item:hover,
     .navbar-link:hover,
     .navbar-item:hover,
     .navbar-menu .navbar-item:hover a {
-      background-color: var(--color-blue-bonita);
+      background-color: var(--color-nav-item);
 
       .navbar-link {
         color: var(--color-white);
@@ -254,6 +254,31 @@ body {
 
   .navbar-menu.is-active {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  }
+
+  .search-bar {
+    background-color: transparent;
+    color: var(--body-font-color);
+    border-bottom: 1px solid var(--body-font-color);
+    width: 15rem;
+    opacity: 1;
+
+    &::placeholder {
+      color: var(--body-font-color);
+    }
+  }
+
+  .search-icon {
+    filter: invert(100%);
+  }
+
+  .search-item {
+    opacity: 0.6;
+
+    &:focus-within,
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -308,7 +333,8 @@ body {
   }
 
   .search-item {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .search-content {
