@@ -1,34 +1,32 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
+      <div class="navbar-item">
+        <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
+      </div>
+
+      <button class="navbar-burger" data-target="search-container">
+        <i class="search-icon" aria-hidden="true"></i>
+      </button>
+
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="navbar-item">
-        <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
-      </div>
-
-      {{!-- <div class="input-container">
-        <input type="text" placeholder="Search Docs">
-        <div class="search"></div>
-      </div> --}}
-    </div>
-
-    <div class="search-content">
-      <fieldset>
-        <input type="text" id="search-query-mobile" placeholder="Search..." />
-        <div class="icons-container">
-          <div id="search-icon"></div>
-        </div>
-      </fieldset>
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
-      {{!-- <div class="navbar-item is-hoverable">
-        <a href="#" class="navbar-link">Getting started</a>
-      </div> --}}
+      <div class="theme-switch-wrapper-mobile">
+        <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check-mobile">
+        <div class="toggle-content">
+          <label class="label" for="check-mobile">
+            <span>🌜</span>
+            <span>🌞</span>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
       <div class="navbar-item is-hoverable">
         <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
       </div>
@@ -40,14 +38,23 @@
     </div>
 
     {{!-- Dark theme --}}
-    <div class="theme-switch-wrapper">
-      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    <div class="navbar-search" id="search-container">
+      <div class="navbar-item search-item hide-for-print">
+        {{!-- Algolia search bar --}}
+        <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+        <i class="search-icon" aria-hidden="true"></i>
+      </div>
+      <div class="theme-switch-wrapper">
+        <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
+        <div class="toggle-content">
+          <label class="label" for="check">
+            <span>🌜</span>
+            <span>🌞</span>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
     </div>
 
-    <div class="navbar-item search-item hide-for-print">
-      {{!-- Algolia search bar --}}
-      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
-      <i class="search-icon" aria-hidden="true"></i>
-    </div>
   </nav>
 </header>

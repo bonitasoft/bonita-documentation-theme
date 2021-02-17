@@ -32,21 +32,28 @@
   padding: 0;
   width: 2.5rem;
   margin-right: -0.25rem;
+  filter: var(--filter-icon);
 }
 
 .nav-toggle.is-active {
   background-image: url(../img/back.svg);
   background-size: 41.5%;
+  filter: var(--filter-icon);
 }
 
 .home-link {
+  background: url(../img/home-o.svg) no-repeat 50% 45%;
+  background-size: 50%;
   display: block;
   padding: 0;
-  fill: var(--color-jet-50);
+  height: 2.5rem;
+  width: 2.5rem;
+  filter: var(--filter-icon);
+}
 
-  &:hover {
-    fill: var(--color-black);
-  }
+.home-link.is-current {
+  background-image: url(../img/home.svg);
+  filter: var(--filter-icon);
 }
 
 .edit-this-page {

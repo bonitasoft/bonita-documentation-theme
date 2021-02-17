@@ -73,7 +73,8 @@ body {
 ****** Navbar menu ******
 *************************/
 
-.navbar-menu {
+.navbar-menu,
+.navbar-search {
   display: none;
 }
 
@@ -98,8 +99,11 @@ body {
   line-height: 1;
   height: var(--navbar-height);
   position: relative;
-  width: 2.75rem;
+  width: 2rem;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   span {
     background: var(--navbar-font-color);
@@ -174,6 +178,7 @@ body {
   padding: 0;
   width: 1rem;
   opacity: inherit;
+  filter: var(--filter-icon-search-dark); // On large screen the search is on the toolbar, which is always dark
 }
 
 .search-item {
@@ -187,6 +192,72 @@ body {
 
 .algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
   max-height: calc(100vh - 3.25rem);
+}
+
+/**************************
+********* TOGGLE **********
+***************************/
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.theme-switch-wrapper-mobile {
+  display: none;
+}
+
+.toggle-content {
+  background-color: transparent;
+  color: var(--navbar-menu-font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: var(--color-blue-bonita);
+  border: 2px solid var(--color-unfocused);
+  border-radius: 5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.3rem;
+  height: 1.8rem;
+  width: 3.8rem;
+  font-size: 1rem;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.label .ball {
+  position: absolute;
+  background-color: var(--color-unfocused);
+  border-radius: 50%;
+
+  left: 0.25rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+.checkbox:checked + .toggle-content .label .ball {
+  transform: translateX(1.7rem);
+}
+
+.checkbox:checked + .toggle-content {
+  --dark-opacity: 1;
+  --light-opacity: 0;
 }
 
 /**************************
@@ -221,7 +292,7 @@ body {
 /* Colors for small screens */
 @media screen and (max-width: 1023px) {
   .navbar-menu {
-    background: var(--color-smoke-30);
+    background: var(--color-smoke-50);
 
     .navbar-item {
       background-color: var(--color-white);
@@ -237,14 +308,14 @@ body {
 
     .navbar-link,
     .navbar-item a {
-      color: var(--color-blue-bonita);
+      color: var(--color-nav-item);
     }
 
     > a.navbar-item:hover,
     .navbar-link:hover,
     .navbar-item:hover,
     .navbar-menu .navbar-item:hover a {
-      background-color: var(--color-blue-bonita);
+      background-color: var(--color-nav-item);
 
       .navbar-link {
         color: var(--color-white);
@@ -252,15 +323,62 @@ body {
     }
   }
 
-  .navbar-menu.is-active {
+  .navbar-search {
+    background: var(--color-smoke-50);
+
+    .navbar-item {
+      background-color: var(--color-white);
+      border: 2px solid var(--color-nav-item);
+      border-radius: 5px;
+      margin: 10px;
+      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    }
+
+    .navbar-link {
+      font-weight: bold;
+    }
+
+    .navbar-link,
+    .navbar-item a {
+      color: var(--color-nav-item);
+    }
+
+    .search-icon {
+      filter: var(--filter-icon-search);
+    }
+  }
+
+  .navbar-menu.is-active,
+  .navbar-search.is-active {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  }
+
+  .search-bar {
+    background-color: transparent;
+    color: var(--body-font-color);
+    width: 15rem;
+    opacity: 1;
+
+    &::placeholder {
+      color: var(--body-font-color);
+    }
+  }
+
+  .search-item {
+    opacity: 0.6;
+
+    &:focus-within,
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
 /* Layout for large screens */
 @media screen and (min-width: 1024px) {
   .navbar,
-  .navbar-menu {
+  .navbar-menu,
+  .navbar-search {
     align-items: stretch;
     display: flex;
     flex-direction: row;
@@ -288,7 +406,8 @@ body {
   }
 
   .input-container,
-  .search-content { // input container will probably need to be removed
+  .search-content {
+    // input container will probably need to be removed
     display: none;
   }
 }
@@ -298,6 +417,7 @@ body {
   .navbar-brand .navbar-item {
     align-items: center;
     display: flex;
+    flex-grow: 1;
   }
 
   .bonita-logo {
@@ -307,21 +427,34 @@ body {
   }
 
   .search-item {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+
+    .algolia-autocomplete {
+      width: 100%;
+    }
+
+    .search-icon {
+      height: 1.5rem;
+      margin-top: 3px;
+      margin-left: 10px;
+      width: 1.5rem;
+    }
   }
 
   .search-content {
     display: flex;
   }
 
-  .navbar-menu {
+  .navbar-menu,
+  .navbar-search {
     padding: 0.5rem 0;
   }
 
-  .navbar-menu.is-active {
+  .navbar-menu.is-active,
+  .navbar-search.is-active {
     display: block;
     max-height: var(--nav-height);
-    overflow-y: auto;
   }
 
   summary {
@@ -338,127 +471,33 @@ body {
     display: inline;
   }
 
-  .input-container {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 2rem;
-    bottom: 0;
-    width: 92%;
-    height: 100px;
-    transition: 0.2s;
+  .search-bar {
+    line-height: 1.8;
+    width: 100%;
+    opacity: 1;
+    border: none;
 
-    .search {
-      position: absolute;
-      margin: auto;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      transition: all 1s;
-      z-index: 4;
-      opacity: 0.6;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        margin: auto;
-        top: 8px;
-        right: 0;
-        bottom: 0;
-        left: 8px;
-        width: 5px;
-        height: 2px;
-        background: var(--color-white);
-        transform: rotate(45deg);
-        transition: all 0.5s;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        margin: auto;
-        top: -3px;
-        right: 0;
-        bottom: 0;
-        left: -3px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        border: 2px solid var(--color-white);
-        transition: all 0.5s;
-      }
+    &::placeholder {
+      color: var(--color-gray-70);
+      font-style: italic;
     }
+  }
 
-    input {
-      position: absolute;
-      margin: auto;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 99%;
-      height: 35px;
-      outline: none;
-      border: 1px soild var(--color-white);
-      background: var(--color-white);
-      color: var(--color-blue-bonita);
-      padding: 0 80px 0 20px;
-      border-radius: 30px;
-      transition: all 1s;
-      opacity: 0;
-      z-index: 5;
+  .theme-switch-wrapper-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    right: 0;
+    width: auto;
+  }
 
-      &:hover {
-        cursor: pointer;
-      }
+  .theme-switch-wrapper {
+    display: none;
+  }
 
-      &:focus {
-        width: 99%;
-        opacity: 1;
-        cursor: text;
-        border: 1px solid var(--color-blue-bonita);
-        background: var(--color-white);
-        color: var(--color-blue-bonita);
-      }
-
-      &:focus ~ .search {
-        right: 0.2rem;
-        background: var(--color-blue-bonita);
-        border: none;
-        z-index: 6;
-      }
-
-      &:focus ~ .search::before {
-        top: 0;
-        left: 0;
-        width: 15px;
-      }
-
-      &:focus ~ .search::after {
-        top: 0;
-        left: 0;
-        width: 15px;
-        height: 2px;
-        border: none;
-        background: var(--color-white);
-        border-radius: 0%;
-        transform: rotate(-45deg);
-      }
-
-      &::placeholder {
-        color: var(--color-blue-bonita);
-        opacity: 0.5;
-        font-weight: bolder;
-      }
-    }
+  .label span {
+    height: 1rem;
   }
 }
 

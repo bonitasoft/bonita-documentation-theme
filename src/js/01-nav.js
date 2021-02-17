@@ -179,6 +179,10 @@ function toggleDarkThemeMode (checkbox) {
     updateCSSProperty('--color-focused', '--color-focused-dark')
     updateCSSProperty('--color-link', '--color-link-dark')
     updateCSSProperty('--color-link-hover', '--color-link-hover-dark')
+    updateCSSProperty('--color-nav-item', '--color-nav-item-dark')
+    /* filter icon variables */
+    updateCSSProperty('--filter-icon', '--filter-icon-dark')
+    updateCSSProperty('--filter-icon-search', '--filter-icon-search-dark')
   } else {
     updateCSSProperty('--color-white', '--color-white-light')
     updateCSSProperty('--color-text-light', '--color-text-light')
@@ -203,5 +207,9 @@ function toggleDarkThemeMode (checkbox) {
     updateCSSProperty('--color-focused', '--color-focused-light')
     updateCSSProperty('--color-link', '--color-link-light')
     updateCSSProperty('--color-link-hover', '--color-link-hover-light')
+    updateCSSProperty('--color-nav-item', '--color-nav-item-light')
+    /* filter icon variables */
+    updateCSSProperty('--filter-icon', '--filter-icon-light')
+    updateCSSProperty('--filter-icon-search', '--filter-icon-search-light')
   }
 }

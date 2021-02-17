@@ -1,12 +1,7 @@
 <div class="toolbar" role="navigation">
   {{> nav-toggle}}
   {{#with site.homeUrl}}
-  <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}">
-    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
-      <path d="M0 0h48v48H0z" fill="none" />
-    </svg>
-  </a>
+  <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}"></a>
   {{/with}}
   {{> breadcrumbs}}
   {{> page-versions}}
