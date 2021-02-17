@@ -19,7 +19,7 @@
   --color-black-light: #000;
   --color-blue-bonita-light: #083355;
   --color-red-bonita-light: #e22936;
-  --color-unfocused-light: #ffffff85;
+  --color-unfocused-light: var(--color-smoke-70-light);
   --color-focused-light: #fff;
   --color-link-light: #1565c0;
   --color-link-hover-light: #104d92;
@@ -44,7 +44,7 @@
   --color-black-dark: #fff;
   --color-blue-bonita-dark: #232f3e;
   --color-red-bonita-dark: #e22936;
-  --color-unfocused-dark: #ffffff85;
+  --color-unfocused-dark: #dcdcdc;
   --color-focused-dark: #fff;
   --color-link-dark: #e0cb2e;
   --color-link-hover-dark: #f9e236;
@@ -192,13 +192,14 @@
   --z-index-navbar: 4;
   --border-radius: 0.3rem;
   --card-index-border: #ebf2f2;
-  //Icon filter definitions
+  //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Light icon set
-  --filter-icon-light: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg)
-    brightness(100%) contrast(102%);
+  --filter-icon-light: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%); // black
+  --filter-icon-search-light: invert(15%) sepia(13%) saturate(6139%) hue-rotate(174deg) brightness(100%) contrast(94%); // bonita blue
   // Dark icon set
-  --filter-icon-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg)
-    brightness(112%) contrast(112%);
+  --filter-icon-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
+  --filter-icon-search-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
   // Used icon set
   --filter-icon: var(--filter-icon-light);
+  --filter-icon-search: var(--filter-icon-search-light);
 }
