@@ -178,7 +178,9 @@ body {
   padding: 0;
   width: 1rem;
   opacity: inherit;
-  filter: var(--filter-icon-search-dark); // On large screen the search is on the toolbar, which is always dark
+  filter: var(
+    --filter-icon-search-dark
+  ); // On large screen the search is on the toolbar, which is always dark
 }
 
 .search-item {
@@ -233,7 +235,7 @@ body {
   padding: 0.5rem 0.5rem 0.5rem 0.3rem;
   height: 1.8rem;
   width: 3.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: background 0.5s ease;
   cursor: pointer;
   z-index: 1;

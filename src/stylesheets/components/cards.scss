@@ -16,7 +16,10 @@
 }
 
 .card-section-2col .sectionbody {
-  grid-template-columns: repeat(auto-fill, minmax(calc(max(50% - 0.5rem, 250px)), 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(max(50% - 0.5rem, 250px)), 1fr)
+  );
 }
 
 .card-section .sectionbody > :not(.card) {
@@ -24,7 +27,9 @@
 }
 
 .card {
-  .content, .paragraph, p {
+  .content,
+  .paragraph,
+  p {
     display: inline;
   }
 }
@@ -42,13 +47,15 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem 1.2rem;
+  text-align: center;
 
   .card-body {
     flex-grow: 1;
   }
 }
 
-.card-title, .card-body {
+.card-title,
+.card-body {
   display: block;
 }
 
@@ -56,7 +63,7 @@
   border-radius: var(--border-radius);
   color: inherit;
   text-decoration: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
 
   .card-title {
     font-family: var(--heading);
@@ -64,8 +71,7 @@
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 1.2rem;
-
-   }
+  }
 }
 
 .card-index a {
@@ -93,6 +99,13 @@
     transform: translateY(-3px);
     top: -3px;
     box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
+    background: linear-gradient(
+      90deg,
+      var(--color-smoke-10),
+      var(--color-smoke-30),
+      var(--color-smoke-50)
+    );
+    transition: all 0.3s ease-in-out;
   }
 }
 
