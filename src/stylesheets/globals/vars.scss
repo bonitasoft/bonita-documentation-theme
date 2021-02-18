@@ -19,7 +19,7 @@
   --color-black-light: #000;
   --color-blue-bonita-light: #083355;
   --color-red-bonita-light: #e22936;
-  --color-unfocused-light: var(--color-smoke-70-light);
+  --color-unfocused-light: #ffffffc2;
   --color-focused-light: #fff;
   --color-link-light: #1565c0;
   --color-link-hover-light: #104d92;
@@ -44,7 +44,7 @@
   --color-black-dark: #fff;
   --color-blue-bonita-dark: #232f3e;
   --color-red-bonita-dark: #e22936;
-  --color-unfocused-dark: #dcdcdc;
+  --color-unfocused-dark: #dcdcdcc2;
   --color-focused-dark: #fff;
   --color-link-dark: #e0cb2e;
   --color-link-hover-dark: #f9e236;
@@ -74,6 +74,7 @@
   --color-link: var(--color-link-light);
   --color-link-hover: var(--color-link-hover-light);
   --color-nav-item: var(--color-nav-item-light);
+  --color-blue-bright: #0fe;
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
