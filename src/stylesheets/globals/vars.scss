@@ -19,7 +19,7 @@
   --color-black-light: #000;
   --color-blue-bonita-light: #083355;
   --color-red-bonita-light: #e22936;
-  --color-unfocused-light: var(--color-smoke-70-light);
+  --color-unfocused-light: #ffffffc2;
   --color-focused-light: #fff;
   --color-link-light: #1565c0;
   --color-link-hover-light: #104d92;
@@ -44,7 +44,7 @@
   --color-black-dark: #fff;
   --color-blue-bonita-dark: #232f3e;
   --color-red-bonita-dark: #e22936;
-  --color-unfocused-dark: #dcdcdc;
+  --color-unfocused-dark: #dcdcdcc2;
   --color-focused-dark: #fff;
   --color-link-dark: #e0cb2e;
   --color-link-hover-dark: #f9e236;
@@ -71,9 +71,10 @@
   --color-red-bonita: var(--color-red-bonita-light);
   --color-unfocused: var(--color-unfocused-light);
   --color-focused: var(--color-focused-light);
-  --color-link: var(--link-color-light);
-  --color-link-hover: var(--link-color-hover-light);
+  --color-link: var(--color-link-light);
+  --color-link-hover: var(--color-link-hover-light);
   --color-nav-item: var(--color-nav-item-light);
+  --color-blue-bright: #0fe;
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -175,9 +176,7 @@
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(
-    var(--nav-height--desktop) - var(--drawer-height)
-  );
+  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
