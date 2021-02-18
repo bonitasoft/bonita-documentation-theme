@@ -4,7 +4,7 @@
     background-color: var(--nav-background);
   }
 
-  [class^='ds-dataset-'] {
+  [class^="ds-dataset-"] {
     background-color: var(--nav-background);
   }
 }
@@ -17,6 +17,16 @@
 /* Category (eg. Downloads) */
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
   color: gray;
+}
+
+.algolia-docsearch-suggestion--subcategory-column,
+.algolia-docsearch-suggestion--subcategory-inline,
+.algolia-docsearch-suggestion--category-header {
+  display: none !important;
+}
+
+.algolia-docsearch-suggestion--content {
+  width: 100% !important;
 }
 
 /* Title (eg. Bootstrap CDN) */
@@ -35,8 +45,12 @@
 .algolia-autocomplete .algolia-docsearch-suggestion {
   background-color: var(--nav-background);
 
-  &--category-header .algolia-docsearch-suggestion--category-header-lvl0 .algolia-docsearch-suggestion--highlight,
-  &--category-header .algolia-docsearch-suggestion--category-header-lvl1 .algolia-docsearch-suggestion--highlight {
+  &--category-header
+    .algolia-docsearch-suggestion--category-header-lvl0
+    .algolia-docsearch-suggestion--highlight,
+  &--category-header
+    .algolia-docsearch-suggestion--category-header-lvl1
+    .algolia-docsearch-suggestion--highlight {
     padding: 0 0 1px;
     background: inherit;
     box-shadow: inset 0 -2px 0 0 var(--color-link-hover);
@@ -57,7 +71,9 @@
 }
 
 @media (max-width: 768px) {
-  .algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--subcategory-column {
+  .algolia-autocomplete
+    .algolia-docsearch-suggestion
+    .algolia-docsearch-suggestion--subcategory-column {
     color: var(--body-font-color);
   }
 }
