@@ -83,10 +83,6 @@ function isDarkTheme () {
 // init
 if (localStorage.getItem('theme') === 'dark') {
   toDarkTheme()
-  document.getElementById('check').checked = true
-  document.getElementById('check-mobile').checked = true
 } else {
   toLightTheme()
-  document.getElementById('check').checked = false
-  document.getElementById('check-mobile').checked = false
 }
