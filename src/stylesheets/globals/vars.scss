@@ -24,6 +24,16 @@
   --color-link-light: #1565c0;
   --color-link-hover-light: #104d92;
   --color-nav-item-light: var(--color-blue-bonita-light);
+  --color-admonition-note-light: #217de7;
+  --color-admonition-note-bg-light: #217de74f;
+  --color-admonition-tip-light: #41af46;
+  --color-admonition-tip-bg-light: #41af464f;
+  --color-admonition-important-light: #d32f2f;
+  --color-admonition-important-bg-light: #d32f2f4f;
+  --color-admonition-warning-light: #e18114;
+  --color-admonition-warning-bg-light: #e181144f;
+  --color-admonition-caution-light: #a0439c;
+  --color-admonition-caution-bg-light: #a0439c4f;
   // Dark color set
   --color-white-dark: #151a25;
   --color-text-light-dark: #556;
@@ -49,6 +59,16 @@
   --color-link-dark: #e0cb2e;
   --color-link-hover-dark: #f9e236;
   --color-nav-item-dark: var(--color-black-dark);
+  --color-admonition-note-dark: #11386a;
+  --color-admonition-note-bg-dark: #11386a4f;
+  --color-admonition-tip-dark: #265b37;
+  --color-admonition-tip-bg-dark: #265b374f;
+  --color-admonition-important-dark: #642d2d;
+  --color-admonition-important-bg-dark: #642d2d4f;
+  --color-admonition-warning-dark: #8b6e25;
+  --color-admonition-warning-bg-dark: #8b6e254f;
+  --color-admonition-caution-dark: #652e7c;
+  --color-admonition-caution-bg-dark: #652e7c4f;
   // Used color set -> Updated with light / dakr values depending on the user choice
   --color-white: var(--color-white-light);
   --color-text-light: var(--color-text-light-light);
@@ -75,6 +95,16 @@
   --color-link-hover: var(--color-link-hover-light);
   --color-nav-item: var(--color-nav-item-light);
   --color-blue-bright: #0fe;
+  --color-admonition-note: var(--color-admonition-note-light);
+  --color-admonition-note-bg: var(--color-admonition-note-bg-light);
+  --color-admonition-tip: var(--color-admonition-tip-light);
+  --color-admonition-tip-bg: var(--color-admonition-tip-bg-light);
+  --color-admonition-important: var(--color-admonition-important-light);
+  --color-admonition-important-bg: var(--color-admonition-important-bg-light);
+  --color-admonition-warning: var(--color-admonition-warning-light);
+  --color-admonition-warning-bg: var(--color-admonition-warning-bg-light);
+  --color-admonition-caution: var(--color-admonition-caution-light);
+  --color-admonition-caution-bg: var(--color-admonition-caution-bg-light);
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -119,16 +149,6 @@
   --toc-heading-font-color: var(--doc-font-color);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
-  --caution-color: #a0439c;
-  --caution-on-color: var(--color-white);
-  --important-color: #d32f2f;
-  --important-on-color: var(--color-white);
-  --note-color: #217ee7;
-  --note-on-color: var(--color-white);
-  --tip-color: #41af46;
-  --tip-on-color: var(--color-white);
-  --warning-color: #e18114;
-  --warning-on-color: var(--color-white);
   --doc-font-color: var(--color-jet-50);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);

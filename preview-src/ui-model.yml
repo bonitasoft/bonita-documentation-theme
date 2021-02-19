@@ -105,11 +105,11 @@ page:
       - content: Brand&#8217;s Hardware &amp; Software Requirements
         url: /bonita/7.10/index.html
         urlType: internal
-      - content: Cu Solet
-        url: '404.html'
+      - content: Overview
+        url: '/bonita/7.10/overview.html'
         urlType: internal
-      - content: English + 中文
-        url: '/bonita/7.10/index.html#english+中文'
+      - content: Misc
+        url: '/bonita/7.10/misc.html'
         urlType: internal
     - content: Liber Recusabo
       url: '#liber-recusabo'
