@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 ;(function () {
   'use strict'
 
@@ -149,67 +151,92 @@
 
 function updateCSSProperty (propertyToUpdate, propertyValue) {
   document.documentElement.style.setProperty(propertyToUpdate,
-    // eslint-disable-next-line no-undef
     getComputedStyle(document.body).getPropertyValue(propertyValue))
 }
 
-// eslint-disable-next-line no-unused-vars
+function toDarkTheme () {
+  localStorage.setItem('theme', 'dark')
+  // Update colors
+  updateCSSProperty('--color-white', '--color-white-dark')
+  updateCSSProperty('--color-text-light', '--color-text-dark')
+  updateCSSProperty('--color-smoke-10', '--color-smoke-10-dark')
+  updateCSSProperty('--color-smoke-30', '--color-smoke-30-dark')
+  updateCSSProperty('--color-smoke-50', '--color-smoke-50-dark')
+  updateCSSProperty('--color-smoke-70', '--color-smoke-70-dark')
+  updateCSSProperty('--color-smoke-90', '--color-smoke-90-dark')
+  updateCSSProperty('--color-gray-10', '--color-gray-10-dark')
+  updateCSSProperty('--color-gray-30', '--color-gray-30-dark')
+  updateCSSProperty('--color-gray-50', '--color-gray-50-dark')
+  updateCSSProperty('--color-gray-70', '--color-gray-70-dark')
+  updateCSSProperty('--color-jet-20', '--color-jet-20-dark')
+  updateCSSProperty('--color-jet-30', '--color-jet-30-dark')
+  updateCSSProperty('--color-jet-50', '--color-jet-50-dark')
+  updateCSSProperty('--color-jet-70', '--color-jet-70-dark')
+  updateCSSProperty('--color-jet-80', '--color-jet-80-dark')
+  updateCSSProperty('--color-black', '--color-black-dark')
+  updateCSSProperty('--color-blue-bonita', '--color-blue-bonita-dark')
+  updateCSSProperty('--color-red-bonita', '--color-red-bonita-dark')
+  updateCSSProperty('--color-unfocused', '--color-unfocused-dark')
+  updateCSSProperty('--color-focused', '--color-focused-dark')
+  updateCSSProperty('--color-link', '--color-link-dark')
+  updateCSSProperty('--color-link-hover', '--color-link-hover-dark')
+  updateCSSProperty('--color-nav-item', '--color-nav-item-dark')
+  /* filter icon variables */
+  updateCSSProperty('--filter-icon', '--filter-icon-dark')
+  updateCSSProperty('--filter-icon-search', '--filter-icon-search-dark')
+}
+
+function toLightTheme () {
+  localStorage.setItem('theme', 'light')
+  // Update colors
+  updateCSSProperty('--color-white', '--color-white-light')
+  updateCSSProperty('--color-text-light', '--color-text-light')
+  updateCSSProperty('--color-smoke-10', '--color-smoke-10-light')
+  updateCSSProperty('--color-smoke-30', '--color-smoke-30-light')
+  updateCSSProperty('--color-smoke-50', '--color-smoke-50-light')
+  updateCSSProperty('--color-smoke-70', '--color-smoke-70-light')
+  updateCSSProperty('--color-smoke-90', '--color-smoke-90-light')
+  updateCSSProperty('--color-gray-10', '--color-gray-10-light')
+  updateCSSProperty('--color-gray-30', '--color-gray-30-light')
+  updateCSSProperty('--color-gray-50', '--color-gray-50-light')
+  updateCSSProperty('--color-gray-70', '--color-gray-70-light')
+  updateCSSProperty('--color-jet-20', '--color-jet-20-light')
+  updateCSSProperty('--color-jet-30', '--color-jet-30-light')
+  updateCSSProperty('--color-jet-50', '--color-jet-50-light')
+  updateCSSProperty('--color-jet-70', '--color-jet-70-light')
+  updateCSSProperty('--color-jet-80', '--color-jet-80-light')
+  updateCSSProperty('--color-black', '--color-black-light')
+  updateCSSProperty('--color-blue-bonita', '--color-blue-bonita-light')
+  updateCSSProperty('--color-red-bonita', '--color-red-bonita-light')
+  updateCSSProperty('--color-unfocused', '--color-unfocused-light')
+  updateCSSProperty('--color-focused', '--color-focused-light')
+  updateCSSProperty('--color-link', '--color-link-light')
+  updateCSSProperty('--color-link-hover', '--color-link-hover-light')
+  updateCSSProperty('--color-nav-item', '--color-nav-item-light')
+  /* filter icon variables */
+  updateCSSProperty('--filter-icon', '--filter-icon-light')
+  updateCSSProperty('--filter-icon-search', '--filter-icon-search-light')
+}
+
 function toggleDarkThemeMode (checkbox) {
   if (checkbox.checked) {
-    updateCSSProperty('--color-white', '--color-white-dark')
-    updateCSSProperty('--color-text-light', '--color-text-dark')
-    updateCSSProperty('--color-smoke-10', '--color-smoke-10-dark')
-    updateCSSProperty('--color-smoke-30', '--color-smoke-30-dark')
-    updateCSSProperty('--color-smoke-50', '--color-smoke-50-dark')
-    updateCSSProperty('--color-smoke-70', '--color-smoke-70-dark')
-    updateCSSProperty('--color-smoke-90', '--color-smoke-90-dark')
-    updateCSSProperty('--color-gray-10', '--color-gray-10-dark')
-    updateCSSProperty('--color-gray-30', '--color-gray-30-dark')
-    updateCSSProperty('--color-gray-50', '--color-gray-50-dark')
-    updateCSSProperty('--color-gray-70', '--color-gray-70-dark')
-    updateCSSProperty('--color-jet-20', '--color-jet-20-dark')
-    updateCSSProperty('--color-jet-30', '--color-jet-30-dark')
-    updateCSSProperty('--color-jet-50', '--color-jet-50-dark')
-    updateCSSProperty('--color-jet-70', '--color-jet-70-dark')
-    updateCSSProperty('--color-jet-80', '--color-jet-80-dark')
-    updateCSSProperty('--color-black', '--color-black-dark')
-    updateCSSProperty('--color-blue-bonita', '--color-blue-bonita-dark')
-    updateCSSProperty('--color-red-bonita', '--color-red-bonita-dark')
-    updateCSSProperty('--color-unfocused', '--color-unfocused-dark')
-    updateCSSProperty('--color-focused', '--color-focused-dark')
-    updateCSSProperty('--color-link', '--color-link-dark')
-    updateCSSProperty('--color-link-hover', '--color-link-hover-dark')
-    updateCSSProperty('--color-nav-item', '--color-nav-item-dark')
-    /* filter icon variables */
-    updateCSSProperty('--filter-icon', '--filter-icon-dark')
-    updateCSSProperty('--filter-icon-search', '--filter-icon-search-dark')
+    toDarkTheme()
   } else {
-    updateCSSProperty('--color-white', '--color-white-light')
-    updateCSSProperty('--color-text-light', '--color-text-light')
-    updateCSSProperty('--color-smoke-10', '--color-smoke-10-light')
-    updateCSSProperty('--color-smoke-30', '--color-smoke-30-light')
-    updateCSSProperty('--color-smoke-50', '--color-smoke-50-light')
-    updateCSSProperty('--color-smoke-70', '--color-smoke-70-light')
-    updateCSSProperty('--color-smoke-90', '--color-smoke-90-light')
-    updateCSSProperty('--color-gray-10', '--color-gray-10-light')
-    updateCSSProperty('--color-gray-30', '--color-gray-30-light')
-    updateCSSProperty('--color-gray-50', '--color-gray-50-light')
-    updateCSSProperty('--color-gray-70', '--color-gray-70-light')
-    updateCSSProperty('--color-jet-20', '--color-jet-20-light')
-    updateCSSProperty('--color-jet-30', '--color-jet-30-light')
-    updateCSSProperty('--color-jet-50', '--color-jet-50-light')
-    updateCSSProperty('--color-jet-70', '--color-jet-70-light')
-    updateCSSProperty('--color-jet-80', '--color-jet-80-light')
-    updateCSSProperty('--color-black', '--color-black-light')
-    updateCSSProperty('--color-blue-bonita', '--color-blue-bonita-light')
-    updateCSSProperty('--color-red-bonita', '--color-red-bonita-light')
-    updateCSSProperty('--color-unfocused', '--color-unfocused-light')
-    updateCSSProperty('--color-focused', '--color-focused-light')
-    updateCSSProperty('--color-link', '--color-link-light')
-    updateCSSProperty('--color-link-hover', '--color-link-hover-light')
-    updateCSSProperty('--color-nav-item', '--color-nav-item-light')
-    /* filter icon variables */
-    updateCSSProperty('--filter-icon', '--filter-icon-light')
-    updateCSSProperty('--filter-icon-search', '--filter-icon-search-light')
+    toLightTheme()
   }
+}
+
+function isDarkTheme () {
+  return localStorage.getItem('theme') === 'dark' ? 'checked' : 'unchecked'
+}
+
+// init
+if (localStorage.getItem('theme') === 'dark') {
+  toDarkTheme()
+  document.getElementById('check').checked = true
+  document.getElementById('check-mobile').checked = true
+} else {
+  toLightTheme()
+  document.getElementById('check').checked = false
+  document.getElementById('check-mobile').checked = false
 }

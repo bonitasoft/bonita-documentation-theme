@@ -255,7 +255,6 @@ body {
   height: 1.3rem;
   width: 1.3rem;
   transform: translateX(0);
-  transition: transform 0.3s ease, background-color 0.5s ease;
 
   &:hover {
     box-shadow: 0 0 5px 3px var(--color-blue-bright);

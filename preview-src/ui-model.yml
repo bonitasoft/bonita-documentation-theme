@@ -106,7 +106,7 @@ page:
         url: /bonita/7.10/index.html
         urlType: internal
       - content: Cu Solet
-        url: '/bonita/7.10/index.html#cu-solet'
+        url: '404.html'
         urlType: internal
       - content: English + 中文
         url: '/bonita/7.10/index.html#english+中文'
