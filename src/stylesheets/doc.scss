@@ -720,6 +720,10 @@
     .icon {
       background-color: var(--color-admonition-caution);
       color: var(--color-focused);
+
+      i.fa.icon-caution::before {
+        background: no-repeat url("../img/caution.svg");
+      }
     }
 
     .content {
@@ -731,6 +735,10 @@
     .icon {
       background-color: var(--color-admonition-important);
       color: var(--color-focused);
+
+      i.fa.icon-important::before {
+        background: no-repeat url("../img/important.svg");
+      }
     }
 
     .content {
@@ -738,10 +746,27 @@
     }
   }
 
+  .doc .admonitionblock .icon {
+    border-radius: 1rem;
+  }
+
+  i.fa[class^="icon-"],
+  i.fa[class*=" icon-"]::before {
+    content: "";
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.25rem;
+    margin-left: -0.5rem;
+  }
+
   .admonitionblock.note {
     .icon {
       background-color: var(--color-admonition-note);
       color: var(--color-focused);
+
+      i.fa.icon-note::before {
+        background: no-repeat url("../img/note.svg");
+      }
     }
 
     .content {
@@ -753,6 +778,10 @@
     .icon {
       background-color: var(--color-admonition-tip);
       color: var(--color-focused);
+
+      i.fa.icon-tip::before {
+        background: no-repeat url("../img/tip.svg");
+      }
     }
 
     .content {
@@ -764,6 +793,10 @@
     .icon {
       background-color: var(--color-admonition-warning);
       color: var(--color-focused);
+
+      i.fa.icon-warning::before {
+        background: no-repeat url("../img/warning.svg");
+      }
     }
 
     .content {
@@ -961,7 +994,8 @@
     background: var(--kbd-background);
     border: 1px solid var(--kbd-border-color);
     border-radius: 0.25em;
-    box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+    box-shadow: 0 1px 0 var(--kbd-border-color),
+      0 0 0 0.1em var(--body-background) inset;
     padding: 0.25em 0.5em;
     vertical-align: text-bottom;
     white-space: nowrap;
