@@ -51,6 +51,7 @@
 
   .card-body {
     flex-grow: 1;
+    hyphens: initial;
   }
 }
 
@@ -85,6 +86,7 @@
   .card-title {
     font-size: 1.2em;
     text-align: center;
+    hyphens: initial;
   }
 
   &::before {
