@@ -5,41 +5,6 @@ footer {
   padding: 5rem;
   padding-bottom: 2rem;
 
-  .footer-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h3 {
-      font-size: 1.3rem;
-      font-weight: normal;
-      margin-right: 1rem;
-      text-align: center;
-    }
-
-    input {
-      height: 2rem;
-      border: none;
-      padding: 1rem;
-      width: 15rem;
-      margin: 0;
-
-      &::placeholder {
-        font-size: 0.7rem;
-      }
-    }
-
-    button {
-      height: 2rem;
-      border: none;
-      margin: 0;
-      font-size: 0.7rem;
-      background-color: var(--color-red-bonita);
-      color: var(--color-focused);
-      font-weight: bold;
-    }
-  }
-
   .footer-body {
     display: block;
 
@@ -118,27 +83,6 @@ footer {
 @media screen and (max-width: 767px) {
   footer {
     padding: 1rem 2rem;
-
-    .footer-header {
-      flex-direction: column;
-
-      h3 {
-        margin-right: 0;
-      }
-
-      input {
-        width: 100%;
-
-        &::placeholder {
-          text-align: center;
-        }
-      }
-
-      button {
-        margin-top: 1rem;
-        width: 100%;
-      }
-    }
 
     .footer-body {
       margin-top: 1rem;
