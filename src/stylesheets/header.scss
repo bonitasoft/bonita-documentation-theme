@@ -155,7 +155,7 @@ body {
   background-color: transparent;
   color: var(--color-focused);
   border: none;
-  border-bottom: 1px solid var(--color-focused);
+  border-bottom: 1px solid var(--color-unfocused);
   border-radius: 0;
   outline: none;
   -webkit-box-shadow: none;
@@ -165,7 +165,7 @@ body {
   opacity: 1;
 
   &::placeholder {
-    color: var(--navbar-focused-font-color);
+    color: var(--navbar-unfocused-font-color);
     font-style: italic;
   }
 }
@@ -371,6 +371,7 @@ body {
 
     &::placeholder {
       color: var(--body-font-color);
+      opacity: 0.6;
     }
   }
 
