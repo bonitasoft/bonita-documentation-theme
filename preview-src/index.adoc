@@ -11,6 +11,10 @@ image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 
 Welcome to the Bonita BPM documentation website.
 
+++++
+<asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
+++++
+
 == Explore Bonita
 
 Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.

@@ -110,7 +110,7 @@ function compileLayouts (src) {
 
 function copyImages (src, dest) {
   return vfs
-    .src('**/*.{png,svg}', { base: src, cwd: src })
+    .src('**/*.{png,svg,cast}', { base: src, cwd: src })
     .pipe(vfs.dest(dest))
     .pipe(map((file, enc, next) => next()))
 }
