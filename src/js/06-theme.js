@@ -53,8 +53,7 @@ function toDarkTheme () {
   })
 
   // Update highlight js theme
-  swithcToHighlightDarkTheme(true)
-
+  switchToHighlightDarkTheme(true)
 }
 
 function toLightTheme () {
@@ -67,21 +66,21 @@ function toLightTheme () {
   })
 
   // Update highlight js theme
-  swithcToHighlightDarkTheme(false)
+  switchToHighlightDarkTheme(false)
 }
 
 // Update highlight js to dark theme if dark = true
-function swithcToHighlightDarkTheme(dark){
-  let hljsCssLink = document.getElementById('highlight-style-lnk');
-  if(hljsCssLink){
-    let currentHref = hljsCssLink.getAttribute('href');
-    let cssHref = currentHref.replace('-dark', '-light');
-    if(dark){
-       cssHref = currentHref.replace('-light','-dark');
+function switchToHighlightDarkTheme (dark) {
+  const hljsCssLink = document.getElementById('highlight-style-lnk')
+  if (hljsCssLink) {
+    const currentHref = hljsCssLink.getAttribute('href')
+    let cssHref = currentHref.replace('-dark', '-light')
+    if (dark) {
+      cssHref = currentHref.replace('-light', '-dark')
     }
-    hljsCssLink.setAttribute('href',cssHref);
+    hljsCssLink.setAttribute('href', cssHref)
   } else {
-    console.log("Failed to find highlight-style-lnk css link element in page, can not swap theme")
+    console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
   }
 }
 
