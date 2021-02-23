@@ -174,6 +174,18 @@ vfs
 <2> Wrap each streaming file in a buffer so the files can be processed by uglify.
 Uglify can only work with buffers, not streams.
 
+
+[source,xml]
+----
+<root>
+    <branch>
+        <leafs length="130">
+            <leaf color="yellow" />
+        </leafs>
+    </branch>
+</root>
+----
+
 Cum dicat #putant# ne.
 Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
 Altera atomorum his ex, has cu elitr melius propriae.

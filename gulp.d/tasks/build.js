@@ -51,7 +51,7 @@ module.exports = (src, dest, preview) => () => {
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js')),
     vfs
-      .src(['js/vendor/*.js'], { ...opts, read: false })
+      .src(['js/vendor/*.js', '!js/vendor/*.min.js'], { ...opts, read: false })
       .pipe(
         // see https://gulpjs.org/recipes/browserify-multiple-destination.html
         map((file, enc, next) => {
@@ -84,7 +84,8 @@ module.exports = (src, dest, preview) => () => {
       .pipe(uglify()),
     // NOTE use this statement to bundle a JavaScript library that cannot be browserified, like jQuery
     //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
-    // vfs.src(require.resolve('asciinema-player'), opts).pipe(concat('js/vendor/asciinema-player.min.js')),
+    vfs
+      .src(['js/vendor/*.min.js'], { ...opts }),
     vfs
       .src('stylesheets/vendor/*.css', { ...opts }),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
