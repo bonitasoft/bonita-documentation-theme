@@ -27,6 +27,9 @@
 }
 
 .card {
+  max-height: 15rem;
+  height: 15rem;
+
   .content,
   .paragraph,
   p {
@@ -45,12 +48,19 @@
 .card a {
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem 1.2rem;
+  justify-content: space-around;
+  padding: 1.2rem;
   text-align: center;
 
   .card-body {
     flex-grow: 1;
+    hyphens: initial;
+  }
+
+  .card-content-overflow {
+    --max-lines: 3;
+    max-height: calc(1.4rem * var(--max-lines));
+    overflow: hidden;
   }
 }
 
@@ -70,21 +80,19 @@
     font-weight: var(--weight-bold);
     font-size: 1rem;
     line-height: 1.4;
-    margin-bottom: 1.2rem;
   }
 }
 
 .card-index a {
   border: 2px solid var(--card-index-border);
   position: relative;
-  padding-top: 3em;
-  padding-bottom: 2em;
   overflow: hidden; // hide background image
   text-decoration: none;
 
   .card-title {
     font-size: 1.2em;
     text-align: center;
+    hyphens: initial;
   }
 
   &::before {
