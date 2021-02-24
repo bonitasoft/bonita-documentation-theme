@@ -16,10 +16,11 @@
 }
 
 .card-section-2col .sectionbody {
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(calc(max(50% - 0.5rem, 250px)), 1fr)
-  );
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(calc(max(50% - 0.5rem, 250px)), 1fr)
+    );
 }
 
 .card-section .sectionbody > :not(.card) {
@@ -37,20 +38,32 @@
   }
 }
 
-.card a {
+.card-title,
+.card-body {
   display: block;
-  height: 100%;
-  width: 100%;
 }
 
 // inner card layout
-
 .card a {
+  border-radius: var(--border-radius);
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: normal;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 1.2rem;
   text-align: center;
+  height: 100%;
+  width: 100%;
+
+  .card-title {
+    font-family: var(--heading);
+    font-weight: var(--weight-bold);
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 
   .card-body {
     flex-grow: 1;
@@ -59,32 +72,14 @@
 
   .card-content-overflow {
     --max-lines: 3;
+
     max-height: calc(1.4rem * var(--max-lines));
     overflow: hidden;
   }
 }
 
-.card-title,
-.card-body {
-  display: block;
-}
-
-.card a {
-  border-radius: var(--border-radius);
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.9rem;
-
-  .card-title {
-    font-family: var(--heading);
-    font-weight: var(--weight-bold);
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-}
-
 .card-index a {
-  border: 2px solid var(--card-index-border);
+  border: 2px solid var(--color-card-border);
   position: relative;
   overflow: hidden; // hide background image
   text-decoration: none;
@@ -104,15 +99,12 @@
   }
 
   &:hover {
+    border: 2px solid var(--color-red-bonita);
+    background-color: var(--color-red-bonita);
+    color: var(--color-focused);
     transform: translateY(-3px);
     top: -3px;
-    box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
-    background: linear-gradient(
-      90deg,
-      var(--color-smoke-10),
-      var(--color-smoke-30),
-      var(--color-smoke-50)
-    );
+    box-shadow: 0 10px 20px 0 var(--color-card-shadow);
     transition: all 0.3s ease-in-out;
   }
 }

@@ -36,11 +36,17 @@ var colors = [
   '--color-admonition-warning-bg',
   '--color-admonition-caution',
   '--color-admonition-caution-bg',
+  '--color-blue-bright',
+  '--color-card-shadow',
+  '--color-higlight',
+  '--color-footer',
+  '--color-card-border',
 ]
 
 var filters = [
   '--filter-icon',
   '--filter-icon-search',
+  '--filter-logo-footer',
 ]
 
 function toDarkTheme () {
@@ -71,10 +77,10 @@ function toLightTheme () {
 
 // Update highlight js to dark theme if dark = true
 function enableHightLightDarkTheme (dark) {
-  const hljsCssLink = document.getElementById('highlight-style-lnk')
+  var hljsCssLink = document.getElementById('highlight-style-lnk')
   if (hljsCssLink) {
-    const currentHref = hljsCssLink.getAttribute('href')
-    let cssHref = currentHref.replace('-dark', '-light')
+    var currentHref = hljsCssLink.getAttribute('href')
+    var cssHref = currentHref.replace('-dark', '-light')
     if (dark) {
       cssHref = currentHref.replace('-light', '-dark')
     }

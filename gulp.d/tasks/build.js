@@ -32,15 +32,26 @@ module.exports = (src, dest, preview) => () => {
         if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)
         return path.join('..', 'font', basename)
       },
+    }),
+    postcssUrl({
+      filter: '**/open-sans/**',
+      url: (asset) => {
+        const relpath = 'open-sans-fonts/' + asset.pathname.substr(1)
+        const abspath = require.resolve(relpath)
+        const basename = ospath.basename(abspath)
+        const destpath = ospath.join(dest, 'font', basename)
+        if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)
+        return path.join('..', 'font', basename)
+      },
     })]
 
   function scss () {
     return vfs
       .src('stylesheets/site.scss', { ...opts, sourcemaps })
+      .pipe(sass({
+        includePaths: ['node_modules/open-sans-fonts'],
+      }))
       .pipe(postcss(postcssPlugins))
-      .pipe(sass(sass({
-        includePaths: ['./node_modules'],
-      })))
   }
 
   return merge(

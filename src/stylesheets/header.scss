@@ -17,11 +17,6 @@ body {
   height: 3.5rem;
   padding: 0;
   width: 9.5rem;
-  opacity: 0.6;
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
 /*******************
@@ -231,6 +226,7 @@ body {
   position: relative;
   background: var(--color-blue-bonita);
   border: 2px solid var(--color-focused);
+  opacity: 0.85;
   border-radius: 5rem;
   padding: 0.5rem 0.5rem 0.5rem 0.3rem;
   height: 1.8rem;
@@ -241,6 +237,8 @@ body {
   z-index: 1;
 
   &:hover {
+    opacity: 1;
+
     .ball {
       box-shadow: 0 0 5px 3px var(--color-blue-bright);
     }
@@ -281,7 +279,7 @@ body {
       color: var(--navbar-unfocused-font-color);
 
       &:hover {
-        border-top: 4px solid var(--navbar-unfocused-font-color);
+        border-top: 4px solid var(--color-red-bonita);
       }
 
       a:hover {

@@ -47,8 +47,9 @@
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
     "node-sass": "^5.0.0",
+    "open-sans-fonts": "^1.6.2",
     "postcss-calc": "~7.0",
-    "postcss-custom-properties": "~9.1",
+    "postcss-custom-properties": "^11.0.0",
     "postcss-import": "~12.0",
     "postcss-url": "~8.0",
     "prettier-eslint": "~9.0",
@@ -58,7 +59,6 @@
     "stylelint-config-standard": "~20.0",
     "stylelint-scss": "^3.18.0",
     "through2": "~3.0",
-    "typeface-roboto": "1.1.13",
     "typeface-roboto-mono": "1.1.13",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
