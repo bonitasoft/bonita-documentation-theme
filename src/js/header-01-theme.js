@@ -51,6 +51,9 @@ function toDarkTheme () {
   filters.forEach(function (filter) {
     updateCSSProperty(filter, filter + '-dark')
   })
+
+  // Update highlight js theme
+  enableHightLightDarkTheme(true)
 }
 
 function toLightTheme () {
@@ -61,6 +64,24 @@ function toLightTheme () {
   filters.forEach(function (filter) {
     updateCSSProperty(filter, filter + '-light')
   })
+
+  // Update highlight js theme
+  enableHightLightDarkTheme(false)
+}
+
+// Update highlight js to dark theme if dark = true
+function enableHightLightDarkTheme (dark) {
+  const hljsCssLink = document.getElementById('highlight-style-lnk')
+  if (hljsCssLink) {
+    const currentHref = hljsCssLink.getAttribute('href')
+    let cssHref = currentHref.replace('-dark', '-light')
+    if (dark) {
+      cssHref = currentHref.replace('-light', '-dark')
+    }
+    hljsCssLink.setAttribute('href', cssHref)
+  } else {
+    console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
+  }
 }
 
 function updateCSSProperty (propertyToUpdate, propertyValue) {

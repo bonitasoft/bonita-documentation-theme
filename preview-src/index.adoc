@@ -8,7 +8,6 @@ Author Name
 
 image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 
-
 Welcome to the Bonita BPM documentation website.
 
 == Explore Bonita
@@ -117,6 +116,11 @@ xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.
 xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Javadoc# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
 --
 
+== Asciinema
+
+++++
+<asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
+++++
 
 == Cu solet
 
@@ -155,6 +159,8 @@ This is an example paragraph.
 
 How about some code?
 
+==== JS
+
 [source,js]
 ----
 vfs
@@ -169,6 +175,26 @@ vfs
 <1> The tap function is used to wiretap the data in the pipe.
 <2> Wrap each streaming file in a buffer so the files can be processed by uglify.
 Uglify can only work with buffers, not streams.
+
+==== Shell
+
+[source,shell]
+----
+alias ducksort=""du -cks * | sort -n""
+----
+
+==== XML
+
+[source,xml]
+----
+<root>
+    <branch>
+        <leafs length="130">
+            <leaf color="yellow" />
+        </leafs>
+    </branch>
+</root>
+----
 
 Cum dicat #putant# ne.
 Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
@@ -186,7 +212,7 @@ src/
       HelloWorldTest.java
 ....
 
-Eu mea munere vituperata constituam.
+== Eu mea munere vituperata constituam.
 
 [%autowidth]
 |===
