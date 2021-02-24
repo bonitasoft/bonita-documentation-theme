@@ -9,3 +9,16 @@ IMPORTANT: Don't forget...
 WARNING: Watch out for...
 
 CAUTION: Ensure that...
+
+[source,groovy]
+----
+List<List<String>> table = new ArrayList<List<String>>();
+Set<Entry<String,String>> weatherDataEntries = weatherData.entrySet();
+for (Entry<String,String> entry : weatherDataEntries) {
+    List<String> row = new ArrayList<String>();
+    row.add(entry.getKey());
+    row.add(entry.getValue());
+    table.add(row);
+}
+return table;
+----
