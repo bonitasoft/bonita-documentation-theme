@@ -644,7 +644,10 @@
   }
 
   .admonitionblock {
-    margin: 1.4rem 0 0;
+    margin: 1.4rem 3rem 0;
+    padding: 1.7rem 1.5rem 0;
+    border-left-style: solid;
+    border-left-width: 1rem;
 
     p {
       font-size: calc(16 / var(--rem-base) * 1rem);
@@ -652,8 +655,7 @@
 
     td.content {
       font-size: calc(16 / var(--rem-base) * 1rem);
-      padding: 1rem 1rem 0.75rem;
-      background: var(--admonition-background);
+      padding: 1.5rem 0;
       width: 100%;
 
       > {
@@ -678,12 +680,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      font-size: calc(15 / var(--rem-base) * 1rem);
+      font-size: 1rem;
       padding: 0 0.5rem;
       height: 1.25rem;
       line-height: 1;
       font-weight: var(--admonition-label-font-weight);
-      text-transform: uppercase;
       border-radius: 0.45rem;
       transform: translate(-0.5rem, -50%);
 
@@ -693,6 +694,7 @@
         height: 100%;
 
         &::after {
+          padding-left: 10px;
           content: attr(title);
         }
       }
@@ -720,36 +722,6 @@
     }
   }
 
-  .admonitionblock.caution {
-    .icon {
-      background-color: var(--color-admonition-caution);
-      color: var(--color-focused);
-
-      i.fa.icon-caution::before {
-        background: no-repeat url("../img/caution.svg");
-      }
-    }
-
-    .content {
-      background: var(--color-admonition-caution-bg);
-    }
-  }
-
-  .admonitionblock.important {
-    .icon {
-      background-color: var(--color-admonition-important);
-      color: var(--color-focused);
-
-      i.fa.icon-important::before {
-        background: no-repeat url("../img/important.svg");
-      }
-    }
-
-    .content {
-      background: var(--color-admonition-important-bg);
-    }
-  }
-
   .doc .admonitionblock .icon {
     border-radius: 1rem;
   }
@@ -757,54 +729,83 @@
   i.fa[class^="icon-"],
   i.fa[class*=" icon-"]::before {
     content: "";
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 1.8rem;
+    width: 1.8rem;
     margin-right: 0.25rem;
-    margin-left: -0.5rem;
+  }
+
+  .admonitionblock.caution {
+    background-color: var(--color-admonition-caution-bg);
+    border-color: var(--color-admonition-caution);
+    color: var(--color-admonition-caution-text);
+    border-radius: 8px;
+
+    .icon {
+      i.fa.icon-caution::before {
+        background: no-repeat url("../img/caution.svg");
+        background-color: var(--color-admonition-caution);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .admonitionblock.important {
+    background-color: var(--color-admonition-important-bg);
+    border-color: var(--color-admonition-important);
+    color: var(--color-admonition-important-text);
+    border-radius: 8px;
+
+    .icon {
+      i.fa.icon-important::before {
+        background: no-repeat url("../img/important.svg");
+        background-color: var(--color-admonition-important);
+        border-radius: 50%;
+      }
+    }
   }
 
   .admonitionblock.note {
-    .icon {
-      background-color: var(--color-admonition-note);
-      color: var(--color-focused);
+    background-color: var(--color-admonition-note-bg);
+    border-color: var(--color-admonition-note);
+    color: var(--color-admonition-note-text);
+    border-radius: 8px;
 
+    .icon {
       i.fa.icon-note::before {
         background: no-repeat url("../img/note.svg");
+        background-color: var(--color-admonition-note);
+        border-radius: 50%;
       }
-    }
-
-    .content {
-      background: var(--color-admonition-note-bg);
     }
   }
 
   .admonitionblock.tip {
-    .icon {
-      background-color: var(--color-admonition-tip);
-      color: var(--color-focused);
+    background-color: var(--color-admonition-tip-bg);
+    border-color: var(--color-admonition-tip);
+    color: var(--color-admonition-tip-text);
+    border-radius: 8px;
 
+    .icon {
       i.fa.icon-tip::before {
         background: no-repeat url("../img/tip.svg");
+        background-color: var(--color-admonition-tip);
+        border-radius: 50%;
       }
-    }
-
-    .content {
-      background: var(--color-admonition-tip-bg);
     }
   }
 
   .admonitionblock.warning {
-    .icon {
-      background-color: var(--color-admonition-warning);
-      color: var(--color-focused);
+    background-color: var(--color-admonition-warning-bg);
+    border-color: var(--color-admonition-warning);
+    color: var(--color-admonition-warning-text);
+    border-radius: 8px;
 
+    .icon {
       i.fa.icon-warning::before {
         background: no-repeat url("../img/warning.svg");
+        background-color: var(--color-admonition-warning);
+        border-radius: 50%;
       }
-    }
-
-    .content {
-      background: var(--color-admonition-warning-bg);
     }
   }
 
