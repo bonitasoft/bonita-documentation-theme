@@ -6,18 +6,9 @@ on:
       - master
       # To manage 'surge-preview' action teardown, add default event types + closed event type
     types: [opened, synchronize, reopened, closed]
-#    paths:
-#      - 'modules/ROOT/**'
-#      - 'antora.yml'
-#      - '.github/workflows/build-pr-preview.yml'
 jobs:
   build_preview:
     runs-on: ubuntu-20.04
-    env:
-#      COMPONENT_NAME: preview
-#      # Except if you want to test in progress work that your content depends on, keep it set to master
-#      DOC_SITE_BRANCH: master
-      PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - uses: actions/checkout@v2
       - name: Publish preview
