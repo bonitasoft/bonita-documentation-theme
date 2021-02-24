@@ -685,7 +685,6 @@
       height: 1.25rem;
       line-height: 1;
       font-weight: var(--admonition-label-font-weight);
-      text-transform: uppercase;
       border-radius: 0.45rem;
       transform: translate(-0.5rem, -50%);
 
@@ -723,38 +722,6 @@
     }
   }
 
-  .admonitionblock.caution {
-    background-color: var(--color-admonition-caution-bg);
-    border-color: var(--color-admonition-caution);
-    border-radius: 8px;
-
-    .icon {
-      color: var(--color-admonition-caution);
-
-      i.fa.icon-caution::before {
-        background: no-repeat url("../img/caution.svg");
-        background-color: var(--color-admonition-caution);
-        border-radius: 50%;
-      }
-    }
-  }
-
-  .admonitionblock.important {
-    background-color: var(--color-admonition-important-bg);
-    border-color: var(--color-admonition-important);
-    border-radius: 8px;
-
-    .icon {
-      color: var(--color-admonition-important);
-
-      i.fa.icon-important::before {
-        background: no-repeat url("../img/important.svg");
-        background-color: var(--color-admonition-important);
-        border-radius: 50%;
-      }
-    }
-  }
-
   .doc .admonitionblock .icon {
     border-radius: 1rem;
   }
@@ -767,14 +734,43 @@
     margin-right: 0.25rem;
   }
 
-  .admonitionblock.note {
-    background-color: var(--color-admonition-note-bg);
-    border-color: var(--color-admonition-note);
+  .admonitionblock.caution {
+    background-color: var(--color-admonition-caution-bg);
+    border-color: var(--color-admonition-caution);
+    color: var(--color-admonition-caution-text);
     border-radius: 8px;
 
     .icon {
-      color: var(--color-admonition-note-text);
+      i.fa.icon-caution::before {
+        background: no-repeat url("../img/caution.svg");
+        background-color: var(--color-admonition-caution);
+        border-radius: 50%;
+      }
+    }
+  }
 
+  .admonitionblock.important {
+    background-color: var(--color-admonition-important-bg);
+    border-color: var(--color-admonition-important);
+    color: var(--color-admonition-important-text);
+    border-radius: 8px;
+
+    .icon {
+      i.fa.icon-important::before {
+        background: no-repeat url("../img/important.svg");
+        background-color: var(--color-admonition-important);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .admonitionblock.note {
+    background-color: var(--color-admonition-note-bg);
+    border-color: var(--color-admonition-note);
+    color: var(--color-admonition-note-text);
+    border-radius: 8px;
+
+    .icon {
       i.fa.icon-note::before {
         background: no-repeat url("../img/note.svg");
         background-color: var(--color-admonition-note);
@@ -786,11 +782,10 @@
   .admonitionblock.tip {
     background-color: var(--color-admonition-tip-bg);
     border-color: var(--color-admonition-tip);
+    color: var(--color-admonition-tip-text);
     border-radius: 8px;
 
     .icon {
-      color: var(--color-admonition-tip);
-
       i.fa.icon-tip::before {
         background: no-repeat url("../img/tip.svg");
         background-color: var(--color-admonition-tip);
@@ -802,11 +797,10 @@
   .admonitionblock.warning {
     background-color: var(--color-admonition-warning-bg);
     border-color: var(--color-admonition-warning);
+    color: var(--color-admonition-warning-text);
     border-radius: 8px;
 
     .icon {
-      color: var(--color-admonition-warning);
-
       i.fa.icon-warning::before {
         background: no-repeat url("../img/warning.svg");
         background-color: var(--color-admonition-warning);
