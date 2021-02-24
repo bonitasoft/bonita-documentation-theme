@@ -255,9 +255,15 @@ html.is-clipped--nav {
   }
 }
 
+.nav-link:hover {
+  color: var(--color-blue-bonita);
+  font-weight: var(--body-font-weight-bold);
+}
+
 .is-current-page {
   > .nav-link {
     font-weight: var(--body-font-weight-bold);
+    color: var(--color-blue-bonita);
   }
 
   > .nav-text {

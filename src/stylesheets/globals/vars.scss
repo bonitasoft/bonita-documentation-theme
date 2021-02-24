@@ -17,8 +17,8 @@
   --color-jet-70-light: #222;
   --color-jet-80-light: #191919;
   --color-black-light: #000;
-  --color-blue-bonita-light: #083355;
-  --color-red-bonita-light: #e22936;
+  --color-blue-bonita-light: #19465f;
+  --color-red-bonita-light: #dd042b;
   --color-unfocused-light: #ffffffc2;
   --color-focused-light: #fff;
   --color-link-light: #1565c0;
@@ -34,6 +34,8 @@
   --color-admonition-warning-bg-light: #e181144f;
   --color-admonition-caution-light: #a0439c;
   --color-admonition-caution-bg-light: #a0439c4f;
+  --color-blue-bright-light: #0fe;
+  --color-card-shadow-light: #876c6c;
   // Dark color set
   --color-white-dark: #151a25;
   --color-text-light-dark: #556;
@@ -52,12 +54,12 @@
   --color-jet-70-dark: #ccc;
   --color-jet-80-dark: #ddd;
   --color-black-dark: #fff;
-  --color-blue-bonita-dark: #232f3e;
+  --color-blue-bonita-dark: rgb(23, 0, 70);
   --color-red-bonita-dark: #e22936;
   --color-unfocused-dark: #dcdcdcc2;
   --color-focused-dark: #fff;
-  --color-link-dark: #e0cb2e;
-  --color-link-hover-dark: #f9e236;
+  --color-link-dark: #15ABE9;
+  --color-link-hover-dark: #15ABE9;
   --color-nav-item-dark: var(--color-black-dark);
   --color-admonition-note-dark: #11386a;
   --color-admonition-note-bg-dark: #11386a4f;
@@ -69,6 +71,8 @@
   --color-admonition-warning-bg-dark: #8b6e254f;
   --color-admonition-caution-dark: #652e7c;
   --color-admonition-caution-bg-dark: #652e7c4f;
+  --color-blue-bright-dark: #0fe;
+  --color-card-shadow-dark: #876c6c;
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -110,7 +114,7 @@
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
   --toc-font-color: var(--nav-muted-color);
-  --toc-heading-font-color: var(--doc-font-color);
+  --toc-heading-font-color: var(--color-blue-bonita);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   --doc-font-color: var(--color-jet-50);

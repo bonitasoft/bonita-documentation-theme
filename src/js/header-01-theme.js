@@ -36,6 +36,7 @@ var colors = [
   '--color-admonition-warning-bg',
   '--color-admonition-caution',
   '--color-admonition-caution-bg',
+  '--color-blue-bright',
 ]
 
 var filters = [

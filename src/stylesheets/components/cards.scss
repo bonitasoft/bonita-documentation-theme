@@ -104,15 +104,12 @@
   }
 
   &:hover {
+    border: 2px solid var(--color-red-bonita);
+    background-color: var(--color-red-bonita);
+    color: var(--color-focused);
     transform: translateY(-3px);
     top: -3px;
-    box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
-    background: linear-gradient(
-      90deg,
-      var(--color-smoke-10),
-      var(--color-smoke-30),
-      var(--color-smoke-50)
-    );
+    box-shadow: 0 10px 20px 0 rgb(135, 108, 108);
     transition: all 0.3s ease-in-out;
   }
 }
