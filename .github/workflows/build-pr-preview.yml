@@ -19,12 +19,9 @@ jobs:
 #      DOC_SITE_BRANCH: master
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
-#      - name: Compute environment variables
-#        run: |
-#          # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
-#          repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/\//-/g')
-#          echo PREVIEW_URL=https://$repo_owner_and_name-"${{github.job}}"-pr-$PR_NUMBER.surge.sh >> $GITHUB_ENV
+      - uses: actions/checkout@v2
       - name: Publish preview
+        id: preview_step
         uses: afc163/surge-preview@v1
         with:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
@@ -35,3 +32,5 @@ jobs:
           build: |
             npm install
             gulp preview:build
+      - name: Get the preview_url
+        run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
