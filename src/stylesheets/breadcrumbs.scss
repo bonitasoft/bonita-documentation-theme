@@ -16,6 +16,11 @@
     display: inline;
     margin: 0;
 
+    a:hover {
+      color: var(--color-higlight);
+      font-weight: var(--body-font-weight-bolder);
+    }
+
     &::after {
       content: "/";
       padding: 0 0.5rem;

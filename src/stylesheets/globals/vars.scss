@@ -21,8 +21,8 @@
   --color-red-bonita-light: #dd042b;
   --color-unfocused-light: #ffffffc2;
   --color-focused-light: #fff;
-  --color-link-light: #1565c0;
-  --color-link-hover-light: #104d92;
+  --color-link-light: #104d92;
+  --color-link-hover-light: #1565c0;
   --color-nav-item-light: var(--color-blue-bonita-light);
   --color-admonition-note-light: #217de7;
   --color-admonition-note-bg-light: #217de74f;
@@ -36,6 +36,9 @@
   --color-admonition-caution-bg-light: #a0439c4f;
   --color-blue-bright-light: #0fe;
   --color-card-shadow-light: #876c6c;
+  --color-higlight-light: var(--color-blue-bonita-light);
+  --color-footer-light: #c1c1c1;
+  --color-card-border-light: #ebf2f2;
   // Dark color set
   --color-white-dark: #151a25;
   --color-text-light-dark: #556;
@@ -54,12 +57,12 @@
   --color-jet-70-dark: #ccc;
   --color-jet-80-dark: #ddd;
   --color-black-dark: #fff;
-  --color-blue-bonita-dark: rgb(23, 0, 70);
-  --color-red-bonita-dark: #e22936;
+  --color-blue-bonita-dark: #2a2f43;
+  --color-red-bonita-dark: #ca4a53;
   --color-unfocused-dark: #dcdcdcc2;
   --color-focused-dark: #fff;
-  --color-link-dark: #15ABE9;
-  --color-link-hover-dark: #15ABE9;
+  --color-link-dark: #00d9ff;
+  --color-link-hover-dark: #40e2ff;
   --color-nav-item-dark: var(--color-black-dark);
   --color-admonition-note-dark: #11386a;
   --color-admonition-note-bg-dark: #11386a4f;
@@ -72,7 +75,10 @@
   --color-admonition-caution-dark: #652e7c;
   --color-admonition-caution-bg-dark: #652e7c4f;
   --color-blue-bright-dark: #0fe;
-  --color-card-shadow-dark: #876c6c;
+  --color-card-shadow-dark: #2e2e2e;
+  --color-higlight-dark: #eee;
+  --color-footer-dark: var(--color-blue-bonita-dark);
+  --color-card-border-dark: #9ba9c6;
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -80,10 +86,11 @@
   --body-font-size--print: 0.9375em;
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
-  --body-font-weight-bold: 500;
-  --monospace-font-family: "Roboto Mono", monospace;
-  --monospace-font-weight-bold: 500;
+  --body-font-family: "Open Sans", sans-serif;
+  --body-font-weight-bold: 550;
+  --body-font-weight-bolder: 650;
+  --monospace-font-family: "Open Sans Condensed", monospace;
+  --monospace-font-weight-bold: 700;
   --body-background: var(--color-white);
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
@@ -114,7 +121,7 @@
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
   --toc-font-color: var(--nav-muted-color);
-  --toc-heading-font-color: var(--color-blue-bonita);
+  --toc-heading-font-color: var(--color-higlight);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   --doc-font-color: var(--color-jet-50);
@@ -178,12 +185,13 @@
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
   --border-radius: 0.3rem;
-  --card-index-border: #ebf2f2;
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Light icon set
   --filter-icon-light: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%); // black
   --filter-icon-search-light: invert(15%) sepia(13%) saturate(6139%) hue-rotate(174deg) brightness(100%) contrast(94%); // bonita blue
+  --filter-logo-footer-light: invert(0); // keep it as it is
   // Dark icon set
   --filter-icon-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
   --filter-icon-search-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
+  --filter-logo-footer-dark: brightness(0) invert(1); // full white
 }

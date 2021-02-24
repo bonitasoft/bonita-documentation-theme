@@ -23,9 +23,9 @@ module.exports = (src, dest, preview) => () => {
   const postcssPlugins = [require('@csstools/postcss-sass'),
     autoprefixer(),
     postcssUrl({
-      filter: '**/~typeface-*/files/*',
+      filter: '**/open-sans/**',
       url: (asset) => {
-        const relpath = asset.pathname.substr(1)
+        const relpath = 'open-sans-fonts/' + asset.pathname.substr(1)
         const abspath = require.resolve(relpath)
         const basename = ospath.basename(abspath)
         const destpath = ospath.join(dest, 'font', basename)
@@ -37,10 +37,10 @@ module.exports = (src, dest, preview) => () => {
   function scss () {
     return vfs
       .src('stylesheets/site.scss', { ...opts, sourcemaps })
+      .pipe(sass({
+        includePaths: ['node_modules/open-sans-fonts'],
+      }))
       .pipe(postcss(postcssPlugins))
-      .pipe(sass(sass({
-        includePaths: ['./node_modules'],
-      })))
   }
 
   return merge(

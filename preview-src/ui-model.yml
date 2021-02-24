@@ -19,12 +19,12 @@ site:
   - &component
     name: bonita
     title: Project Bonita
-    url: /bonita/7.11/index.html
+    url: /bonita/2021.1/index.html
     versions:
     - &latest_version_bonita
-      url: /bonita/7.11/index.html
-      version: '7.11'
-      displayVersion: '7.11'
+      url: /bonita/2021.1/index.html
+      version: '2021.1'
+      displayVersion: '2021.1'
     - &component_version
       url: '#'
       version: '7.10'
@@ -79,8 +79,8 @@ page:
     url: /bonita/7.10/index.html
     urlType: internal
   versions:
-  - version: '7.11'
-    displayVersion: '7.11'
+  - version: '2021.1'
+    displayVersion: '2021.1'
     url: '#'
   - version: '7.10'
     displayVersion: '7.10'

@@ -256,18 +256,18 @@ html.is-clipped--nav {
 }
 
 .nav-link:hover {
-  color: var(--color-blue-bonita);
-  font-weight: var(--body-font-weight-bold);
+  color: var(--color-higlight);
+  font-weight: var(--body-font-weight-bolder);
 }
 
 .is-current-page {
   > .nav-link {
-    font-weight: var(--body-font-weight-bold);
-    color: var(--color-blue-bonita);
+    font-weight: var(--body-font-weight-bolder);
+    color: var(--color-higlight);
   }
 
   > .nav-text {
-    font-weight: var(--body-font-weight-bold);
+    font-weight: var(--body-font-weight-bolder);
   }
 }
 

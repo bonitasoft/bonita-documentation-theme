@@ -1,7 +1,7 @@
 footer {
   display: block;
-  background-color: var(--color-blue-bonita);
-  color: var(--color-focused);
+  background-color: var(--color-footer);
+  color: var(--body-font-color);
   padding: 5rem;
   padding-bottom: 2rem;
 
@@ -37,20 +37,20 @@ footer {
           font-size: 0.8rem;
 
           a {
-            color: var(--color-focused);
+            color: var(--body-font-color);
             text-decoration: none;
 
             svg {
               height: 1.2rem;
               width: 1.2rem;
-              fill: var(--color-focused);
+              fill: var(--color-red-bonita);
             }
           }
         }
       }
 
       .border-right li {
-        border-right: 0.1rem solid var(--color-focused);
+        border-right: 0.1rem solid var(--body-font-color);
         line-height: 0.2rem;
 
         &:last-child {
@@ -65,16 +65,17 @@ footer {
 
       a {
         text-decoration: none;
-        color: var(--color-focused);
+        color: var(--body-font-color);
       }
 
       .footer-bonita-logo {
-        background: url(../img/bonitasoft-logo.svg) no-repeat;
+        background: url(../img/bonita-logo-color.svg) no-repeat;
         background-size: contain;
         height: 2rem;
         width: 7rem;
         margin: 1rem auto;
         display: block;
+        filter: var(--filter-logo-footer);
       }
     }
   }
