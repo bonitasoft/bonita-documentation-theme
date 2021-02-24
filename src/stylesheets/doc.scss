@@ -644,10 +644,10 @@
   }
 
   .admonitionblock {
-    margin: 1.4rem 0 0;
-    padding: 1.7rem 1.5rem 1rem;
+    margin: 1.4rem 3rem 0;
+    padding: 1.7rem 1.5rem 0;
     border-left-style: solid;
-    border-left-width: 0.5rem;
+    border-left-width: 1rem;
 
     p {
       font-size: calc(16 / var(--rem-base) * 1rem);
@@ -680,7 +680,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      font-size: calc(15 / var(--rem-base) * 1rem);
+      font-size: 1rem;
       padding: 0 0.5rem;
       height: 1.25rem;
       line-height: 1;
@@ -695,6 +695,7 @@
         height: 100%;
 
         &::after {
+          padding-left: 10px;
           content: attr(title);
         }
       }
@@ -728,6 +729,8 @@
     border-radius: 8px;
 
     .icon {
+      color: var(--color-admonition-caution);
+
       i.fa.icon-caution::before {
         background: no-repeat url("../img/caution.svg");
         background-color: var(--color-admonition-caution);
@@ -742,6 +745,8 @@
     border-radius: 8px;
 
     .icon {
+      color: var(--color-admonition-important);
+
       i.fa.icon-important::before {
         background: no-repeat url("../img/important.svg");
         background-color: var(--color-admonition-important);
@@ -757,8 +762,8 @@
   i.fa[class^="icon-"],
   i.fa[class*=" icon-"]::before {
     content: "";
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 1.8rem;
+    width: 1.8rem;
     margin-right: 0.25rem;
   }
 
@@ -768,6 +773,8 @@
     border-radius: 8px;
 
     .icon {
+      color: var(--color-admonition-note-text);
+
       i.fa.icon-note::before {
         background: no-repeat url("../img/note.svg");
         background-color: var(--color-admonition-note);
@@ -782,6 +789,8 @@
     border-radius: 8px;
 
     .icon {
+      color: var(--color-admonition-tip);
+
       i.fa.icon-tip::before {
         background: no-repeat url("../img/tip.svg");
         background-color: var(--color-admonition-tip);
@@ -796,6 +805,8 @@
     border-radius: 8px;
 
     .icon {
+      color: var(--color-admonition-warning);
+
       i.fa.icon-warning::before {
         background: no-repeat url("../img/warning.svg");
         background-color: var(--color-admonition-warning);
