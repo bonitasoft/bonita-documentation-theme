@@ -32,5 +32,4 @@ jobs:
           dist: public
           failOnError: true
           teardown: 'true'
-          build: |
-            npm install && gulp preview:build
+          build: "npm install && gulp preview:build"
