@@ -51,6 +51,11 @@ module.exports = (src, dest, preview) => () => {
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js')),
     vfs
+      .src('js/header-+([0-9])-*.js', { ...opts, sourcemaps })
+      .pipe(uglify())
+      // NOTE concat already uses stat from newest combined file
+      .pipe(concat('js/header-site.js')),
+    vfs
       .src(['js/vendor/*.js', '!js/vendor/*.min.js'], { ...opts, read: false })
       .pipe(
         // see https://gulpjs.org/recipes/browserify-multiple-destination.html

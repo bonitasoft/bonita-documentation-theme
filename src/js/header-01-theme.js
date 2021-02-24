@@ -53,7 +53,7 @@ function toDarkTheme () {
   })
 
   // Update highlight js theme
-  switchToHighlightDarkTheme(true)
+  enableHightLightDarkTheme(true)
 }
 
 function toLightTheme () {
@@ -66,11 +66,11 @@ function toLightTheme () {
   })
 
   // Update highlight js theme
-  switchToHighlightDarkTheme(false)
+  enableHightLightDarkTheme(false)
 }
 
 // Update highlight js to dark theme if dark = true
-function switchToHighlightDarkTheme (dark) {
+function enableHightLightDarkTheme (dark) {
   const hljsCssLink = document.getElementById('highlight-style-lnk')
   if (hljsCssLink) {
     const currentHref = hljsCssLink.getAttribute('href')
