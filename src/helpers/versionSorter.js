@@ -3,14 +3,14 @@
 module.exports = (versions) => Object.values(versions).sort(compare)
 
 /**
- * This function ensure that a component with the version "other" has the lowest priority
+ * This function ensure that a component with the version "old" has the lowest priority
  * -> displayed at the end of the versions list.
  */
 function compare (v1, v2) {
-  if (v1.version === 'other' || v2.version === 'latest') {
+  if (v1.version === 'old' || v2.version === 'latest') {
     return 1
   }
-  if (v2.version === 'other' || v1.version === 'latest') {
+  if (v2.version === 'old' || v1.version === 'latest') {
     return -1
   }
   return semVerCompare(v1.version, v2.version)
