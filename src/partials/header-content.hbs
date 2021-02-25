@@ -1,4 +1,5 @@
 <header class="header">
+  {{#if site.title}}
   <nav class="navbar">
     <div class="navbar-brand">
       <div class="navbar-item">
@@ -53,6 +54,18 @@
         </div>
       </div>
     </div>
-
   </nav>
+  {{else}}
+  <nav class="navbar-nonProduction">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
+      </div>
+
+      <div class="navbar-item">
+        <p>{{{site.keys.nonProduction}}}</p>
+      </div>
+    </div>
+  </nav>
+  {{/if}}
 </header>
