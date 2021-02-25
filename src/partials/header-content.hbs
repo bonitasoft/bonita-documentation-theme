@@ -1,5 +1,5 @@
 <header class="header">
-  {{#if site.title}}
+  {{#unless site.keys.non-production}}
   <nav class="navbar">
     <div class="navbar-brand">
       <div class="navbar-item">
@@ -63,9 +63,26 @@
       </div>
 
       <div class="navbar-item">
-        <p>{{{site.keys.nonProduction}}}</p>
+        <p>{{{site.title}}}</p>
       </div>
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item is-hoverable">
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
+      </div>
+      {{#each site.components}}
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="{{{./latestVersion.url}}}">{{{./title}}}</a>
+      </div>
+      {{/each}}
     </div>
   </nav>
-  {{/if}}
+  {{/unless}}
 </header>
