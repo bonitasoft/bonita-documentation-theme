@@ -7,10 +7,10 @@ module.exports = (versions) => Object.values(versions).sort(compare)
  * -> displayed at the end of the versions list.
  */
 function compare (v1, v2) {
-  if (v1.version === 'other') {
+  if (v1.version === 'other' || v2.version === 'latest') {
     return 1
   }
-  if (v2.version === 'other') {
+  if (v2.version === 'other' || v1.version === 'latest') {
     return -1
   }
   return semVerCompare(v1.version, v2.version)
