@@ -56,13 +56,13 @@
     </div>
   </nav>
   {{else}}
-  <nav class="navbar-nonProduction">
+  <nav class="navbar navbar-nonProduction">
     <div class="navbar-brand">
-      <div class="navbar-item">
+      <div class="navbar-item hidden-xs">
         <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
       </div>
 
-      <div class="navbar-item">
+      <div class="navbar-item-nonProduction">
         <p>{{{site.title}}}</p>
       </div>
 
@@ -82,6 +82,18 @@
         <a class="navbar-link" href="{{{./latestVersion.url}}}">{{{./title}}}</a>
       </div>
       {{/each}}
+    </div>
+
+    {{!-- Dark theme --}}
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
+      <div class="toggle-content">
+        <label class="label" for="check">
+          <span>🌜</span>
+          <span>🌞</span>
+          <div class="ball"></div>
+        </label>
+      </div>
     </div>
   </nav>
   {{/unless}}

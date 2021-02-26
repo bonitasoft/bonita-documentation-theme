@@ -24,30 +24,17 @@ body {
 ********************/
 
 .navbar-nonProduction {
-  background: #dd042b;
-  color: var(--navbar-font-color);
-  font-size: calc(16 / var(--rem-base) * 1rem);
-  height: var(--navbar-height);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  word-wrap: break-word;
-  z-index: var(--z-index-navbar);
+  background: var(--color-red-bonita) !important;
 
-  .button {
-    display: inline-flex;
-    align-items: center;
-    background: var(--navbar-button-background);
-    border: 1px solid var(--navbar-button-border-color);
-    border-radius: 0.15rem;
-    height: 1.75rem;
-    color: var(--navbar-button-font-color);
-    padding: 0 0.75em;
-    white-space: nowrap;
-  }
-
-  a {
-    text-decoration: none;
+  .navbar-item-nonProduction {
+    align-items: baseline;
+    font-size: 1.2rem;
+    display: flex;
+    line-height: var(--doc-line-height);
+    padding: 0 0.5rem;
+    position: relative;
+    color: var(--color-unfocused);
+    flex-grow: 1;
   }
 }
 
@@ -535,6 +522,10 @@ body {
 
   .label span {
     height: 1rem;
+  }
+
+  .navbar-nonProduction .hidden-xs {
+    display: none;
   }
 }
 
