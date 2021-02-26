@@ -1,20 +1,50 @@
 = Bonita Documentation Theme
 
-NOTE: Readme in progress
-
 This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io]
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora default UI].
 
 == Usage
 
-TODO: how to use the bundle in the antora conf file
+This repository produces a zip archive _ui-bundle.zip_. This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonitasoft.github.io/blob/master/antora-playbook.yml[configuration file]. +
+Currently, we embed the ui-bundle.zip in the main docsite repository (https://github.com/bonitasoft/bonitasoft.github.io/tree/master/resources[here]), it is used locally at build time.
+
+[TIP]
+====
+Simple flow to 'release' a new version of the theme (i.e use a new version of the UI bundle in the doc site):
+
+- Build locally this repository (type `gulp bundle` at the root of the repository) -> _build/ui-bundle.zip_ is created +
+- Clone the repository https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io], and create a new branch to update the UI bundle
+- Copy the ui-bundle.zip archive in _bonitasoft.github.io/resources/_, and rename it into _antora-ui-bundle.zip_ +
+- Push your changes and open a pull request, with details on the changes and eventually some links to the change commits in this repository
+====
 
 == Development
-
-TODO
 
 A static or live preview of the theme is available, see the xref:docs/modules/ROOT/pages/build-preview-ui.adoc[build-preview-ui]
 documentation.
 
 To build the bundle to be used in the Antora playbook, run `gulp bundle`.
+
+=== Change some colors in the UI
+
+If you are only here to update some colors in the UI, it should be easy. +
+All used colors are defined in _src/stylsheets/globals.var.scss_ +
+At the beggining of the file, you will find the light colors and  the dark colors. +
+If you need to add a new color in the color set, then you have to:
+
+- Create a variable `--color-XXX-light` in the light color set
+- Create a variable `--color-XXX-dark` in the dark color set
+- Add `'--color-XXX'` in the color list at the beggining of the file _src/js/header-01-theme.js_
+- Use this new color by using `var(--color-XXX)` in some css classes
+
+[CAUTION]
+====
+If you simply update an existing color, your change will probably impact different elements of the UI. +
+Make sure that the whole UI is OK before submitting your change, in both light and dark !
+====
+
+=== Perform some structural changes in the UI
+
+This UI bundle is based on the Antora default UI. It uses gulp, handlebars and sass. +
+You can find the detailed documentation on the UI bundle https://docs.antora.org/antora-ui-default/[here].
