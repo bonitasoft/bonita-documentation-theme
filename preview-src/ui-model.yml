@@ -1,7 +1,7 @@
-antoraVersion: "1.0.0"
+antoraVersion: '1.0.0'
 site:
   keys:
-    nonProduction: false
+    nonProduction: true
   url: http://localhost:5252
   title: Brand Docs
   homeUrl: &home_url /bonita/7.10/index.html
@@ -59,23 +59,23 @@ page:
   title: Brand&#8217;s Hardware &amp; Software Requirements
   component: *component
   componentVersion: *component_version
-  version: "7.10"
-  displayVersion: "7.10"
+  version: '7.10'
+  displayVersion: '7.10'
   module: ROOT
   editUrl: http://example.com/project-bonita/blob/master/index.adoc
   origin:
     private: false
   previous:
     content: Quickstart
-    url: "#"
-    urlType: "internal"
+    url: '#'
+    urlType: 'internal'
   next:
     content: Liber Recusabo
-    url: "#"
-    urlType: "internal"
+    url: '#'
+    urlType: 'internal'
   breadcrumbs:
     - content: Quickstart
-      url: "#"
+      url: '#'
       urlType: fragment
     - content: Brand&#8217;s Hardware &amp; Software Requirements
       url: /bonita/7.10/index.html
@@ -97,33 +97,33 @@ page:
   navigation:
     - root: true
       content: Project Bonita
-      url: "#"
+      url: '#'
       urlType: fragment
       items:
         - content: Quickstart
-          url: "#"
+          url: '#'
           urlType: fragment
           items:
             - content: Brand&#8217;s Hardware &amp; Software Requirements
               url: /bonita/7.10/index.html
               urlType: internal
             - content: Overview
-              url: "/bonita/7.10/overview.html"
+              url: '/bonita/7.10/overview.html'
               urlType: internal
             - content: Misc
-              url: "/bonita/7.10/misc.html"
+              url: '/bonita/7.10/misc.html'
               urlType: internal
         - content: Liber Recusabo
-          url: "#liber-recusabo"
+          url: '#liber-recusabo'
           urlType: fragment
         - content: Reference
           items:
             - content: Keyboard Shortcuts
-              url: "#"
+              url: '#'
               urlType: fragment
             - content: Importing and Exporting
-              url: "#"
+              url: '#'
               urlType: fragment
             - content: Some Code
-              url: "/bonita/7.10/index.html#some-code"
+              url: '/bonita/7.10/index.html#some-code'
               urlType: internal
