@@ -1,14 +1,13 @@
 = Bonita Documentation Theme
 
-NOTE: Readme in progress
-
 This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io]
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora default UI].
 
 == Usage
 
-TODO: how to use the bundle in the antora conf file
+This repository produces a zip archive _ui-bundle.zip_. This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonitasoft.github.io/blob/master/antora-playbook.yml[configuration file]. +
+Currently, we embed ui-bundle.zip in the main docsite repository (https://github.com/bonitasoft/bonitasoft.github.io/tree/master/resources[here]), the Antora configuration file can reference
 
 == Development
 
