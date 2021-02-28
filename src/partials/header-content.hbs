@@ -1,10 +1,15 @@
 <header class="header">
-  {{#unless site.keys.nonProduction}}
-  <nav class="navbar">
+  <nav class="navbar {{~#if site.keys.nonProduction}} navbar-nonProduction {{/if~}} ">
     <div class="navbar-brand">
       <div class="navbar-item">
         <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
       </div>
+
+      {{#if site.keys.nonProduction}}
+      <div class="navbar-item-nonProduction">
+        <p>{{{site.title}}}</p>
+      </div>
+      {{/if}}
 
       <button class="navbar-burger" data-target="search-container">
         <i class="search-icon" aria-hidden="true"></i>
@@ -55,46 +60,4 @@
       </div>
     </div>
   </nav>
-  {{else}}
-  <nav class="navbar navbar-nonProduction">
-    <div class="navbar-brand">
-      <div class="navbar-item hidden-xs">
-        <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
-      </div>
-
-      <div class="navbar-item-nonProduction">
-        <p>{{{site.title}}}</p>
-      </div>
-
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-item is-hoverable">
-        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
-      </div>
-      {{#each site.components}}
-      <div class="navbar-item is-hoverable">
-        <a class="navbar-link" href="{{{./latestVersion.url}}}">{{{./title}}}</a>
-      </div>
-      {{/each}}
-    </div>
-
-    {{!-- Dark theme --}}
-    <div class="theme-switch-wrapper">
-      <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
-      <div class="toggle-content">
-        <label class="label" for="check">
-          <span>🌜</span>
-          <span>🌞</span>
-          <div class="ball"></div>
-        </label>
-      </div>
-    </div>
-  </nav>
-  {{/unless}}
 </header>
