@@ -23,21 +23,6 @@ body {
 ****** Navbar ******
 ********************/
 
-.navbar-nonProduction {
-  background: var(--color-red-bonita) !important;
-
-  .navbar-item-nonProduction {
-    align-items: baseline;
-    font-size: 1.2rem;
-    display: flex;
-    line-height: var(--doc-line-height);
-    padding: 0 0.5rem;
-    position: relative;
-    color: var(--color-unfocused);
-    flex-grow: 1;
-  }
-}
-
 .navbar {
   background: var(--navbar-background);
   color: var(--navbar-font-color);
@@ -63,6 +48,21 @@ body {
 
   a {
     text-decoration: none;
+  }
+}
+
+.navbar-nonProduction {
+  background: var(--color-red-bonita);
+
+  .navbar-item-nonProduction {
+    align-items: baseline;
+    font-size: 1.2rem;
+    display: flex;
+    line-height: var(--doc-line-height);
+    padding: 0 0.5rem;
+    position: relative;
+    color: var(--color-unfocused);
+    flex-grow: 1;
   }
 }
 
