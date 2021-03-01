@@ -51,6 +51,21 @@ body {
   }
 }
 
+.navbar-nonProduction {
+  background: var(--color-red-bonita);
+
+  .navbar-item-nonProduction {
+    align-items: baseline;
+    font-size: 1.2rem;
+    display: flex;
+    line-height: var(--doc-line-height);
+    padding: 0 0.5rem;
+    position: relative;
+    color: var(--color-unfocused);
+    flex-grow: 1;
+  }
+}
+
 .navbar-brand {
   align-items: stretch;
   display: flex;
@@ -507,6 +522,10 @@ body {
 
   .label span {
     height: 1rem;
+  }
+
+  .navbar-nonProduction .hidden-xs {
+    display: none;
   }
 }
 

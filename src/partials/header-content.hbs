@@ -1,9 +1,15 @@
 <header class="header">
-  <nav class="navbar">
+  <nav class="navbar {{~#if site.keys.nonProduction}} navbar-nonProduction {{/if~}} ">
     <div class="navbar-brand">
       <div class="navbar-item">
         <a class="bonita-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}"></a>
       </div>
+
+      {{#if site.keys.nonProduction}}
+      <div class="navbar-item-nonProduction">
+        <p>{{{site.title}}}</p>
+      </div>
+      {{/if}}
 
       <button class="navbar-burger" data-target="search-container">
         <i class="search-icon" aria-hidden="true"></i>
@@ -35,11 +41,13 @@
     </div>
 
     <div class="navbar-search" id="search-container">
+      {{#unless site.keys.nonProduction}}
       <div class="navbar-item search-item hide-for-print">
         {{!-- Algolia search bar --}}
         <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
         <i class="search-icon" aria-hidden="true"></i>
       </div>
+      {{/unless}}
 
       {{!-- Dark theme --}}
       <div class="theme-switch-wrapper">
@@ -53,6 +61,5 @@
         </div>
       </div>
     </div>
-
   </nav>
 </header>
