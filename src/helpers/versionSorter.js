@@ -10,7 +10,7 @@ function compare (v1, v2) {
   if (v1.version === 'archives' || v2.version === 'latest') {
     return 1
   }
-  if (v2.version === 'olarchivesd' || v1.version === 'latest') {
+  if (v2.version === 'archives' || v1.version === 'latest') {
     return -1
   }
   return semVerCompare(v1.version, v2.version)
