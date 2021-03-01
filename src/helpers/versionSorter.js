@@ -3,7 +3,7 @@
 module.exports = (versions) => Object.values(versions).sort(compare)
 
 /**
- * This function ensure that a component with the version "archives" has the lowest priority
+ * This function ensure that a component with the version 'archives' has the lowest priority
  * -> displayed at the end of the versions list.
  */
 function compare (v1, v2) {
