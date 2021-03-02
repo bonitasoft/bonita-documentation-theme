@@ -35,7 +35,7 @@ site:
       version: '7.9'
       displayVersion: '7.9'
     - url: '#'
-      version: 'archives'
+      version: '0'
       displayVersion: 'archives'
     latestVersion: *latest_version_bonita
   - name: 123
@@ -90,7 +90,7 @@ page:
   - version: '7.9'
     displayVersion: '7.9'
     url: '#'
-  - version: 'archives'
+  - version: '0'
     displayVersion: 'archives'
     missing: true
     url: '#'
