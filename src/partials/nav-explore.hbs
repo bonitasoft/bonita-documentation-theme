@@ -10,7 +10,7 @@
     <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
       <span class="title">{{{./title}}}</span>
       <ul class="versions">
-        {{#each (versionSorter ./versions)}}
+        {{#each ./versions}}
         <li class="version
           {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
           {{~#if (eq this ../latest)}} is-latest{{/if}}">
