@@ -3,6 +3,7 @@ site:
   keys:
     nonProduction: false
     hideEditPageLinks: false
+    hideNavbarComponentsList: false
   url: http://localhost:5252
   title: Brand Docs
   homeUrl: &home_url /bonita/7.10/index.html
