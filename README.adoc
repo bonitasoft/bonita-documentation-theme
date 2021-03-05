@@ -1,4 +1,12 @@
 = Bonita Documentation Theme
+:icons: font
+ifdef::env-github[]
+:note-caption: :information_source:
+:tip-caption: :bulb:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
 This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io]
 repository to build the Bonita documentation website. +
