@@ -20,10 +20,18 @@
   .version-menu {
     border: 1px solid transparent;
     background-color: var(--page-version-menu-background);
-    padding: 1.25rem 0.5rem 0.5rem;
+    padding: 1.375rem 1.5rem .5rem .5rem;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+    align-items: flex-end;
+    flex-direction: column;
+    -webkit-box-align: end;
+    display: flex;
+    min-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    white-space: nowrap;
   }
 
   &:not(.is-active) {
