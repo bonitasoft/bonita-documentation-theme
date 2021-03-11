@@ -8,22 +8,22 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io]
+This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site]
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora default UI].
 
 == Usage
 
-This repository produces a zip archive _ui-bundle.zip_. This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonitasoft.github.io/blob/master/antora-playbook.yml[configuration file]. +
-Currently, we embed the ui-bundle.zip in the main docsite repository (https://github.com/bonitasoft/bonitasoft.github.io/tree/master/resources[here]), it is used locally at build time.
+This repository produces a zip archive _ui-bundle.zip_. This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonita-documentation-site/blob/master/antora-playbook.yml[configuration file]. +
+Currently, we embed the ui-bundle.zip in the main docsite repository (https://github.com/bonitasoft/bonita-documentation-site/tree/master/resources[here]), it is used locally at build time.
 
 [TIP]
 ====
 Simple flow to 'release' a new version of the theme (i.e use a new version of the UI bundle in the doc site):
 
 - Build locally this repository (type `gulp bundle` at the root of the repository) -> _build/ui-bundle.zip_ is created +
-- Clone the repository https://github.com/bonitasoft/bonitasoft.github.io[bonitasoft.github.io], and create a new branch to update the UI bundle
-- Copy the ui-bundle.zip archive in _bonitasoft.github.io/resources/_, and rename it into _antora-ui-bundle.zip_ +
+- Clone the repository https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site], and create a new branch to update the UI bundle
+- Copy the ui-bundle.zip archive in _bonita-documentation-site/resources/_, and rename it into _antora-ui-bundle.zip_ +
 - Push your changes and open a pull request, with details on the changes and eventually some links to the change commits in this repository
 ====
 
