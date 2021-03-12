@@ -9,13 +9,18 @@
       If you typed the URL of this page manually, please double check that you entered the address correctly.</p>
   </div>
   {{else}}
-  {{#if page.attributes.out-of-support}}
+  {{!-- {{#if page.attributes.out-of-support}} --}}
   <div class="paragraph out-of-support-block">
-    <p>This version is out of support, new versions are available. Check the <a
-        href="{{{page.component.latestVersion.url}}}">latest
-        version.</a></p>
+    <p>This documentation is about a version that is <b>out of support</b>, here is the <a
+        href="{{{page.component.latestVersion.url}}}">latest documentation
+        version</a>.
+    </p>
+    <p>
+      How about <a href="https://www.bonitasoft.com/downloads">downloading</a> a newer, supported
+      version?
+    </p>
   </div>
-  {{/if}}
+  {{!-- {{/if}} --}}
   {{#with page.title}}
   <h1 class="page">{{{this}}}</h1>
   {{/with}}
