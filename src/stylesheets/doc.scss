@@ -740,6 +740,16 @@
         border-radius: 50%;
       }
     }
+
+    p {
+      code {
+        background-color: var(--color-admonition-caution-bg);
+      }
+    }
+
+    pre.highlight code {
+      background-color: var(--color-admonition-caution-bg);
+    }
   }
 
   .admonitionblock.important {
@@ -754,6 +764,16 @@
         background-color: var(--color-admonition-important);
         border-radius: 50%;
       }
+    }
+
+    p {
+      code {
+        background-color: var(--color-admonition-important-bg);
+      }
+    }
+
+    pre.highlight code {
+      background-color: var(--color-admonition-important-bg);
     }
   }
 
@@ -770,6 +790,16 @@
         border-radius: 50%;
       }
     }
+
+    p {
+      code {
+        background-color: var(--color-admonition-note-bg);
+      }
+    }
+
+    pre.highlight code {
+      background-color: var(--color-admonition-note-bg);
+    }
   }
 
   .admonitionblock.tip {
@@ -785,6 +815,16 @@
         border-radius: 50%;
       }
     }
+
+    p {
+      code {
+        background-color: var(--color-admonition-tip-bg);
+      }
+    }
+
+    pre.highlight code {
+      background-color: var(--color-admonition-tip-bg);
+    }
   }
 
   .admonitionblock.warning {
@@ -799,6 +839,16 @@
         background-color: var(--color-admonition-warning);
         border-radius: 50%;
       }
+    }
+
+    p {
+      code {
+        background-color: var(--color-admonition-warning-bg);
+      }
+    }
+
+    pre.highlight code {
+      background-color: var(--color-admonition-warning-bg);
     }
   }
 
