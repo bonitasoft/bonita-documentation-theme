@@ -1160,3 +1160,12 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .videoblock {
+    iframe {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}

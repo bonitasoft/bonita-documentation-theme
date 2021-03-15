@@ -1,3 +1,11 @@
+= MISC
+
+== Test Video
+
+{empty} +
+
+video::Hl1thnPla7E[youtube, width=640,height=380]
+
 == Test raw admonitions
 
 [NOTE]
