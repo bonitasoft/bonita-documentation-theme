@@ -54,7 +54,7 @@ var filters = [
   '--filter-logo-footer',
 ]
 
-function toDarkTheme () {
+function toDarkTheme (resolve) {
   localStorage.setItem('theme', 'dark')
   colors.forEach(function (color) {
     updateCSSProperty(color, color + '-dark')
@@ -65,9 +65,11 @@ function toDarkTheme () {
 
   // Update highlight js theme
   enableHightLightDarkTheme(true)
+  // Promise.resolve if existing
+  resolve && resolve()
 }
 
-function toLightTheme () {
+function toLightTheme (resolve) {
   localStorage.setItem('theme', 'light')
   colors.forEach(function (color) {
     updateCSSProperty(color, color + '-light')
@@ -78,6 +80,8 @@ function toLightTheme () {
 
   // Update highlight js theme
   enableHightLightDarkTheme(false)
+  // Promise.resolve if existing
+  resolve && resolve()
 }
 
 // Update highlight js to dark theme if dark = true
@@ -95,17 +99,35 @@ function enableHightLightDarkTheme (dark) {
   }
 }
 
+function performThemeSwitch (checkbox, switchBall) {
+  setTimeout(function () {
+    const themeSwitchPromise = new Promise((resolve) => {
+      if (checkbox.checked) {
+        toDarkTheme(resolve)
+      } else {
+        toLightTheme(resolve)
+      }
+    })
+
+    themeSwitchPromise.finally(function () {
+      switchBall.innerHTML = ''
+    })
+  }, 100)
+}
+
 function updateCSSProperty (propertyToUpdate, propertyValue) {
   document.documentElement.style.setProperty(propertyToUpdate,
     getComputedStyle(document.body).getPropertyValue(propertyValue))
 }
 
+// create the loader div
+const loader = document.createElement('div')
+loader.classList.add('lds-dual-ring')
+
 function toggleDarkThemeMode (checkbox) {
-  if (checkbox.checked) {
-    toDarkTheme()
-  } else {
-    toLightTheme()
-  }
+  const switchBall = document.querySelector('.theme-switch-wrapper .toggle-content .label .ball')
+  switchBall.appendChild(loader)
+  performThemeSwitch(checkbox, switchBall)
 }
 
 function isDarkTheme () {
