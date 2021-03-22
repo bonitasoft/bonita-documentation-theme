@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 function sendClickEvent (queryID, hits, suggestion) {
-  // The APP ID does not provide any write access, it is used ot identify us when using API's
-  var appID = 'BH4D9OD16A'
-  var apiKey = '16267f96d135c47df8454efd5b448c9a'
+  var appID = 'BH4D9OD16A' // The APP ID does not provide any write access, it is used to identify us when using API's
+  var apiKey = '16267f96d135c47df8454efd5b448c9a' // Read only API Key
 
   const Http = new XMLHttpRequest()
   Http.open('POST', 'https://insights.algolia.io/1/events')
