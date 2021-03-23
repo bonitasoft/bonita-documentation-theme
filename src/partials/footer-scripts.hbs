@@ -1,16 +1,27 @@
 <script async src="{{{uiRootPath}}}/js/vendor/asciinema-player.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{{uiRootPath}}}/js/site.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript"> docsearch({
-    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    apiKey: '16267f96d135c47df8454efd5b448c9a', // Read only API Key
     indexName: 'bonitasoft',
     inputSelector: '#search-query',
     debug: false, // Set debug to true if you want to inspect the dropdown
     algoliaOptions: {
-      'facetFilters': ["version:{{page.version}}", "tags:{{page.component.name}}"]
+      // Can't be extracted on a js file because facetFilters are valued by Antora at build time, only on html files!
+      'facetFilters': ["version:{{page.version}}", "tags:{{page.component.name}}"],
+      clickAnalytics: true
+    },
+    handleSelected: function (input, event, suggestion, datasetNumber, context) {
+      sendClickEvent(lastQueryID, lastQueryHits, suggestion);
+      input.setVal('');
+      window.location.assign(suggestion.url);
+    },
+    queryDataCallback: function (data) {
+      lastQueryID = data.results[0].queryID;
+      lastQueryHits = data.results[0].hits;
     }
   });
 </script>
