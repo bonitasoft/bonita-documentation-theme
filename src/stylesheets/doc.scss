@@ -802,6 +802,16 @@
     }
   }
 
+  .admonitionblock.note.bonitacloud {
+    .icon {
+      i.fa.icon-note::before {
+        background: url("../img/cloud.svg") no-repeat;
+        background-color: var(--color-admonition-note);
+        border-radius: 50%;
+      }
+    }
+  }
+
   .admonitionblock.tip {
     background-color: var(--color-admonition-tip-bg);
     border-color: var(--color-admonition-tip);
