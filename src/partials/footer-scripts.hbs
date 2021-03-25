@@ -28,8 +28,8 @@
     },
     handleSelected: function (input, event, suggestion, datasetNumber, context) {
       sendClickEvent(lastQueryID, lastQueryHits, suggestion);
-      //input.setVal('');
-      //window.location.assign(suggestion.url);
+      input.setVal('');
+      window.location.assign(suggestion.url);
     },
     queryDataCallback: function (data) {
       lastQueryID = data.results[0].queryID;
