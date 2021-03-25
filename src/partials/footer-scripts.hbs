@@ -4,7 +4,19 @@
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{{uiRootPath}}}/js/site.js"></script>
 
-<script type="text/javascript"> docsearch({
+<script>
+  var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
+
+  !function (e, a, t, n, s, i, c) {
+    e.AlgoliaAnalyticsObject = s, e[s] = e[s] || function () {
+      (e[s].queue = e[s].queue || []).push(arguments)
+    }, i = a.createElement(t), c = a.getElementsByTagName(t)[0],
+      i.async = 1, i.src = n, c.parentNode.insertBefore(i, c)
+  }(window, document, "script", ALGOLIA_INSIGHTS_SRC, "aa");
+</script>
+
+<script type="text/javascript">
+  docsearch({
     apiKey: '16267f96d135c47df8454efd5b448c9a', // Read only API Key
     indexName: 'bonitasoft',
     inputSelector: '#search-query',
@@ -16,13 +28,18 @@
     },
     handleSelected: function (input, event, suggestion, datasetNumber, context) {
       sendClickEvent(lastQueryID, lastQueryHits, suggestion);
-      input.setVal('');
-      window.location.assign(suggestion.url);
+      //input.setVal('');
+      //window.location.assign(suggestion.url);
     },
     queryDataCallback: function (data) {
       lastQueryID = data.results[0].queryID;
       lastQueryHits = data.results[0].hits;
     }
+  });
+
+  aa('init', {
+    appId: 'BH4D9OD16A',
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
   });
 </script>
 
