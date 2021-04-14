@@ -58,16 +58,16 @@
   --color-gray-70-dark: #c1c1c1;
   --color-jet-20-dark: #aaa;
   --color-jet-30-dark: #b0b0b0;
-  --color-jet-50-dark: #bbb;
-  --color-jet-70-dark: #ccc;
-  --color-jet-80-dark: #ddd;
+  --color-jet-50-dark: #ccc;
+  --color-jet-70-dark: #ddd;
+  --color-jet-80-dark: #eee;
   --color-black-dark: #fff;
   --color-blue-bonita-dark: #2a2f43;
   --color-red-bonita-dark: #ca4a53;
   --color-unfocused-dark: #dcdcdcc2;
   --color-focused-dark: #fff;
   --color-link-dark: #00d9ff;
-  --color-link-hover-dark: #40e2ff;
+  --color-link-hover-dark: #00d9ffb5;
   --color-nav-item-dark: var(--color-black-dark);
   --color-admonition-note-dark: #11386a;
   --color-admonition-note-bg-dark: #11386a4f;
@@ -86,7 +86,7 @@
   --color-admonition-caution-text-dark: #fb8af6;
   --color-blue-bright-dark: #0fe;
   --color-card-shadow-dark: #2e2e2e;
-  --color-higlight-dark: #eee;
+  --color-higlight-dark: #9ed4ff;
   --color-footer-dark: var(--color-blue-bonita-dark);
   --color-card-border-dark: #9ba9c6;
   // End of color definition
@@ -98,7 +98,6 @@
   --body-font-color: var(--color-jet-70);
   --body-font-family: "Open Sans", sans-serif;
   --body-font-weight-bold: 550;
-  --body-font-weight-bolder: 650;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 700;
   --body-background: var(--color-white);
