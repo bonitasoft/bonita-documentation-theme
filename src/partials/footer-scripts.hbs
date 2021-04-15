@@ -24,7 +24,8 @@
     algoliaOptions: {
       // Can't be extracted on a js file because facetFilters are valued by Antora at build time, only on html files!
       'facetFilters': ["version:{{page.version}}", "tags:{{page.component.name}}"],
-      clickAnalytics: true
+      clickAnalytics: true,
+      hitsPerPage: 20
     },
     handleSelected: function (input, event, suggestion, datasetNumber, context) {
       sendClickEvent(lastQueryID, lastQueryHits, suggestion);
