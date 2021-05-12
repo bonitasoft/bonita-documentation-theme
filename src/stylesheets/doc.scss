@@ -749,6 +749,10 @@
     pre.highlight code {
       background-color: var(--color-admonition-caution-bg);
     }
+
+    strong {
+      color: var(--color-admonition-caution-text);
+    }
   }
 
   .admonitionblock.important {
@@ -774,6 +778,10 @@
     pre.highlight code {
       background-color: var(--color-admonition-important-bg);
     }
+
+    strong {
+      color: var(--color-admonition-important-text);
+    }
   }
 
   .admonitionblock.note {
@@ -798,6 +806,10 @@
 
     pre.highlight code {
       background-color: var(--color-admonition-note-bg);
+    }
+
+    strong {
+      color: var(--color-admonition-note-text);
     }
   }
 
@@ -834,6 +846,10 @@
     pre.highlight code {
       background-color: var(--color-admonition-tip-bg);
     }
+
+    strong {
+      color: var(--color-admonition-tip-text);
+    }
   }
 
   .admonitionblock.warning {
@@ -858,6 +874,10 @@
 
     pre.highlight code {
       background-color: var(--color-admonition-warning-bg);
+    }
+
+    strong {
+      color: var(--color-admonition-warning-text);
     }
   }
 
