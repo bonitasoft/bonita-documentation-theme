@@ -101,7 +101,7 @@ function enableHightLightDarkTheme (dark) {
 
 function performThemeSwitch (checkbox, switchBall) {
   setTimeout(function () {
-    const themeSwitchPromise = new Promise((resolve) => {
+    const themeSwitchPromise = new Promise(function (resolve) {
       if (checkbox.checked) {
         toDarkTheme(resolve)
       } else {
