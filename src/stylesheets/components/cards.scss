@@ -8,14 +8,16 @@
   vertical-align: middle;
 }
 
-.card-section .sectionbody {
+.card-section .sectionbody,
+.card-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 1rem;
   margin-top: 1rem;
 }
 
-.card-section-2col .sectionbody {
+.card-section-2col .sectionbody,
+.card-section-2col {
   grid-template-columns:
     repeat(
       auto-fill,
@@ -23,7 +25,8 @@
     );
 }
 
-.card-section .sectionbody > :not(.card) {
+.card-section .sectionbody > :not(.card),
+.card-section > :not(.card) {
   grid-column: 1 / -1;
 }
 

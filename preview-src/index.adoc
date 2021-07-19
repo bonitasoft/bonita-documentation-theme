@@ -10,51 +10,12 @@ image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 
 Welcome to the Bonita BPM documentation website.
 
+[.card-section]
 == Explore Bonita
 
 Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
 
-[.card-section]
-== Highlight
 
-[.card.card-index]
---
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Release-note 7.5# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Integration of SSO SAML 2.0# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#New wizard to import a process in the studio and compare the artifacts# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Industrialization of Living Application (in Studio)# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#New management of date/time# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Full Java 8 support# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Support of Microsoft Edge browser# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-
-[.card-section]
-== Getting Started
 [.card.card-index]
 --
 http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
@@ -65,55 +26,18 @@ http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started t
 xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Process diagram overview# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
 --
 
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Key concepts# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#UI designer overview# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Bonita BPM Studio installation# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Basic Bonita BPM platform installation# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Create your first project with the Engine APIs and Maven# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
---
 
 [.card-section]
-== Resources
+=== Highlight
+
 [.card.card-index]
 --
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Download Bonita BPM software# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
 --
 
 [.card.card-index]
 --
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#BPMN standard# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#The Ultimate Guide to BPMN2# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Best Practices for Continuous Integration with Bonita BPM# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
---
-[.card.card-index.card-java]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Javadoc# [.card-body.card-content-overflow]#pass:q[Read BPMN Standard]#]
+xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Process diagram overview# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
 --
 
 == Asciinema
