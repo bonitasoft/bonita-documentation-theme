@@ -1,4 +1,4 @@
-= MISC
+= MISC **WITH BOLD**
 
 == Test Video
 
@@ -111,20 +111,23 @@ Allez Grenoble
 . blabla
 
 
-== Test title level
+== Test title level **WITH BOLD**
 
 lalala
 
-=== level 3
+=== level 3 **WITH BOLD**
 
 lalalalala
 
-==== level 4
+==== level 4 **WITH BOLD**
 
 lalalalalalalala
+
+===== level 5 **WITH BOLD**
+
 -> no more levels
 
-**Use bold for lvl 5, it's better**
+**Consider to use bold instead of lvl 5 :)**
 
 tututututu
 pouet
