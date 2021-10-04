@@ -1,11 +1,11 @@
 {
   "name": "@antora/ui-default",
-  "description": "An archetype project that produces a UI for creating documentation sites with Antora",
-  "homepage": "https://gitlab.com/antora/antora-ui-default",
+  "description": "Bonita documentation theme, inspired from the Antora default UI.",
+  "homepage": "https://documentation.bonitasoft.com/bonita",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/antora/antora-ui-default.git"
+    "url": "https://github.com/bonitasoft/bonita-documentation-theme"
   },
   "engines": {
     "node": ">= 8.0.0"
@@ -24,7 +24,7 @@
     "browser-pack-flat": "~3.4",
     "browserify": "~16.5",
     "cssnano": "~4.1",
-    "eslint": "~6.8",
+    "eslint": "~7.32.0",
     "eslint-config-standard": "~14.1",
     "eslint-plugin-import": "~2.20",
     "eslint-plugin-node": "~11.1",
@@ -38,7 +38,7 @@
     "gulp-eslint": "~6.0",
     "gulp-imagemin": "~6.2",
     "gulp-postcss": "~8.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "~3.0",
     "gulp-vinyl-zip": "~2.2",
@@ -46,21 +46,21 @@
     "highlight.js": "~10.5.0",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
-    "node-sass": "^5.0.0",
     "open-sans-fonts": "^1.6.2",
     "postcss-calc": "~7.0",
     "postcss-custom-properties": "^11.0.0",
     "postcss-import": "~12.0",
     "postcss-url": "~8.0",
-    "prettier-eslint": "~9.0",
+    "prettier-eslint": "~13.0.0",
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
+    "sass": "^1.42.1",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "~20.0",
     "stylelint-scss": "^3.18.0",
     "through2": "~3.0",
     "typeface-roboto-mono": "1.1.13",
     "vinyl-buffer": "~1.0",
-    "vinyl-fs": "~3.0"
+    "vinyl-fs": "~3.0.3"
   }
 }
