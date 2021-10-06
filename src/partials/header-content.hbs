@@ -44,11 +44,13 @@
 
     <div class="navbar-search" id="search-container">
       {{#unless site.keys.nonProduction}}
-      <div class="navbar-item search-item hide-for-print">
-        {{!-- Algolia search bar --}}
-        <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
-        <i class="search-icon" aria-hidden="true"></i>
-      </div>
+        {{#unless page.attributes.hide-search-bar }}
+        <div class="navbar-item search-item hide-for-print">
+          {{!-- Algolia search bar --}}
+          <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+          <i class="search-icon" aria-hidden="true"></i>
+        </div>
+        {{/unless}}
       {{/unless}}
 
       {{!-- Dark theme --}}

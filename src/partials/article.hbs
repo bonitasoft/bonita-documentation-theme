@@ -21,6 +21,14 @@
     </p>
   </div>
   {{/if}}
+  {{#if page.attributes.next-release}}
+  <div class="paragraph next-release-block">
+    <p>This section of the documentation is dedicated to our next version.
+    It is work in progress: its content will evolve by the time the new version is released.
+    </p>
+  </div>
+  {{/if}}
+
   {{#with page.title}}
   <h1 class="page">{{{this}}}</h1>
   {{/with}}
