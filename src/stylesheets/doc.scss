@@ -909,6 +909,13 @@
     text-align: center;
   }
 
+  .next-release-block {
+    background-color: var(--color-admonition-note-bg);
+    border-color: var(--color-admonition-note);
+    color: var(--color-admonition-note-text);
+    text-align: center;
+  }
+
   .image {
     > img {
       height: auto;
