@@ -24,6 +24,7 @@ var colors = [
   '--color-unfocused',
   '--color-focused',
   '--color-link',
+  '--color-admonition-link',
   '--color-link-hover',
   '--color-nav-item',
   '--color-admonition-note',
