@@ -733,6 +733,10 @@
         }
       }
     }
+
+    a {
+      color: var(--color-admonition-link);
+    }
   }
 
   .doc .admonitionblock .icon {
