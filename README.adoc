@@ -12,10 +12,18 @@ This project produces the Antora UI bundle used by the https://github.com/bonita
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora default UI].
 
+
+== Prerequisites
+
+The project requires Node 16, for nvm user, run `nvm use`.
+
+For more details, see the xref:docs/modules/ROOT/pages/prerequisites.adoc[prerequisites].
+
+
 == Usage
 
 This repository produces a zip archive _ui-bundle.zip_. This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonita-documentation-site/blob/master/antora-playbook.yml[configuration file]. +
-Currently, we embed the ui-bundle.zip in the main docsite repository (https://github.com/bonitasoft/bonita-documentation-site/tree/master/resources[here]), it is used locally at build time.
+Currently, we embed the ui-bundle.zip in the main https://github.com/bonitasoft/bonita-documentation-site/tree/master/resources[documentation site repository], it is used locally at build time.
 
 [TIP]
 ====
