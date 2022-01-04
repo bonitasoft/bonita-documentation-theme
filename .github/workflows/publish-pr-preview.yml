@@ -6,7 +6,12 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - master
-    # TODO path
+    paths:
+      - 'package-lock.json'
+      - 'src/*'
+      - 'preview-src/*'
+      - '.github/actions/build-setup/*'
+      - '.github/workflows/publish-pr-preview.yml'
 
 permissions:
   # surge-preview creates or updates PR comments about the deployment status
