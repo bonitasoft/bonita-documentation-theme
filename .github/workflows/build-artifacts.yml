@@ -18,10 +18,6 @@ on:
       - '.github/actions/build-setup/*'
       - '.github/workflows/build-artifacts.yml'
 
-permissions:
-  # for artifacts upload
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-20.04
