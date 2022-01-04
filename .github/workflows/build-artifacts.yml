@@ -18,9 +18,9 @@ on:
       - '.github/actions/build-setup/*'
       - '.github/workflows/build-artifacts.yml'
 
-# TODO permissions for artifacts upload
-#permissions:
-#  contents: write
+permissions:
+  # for artifacts upload
+  contents: read
 
 jobs:
   build:
