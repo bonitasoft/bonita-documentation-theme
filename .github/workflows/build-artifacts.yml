@@ -3,8 +3,14 @@ name: Build
 on:
   push:
     branches: [ master ]
+    # TODO path
   pull_request:
     branches: [ master ]
+    # TODO path
+
+# TODO permissions for artifacts upload
+#permissions:
+#  contents: write
 
 jobs:
   build:
@@ -12,11 +18,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Install npm modules
+      - name: Build Setup
+        uses: ./.github/actions/build-setup
+      - name: Install dependencies
         run: npm ci
       - name: Bundle documentation theme
         run: gulp bundle

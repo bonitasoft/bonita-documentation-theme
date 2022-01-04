@@ -2,15 +2,25 @@ name: Build PR preview
 
 on:
   pull_request:
+    # To manage 'surge-preview' action teardown, add default event types + closed event type
+    types: [opened, synchronize, reopened, closed]
     branches:
       - master
-      # To manage 'surge-preview' action teardown, add default event types + closed event type
-    types: [opened, synchronize, reopened, closed]
+    # TODO path
+
+permissions:
+  # surge-preview creates or updates PR comments about the deployment status
+  pull-requests: write
+
 jobs:
   build_preview:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        if: github.event.action != 'closed'
+      - name: Build Setup
+        uses: ./.github/actions/build-setup
       - name: Publish preview
         id: preview_step
         uses: afc163/surge-preview@v1
@@ -21,7 +31,5 @@ jobs:
           failOnError: true
           teardown: 'true'
           build: |
-            npm install
+            npm ci
             gulp preview:build
-      - name: Get the preview_url
-        run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
