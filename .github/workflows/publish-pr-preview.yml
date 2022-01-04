@@ -26,6 +26,7 @@ jobs:
         if: github.event.action != 'closed'
       - name: Build Setup
         uses: ./.github/actions/build-setup
+        if: github.event.action != 'closed'
       - name: Publish preview
         id: preview_step
         uses: afc163/surge-preview@v1
