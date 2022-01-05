@@ -8,3 +8,6 @@ runs:
       with:
         node-version: '16'
         cache: 'npm'
+    - name: Install dependencies
+      shell: bash
+      run: npm ci

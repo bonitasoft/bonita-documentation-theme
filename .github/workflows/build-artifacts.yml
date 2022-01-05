@@ -26,8 +26,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build Setup
         uses: ./.github/actions/build-setup
-      - name: Install dependencies
-        run: npm ci
       - name: Bundle documentation theme
         run: gulp bundle
       - name: Upload UI bundle
