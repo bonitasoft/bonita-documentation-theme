@@ -3,8 +3,20 @@ name: Build
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'package-lock.json'
+      - 'src/*'
+      - 'preview-src/*'
+      - '.github/actions/build-setup/*'
+      - '.github/workflows/build-artifacts.yml'
   pull_request:
     branches: [ master ]
+    paths:
+      - 'package-lock.json'
+      - 'src/*'
+      - 'preview-src/*'
+      - '.github/actions/build-setup/*'
+      - '.github/workflows/build-artifacts.yml'
 
 jobs:
   build:
@@ -12,12 +24,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Install npm modules
-        run: npm ci
+      - name: Build Setup
+        uses: ./.github/actions/build-setup
       - name: Bundle documentation theme
         run: gulp bundle
       - name: Upload UI bundle
