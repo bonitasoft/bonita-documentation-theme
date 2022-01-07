@@ -45,6 +45,7 @@ var colors = [
   '--color-blue-bright',
   '--color-card-shadow',
   '--color-higlight',
+  '--color-higlight-link',
   '--color-footer',
   '--color-card-border',
 ]
