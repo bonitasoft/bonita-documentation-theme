@@ -256,14 +256,12 @@ html.is-clipped--nav {
 }
 
 .nav-link:hover {
-  color: var(--color-higlight);
-  font-weight: var(--body-font-weight-bold);
+  color: var(--color-higlight-link);
 }
 
 .is-current-page {
   > .nav-link {
-    font-weight: var(--body-font-weight-bold);
-    color: var(--color-higlight);
+    color: var(--color-higlight-link);
   }
 
   > .nav-text {

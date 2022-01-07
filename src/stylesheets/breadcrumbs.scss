@@ -17,8 +17,7 @@
     margin: 0;
 
     a:hover {
-      color: var(--color-higlight);
-      font-weight: var(--body-font-weight-bold);
+      color: var(--color-higlight-link);
     }
 
     &::after {
