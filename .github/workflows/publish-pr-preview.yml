@@ -8,9 +8,9 @@ on:
       - master
     paths:
       - 'package-lock.json'
-      - 'src/*'
-      - 'preview-src/*'
-      - '.github/actions/build-setup/*'
+      - 'src/**/*'
+      - 'preview-src/**/*'
+      - '.github/actions/build-setup/**/*'
       - '.github/workflows/publish-pr-preview.yml'
 
 permissions:

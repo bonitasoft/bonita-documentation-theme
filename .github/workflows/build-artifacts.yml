@@ -5,17 +5,17 @@ on:
     branches: [ master ]
     paths:
       - 'package-lock.json'
-      - 'src/*'
-      - 'preview-src/*'
-      - '.github/actions/build-setup/*'
+      - 'src/**/*'
+      - 'preview-src/**/*'
+      - '.github/actions/build-setup/**/*'
       - '.github/workflows/build-artifacts.yml'
   pull_request:
     branches: [ master ]
     paths:
       - 'package-lock.json'
-      - 'src/*'
-      - 'preview-src/*'
-      - '.github/actions/build-setup/*'
+      - 'src/**/*'
+      - 'preview-src/**/*'
+      - '.github/actions/build-setup/**/*'
       - '.github/workflows/build-artifacts.yml'
 
 jobs:
