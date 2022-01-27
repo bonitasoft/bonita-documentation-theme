@@ -82,7 +82,6 @@ Update the `antora-ui-default` branch to reference the latest commits of the `ma
 
   $ git reset --hard antora-ui-default/master
 
-
 Push the changes to GitHub (assuming that `origin` is the alias for the GitHub repository)
 
   $ git push origin antora-ui-default
