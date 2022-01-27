@@ -6,7 +6,6 @@ const buffer = require('vinyl-buffer')
 const concat = require('gulp-concat')
 const fs = require('fs-extra')
 const imagemin = require('gulp-imagemin')
-const { obj: map } = require('through2')
 const merge = require('merge-stream')
 const postcss = require('gulp-postcss')
 const uglify = require('gulp-uglify')
@@ -15,6 +14,9 @@ const sass = require('gulp-sass')(require('sass'))
 const ospath = require('path')
 const path = ospath.posix
 const postcssUrl = require('postcss-url')
+const { Transform } = require('stream')
+const map = (transform) => new Transform({ objectMode: true, transform })
+const through = () => map((file, enc, next) => next(null, file))
 
 module.exports = (src, dest, preview) => () => {
   const opts = { base: src, cwd: src }
@@ -104,18 +106,24 @@ module.exports = (src, dest, preview) => () => {
     vfs
       .src('stylesheets/vendor/*.css', { ...opts }),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
-    vfs
-      .src('img/**/*.{gif,ico,jpg,png,svg}', opts)
-      .pipe(
-        imagemin(
+    vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
+      preview
+        ? through()
+        : imagemin(
           [
             imagemin.gifsicle(),
             imagemin.jpegtran(),
             imagemin.optipng(),
-            imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+            imagemin.svgo({
+              plugins: [
+                { cleanupIDs: { preservePrefixes: ['symbol-', 'view-'] } },
+                { removeViewBox: false },
+                { removeDesc: false },
+              ],
+            }),
           ].reduce((accum, it) => (it ? accum.concat(it) : accum), [])
         )
-      ),
+    ),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)
