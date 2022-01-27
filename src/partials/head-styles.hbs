@@ -1,4 +1,10 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+{{!-- DocSearch only available if the search bar is displayed --}}
+{{#unless site.keys.nonProduction}}
+  {{#unless page.attributes.hide-search-bar }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.css" integrity="sha256-tY3FCmL2d8yoJBOVyC2aOxdixg8sLT6CHlDWX/VUJaY=" crossorigin="anonymous">
+  {{/unless}}
+{{/unless}}
+
 <link rel="stylesheet" href="{{{uiRootPath}}}/stylesheets/vendor/asciinema-player.css">
 <link rel="stylesheet" href="{{{uiRootPath}}}/stylesheets/site.css">
 <link id="highlight-style-lnk" rel="stylesheet" href="{{{uiRootPath}}}/stylesheets/vendor/highlight-light.css">

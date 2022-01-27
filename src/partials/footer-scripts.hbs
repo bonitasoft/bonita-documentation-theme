@@ -1,9 +1,17 @@
 <script async src="{{{uiRootPath}}}/js/vendor/asciinema-player.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/highlight.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+{{!-- DocSearch only available if the search bar is displayed --}}
+{{#unless site.keys.nonProduction}}
+  {{#unless page.attributes.hide-search-bar }}
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous"></script>
+  {{/unless}}
+{{/unless}}
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{{uiRootPath}}}/js/site.js"></script>
 
+{{!-- DocSearch only available if the search bar is displayed --}}
+{{#unless site.keys.nonProduction}}
+  {{#unless page.attributes.hide-search-bar }}
 <script>
   var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
 
@@ -43,6 +51,8 @@
     apiKey: '16267f96d135c47df8454efd5b448c9a',
   });
 </script>
+  {{/unless}}
+{{/unless}}
 
 <script>
   // init toggle state
