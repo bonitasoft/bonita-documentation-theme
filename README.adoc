@@ -75,16 +75,14 @@ This branch contains all improvements and bug fixes available in the `Antora UI 
 ==== Updating the `antora-ui-default` branch
 
 Add the GitLab repository as remote of your local repository
-====
-git remote add antora-ui-default https://gitlab.com/antora/antora-ui-default.git
-====
+
+  $ git remote add antora-ui-default https://gitlab.com/antora/antora-ui-default.git
 
 Update the `antora-ui-default` branch to reference the latest commits of the `master` branch of the `Antora Default UI` repository
-====
-git reset --hard antora-ui-default/master
-====
+
+  $ git reset --hard antora-ui-default/master
+
 
 Push the changes to GitHub (assuming that `origin` is the alias for the GitHub repository)
-====
-git push origin antora-ui-default
-====
+
+  $ git push origin antora-ui-default
