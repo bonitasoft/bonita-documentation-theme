@@ -10,7 +10,7 @@ endif::[]
 
 This project produces the Antora UI bundle used by the https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site]
 repository to build the Bonita documentation website. +
-It is based on the https://gitlab.com/antora/antora-ui-default[Antora default UI].
+It is based on the https://gitlab.com/antora/antora-ui-default[Antora Default UI].
 
 
 == Prerequisites
@@ -64,3 +64,24 @@ Make sure that the whole UI is OK before submitting your change, in both light a
 
 This UI bundle is based on the Antora default UI. It uses gulp, handlebars and sass. +
 You can find the detailed documentation on the UI bundle https://docs.antora.org/antora-ui-default/[here].
+
+
+=== Integrating changes from Antora UI Default
+
+You can find the original code in the `antora-ui-default` branch of this repository or at https://gitlab.com/antora/antora-ui-default[GitLab].
+
+This branch contains all improvements and bug fixes available in the `Antora UI Default` project that can be reintegrated in `bonita-documentation-theme`.
+
+==== Updating the `antora-ui-default` branch
+
+Add the GitLab repository as remote of your local repository
+
+  $ git remote add antora-ui-default https://gitlab.com/antora/antora-ui-default.git
+
+Update the `antora-ui-default` branch to reference the latest commits of the `master` branch of the `Antora Default UI` repository
+
+  $ git reset --hard antora-ui-default/master
+
+Push the changes to GitHub (assuming that `origin` is the alias for the GitHub repository)
+
+  $ git push origin antora-ui-default
