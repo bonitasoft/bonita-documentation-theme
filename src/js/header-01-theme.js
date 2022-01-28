@@ -48,6 +48,8 @@ var colors = [
   '--color-higlight-link',
   '--color-footer',
   '--color-card-border',
+  '--color-code-background',
+  '--color-code-font',
 ]
 
 var filters = [

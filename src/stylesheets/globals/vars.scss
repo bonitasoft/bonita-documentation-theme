@@ -46,6 +46,8 @@
   --color-higlight-link-light: #005889;
   --color-footer-light: #e6e6e6;
   --color-card-border-light: #ebf2f2;
+  --color-code-background-light: #f1f1f1;
+  --color-code-font-light: #d36700;
   // Dark color set
   --color-white-dark: #151a25;
   --color-text-light-dark: #556;
@@ -93,6 +95,8 @@
   --color-higlight-link-dark: var(--color-higlight-dark);
   --color-footer-dark: var(--color-blue-bonita-dark);
   --color-card-border-dark: #9ba9c6;
+  --color-code-background-dark: #30334b;
+  --color-code-font-dark: #f7962e;
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -157,8 +161,8 @@
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
-  --code-background: var(--panel-background);
-  --code-font-color: var(--body-font-color);
+  --code-background: var(--color-code-background);
+  --code-font-color: var(--color-code-font);
   --example-background: var(--color-white);
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
