@@ -788,6 +788,26 @@
     strong {
       color: var(--color-admonition-caution-text);
     }
+
+    table.tableblock {
+      td {
+        border-top-color: var(--color-admonition-caution);
+        border-bottom-color: var(--color-admonition-caution);
+      }
+
+      thead th {
+        border-bottom-color: var(--color-admonition-caution);
+      }
+
+      > {
+      :not(thead) {
+          th {
+            border-top-color: var(--color-admonition-caution);
+            border-bottom-color: var(--color-admonition-caution);
+          }
+        }
+      }
+    }
   }
 
   .admonitionblock.important {
@@ -817,6 +837,26 @@
     strong {
       color: var(--color-admonition-important-text);
     }
+
+    table.tableblock {
+      td {
+        border-top-color: var(--color-admonition-important);
+        border-bottom-color: var(--color-admonition-important);
+      }
+
+      thead th {
+        border-bottom-color: var(--color-admonition-important);
+      }
+
+      > {
+      :not(thead) {
+          th {
+            border-top-color: var(--color-admonition-important);
+            border-bottom-color: var(--color-admonition-important);
+          }
+        }
+      }
+    }
   }
 
   .admonitionblock.note {
@@ -845,6 +885,26 @@
 
     strong {
       color: var(--color-admonition-note-text);
+    }
+
+    table.tableblock {
+      td {
+        border-top-color: var(--color-admonition-note);
+        border-bottom-color: var(--color-admonition-note);
+      }
+
+      thead th {
+        border-bottom-color: var(--color-admonition-note);
+      }
+
+      > {
+      :not(thead) {
+          th {
+            border-top-color: var(--color-admonition-note);
+            border-bottom-color: var(--color-admonition-note);
+          }
+        }
+      }
     }
   }
 
@@ -885,6 +945,26 @@
     strong {
       color: var(--color-admonition-tip-text);
     }
+
+    table.tableblock {
+      td {
+        border-top-color: var(--color-admonition-tip);
+        border-bottom-color: var(--color-admonition-tip);
+      }
+
+      thead th {
+        border-bottom-color: var(--color-admonition-tip);
+      }
+
+      > {
+      :not(thead) {
+          th {
+            border-top-color: var(--color-admonition-tip);
+            border-bottom-color: var(--color-admonition-tip);
+          }
+        }
+      }
+    }
   }
 
   .admonitionblock.warning {
@@ -913,6 +993,26 @@
 
     strong {
       color: var(--color-admonition-warning-text);
+    }
+
+    table.tableblock {
+      td {
+        border-top-color: var(--color-admonition-warning);
+        border-bottom-color: var(--color-admonition-warning);
+      }
+
+      thead th {
+        border-bottom-color: var(--color-admonition-warning);
+      }
+
+      > {
+      :not(thead) {
+          th {
+            border-top-color: var(--color-admonition-warning);
+            border-bottom-color: var(--color-admonition-warning);
+          }
+        }
+      }
     }
   }
 

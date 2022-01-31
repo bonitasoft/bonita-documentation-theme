@@ -110,6 +110,36 @@ Allez Grenoble
 +
 . blabla
 
+[NOTE]
+====
+|===
+| OS | Description
+
+| Windaube
+| Oulala
+
+| Macos
+| Pure gold
+
+| Linoux
+| Truc de geek
+|===
+====
+
+[WARNING]
+====
+|===
+| Gens à éviter
+
+| Parisiens
+
+| Bretons
+
+| Sudistes
+
+|===
+====
+
 
 == Test title level **WITH BOLD**
 
