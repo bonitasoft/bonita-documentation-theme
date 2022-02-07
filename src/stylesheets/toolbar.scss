@@ -5,7 +5,6 @@
   box-shadow: 0 1px 0 var(--toolbar-border-color);
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
-  height: var(--toolbar-height);
   justify-content: flex-start;
   position: sticky;
   top: var(--navbar-height);
@@ -59,6 +58,29 @@
 .edit-this-page {
   display: none;
   padding-right: 0.5rem;
+}
+
+.toolbar.toolbar-wrap {
+    flex-wrap: wrap;
+}
+
+.notice {
+  text-align: center;
+  width: 100%;
+  padding: 10px 5px;
+  position: sticky;
+}
+
+.custom-message-block {
+  background-color: var(--color-info-custom-message-bg);
+  border-color: var(--color-admonition-note);
+  color: var(--color-admonition-note-text);
+}
+
+.out-of-support-block {
+  background-color: var(--color-important-custom-message-bg);
+  border-color: var(--color-admonition-important);
+  color: var(--color-admonition-important-text);
 }
 
 @media screen and (min-width: 1024px) {

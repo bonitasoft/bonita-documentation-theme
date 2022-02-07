@@ -50,6 +50,8 @@ var colors = [
   '--color-card-border',
   '--color-code-background',
   '--color-code-font',
+  '--color-info-custom-message-bg',
+  '--color-important-custom-message-bg',
 ]
 
 var filters = [
