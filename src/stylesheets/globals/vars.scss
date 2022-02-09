@@ -1,102 +1,54 @@
 :root {
   // Light color set
-  --color-white-light: #fff;
-  --color-text-light-light: #556;
-  --color-smoke-10-light: #fefefe;
-  --color-smoke-30-light: #fafafa;
-  --color-smoke-50-light: #f5f5f5;
-  --color-smoke-70-light: #f0f0f0;
-  --color-smoke-90-light: #e1e1e1;
-  --color-gray-10-light: #c1c1c1;
-  --color-gray-30-light: #8e8e8e;
-  --color-gray-50-light: #808080;
-  --color-gray-70-light: #5d5d5d;
-  --color-jet-20-light: #4a4a4a;
-  --color-jet-30-light: #424242;
-  --color-jet-50-light: #333;
-  --color-jet-70-light: #222;
-  --color-jet-80-light: #191919;
-  --color-black-light: #000;
-  --color-blue-bonita-light: #19465f;
-  --color-red-bonita-light: #dd042b;
-  --color-unfocused-light: #ffffffc2;
-  --color-focused-light: #fff;
-  --color-link-light: #104d92;
-  --color-admonition-link-light: #0077ff;
-  --color-link-hover-light: #1565c0;
-  --color-nav-item-light: var(--color-blue-bonita-light);
-  --color-admonition-note-light: #217de7;
-  --color-admonition-note-bg-light: #217de72a;
-  --color-admonition-note-text-light: #0250a9;
-  --color-admonition-tip-light: #41af46;
-  --color-admonition-tip-bg-light: #41af462a;
-  --color-admonition-tip-text-light: #2d7a30;
-  --color-admonition-important-light: #d32f2f;
-  --color-admonition-important-bg-light: #d32f2f2a;
-  --color-admonition-important-text-light: #912020;
-  --color-admonition-warning-light: #e7ba07;
-  --color-admonition-warning-bg-light: #e7ba072a;
-  --color-admonition-warning-text-light: #ab8800;
-  --color-admonition-caution-light: #a0439c;
-  --color-admonition-caution-bg-light: #a0439c2a;
-  --color-admonition-caution-text-light: #5c1759;
-  --color-blue-bright-light: #0fe;
-  --color-card-shadow-light: #876c6c;
-  --color-higlight-light: var(--color-blue-bonita-light);
-  --color-higlight-link-light: #005889;
-  --color-footer-light: #e6e6e6;
-  --color-card-border-light: #ebf2f2;
-  --color-code-background-light: #f9f2f4;
-  --color-code-font-light: #c7254e;
-  // Dark color set
-  --color-white-dark: #151a25;
-  --color-text-light-dark: #556;
-  --color-smoke-10-dark: #141a28;
-  --color-smoke-30-dark: #161c29;
-  --color-smoke-50-dark: #212a3f;
-  --color-smoke-70-dark: #27314a;
-  --color-smoke-90-dark: #2b3652;
-  --color-gray-10-dark: #5d5d5d;
-  --color-gray-30-dark: #808080;
-  --color-gray-50-dark: #8e8e8e;
-  --color-gray-70-dark: #c1c1c1;
-  --color-jet-20-dark: #aaa;
-  --color-jet-30-dark: #b0b0b0;
-  --color-jet-50-dark: #ccc;
-  --color-jet-70-dark: #ddd;
-  --color-jet-80-dark: #eee;
-  --color-black-dark: #fff;
-  --color-blue-bonita-dark: #2a2f43;
-  --color-red-bonita-dark: #ca4a53;
-  --color-unfocused-dark: #dcdcdcc2;
-  --color-focused-dark: #fff;
-  --color-link-dark: #00d9ff;
-  --color-admonition-link-dark: var(--color-link-dark);
-  --color-link-hover-dark: #00d9ffb5;
-  --color-nav-item-dark: var(--color-black-dark);
-  --color-admonition-note-dark: #11386a;
-  --color-admonition-note-bg-dark: #11386a4f;
-  --color-admonition-note-text-dark: #8abbfb;
-  --color-admonition-tip-dark: #265b37;
-  --color-admonition-tip-bg-dark: #265b374f;
-  --color-admonition-tip-text-dark: #7be1b2;
-  --color-admonition-important-dark: #642d2d;
-  --color-admonition-important-bg-dark: #642d2d4f;
-  --color-admonition-important-text-dark: #fb8a8a;
-  --color-admonition-warning-dark: #8b6e25;
-  --color-admonition-warning-bg-dark: #8b6e254f;
-  --color-admonition-warning-text-dark: #d4ca73;
-  --color-admonition-caution-dark: #652e7c;
-  --color-admonition-caution-bg-dark: #652e7c4f;
-  --color-admonition-caution-text-dark: #fb8af6;
-  --color-blue-bright-dark: #0fe;
-  --color-card-shadow-dark: #2e2e2e;
-  --color-higlight-dark: #9ed4ff;
-  --color-higlight-link-dark: var(--color-higlight-dark);
-  --color-footer-dark: var(--color-blue-bonita-dark);
-  --color-card-border-dark: #9ba9c6;
-  --color-code-background-dark: #30334b;
-  --color-code-font-dark: #f7962e;
+  --color-white: #fff;
+  --color-text-light: #556;
+  --color-smoke-10: #fefefe;
+  --color-smoke-30: #fafafa;
+  --color-smoke-50: #f5f5f5;
+  --color-smoke-70: #f0f0f0;
+  --color-smoke-90: #e1e1e1;
+  --color-gray-10: #c1c1c1;
+  --color-gray-30: #8e8e8e;
+  --color-gray-50: #808080;
+  --color-gray-70: #5d5d5d;
+  --color-jet-20: #4a4a4a;
+  --color-jet-30: #424242;
+  --color-jet-50: #333;
+  --color-jet-70: #222;
+  --color-jet-80: #191919;
+  --color-black: #000;
+  --color-blue-bonita: #19465f;
+  --color-red-bonita: #dd042b;
+  --color-unfocused: #ffffffc2;
+  --color-focused: #fff;
+  --color-link: #104d92;
+  --color-admonition-link: #0077ff;
+  --color-link-hover: #1565c0;
+  --color-nav-item: var(--color-blue-bonita);
+  --color-admonition-note: #217de7;
+  --color-admonition-note-bg: #217de72a;
+  --color-admonition-note-text: #0250a9;
+  --color-admonition-tip: #41af46;
+  --color-admonition-tip-bg: #41af462a;
+  --color-admonition-tip-text: #2d7a30;
+  --color-admonition-important: #d32f2f;
+  --color-admonition-important-bg: #d32f2f2a;
+  --color-admonition-important-text: #912020;
+  --color-admonition-warning: #e7ba07;
+  --color-admonition-warning-bg: #e7ba072a;
+  --color-admonition-warning-text: #ab8800;
+  --color-admonition-caution: #a0439c;
+  --color-admonition-caution-bg: #a0439c2a;
+  --color-admonition-caution-text: #5c1759;
+  --color-blue-bright: #0fe;
+  --color-card-shadow: #876c6c;
+  --color-higlight: var(--color-blue-bonita);
+  --color-higlight-link: #005889;
+  --color-footer: #e6e6e6;
+  --color-card-border: #ebf2f2;
+  --color-code-background: #f9f2f4;
+  --color-code-font: #c7254e;
+
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -202,13 +154,68 @@
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
   --border-radius: 0.3rem;
+
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Light icon set
-  --filter-icon-light: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%); // black
-  --filter-icon-search-light: invert(15%) sepia(13%) saturate(6139%) hue-rotate(174deg) brightness(100%) contrast(94%); // bonita blue
-  --filter-logo-footer-light: invert(0); // keep it as it is
+  --filter-icon: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%); // black
+  --filter-icon-search: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // White
+  --filter-logo-footer: invert(0); // keep it as it is
+}
+
+
+html[data-theme='dark'] {
+  --color-white: #151a25;
+  --color-text-light: #556;
+  --color-smoke-10: #141a28;
+  --color-smoke-30: #161c29;
+  --color-smoke-50: #212a3f;
+  --color-smoke-70: #27314a;
+  --color-smoke-90: #2b3652;
+  --color-gray-10: #5d5d5d;
+  --color-gray-30: #808080;
+  --color-gray-50: #8e8e8e;
+  --color-gray-70: #c1c1c1;
+  --color-jet-20: #aaa;
+  --color-jet-30: #b0b0b0;
+  --color-jet-50: #ccc;
+  --color-jet-70: #ddd;
+  --color-jet-80: #eee;
+  --color-black: #fff;
+  --color-blue-bonita: #2a2f43;
+  --color-red-bonita: #ca4a53;
+  --color-unfocused: #dcdcdcc2;
+  --color-focused: #fff;
+  --color-link: #00d9ff;
+  --color-admonition-link: var(--color-link);
+  --color-link-hover: #00d9ffb5;
+  --color-nav-item: var(--color-black);
+  --color-admonition-note: #11386a;
+  --color-admonition-note-bg: #11386a4f;
+  --color-admonition-note-text: #8abbfb;
+  --color-admonition-tip: #265b37;
+  --color-admonition-tip-bg: #265b374f;
+  --color-admonition-tip-text: #7be1b2;
+  --color-admonition-important: #642d2d;
+  --color-admonition-important-bg: #642d2d4f;
+  --color-admonition-important-text: #fb8a8a;
+  --color-admonition-warning: #8b6e25;
+  --color-admonition-warning-bg: #8b6e254f;
+  --color-admonition-warning-text: #d4ca73;
+  --color-admonition-caution: #652e7c;
+  --color-admonition-caution-bg: #652e7c4f;
+  --color-admonition-caution-text: #fb8af6;
+  --color-blue-bright: #0fe;
+  --color-card-shadow: #2e2e2e;
+  --color-higlight: #9ed4ff;
+  --color-higlight-link: var(--color-higlight);
+  --color-footer: var(--color-blue-bonita);
+  --color-card-border: #9ba9c6;
+  --color-code-background: #30334b;
+  --color-code-font: #f7962e;
+
+  //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Dark icon set
-  --filter-icon-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
-  --filter-icon-search-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
-  --filter-logo-footer-dark: brightness(0) invert(1); // full white
+  --filter-icon: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
+  --filter-icon-search: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
+  --filter-logo-footer: brightness(0) invert(1); // full white
 }
