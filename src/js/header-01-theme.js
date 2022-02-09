@@ -1,71 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-var colors = [
-  '--color-white',
-  '--color-text-light',
-  '--color-smoke-10',
-  '--color-smoke-30',
-  '--color-smoke-50',
-  '--color-smoke-70',
-  '--color-smoke-90',
-  '--color-gray-10',
-  '--color-gray-30',
-  '--color-gray-50',
-  '--color-gray-70',
-  '--color-jet-20',
-  '--color-jet-30',
-  '--color-jet-50',
-  '--color-jet-70',
-  '--color-jet-80',
-  '--color-black',
-  '--color-blue-bonita',
-  '--color-red-bonita',
-  '--color-unfocused',
-  '--color-focused',
-  '--color-link',
-  '--color-admonition-link',
-  '--color-link-hover',
-  '--color-nav-item',
-  '--color-admonition-note',
-  '--color-admonition-note-bg',
-  '--color-admonition-note-text',
-  '--color-admonition-tip',
-  '--color-admonition-tip-bg',
-  '--color-admonition-tip-text',
-  '--color-admonition-important',
-  '--color-admonition-important-bg',
-  '--color-admonition-important-text',
-  '--color-admonition-warning',
-  '--color-admonition-warning-bg',
-  '--color-admonition-warning-text',
-  '--color-admonition-caution',
-  '--color-admonition-caution-bg',
-  '--color-admonition-caution-text',
-  '--color-blue-bright',
-  '--color-card-shadow',
-  '--color-higlight',
-  '--color-higlight-link',
-  '--color-footer',
-  '--color-card-border',
-  '--color-code-background',
-  '--color-code-font',
-]
-
-var filters = [
-  '--filter-icon',
-  '--filter-icon-search',
-  '--filter-logo-footer',
-]
-
 function toDarkTheme (resolve) {
   localStorage.setItem('theme', 'dark')
-  colors.forEach(function (color) {
-    updateCSSProperty(color, color + '-dark')
-  })
-  filters.forEach(function (filter) {
-    updateCSSProperty(filter, filter + '-dark')
-  })
+  document.querySelector('html').setAttribute('data-theme', 'dark')
 
   // Update highlight js theme
   enableHightLightDarkTheme(true)
@@ -75,12 +13,7 @@ function toDarkTheme (resolve) {
 
 function toLightTheme (resolve) {
   localStorage.setItem('theme', 'light')
-  colors.forEach(function (color) {
-    updateCSSProperty(color, color + '-light')
-  })
-  filters.forEach(function (filter) {
-    updateCSSProperty(filter, filter + '-light')
-  })
+  document.querySelector('html').setAttribute('data-theme', 'light')
 
   // Update highlight js theme
   enableHightLightDarkTheme(false)
@@ -117,11 +50,6 @@ function performThemeSwitch (checkbox, switchBall) {
       switchBall.innerHTML = ''
     })
   }, 100)
-}
-
-function updateCSSProperty (propertyToUpdate, propertyValue) {
-  document.documentElement.style.setProperty(propertyToUpdate,
-    getComputedStyle(document.body).getPropertyValue(propertyValue))
 }
 
 // create the loader div
