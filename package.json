@@ -62,5 +62,8 @@
     "typeface-roboto-mono": "1.1.13",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0.3"
+  },
+  "dependencies": {
+    "@docsearch/js": "^3.0.0-alpha.50"
   }
 }

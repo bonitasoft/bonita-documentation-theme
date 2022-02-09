@@ -1,8 +1,6 @@
 'use strict'
 
-const autoprefixer = require('autoprefixer')
 const browserify = require('browserify')
-const buffer = require('vinyl-buffer')
 const concat = require('gulp-concat')
 const fs = require('fs-extra')
 const imagemin = require('gulp-imagemin')
@@ -18,9 +16,15 @@ const { Transform } = require('stream')
 const map = (transform) => new Transform({ objectMode: true, transform })
 const through = () => map((file, enc, next) => next(null, file))
 
+const config = {
+  libsJs: ['node_modules/@docsearch/js/dist/umd/index.js'],
+  libsCss: ['node_modules/@docsearch/css/dist/style.css'],
+}
+
 module.exports = (src, dest, preview) => () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
+  const autoprefixer = require('autoprefixer')
   const postcssPlugins = [require('@csstools/postcss-sass'),
     autoprefixer(),
     postcssUrl({
@@ -46,6 +50,25 @@ module.exports = (src, dest, preview) => () => {
       },
     })]
 
+  /**
+   * Aggregate js lib
+   */
+  function libJs () {
+    const { src } = require('gulp')
+    return src(config.libsJs)
+      .pipe(concat('js/vendor/libs.js'))
+  }
+
+  /**
+   * Aggregate css files
+   */
+  function libCss () {
+    const { src } = require('gulp')
+    return src(config.libsCss)
+      .pipe(concat('stylesheets/vendor/libs.css'))
+  }
+
+  const buffer = require('vinyl-buffer')
   function scss () {
     return vfs
       .src('stylesheets/site.scss', { ...opts, sourcemaps })
@@ -56,6 +79,8 @@ module.exports = (src, dest, preview) => () => {
   }
 
   return merge(
+    libJs(),
+    libCss(),
     scss(),
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })

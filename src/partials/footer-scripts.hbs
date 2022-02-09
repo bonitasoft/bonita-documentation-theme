@@ -1,12 +1,13 @@
 <script>window.uiRootPath = '{{{uiRootPath}}}'</script>
 <script async src="{{{uiRootPath}}}/js/vendor/asciinema-player.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/highlight.min.js"></script>
+<script src="{{{uiRootPath}}}/js/vendor/libs.js"></script>
 {{!-- DocSearch only available if the search bar is displayed --}}
-{{#unless site.keys.nonProduction}}
-  {{#unless page.attributes.hide-search-bar }}
-    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous"></script>
-  {{/unless}}
-{{/unless}}
+<!--{{#unless site.keys.nonProduction}}-->
+<!--  {{#unless page.attributes.hide-search-bar }}-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous"></script>-->
+<!--  {{/unless}}-->
+<!--{{/unless}}-->
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{{uiRootPath}}}/js/site.js"></script>
 
@@ -14,17 +15,24 @@
 {{#unless site.keys.nonProduction}}
   {{#unless page.attributes.hide-search-bar }}
 <script>
-  var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
-
-  !function (e, a, t, n, s, i, c) {
-    e.AlgoliaAnalyticsObject = s, e[s] = e[s] || function () {
-      (e[s].queue = e[s].queue || []).push(arguments)
-    }, i = a.createElement(t), c = a.getElementsByTagName(t)[0],
-      i.async = 1, i.src = n, c.parentNode.insertBefore(i, c)
-  }(window, document, "script", ALGOLIA_INSIGHTS_SRC, "aa");
+  // var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
+  //
+  // !function (e, a, t, n, s, i, c) {
+  //   e.AlgoliaAnalyticsObject = s, e[s] = e[s] || function () {
+  //     (e[s].queue = e[s].queue || []).push(arguments)
+  //   }, i = a.createElement(t), c = a.getElementsByTagName(t)[0],
+  //     i.async = 1, i.src = n, c.parentNode.insertBefore(i, c)
+  // }(window, document, "script", ALGOLIA_INSIGHTS_SRC, "aa");
 </script>
 
 <script type="text/javascript">
+  docsearch({
+    container: '#docsearch',
+    appId: 'LWD25NX3CD',
+    apiKey: '6408f799f329e3a010e6a5ac397210d8',
+    indexName: 'bonitasoft',
+  });
+  /*
   docsearch({
     apiKey: '16267f96d135c47df8454efd5b448c9a', // Read only API Key
     indexName: 'bonitasoft',
@@ -51,6 +59,7 @@
     appId: 'BH4D9OD16A',
     apiKey: '16267f96d135c47df8454efd5b448c9a',
   });
+  */
 </script>
   {{/unless}}
 {{/unless}}
