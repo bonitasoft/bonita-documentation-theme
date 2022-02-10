@@ -9,6 +9,10 @@
   max-width: var(--doc-max-width);
   padding: 0 1rem 4rem;
 
+  .listingblock:hover .source-toolbox {
+    visibility: visible;
+  }
+
   .source-toolbox {
     display: flex;
     visibility: hidden;
@@ -20,16 +24,25 @@
     font-size: calc(13.5 / var(--rem-base) * 1rem);
     line-height: 1;
 
+
     .copy-button {
-      svg {
+      .copy-icon {
         flex: none;
-        fill: currentColor;
         width: inherit;
         height: inherit;
       }
     }
 
+    img.copy-icon {
+      filter: invert(50.2%);
+    }
+
+    svg.copy-icon {
+      fill: currentColor;
+    }
+
     .copy-toast {
+      flex: none;
       position: relative;
       display: inline-flex;
       justify-content: center;
@@ -60,9 +73,6 @@
       transition: none;
     }
 
-    .listingblock:hover {
-      visibility: visible;
-    }
 
     .source-lang {
       text-transform: uppercase;
@@ -91,7 +101,6 @@
       width: 1em;
       height: 1em;
     }
-
   }
 
 
