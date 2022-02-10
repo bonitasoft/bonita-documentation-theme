@@ -10,29 +10,9 @@
         <p>{{{site.title}}}</p>
       </div>
       {{/if}}
-
-      <button class="navbar-burger" data-target="search-container">
-        <i class="search-icon" aria-hidden="true"></i>
-      </button>
-
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
-      <div class="theme-switch-wrapper-mobile">
-        <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check-mobile">
-        <div class="toggle-content">
-          <label class="label" for="check-mobile">
-            <span>🌜</span>
-            <span>🌞</span>
-            <div class="ball"></div>
-          </label>
-        </div>
-      </div>
       {{#unless site.keys.hideNavbarComponentsList}}
       {{#each site.components}}
       <div class="navbar-item is-hoverable">
@@ -42,18 +22,15 @@
       {{/unless}}
     </div>
 
-    <div class="navbar-search" id="search-container">
+    <div class="navbar-end" id="search-container">
       {{#unless site.keys.nonProduction}}
-        {{#unless page.attributes.hide-search-bar }}
-        <div class="navbar-item search-item hide-for-print">
-          {{!-- Algolia search bar --}}
-          <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
-          <i class="search-icon" aria-hidden="true"></i>
-        </div>
-        {{/unless}}
+      {{#unless page.attributes.hide-search-bar }}
+      <div class="navbar-item search-item hide-for-print">
+        <div id="docsearch"></div>
+      </div>
+      {{/unless}}
       {{/unless}}
 
-      {{!-- Dark theme --}}
       <div class="theme-switch-wrapper">
         <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
         <div class="toggle-content">
@@ -64,6 +41,22 @@
           </label>
         </div>
       </div>
+
+      <button class="navbar-burger" data-target="topbar-nav-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
+
+  <nav id="topbar-nav-mobile" class="navbar-menu-mobile">
+    {{#unless site.keys.hideNavbarComponentsList}}
+    {{#each site.components}}
+    <div class="navbar-item is-hoverable">
+      <a class="navbar-link" href="{{{./latest.url}}}">{{{./title}}}</a>
+    </div>
+    {{/each}}
+    {{/unless}}
   </nav>
 </header>
