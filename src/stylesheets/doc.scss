@@ -19,13 +19,51 @@
     font-family: var(--body-font-family);
     font-size: calc(13.5 / var(--rem-base) * 1rem);
     line-height: 1;
-  }
 
-  .listingblock:hover .source-toolbox {
-    visibility: visible;
-  }
+    .copy-button {
+      svg {
+        flex: none;
+        fill: currentColor;
+        width: inherit;
+        height: inherit;
+      }
+    }
 
-  .source-toolbox {
+    .copy-toast {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      margin-top: 1em;
+      background-color: var(--doc-font-color);
+      border-radius: 0.25em;
+      padding: 0.5em;
+      color: var(--color-white);
+      cursor: auto;
+      opacity: 0;
+      transition: opacity 0.5s ease 0.75s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1em;
+        height: 1em;
+        border: 0.55em solid transparent;
+        border-left-color: var(--doc-font-color);
+        transform: rotate(-90deg) translateX(50%) translateY(50%);
+        transform-origin: left;
+      }
+    }
+
+    .copy-button.clicked .copy-toast {
+      opacity: 1;
+      transition: none;
+    }
+
+    .listingblock:hover {
+      visibility: visible;
+    }
+
     .source-lang {
       text-transform: uppercase;
       letter-spacing: 0.075em;
@@ -53,6 +91,7 @@
       width: 1em;
       height: 1em;
     }
+
   }
 
 
@@ -1136,7 +1175,7 @@
     border: 1px solid var(--kbd-border-color);
     border-radius: 0.25em;
     box-shadow: 0 1px 0 var(--kbd-border-color),
-      0 0 0 0.1em var(--body-background) inset;
+    0 0 0 0.1em var(--body-background) inset;
     padding: 0.25em 0.5em;
     vertical-align: text-bottom;
     white-space: nowrap;
@@ -1203,50 +1242,6 @@
   }
 }
 
-.source-toolbox {
-  .copy-button {
-    * {
-      flex: none;
-    }
-
-    svg {
-      fill: currentColor;
-      width: inherit;
-      height: inherit;
-    }
-  }
-
-  .copy-toast {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    margin-top: 1em;
-    background-color: var(--doc-font-color);
-    border-radius: 0.25em;
-    padding: 0.5em;
-    color: var(--color-white);
-    cursor: auto;
-    opacity: 0;
-    transition: opacity 0.5s ease 0.75s;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 1em;
-      height: 1em;
-      border: 0.55em solid transparent;
-      border-left-color: var(--doc-font-color);
-      transform: rotate(-90deg) translateX(50%) translateY(50%);
-      transform-origin: left;
-    }
-  }
-
-  .copy-button.clicked .copy-toast {
-    opacity: 1;
-    transition: none;
-  }
-}
 
 #preamble {
   + {
