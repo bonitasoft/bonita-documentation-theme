@@ -2,18 +2,12 @@
 <script async src="{{{uiRootPath}}}/js/vendor/asciinema-player.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/highlight.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/libs.js"></script>
-{{!-- DocSearch only available if the search bar is displayed --}}
-<!--{{#unless site.keys.nonProduction}}-->
-<!--  {{#unless page.attributes.hide-search-bar }}-->
-<!--    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous"></script>-->
-<!--  {{/unless}}-->
-<!--{{/unless}}-->
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{{uiRootPath}}}/js/site.js"></script>
 
 {{!-- DocSearch only available if the search bar is displayed --}}
 {{#unless site.keys.nonProduction}}
-  {{#unless page.attributes.hide-search-bar }}
+{{#unless page.attributes.hide-search-bar }}
 <script>
   // var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
   //
@@ -31,37 +25,34 @@
     appId: 'LWD25NX3CD',
     apiKey: '6408f799f329e3a010e6a5ac397210d8',
     indexName: 'bonitasoft',
-  });
-  /*
-  docsearch({
-    apiKey: '16267f96d135c47df8454efd5b448c9a', // Read only API Key
-    indexName: 'bonitasoft',
-    inputSelector: '#search-query',
-    debug: false, // Set debug to true if you want to inspect the dropdown
-    algoliaOptions: {
-      // Can't be extracted on a js file because facetFilters are valued by Antora at build time, only on html files!
-      'facetFilters': ["version:{{page.version}}", "tags:{{page.component.name}}"],
-      clickAnalytics: true,
-      hitsPerPage: 20
-    },
-    handleSelected: function (input, event, suggestion, datasetNumber, context) {
-      sendClickEvent(lastQueryID, lastQueryHits, suggestion);
-      input.setVal('');
-      window.location.assign(suggestion.url);
-    },
-    queryDataCallback: function (data) {
-      lastQueryID = data.results[0].queryID;
-      lastQueryHits = data.results[0].hits;
+    hitsPerPage: 20,
+    searchParameters: {
+      facetFilters: ["version:{{page.version}}", "tags:{{page.component.name}}"],
     }
   });
+  /*
+          docsearch({
+          algoliaOptions: {
+              clickAnalytics: true,
+          },
+          handleSelected: function (input, event, suggestion, datasetNumber, context) {
+              sendClickEvent(lastQueryID, lastQueryHits, suggestion);
+              input.setVal('');
+              window.location.assign(suggestion.url);
+          },
+          queryDataCallback: function (data) {
+              lastQueryID = data.results[0].queryID;
+              lastQueryHits = data.results[0].hits;
+          }
+          });
 
-  aa('init', {
-    appId: 'BH4D9OD16A',
-    apiKey: '16267f96d135c47df8454efd5b448c9a',
-  });
-  */
+          aa('init', {
+          appId: 'BH4D9OD16A',
+          apiKey: '16267f96d135c47df8454efd5b448c9a',
+          });
+      */
 </script>
-  {{/unless}}
+{{/unless}}
 {{/unless}}
 
 <script>

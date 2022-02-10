@@ -83,9 +83,15 @@ body {
 ****** Navbar menu ******
 *************************/
 
-.navbar-menu,
-.navbar-search {
-  display: none;
+.search-icon {
+  background: url(../img/search.svg) no-repeat;
+  background-size: contain;
+  display: block;
+  height: 1rem;
+  padding: 0;
+  width: 1rem;
+  opacity: inherit;
+  filter: var(--filter-icon-search); // On large screen the search is on the toolbar, which is always dark
 }
 
 .navbar-item {
@@ -180,32 +186,6 @@ body {
   }
 }
 
-.search-icon {
-  background: url(../img/search.svg) no-repeat;
-  background-size: contain;
-  display: block;
-  height: 1rem;
-  padding: 0;
-  width: 1rem;
-  opacity: inherit;
-  filter: var(
-    --filter-icon-search
-  ); // On large screen the search is on the toolbar, which is always dark
-}
-
-.search-item {
-  opacity: 0.6;
-
-  &:focus-within,
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
-  max-height: calc(100vh - 3.25rem);
-}
-
 /**************************
 ********* TOGGLE **********
 ***************************/
@@ -215,10 +195,6 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding: 0.5rem;
-}
-
-.theme-switch-wrapper-mobile {
-  display: none;
 }
 
 .toggle-content {
@@ -314,7 +290,7 @@ body {
 }
 /* Colors for small screens */
 @media screen and (max-width: 1023px) {
-  .navbar-menu {
+  .navbar-menu-mobile {
     background: var(--color-smoke-50);
 
     .navbar-item {
@@ -337,7 +313,7 @@ body {
     > a.navbar-item:hover,
     .navbar-link:hover,
     .navbar-item:hover,
-    .navbar-menu .navbar-item:hover a {
+    .navbar-menu-modile .navbar-item:hover a {
       background-color: var(--color-nav-item);
 
       .navbar-link {
@@ -346,55 +322,8 @@ body {
     }
   }
 
-  .navbar-search {
-    background: var(--color-smoke-50);
-
-    .navbar-item {
-      background-color: var(--color-white);
-      border: 2px solid var(--color-nav-item);
-      border-radius: 5px;
-      margin: 10px;
-      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-    }
-
-    .navbar-link {
-      font-weight: bold;
-    }
-
-    .navbar-link,
-    .navbar-item a {
-      color: var(--color-nav-item);
-    }
-
-    .search-icon {
-      filter: var(--filter-icon-search);
-    }
-  }
-
-  .navbar-menu.is-active,
-  .navbar-search.is-active {
+  .navbar-menu-mobile.is-active {
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-  }
-
-  .search-bar {
-    background-color: transparent;
-    color: var(--body-font-color);
-    width: 15rem;
-    opacity: 1;
-
-    &::placeholder {
-      color: var(--body-font-color);
-      opacity: 0.6;
-    }
-  }
-
-  .search-item {
-    opacity: 0.6;
-
-    &:focus-within,
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 
@@ -402,7 +331,7 @@ body {
 @media screen and (min-width: 1024px) {
   .navbar,
   .navbar-menu,
-  .navbar-search {
+  .navbar-end {
     align-items: stretch;
     display: flex;
     flex-direction: row;
@@ -413,6 +342,10 @@ body {
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
+  }
+
+  .navbar-menu-mobile {
+    display: none;
   }
 
   .navbar-burger {
@@ -429,8 +362,7 @@ body {
     color: var(--color-blue-bonita);
   }
 
-  .input-container,
-  .search-content {
+  .input-container {
     // input container will probably need to be removed
     display: none;
   }
@@ -438,9 +370,23 @@ body {
 
 /* Layout for small screens */
 @media screen and (max-width: 1023px) {
+  .navbar {
+    display: flex;
+  }
+
+  .navbar-end {
+    display: flex;
+    align-items: center;
+  }
+
+
   .navbar-brand .navbar-item {
     align-items: center;
     display: flex;
+    flex-grow: 1;
+  }
+
+  .navbar-brand {
     flex-grow: 1;
   }
 
@@ -453,32 +399,26 @@ body {
   .search-item {
     display: flex;
     justify-content: flex-end;
-
-    .algolia-autocomplete {
-      width: 100%;
-    }
-
-    .search-icon {
-      height: 1.5rem;
-      margin-top: 3px;
-      margin-left: 10px;
-      width: 1.5rem;
-    }
   }
 
-  .search-content {
-    display: flex;
+  .navbar-menu {
+    display: none;
   }
 
-  .navbar-menu,
-  .navbar-search {
+  .navbar-menu-mobile {
+    display: none;
+  }
+
+  .navbar-menu-mobile,
+  .navbar-end {
     padding: 0.5rem 0;
   }
 
-  .navbar-menu.is-active,
-  .navbar-search.is-active {
+  .navbar-menu-mobile.is-active {
     display: block;
-    max-height: var(--nav-height);
+    position: fixed;
+    width: 100%;
+    z-index: var(--z-index-mobile-menu);
   }
 
   summary {
@@ -507,19 +447,6 @@ body {
     }
   }
 
-  .theme-switch-wrapper-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0.5rem;
-    right: 0;
-    width: auto;
-  }
-
-  .theme-switch-wrapper {
-    display: none;
-  }
-
   .label span {
     height: 1rem;
   }
@@ -533,9 +460,5 @@ body {
   .navbar-brand .navbar-item + .navbar-item {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .algolia-autocomplete .ds-dropdown-menu {
-    min-width: calc(100vw - 2.75rem) !important;
   }
 }

@@ -49,6 +49,18 @@
   --color-code-background: #f9f2f4;
   --color-code-font: #c7254e;
 
+  // Search colors
+  --docsearch-primary-color: var(--color-blue-bonita);
+  --docsearch-logo-color: var(--color-blue-bonita);
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --color-search-mark-highlight: #518bcd;
+  --color-search-hit-source-highlight: var(--docsearch-highlight-color);
+
+  --docsearch-hit-color: rgb(68, 73, 80);
+  --docsearch-hit-active-color: #fff;
+  --docsearch-hit-background: #fff;
+  --docsearch-hit-shadow: 0 1px 3px 0 rgb(212, 217, 225);
+
   // End of color definition
   --rem-base: 18;
   --body-font-size: 1.0625em;
@@ -94,6 +106,7 @@
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   --doc-font-color: var(--color-jet-50);
+  --docsearch-text-color: var(--doc-font-color);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
   --doc-line-height: 1.6;
@@ -153,12 +166,13 @@
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
+  --z-index-mobile-menu: 5;
   --border-radius: 0.3rem;
+
 
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Light icon set
   --filter-icon: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%); // black
-  --filter-icon-search: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // White
   --filter-logo-footer: invert(0); // keep it as it is
 }
 
@@ -216,6 +230,11 @@ html[data-theme='dark'] {
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Dark icon set
   --filter-icon: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
-  --filter-icon-search: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
+  --filter-icon-search: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // White
   --filter-logo-footer: brightness(0) invert(1); // full white
+
+  // Search colors
+  --color-search-mark-highlight: var(--color-higlight);
+  --color-search-hit-source-highlight: var(--color-higlight);
+  --docsearch-searchbox-background: var(--body-background);
 }
