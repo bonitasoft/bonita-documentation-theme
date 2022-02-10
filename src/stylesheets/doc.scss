@@ -9,6 +9,53 @@
   max-width: var(--doc-max-width);
   padding: 0 1rem 4rem;
 
+  .source-toolbox {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    color: var(--pre-annotation-font-color);
+    font-family: var(--body-font-family);
+    font-size: calc(13.5 / var(--rem-base) * 1rem);
+    line-height: 1;
+  }
+
+  .listingblock:hover .source-toolbox {
+    visibility: visible;
+  }
+
+  .source-toolbox {
+    .source-lang {
+      text-transform: uppercase;
+      letter-spacing: 0.075em;
+      font-size: 0.96em;
+      line-height: 1.0425;
+    }
+
+    > :not(:last-child)::after {
+      content: "|";
+      letter-spacing: 0;
+      padding: 0 1ch;
+    }
+
+    .copy-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: transparent;
+      border: none;
+      color: inherit;
+      outline: none;
+      padding: 0;
+      font-size: inherit;
+      line-height: inherit;
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+
   h1 {
     color: var(--color-higlight);
     font-weight: var(--heading-font-weight);
@@ -474,28 +521,6 @@
       }
     }
 
-    code[data-lang] {
-      &::before {
-        content: attr(data-lang);
-        display: none;
-        color: var(--pre-annotation-font-color);
-        font-size: calc(13.5 / var(--rem-base) * 1rem);
-        letter-spacing: 0.05em;
-        line-height: 1;
-        text-transform: uppercase;
-        position: absolute;
-        top: 0.25rem;
-        right: 0.25rem;
-      }
-    }
-
-    &:hover {
-      code[data-lang] {
-        &::before {
-          display: block;
-        }
-      }
-    }
   }
 
   .literalblock {
@@ -1175,6 +1200,51 @@
 
   td.tableblock {
     word-break: break-word;
+  }
+}
+
+.source-toolbox {
+  .copy-button {
+    * {
+      flex: none;
+    }
+
+    svg {
+      fill: currentColor;
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  .copy-toast {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 1em;
+    background-color: var(--doc-font-color);
+    border-radius: 0.25em;
+    padding: 0.5em;
+    color: var(--color-white);
+    cursor: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.75s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1em;
+      height: 1em;
+      border: 0.55em solid transparent;
+      border-left-color: var(--doc-font-color);
+      transform: rotate(-90deg) translateX(50%) translateY(50%);
+      transform-origin: left;
+    }
+  }
+
+  .copy-button.clicked .copy-toast {
+    opacity: 1;
+    transition: none;
   }
 }
 
