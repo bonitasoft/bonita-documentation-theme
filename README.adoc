@@ -12,6 +12,7 @@ This project produces the Antora UI bundle used by the https://github.com/bonita
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora Default UI].
 
+To report a Bug or submit a Feature Request, go to the https://github.com/bonitasoft/bonita-documentation-site/issues/[bonita-documentation-site issues].
 
 == Prerequisites
 
@@ -50,7 +51,7 @@ At the beginning of the file, you will find the light colors and then, the dark 
 If you need to add a new color in the color set, then you have to:
 
 - Create a variable `--color-XXX` for the light color set in the `:root` selector
-- Create the same variable for the dark color set, in the `html[data-theme='dark'] ` selector
+- Create the same variable for the dark color set, in the `html[data-theme='dark']` selector
 - Use this new color by using `var(--color-XXX)` in some css classes
 
 [CAUTION]
