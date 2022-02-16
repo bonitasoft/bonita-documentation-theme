@@ -46,12 +46,12 @@ To build the bundle to be used in the Antora playbook, run `gulp bundle`.
 === Change some colors in the UI
 
 If you are only here to update some colors in the UI, it should be easy. +
-All used colors are defined in _src/stylesheets/globals.var.scss_ +
-At the beginning of the file, you will find the light colors and then, the dark colors. +
+All used colors are defined in _src/stylsheets/globals.var.scss_ +
+At the beggining of the file, you will find the light colors and at the bottom of the file the dark colors. +
 If you need to add a new color in the color set, then you have to:
 
-- Create a variable `--color-XXX` for the light color set in the `:root` selector
-- Create the same variable for the dark color set, in the `html[data-theme='dark']` selector
+- Create a variable `--color-XXX` in the light color set
+- Create a variable `--color-XXX` in the dark color set
 - Use this new color by using `var(--color-XXX)` in some css classes
 
 [CAUTION]
