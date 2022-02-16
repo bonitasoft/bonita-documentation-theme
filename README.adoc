@@ -12,12 +12,13 @@ This project produces the Antora UI bundle used by the https://github.com/bonita
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora Default UI].
 
+To report a Bug or submit a Feature Request, go to the https://github.com/bonitasoft/bonita-documentation-site/issues/[bonita-documentation-site issues].
 
 == Prerequisites
 
 The project requires Node 16, for nvm user, run `nvm use`.
 
-For more details, see the xref:docs/modules/ROOT/pages/prerequisites.adoc[prerequisites].
+For more details, see the https://docs.antora.org/antora-ui-default/prerequisites/[prerequisites].
 
 
 == Usage
@@ -27,7 +28,7 @@ Currently, we embed the ui-bundle.zip in the main https://github.com/bonitasoft/
 
 [TIP]
 ====
-Simple flow to 'release' a new version of the theme (i.e use a new version of the UI bundle in the doc site):
+Simple flow to 'release' a new version of the theme (i.e. use a new version of the UI bundle in the doc site):
 
 - Build locally this repository (type `gulp bundle` at the root of the repository) -> _build/ui-bundle.zip_ is created +
 - Clone the repository https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site], and create a new branch to update the UI bundle
@@ -37,7 +38,7 @@ Simple flow to 'release' a new version of the theme (i.e use a new version of th
 
 == Development
 
-A static or live preview of the theme is available, see the xref:docs/modules/ROOT/pages/build-preview-ui.adoc[build-preview-ui]
+A static or live preview of the theme is available, see the https://docs.antora.org/antora-ui-default/build-preview-ui/[build-preview-ui]
 documentation.
 
 To build the bundle to be used in the Antora playbook, run `gulp bundle`.
@@ -46,7 +47,7 @@ To build the bundle to be used in the Antora playbook, run `gulp bundle`.
 
 If you are only here to update some colors in the UI, it should be easy. +
 All used colors are defined in _src/stylsheets/globals.var.scss_ +
-At the beggining of the file, you will find the light colors and  at the bottom of the file the dark colors. +
+At the beggining of the file, you will find the light colors and at the bottom of the file the dark colors. +
 If you need to add a new color in the color set, then you have to:
 
 - Create a variable `--color-XXX` in the light color set
