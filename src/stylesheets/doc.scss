@@ -528,7 +528,7 @@
       }
     }
   }
-
+  .videoblock,
   .imageblock {
     margin: 1rem 0 0;
     display: flex;
@@ -553,6 +553,11 @@
       margin-top: 0.5rem;
       padding-bottom: 0;
     }
+  }
+
+  .videoblock iframe {
+    max-width: 100%;
+    vertical-align: middle;
   }
 
   .listingblock {
