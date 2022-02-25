@@ -170,7 +170,7 @@ pouet
 I can't wake up in the morning, 9AM is too early for me!!!
 
 This is probably because I often go to bed at 3AM :'( +
-I should just stop watchign netflix for hours...
+I should just stop watching netflix for hours...
 --
 
 [.troubleshooting-section]
@@ -182,7 +182,7 @@ It might happen because I do not brush correctly my teeth.
 
 [source, JSON]
 ----
-I could by a new tooth brush, or maybe ensure that I brush my teeth for at least 3 minutes?
+I could buy a new tooth brush, or maybe ensure that I brush my teeth for at least 3 minutes?
 The kind of thing we teach to children...
 ----
 --
