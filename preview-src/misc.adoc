@@ -162,6 +162,31 @@ lalalalalalalala
 tututututu
 pouet
 
+== Troubleshooting
+
+[.troubleshooting-section]
+--
+[.symptom]
+I can't wake up in the morning, 9AM is too early for me!!!
+
+This is probably because I often go to bed at 3AM :'( +
+I should just stop watchign netflix for hours...
+--
+
+[.troubleshooting-section]
+--
+[.symptom]
+My teeth are painfull.
+
+It might happen because I do not brush correctly my teeth.
+
+[source, JSON]
+----
+I could by a new tooth brush, or maybe ensure that I brush my teeth for at least 3 minutes?
+The kind of thing we teach to children...
+----
+--
+
 == Test code
 
 Check that the small code block `toto` is correctly highlighted in the call out of the block code.
@@ -173,3 +198,4 @@ while (true) {
 }
 ----
 <1> The word `toto` is commonly used in examples, it probably refers to our inner self.
+

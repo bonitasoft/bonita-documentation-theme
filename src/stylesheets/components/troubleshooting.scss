@@ -1,0 +1,23 @@
+.troubleshooting-section {
+
+  border-left: 2px solid var(--color-troobleshooting-border);
+  padding-left: 1em;
+  margin-top: 2em;
+
+  .symptom {
+    color: var(--color-higlight);
+    font-weight: var(--body-font-weight-bold);
+
+    ::before {
+      content: "";
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      margin-right: 0.5em;
+      background: url(../img/fire.svg) no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+      filter: var(--filter-fire-icon);
+    }
+  }
+}

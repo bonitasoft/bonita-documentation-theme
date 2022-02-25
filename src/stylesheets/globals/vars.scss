@@ -48,6 +48,7 @@
   --color-card-border: #ebf2f2;
   --color-code-background: #f9f2f4;
   --color-code-font: #c7254e;
+  --color-troobleshooting-border: var(--color-admonition-important-bg);
 
   // Search colors
   --docsearch-primary-color: var(--color-blue-bonita);
@@ -174,6 +175,7 @@
   // Light icon set
   --filter-icon: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%); // black
   --filter-logo-footer: invert(0); // keep it as it is
+  --filter-fire-icon: invert(9%) sepia(91%) saturate(5800%) hue-rotate(2deg) brightness(101%) contrast(115%);
 }
 
 
@@ -226,12 +228,14 @@ html[data-theme='dark'] {
   --color-card-border: #9ba9c6;
   --color-code-background: #30334b;
   --color-code-font: #f7962e;
+  --color-troobleshooting-border: #f5c80071;
 
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
   // Dark icon set
   --filter-icon: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // white
   --filter-icon-search: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); // White
   --filter-logo-footer: brightness(0) invert(1); // full white
+  --filter-fire-icon: invert(72%) sepia(92%) saturate(1187%) hue-rotate(3deg) brightness(100%) contrast(100%);
 
   // Search colors
   --color-search-mark-highlight: var(--color-higlight);
