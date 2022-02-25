@@ -6,7 +6,7 @@ site:
     hideNavbarComponentsList: false
   url: http://localhost:5252
   title: Brand Docs
-  homeUrl: &home_url /bonita/7.10/index.html
+  homeUrl: &home_url /bonita/dev/index.html
   components:
   - name: abc
     title: Project ABC
@@ -31,8 +31,8 @@ site:
       displayVersion: '2021.1'
     - &component_version
       url: '#'
-      version: '7.10'
-      displayVersion: '7.10'
+      version: 'dev'
+      displayVersion: 'dev'
     - url: '#'
       version: '7.9'
       displayVersion: '7.9'
@@ -61,8 +61,8 @@ page:
   title: Brand&#8217;s Hardware &amp; Software Requirements
   component: *component
   componentVersion: *component_version
-  version: '7.10'
-  displayVersion: '7.10'
+  version: 'dev'
+  displayVersion: 'dev'
   module: ROOT
   editUrl: http://example.com/project-bonita/blob/master/index.adoc
   origin:
@@ -86,8 +86,8 @@ page:
   - version: '2021.1'
     displayVersion: '2021.1'
     url: '#'
-  - version: '7.10'
-    displayVersion: '7.10'
+  - version: 'dev'
+    displayVersion: 'dev'
     url: '#'
   - version: '7.9'
     displayVersion: '7.9'
@@ -102,33 +102,55 @@ page:
     url: '#'
     urlType: fragment
     items:
-    - content: Quickstart
-      url: '#'
-      urlType: fragment
-      items:
-      - content: Brand&#8217;s Hardware &amp; Software Requirements
-        url: /bonita/7.10/index.html
-        urlType: internal
-      - content: Overview
-        url: '/bonita/7.10/overview.html'
-        urlType: internal
-      - content: Misc
-        url: '/bonita/7.10/misc.html'
-        urlType: internal
-    - content: Liber Recusabo
-      url: '#liber-recusabo'
-      urlType: fragment
-    - content: Reference
-      items:
-      - content: Keyboard Shortcuts
-        url: '#'
-        urlType: fragment
-      - content: Importing and Exporting
-        url: '#'
-        urlType: fragment
-      - content: Some Code
-        url: '/bonita/7.10/index.html#some-code'
-        urlType: internal
+     - content: Showcase
+       url: index.html
+       urlType: fragment
+     - content: Example
+       url: '#'
+       urlType: fragment
+       items:
+       - content: Admonitions
+         url: /bonita/dev/admonitions.html
+         urlType: internal
+       - content: Asciinema
+         url: /bonita/dev/asciinema.html
+         urlType: internal
+       - content: Cards
+         url: /bonita/dev/cards.html
+         urlType: internal
+       - content: Code
+         url: /bonita/dev/code.html
+         urlType: internal
+       - content: Troubleshooting
+         url: /bonita/dev/troubleshooting.html
+         urlType: internal
+#    - content: Quickstart
+#      url: '#'
+#      urlType: fragment
+#      items:
+#      - content: Brand&#8217;s Hardware &amp; Software Requirements
+#        url: /bonita/dev/index.html
+#        urlType: internal
+#      - content: Overview
+#        url: '/bonita/dev/overview.html'
+#        urlType: internal
+#      - content: Misc
+#        url: '/bonita/dev/misc.html'
+#        urlType: internal
+#    - content: Liber Recusabo
+#      url: '#liber-recusabo'
+#      urlType: fragment
+#    - content: Reference
+#      items:
+#      - content: Keyboard Shortcuts
+#        url: '#'
+#        urlType: fragment
+#      - content: Importing and Exporting
+#        url: '#'
+#        urlType: fragment
+#      - content: Some Code
+#        url: '/bonita/dev/index.html#some-code'
+#        urlType: internal
     - content: Message blocks
       items:
         - content: Out of support

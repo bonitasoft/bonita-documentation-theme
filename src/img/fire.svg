@@ -1,0 +1,9 @@
+<?xml version="1.0" ?><svg height="48" id="thunder" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><defs><style>
+      .vi-primary {
+        fill: #000;
+      }
+
+      .vi-accent {
+        fill: #000;
+      }
+    </style></defs><path class="vi-primary" d="M33,8H20.842L14,22h6L12,40,36,21H27Z"/><path class="vi-accent" d="M28.421,27L12,40l5.778-13H28.421Z"/></svg>

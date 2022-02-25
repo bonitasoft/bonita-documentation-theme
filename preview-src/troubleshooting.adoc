@@ -1,0 +1,126 @@
+= How to write a clean troubleshooting section
+
+
+[.troubleshooting-title]
+== Troubleshooting
+
+[.troubleshooting-section]
+--
+[.symptom]
+I can't wake up in the morning, 9AM is too early for me!!!
+
+[.cause]
+This is probably because I often go to bed at 3AM :'(
+
+[.solution]
+I should just stop watching netflix for hours...
+--
+
+
+[.troubleshooting-section]
+--
+[.symptom]
+My teeth are painfull.
+
+It might happen because I do not brush correctly my teeth.
+
+[source, JSON]
+----
+I could buy a new tooth brush, or maybe ensure that I brush my teeth for at least 3 minutes?
+The kind of thing we teach to children...
+----
+--
+
+[.troubleshooting-section]
+--
+[.symptom]
+My teeth are painfull.
+
+It might happen because I do not brush correctly my teeth.
+
+[source, JSON]
+----
+I could buy a new tooth brush, or maybe ensure that I brush my teeth for at least 3 minutes?
+The kind of thing we teach to children...
+----
+--
+
+
+[.troubleshooting-section]
+--
+[.symptom]
+HTTP/1.1 401 Unauthorized
+
+[.cause]
+The logged user has no permission to access the resources.
+
+[.solution]
+1. Make sure that the cookies have been transferred with the call
+
+2. Make sure that the cookies transferred are the ones generated during the last sucessfull login call
+
+3. If one of the PUT, DELETE or POST method is used, make sure that the X-Bonita-API-Token header is included
+
+4. If the X-Bonita-API-Token header is included, make sure that the value is the same as the one of the cookie generated during the last login
+
+5. Maybe a logout was issued or the session has expired; try to log in again, and re-run the request with the new cookies and the new value for the X-Bonita-API-Token header.
+--
+
+
+
+[.troubleshooting-section]
+--
+[.symptom]
+The following stacktrace appears in the XXX server log:
+
+[source, log]
+----
+javax.security.auth.login.FailedLoginException: Cannot bind to LDAP server
+at com.sun.security.auth.module.LdapLoginModule.attemptAuthentication(LdapLoginModule.java:817)
+at com.sun.security.auth.module.LdapLoginModule.login(LdapLoginModule.java:565)
+...
+Caused by: javax.naming.AuthenticationException: [LDAP: error code 49 - 80090308: LdapErr: DSID-XXXXXXXX, comment: AcceptSecurityContext error, data YYY, vZZZZ..]
+----
+
+[.cause]
+As per LDAP standard, error code 49 means: "Invalid credentials" (i.e. the user credentials presented in the bind operation are not valid).
+When connecting to Active Directory, this error may appear for multiple reasons. The AD-specific error code is the one (YYY) after "data" in the error message:
+
+[%autowidth,frame=all,grid=all]
+|===
+| AD error code | Meaning
+| 525
+| user not found
+| 52e
+| invalid credentials
+| 530
+| not permitted to logon at this time
+| 531
+| not permitted to logon at this workstation
+| 532
+| password expired
+| 533
+| account disabled
+| 701
+| account expired
+| 773
+| user must reset password
+| 775
+| user account locked
+|===
+
+[.solution]
+* *52e*: invalid credentials +
+`LDAP: error code 49 - 80090308: LdapErr: DSID-0C0903A9, comment: AcceptSecurityContext error, data 52e, v1db1`. +
+This error code can have several root causes:
+** The user doesn't exist in AD: in the JAAS configuration, verify the user filter and validate it using a tool such as Apache Directory Studio.
+** The username doesn't include the domain name: in the JAAS configuration, make sure that the `authIdentity` value includes the domain name.
+** The user password provided is not correct.
+* *531*: not permitted to logon at this workstation +
+`LDAP: error code 49 - 80090308: LdapErr: DSID-0C090446, comment: AcceptSecurityContext error, data 531, v4563` +
+This problem is related to the configuration of Workstation Restrictions in Microsoft Active Directory. This problem does not happen when Workstation Restrictions is disabled on Active Directory. +
+In order to get over the error, there seem to be two possible solutions (to be handled by your Active Directory administrator):
+** Disable the workstations restrictions in AD
+** Add the hostname of the Active Directory server to "userWorkstations" attribute. (Note: If it is an AD cluster, you need to add each AD server.)
+
+--

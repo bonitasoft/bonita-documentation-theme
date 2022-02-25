@@ -1,0 +1,174 @@
+[TIP]
+This oughta do it!
+
+Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+[NOTE]
+====
+You've been down _this_ road before.
+====
+
+Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+[WARNING]
+====
+Watch out!
+====
+
+[CAUTION]
+====
+[#inline]#I wouldn't try that if I were you.#
+====
+
+[IMPORTANT]
+====
+Don't forget this step!
+====
+
+.Key Points to Remember
+[TIP]
+====
+If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
+
+ $ npm i -g @antora/cli @antora/site-generator-default
+====
+
+== Test raw admonitions
+
+[NOTE]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+====
+
+[NOTE.bonitacloud,caption=Bonita cloud]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+====
+
+[TIP]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+[IMPORTANT]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+[WARNING]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+[CAUTION]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+
+== Test admonition in list
+
+. blabla
++
+[IMPORTANT]
+====
+Vive le paté
+====
++
+. blabla
+
+---
+
+* blabla
+** Sous blabla
++
+[WARNING]
+====
+Allez Grenoble
+====
++
+** Sous blabla
+* blabla
+
+
+== Test admonition with table content
+
+[TIP]
+====
+|===
+| Nom | Couleur de cheveux
+
+| Titeuf
+| Blond
+
+| Mr propre
+| _Chauve :'(_
+|===
+====
+
+
+. blabla
+. blabla
++
+[CAUTION]
+====
+|===
+| Nourriture | Comestible
+
+| Saucisson
+| Oui
+
+| Brocolis
+| Non
+|===
+====
++
+. blabla
+
+[NOTE]
+====
+|===
+| OS | Description
+
+| Windaube
+| Oulala
+
+| Macos
+| Pure gold
+
+| Linoux
+| Truc de geek
+|===
+====
+
+[WARNING]
+====
+|===
+| Gens à éviter
+
+| Parisiens
+
+| Bretons
+
+| Sudistes
+
+|===
+====

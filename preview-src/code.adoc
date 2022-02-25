@@ -1,0 +1,56 @@
+=== Some Code
+
+How about some code?
+
+==== JS
+
+[source,js]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => { // <1>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) // <2>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+<1> The tap function is used to wiretap the data in the pipe.
+<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.
+
+==== Shell
+
+[source,shell]
+----
+alias ducksort=""du -cks * | sort -n""
+----
+
+==== XML
+
+[source,xml]
+----
+<root>
+    <branch>
+        <leafs length="130">
+            <leaf color="yellow" />
+        </leafs>
+    </branch>
+</root>
+----
+
+Cum dicat #putant# ne.
+Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+....
+pom.xml
+src/
+  main/
+    java/
+      HelloWorld.java
+  test/
+    java/
+      HelloWorldTest.java
+....
