@@ -16,7 +16,7 @@
     {{/if}}
     {{/unless}}
   </div>
-  {{#if page.attributes.out-of-support}}
+  {{!-- {{#if page.attributes.out-of-support}} --}}
   <div class="paragraph notice out-of-support-block">
     <p>This documentation is about a version that is <b>out of support</b>, here is the <a
         href="{{{page.component.latestVersion.url}}}">latest documentation
@@ -27,15 +27,15 @@
       version?
     </p>
   </div>
-  {{/if}}
-  {{!-- {{#if page.attributes.next-release}} --}}
+  {{!-- {{/if}} --}}
+  {{#if page.attributes.next-release}}
   <div class="paragraph notice custom-message-block">
     <p>This content is dedicated to our next version.
       It is work in progress: its content will evolve until the new version is released.
       Before that time, it cannot be considered as official.
     </p>
   </div>
-  {{!-- {{/if}} --}}
+  {{/if}}
   {{#if page.attributes.custom-message}}
   <div class="paragraph notice custom-message-block">
     <p>{{page.attributes.custom-message}}</p>
