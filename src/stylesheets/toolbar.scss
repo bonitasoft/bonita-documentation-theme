@@ -2,13 +2,16 @@
   color: var(--toolbar-font-color);
   align-items: center;
   background-color: var(--toolbar-background);
-  box-shadow: 0 1px 0 var(--toolbar-border-color);
+  box-shadow: none;
+  -webkit-box-shadow: none;
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
-  height: var(--toolbar-height);
+  height: unset!important;
   justify-content: flex-start;
+  margin: 1px auto;
   position: sticky;
   top: var(--navbar-height);
+  width: 100%;
   z-index: var(--z-index-toolbar);
 
   a {
@@ -20,6 +23,10 @@
       color: var(--toolbar-muted-color);
     }
   }
+}
+
+.toolbar.toolbar-wrap {
+  flex-wrap: wrap;
 }
 
 .nav-toggle {
@@ -77,19 +84,6 @@
   color: var(--color-admonition-important-text);
   text-align: center;
   width:100%;
-}
-
-.toolbar {
-  display: flex;
-  height: unset!important;
-  width: 100%;
-  margin: 1px auto;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-}
-
-.toolbar.toolbar-wrap {
-  flex-wrap: wrap;
 }
 
 
