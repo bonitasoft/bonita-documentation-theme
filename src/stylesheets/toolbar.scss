@@ -70,3 +70,26 @@
     display: block;
   }
 }
+
+.out-of-support-block {
+  background-color: var(--color-admonition-important-bg);
+  border-color: var(--color-admonition-important);
+  color: var(--color-admonition-important-text);
+  text-align: center;
+  width:100%;
+}
+
+.toolbar {
+  display: flex;
+  height: unset!important;
+  width: 100%;
+  margin: 1px auto;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.toolbar.toolbar-wrap {
+  flex-wrap: wrap;
+}
+
+
