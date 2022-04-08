@@ -30,7 +30,7 @@ Currently, we embed the ui-bundle.zip in the main https://github.com/bonitasoft/
 ====
 Simple flow to 'release' a new version of the theme (i.e. use a new version of the UI bundle in the doc site):
 
-- Build locally this repository (type `gulp bundle` at the root of the repository) -> _build/ui-bundle.zip_ is created +
+- Build locally this repository (type `npm run bundle` at the root of the repository) -> _build/ui-bundle.zip_ is created +
 - Clone the repository https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site], and create a new branch to update the UI bundle
 - Copy the ui-bundle.zip archive in _bonita-documentation-site/resources/_, and rename it into _antora-ui-bundle.zip_ +
 - Push your changes and open a pull request, with details on the changes and eventually some links to the change commits in this repository
@@ -38,10 +38,9 @@ Simple flow to 'release' a new version of the theme (i.e. use a new version of t
 
 == Development
 
-A static or live preview of the theme is available, see the https://docs.antora.org/antora-ui-default/build-preview-ui/[build-preview-ui]
-documentation.
+A static or live preview of the theme is available, run `npm run dev`. For more details, see the https://docs.antora.org/antora-ui-default/build-preview-ui/[build-preview-ui] documentation.
 
-To build the bundle to be used in the Antora playbook, run `gulp bundle`.
+To build the bundle to be used in the Antora playbook, run `npm run bundle`.
 
 === Change some colors in the UI
 
