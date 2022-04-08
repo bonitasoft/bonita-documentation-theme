@@ -64,6 +64,6 @@
     "vinyl-fs": "~3.0.3"
   },
   "dependencies": {
-    "@docsearch/js": "^3.0.0-alpha.50"
+    "@docsearch/js": "^3.0.0"
   }
 }
