@@ -129,3 +129,14 @@ page:
       - content: Some Code
         url: '/bonita/7.10/index.html#some-code'
         urlType: internal
+    - content: Message blocks
+      items:
+        - content: Out of support
+          url: '/bonita/7.10/msg-block-out-of-support.html'
+          urlType: internal
+        - content: Next version
+          url: '/bonita/7.10/msg-block-next-version.html'
+          urlType: internal
+        - content: Custom message
+          url: '/bonita/7.10/msg-block-custom-message.html'
+          urlType: internal
