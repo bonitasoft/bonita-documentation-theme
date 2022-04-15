@@ -22,7 +22,7 @@ site:
     latestVersion: *latest_version_abc
   - &component
     name: bonita
-    title: Bonita Platform
+    title: Bonita Theme
     url: /bonita/2021.1/index.html
     versions:
     - &latest_version_bonita
@@ -104,7 +104,7 @@ page:
     url: '#'
   navigation:
   - root: true
-    content: Project Bonita
+    content: Bonita Theme
 #    url: '#'
 #    urlType: fragment
     items:
