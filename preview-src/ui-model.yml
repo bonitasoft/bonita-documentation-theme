@@ -103,28 +103,39 @@ page:
     url: '#'
     urlType: fragment
     items:
-     - content: Showcase
-       url: index.html
-       urlType: fragment
-     - content: Example
-       url: '#'
-       urlType: fragment
-       items:
-       - content: Admonitions
-         url: /bonita/dev/admonitions.html
-         urlType: internal
-       - content: Asciinema
-         url: /bonita/dev/asciinema.html
-         urlType: internal
-       - content: Cards
-         url: /bonita/dev/cards.html
-         urlType: internal
-       - content: Code
-         url: /bonita/dev/code.html
-         urlType: internal
-       - content: Troubleshooting
-         url: /bonita/dev/troubleshooting.html
-         urlType: internal
+    - content: Showcase
+      url: index.html
+      urlType: fragment
+    - content: Example
+      url: '#'
+      urlType: fragment
+      items:
+      - content: Admonitions
+        url: /bonita/dev/admonitions.html
+        urlType: internal
+      - content: Asciinema
+        url: /bonita/dev/asciinema.html
+        urlType: internal
+      - content: Cards
+        url: /bonita/dev/cards.html
+        urlType: internal
+      - content: Code
+        url: /bonita/dev/code.html
+        urlType: internal
+      - content: Troubleshooting
+        url: /bonita/dev/troubleshooting.html
+        urlType: internal
+    - content: Message blocks
+      items:
+        - content: Out of support
+          url: '/bonita/7.10/msg-block-out-of-support.html'
+          urlType: internal
+        - content: Next version
+          url: '/bonita/7.10/msg-block-next-version.html'
+          urlType: internal
+        - content: Custom message
+          url: '/bonita/7.10/msg-block-custom-message.html'
+          urlType: internal
 #    - content: Quickstart
 #      url: '#'
 #      urlType: fragment
@@ -152,14 +163,4 @@ page:
 #      - content: Some Code
 #        url: '/bonita/dev/index.html#some-code'
 #        urlType: internal
-    - content: Message blocks
-      items:
-        - content: Out of support
-          url: '/bonita/7.10/msg-block-out-of-support.html'
-          urlType: internal
-        - content: Next version
-          url: '/bonita/7.10/msg-block-next-version.html'
-          urlType: internal
-        - content: Custom message
-          url: '/bonita/7.10/msg-block-custom-message.html'
-          urlType: internal
+
