@@ -58,7 +58,7 @@ site:
 page:
   url: *home_url
   home: true
-  title: Brand&#8217;s Hardware &amp; Software Requirements
+  title: Showcase
   component: *component
   componentVersion: *component_version
   version: 'dev'
@@ -79,8 +79,8 @@ page:
   - content: Quickstart
     url: '#'
     urlType: fragment
-  - content: Brand&#8217;s Hardware &amp; Software Requirements
-    url: /bonita/dev/index.html
+  - content: Showcase
+    url: *home_url
     urlType: internal
   - content: Topics
     url: '#'
@@ -109,8 +109,9 @@ page:
 #    urlType: fragment
     items:
     - content: Showcase
-      # TODO why not /bonita/dev/index.html (if set link in navbar doesn't work, but the navbar correctly opens to match this page)
-      url: index.html
+      # TODO if set to *home_url, link in navbar doesn't work, but the navbar correctly opens to match this page
+      url: *home_url
+#      url: index.html
       urlType: fragment
     - content: Examples
 #      TODO put a real link here
