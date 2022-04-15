@@ -5,7 +5,7 @@ site:
     hideEditPageLinks: false
     hideNavbarComponentsList: false
   url: http://localhost:5252
-  title: Brand Docs
+  title: Bonita Documentation Theme Preview
   homeUrl: &home_url /bonita/dev/index.html
   components:
   - name: abc
@@ -22,7 +22,7 @@ site:
     latestVersion: *latest_version_abc
   - &component
     name: bonita
-    title: Project Bonita
+    title: Bonita Platform
     url: /bonita/2021.1/index.html
     versions:
     - &latest_version_bonita
@@ -64,24 +64,29 @@ page:
   version: 'dev'
   displayVersion: 'dev'
   module: ROOT
-  editUrl: http://example.com/project-bonita/blob/master/index.adoc
+  editUrl: https://example.com/project-bonita/blob/master/index.adoc
   origin:
     private: false
   previous:
-    content: Quickstart
-    url: '#'
+    content: Cards
+    url: '/bonita/dev/cards.html'
     urlType: 'internal'
   next:
-    content: Liber Recusabo
-    url: '#'
+    content: Code
+    url: '/bonita/dev/code.html'
     urlType: 'internal'
   breadcrumbs:
   - content: Quickstart
     url: '#'
     urlType: fragment
-  # TODO change name + add other elements with and without links in the breadcrumbs
   - content: Brand&#8217;s Hardware &amp; Software Requirements
-    url: /bonita/7.10/index.html
+    url: /bonita/dev/index.html
+    urlType: internal
+  - content: Topics
+    url: '#'
+    urlType: fragment
+  - content: Troubleshooting
+    url: /bonita/dev/troubleshooting.html
     urlType: internal
   versions:
   - version: '2021.1'
@@ -100,15 +105,17 @@ page:
   navigation:
   - root: true
     content: Project Bonita
-    url: '#'
-    urlType: fragment
+#    url: '#'
+#    urlType: fragment
     items:
     - content: Showcase
+      # TODO why not /bonita/dev/index.html (if set link in navbar doesn't work, but the navbar correctly opens to match this page)
       url: index.html
       urlType: fragment
-    - content: Example
-      url: '#'
-      urlType: fragment
+    - content: Examples
+#      TODO put a real link here
+#      url: '#'
+#      urlType: fragment
       items:
       - content: Admonitions
         url: /bonita/dev/admonitions.html
@@ -128,13 +135,13 @@ page:
     - content: Message blocks
       items:
         - content: Out of support
-          url: '/bonita/7.10/msg-block-out-of-support.html'
+          url: '/bonita/dev/msg-block-out-of-support.html'
           urlType: internal
         - content: Next version
-          url: '/bonita/7.10/msg-block-next-version.html'
+          url: '/bonita/dev/msg-block-next-version.html'
           urlType: internal
         - content: Custom message
-          url: '/bonita/7.10/msg-block-custom-message.html'
+          url: '/bonita/dev/msg-block-custom-message.html'
           urlType: internal
 #    - content: Quickstart
 #      url: '#'
