@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "bundle": "gulp bundle",
-    "dev": "gulp preview"
+    "dev": "gulp preview",
+    "preview:build": "gulp preview:build"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^4.0.0",

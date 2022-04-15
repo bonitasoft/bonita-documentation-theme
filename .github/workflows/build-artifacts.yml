@@ -4,6 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
+      - 'package.json'
       - 'package-lock.json'
       - 'src/**/*'
       - 'preview-src/**/*'
@@ -12,6 +13,7 @@ on:
   pull_request:
     branches: [ master ]
     paths:
+      - 'package.json'
       - 'package-lock.json'
       - 'src/**/*'
       - 'preview-src/**/*'
@@ -27,7 +29,7 @@ jobs:
       - name: Build Setup
         uses: ./.github/actions/build-setup
       - name: Bundle documentation theme
-        run: gulp bundle
+        run: npm run bundle
       - name: Upload UI bundle
         uses: actions/upload-artifact@v2
         with:
@@ -35,7 +37,7 @@ jobs:
           path: build/ui-bundle.zip
           retention-days: 7
       - name: Build preview
-        run: gulp preview:build
+        run: npm run preview:build
       - name: Upload preview
         uses: actions/upload-artifact@v2
         with:
