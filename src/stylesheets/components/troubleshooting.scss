@@ -1,0 +1,54 @@
+.troubleshooting-title > :first-child {
+  .anchor {
+    margin-left: -4em;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2.2em;
+    background: url(../img/troubleshooting.png) no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+  }
+}
+
+.troubleshooting-section {
+  border-left: 2px solid var(--color-troubleshooting-border);
+  padding-left: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  .symptom {
+    color: var(--color-higlight);
+    font-weight: var(--body-font-weight-bold);
+
+    ::before {
+      content: "";
+      display: inline-block;
+      height: 1.5em;
+      width: 1.5em;
+      margin-right: 0.5em;
+      background: url(../img/loupe.svg) no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+      filter: var(--filter-fire-icon);
+    }
+  }
+  .symptom-description {
+    margin-top: revert;
+  }
+
+  .cause,
+  .solution {
+    position: relative;
+    font-weight: var(--body-font-weight-bold);
+    color: var(--color-higlight);
+
+    &::after{
+      content: '\A';
+      white-space: pre-wrap;
+    }
+  }
+}

@@ -190,3 +190,120 @@ while (true) {
 ----
 <1> The word `toto` is commonly used in examples, it probably refers to our inner self.
 ====
+
+
+== How to write a clean troubleshooting section
+
+[.troubleshooting-title]
+== Troubleshooting 2
+
+=== Troubleshooting 2 Without icon
+
+[.troubleshooting-title]
+=== Troubleshooting 3
+=== Troubleshooting 3 Without icon
+
+[.troubleshooting-title]
+==== Troubleshooting 4
+
+[.troubleshooting-section]
+--
+[.symptom]
+I can't wake up in the morning, 9AM is too early for me!!!
+
+[.symptom-description]
+Here enter a symptom description
+
+[.cause]#Potential cause#
+This is probably because I often go to bed at 3AM :'(
+
+[.solution]#Possible solution#
+I should just stop watching netflix for hours...
+
+[source,java]
+----
+@BonitaTests
+class ProcessIT {
+
+    @Test
+    void should_retrieve_user(BonitaTestToolkit toolkit) {
+        User user = toolkit.getUser("walter.bates");
+        ...
+    }
+}
+----
+--
+
+.Click to see *code example*
+[%collapsible]
+====
+[source,text]
+------
+[.troubleshooting-section]
+--
+[.symptom]
+I can't wake up in the morning, 9AM is too early for me!!!
+
+[.symptom-description]
+Here enter a symptom description
+
+[.cause]#Potential cause#
+This is probably because I often go to bed at 3AM :'(
+
+[.solution]#Possible solution#
+I should just stop watching netflix for hours...
+
+[source,java]
+----
+@BonitaTests
+class ProcessIT {
+
+    @Test
+    void should_retrieve_user(BonitaTestToolkit toolkit) {
+        User user = toolkit.getUser("walter.bates");
+        ...
+    }
+}
+----
+------
+====
+
+
+
+[.troubleshooting-section]
+--
+[.symptom]
+I don't want display potential cause as title
+
+[.symptom-description]
+When i sure about the cause, I want to remove potential on title
+
+[.cause]#Cause#
+This is probably because I often go to bed at 3AM :'(
+
+[.solution]#Possible solution#
+Just write `Cause` as title
+--
+
+
+.Click to see *code example*
+[%collapsible]
+====
+[source,text]
+----
+[.troubleshooting-section]
+--
+[.symptom]
+I don't want display potential cause as title
+
+[.symptom-description]
+When i sure about the cause, I want to remove potential on title
+
+[.cause]#Cause#
+This is probably because I often go to bed at 3AM :'(
+
+[.solution]#Possible solution#
+Just write `Cause` as title
+--
+----
+====
