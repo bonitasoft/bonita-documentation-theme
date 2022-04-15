@@ -1,6 +1,6 @@
 = Message block - custom message
 :page-editable: true
-:page-custom-message: This is a custom message. YYou can use it, for example, for a specific announcement, especially to advertise an upcoming product.
+:page-custom-message: This is a custom message. You can use it, for example, for a specific announcement, especially to advertise an upcoming product.
 
 == Title 1
 
