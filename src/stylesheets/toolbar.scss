@@ -16,7 +16,6 @@
 
   a {
     color: inherit;
-    text-decoration-line: underline;
   }
 
   .edit-this-page {
@@ -79,20 +78,23 @@
   }
 }
 
+.message-block {
+  text-align: center;
+  width:100%;
+
+  a {
+    text-decoration-line: underline;
+  }
+}
+
 .out-of-support-block {
   background-color: var(--color-admonition-important-bg);
   border-color: var(--color-admonition-important);
   color: var(--color-admonition-important-text);
-  text-align: center;
-  width:100%;
 }
 
-.next-release-block {
+.next-release-block,.custom-message-block {
   background-color: var(--color-admonition-note-bg);
   border-color: var(--color-admonition-note);
   color: var(--color-admonition-note-text);
-  text-align: center;
-  width:100%;
 }
-
-
