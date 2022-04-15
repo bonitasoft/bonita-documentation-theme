@@ -79,6 +79,7 @@ page:
   - content: Quickstart
     url: '#'
     urlType: fragment
+  # TODO change name + add other elements with and without links in the breadcrumbs
   - content: Brand&#8217;s Hardware &amp; Software Requirements
     url: /bonita/7.10/index.html
     urlType: internal
