@@ -1,6 +1,25 @@
-= Use cards
+= Cards
 
-[source, asciidoc]
+[.card-section]
+== Explore Bonita
+
+Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
+
+
+[.card.card-index]
+--
+http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+--
+
+[.card.card-index]
+--
+http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Bonita Studio installation# [.card-body.card-content-overflow]#pass:q[The very first step to start your Bonita project]#]
+--
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
 ----
 [.card-section]
 == Explore Bonita
@@ -13,14 +32,10 @@ Click on the *links* below to find useful information quickly, or xref:../taxono
 http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
 --
 
-----
-[.card-section]
-== Explore Bonita
-
-Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
-
-
 [.card.card-index]
 --
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Bonita Studio installation# [.card-body.card-content-overflow]#pass:q[The very first step to start your Bonita project]#]
 --
+----
+====
+

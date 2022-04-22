@@ -1,5 +1,17 @@
+= Admonitions
+
 [TIP]
 This oughta do it!
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[TIP]
+This oughta do it!
+----
+====
 
 Cum dicat putant ne.
 Est in reque homero principes, meis deleniti mediocrem ad has.
@@ -7,8 +19,16 @@ Altera atomorum his ex, has cu elitr melius propriae.
 Eos suscipit scaevola at.
 
 [NOTE]
-====
 You've been down _this_ road before.
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[NOTE]
+You've been down _this_ road before.
+----
 ====
 
 Cum dicat putant ne.
@@ -17,19 +37,46 @@ Altera atomorum his ex, has cu elitr melius propriae.
 Eos suscipit scaevola at.
 
 [WARNING]
-====
 Watch out!
+
+.Click to see the *source code*
+[%collapsible]
 ====
+[source,asciidoc]
+----
+[WARNING]
+Watch out!
+----
+====
+
 
 [CAUTION]
+I wouldn't try that if I were you.
+
+.Click to see the *source code*
+[%collapsible]
 ====
-[#inline]#I wouldn't try that if I were you.#
+[source,asciidoc]
+----
+[CAUTION]
+I wouldn't try that if I were you.
+----
 ====
 
+
 [IMPORTANT]
-====
 Don't forget this step!
+
+.Click to see the *source code*
+[%collapsible]
 ====
+[source,asciidoc]
+----
+[IMPORTANT]
+Don't forget this step!
+----
+====
+
 
 .Key Points to Remember
 [TIP]
@@ -39,7 +86,22 @@ If you installed the CLI and the default site generator globally, you can upgrad
  $ npm i -g @antora/cli @antora/site-generator-default
 ====
 
-== Test raw admonitions
+.Click to see the *source code*
+[%collapsible]
+====
+[source,text]
+----
+[TIP]
+++++
+If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
+
+ $ npm i -g @antora/cli @antora/site-generator-default
+++++
+----
+====
+
+
+== Raw admonitions
 
 [NOTE]
 ====
@@ -51,6 +113,20 @@ If you installed the CLI and the default site generator globally, you can upgrad
 *Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
 ====
 
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[NOTE.bonitacloud,caption=Bonita cloud]
+++++
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+++++
+
+----
+====
+
+
 [TIP]
 ====
 *Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
@@ -84,32 +160,69 @@ String a = "TUTU";
 ====
 
 
-== Test admonition in list
+== Admonition in list
 
 . blabla
 +
 [IMPORTANT]
 ====
-Vive le paté
+Don't forget this step!
 ====
 +
 . blabla
 
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+. blabla
++
+[IMPORTANT]
+++++
+Don't forget this step!
+++++
++
+. blabla
+----
+====
+
+
 ---
+
 
 * blabla
 ** Sous blabla
 +
 [WARNING]
 ====
-Allez Grenoble
+Watch out!
 ====
 +
 ** Sous blabla
 * blabla
 
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+* blabla
+** Sous blabla
++
+[WARNING]
+++++
+Watch out!
+++++
++
+** Sous blabla
+* blabla
+----
+====
 
-== Test admonition with table content
+
+
+== Admonition with table content
 
 [TIP]
 ====
@@ -123,6 +236,26 @@ Allez Grenoble
 | _Chauve :'(_
 |===
 ====
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[TIP]
+++++
+|===
+| Nom | Couleur de cheveux
+
+| Titeuf
+| Blond
+
+| Mr propre
+| _Chauve :'(_
+|===
+++++
+----
+====
+
 
 
 . blabla
@@ -142,6 +275,34 @@ Allez Grenoble
 ====
 +
 . blabla
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+. blabla
+. blabla
++
+[CAUTION]
+++++
+|===
+| Nourriture | Comestible
+
+| Saucisson
+| Oui
+
+| Brocolis
+| Non
+|===
+++++
++
+. blabla
+----
+====
+
+
+
 
 [NOTE]
 ====

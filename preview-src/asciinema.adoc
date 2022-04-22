@@ -3,3 +3,15 @@
 ++++
 <asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
 ++++
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+++++
+<asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
+++++
+----
+====
+

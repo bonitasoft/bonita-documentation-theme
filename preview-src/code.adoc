@@ -1,8 +1,6 @@
-=== Some Code
+= Source Code
 
-How about some code?
-
-==== JS
+== JavaScript
 
 [source,js]
 ----
@@ -19,14 +17,53 @@ vfs
 <2> Wrap each streaming file in a buffer so the files can be processed by uglify.
 Uglify can only work with buffers, not streams.
 
-==== Shell
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[source,js]
+++++
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => { // <1>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) // <2>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+++++
+<1> The tap function is used to wiretap the data in the pipe.
+<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.
+----
+[NOTE]
+****
+<1> should be replaced by `<1>` (same thing for <2>)
+****
+
+====
+
+
+== Shell
 
 [source,shell]
 ----
 alias ducksort=""du -cks * | sort -n""
 ----
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[source,shell]
+++++
+alias ducksort=""du -cks * | sort -n""
+++++
+----
+====
 
-==== XML
+== XML
 
 [source,xml]
 ----
@@ -38,11 +75,31 @@ alias ducksort=""du -cks * | sort -n""
     </branch>
 </root>
 ----
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[source,xml]
+++++
+<root>
+    <branch>
+        <leafs length="130">
+            <leaf color="yellow" />
+        </leafs>
+    </branch>
+</root>
+++++
+----
+====
+
 
 Cum dicat #putant# ne.
 Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
 Altera atomorum his ex, has cu elitr melius propriae.
 Eos suscipit scaevola at.
+
+== Directory list
 
 ....
 pom.xml
@@ -54,3 +111,20 @@ src/
     java/
       HelloWorldTest.java
 ....
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+....
+pom.xml
+src/
+  main/
+    java/
+      HelloWorld.java
+  test/
+    java/
+      HelloWorldTest.java
+....
+----
+====
