@@ -128,3 +128,30 @@ src/
 ....
 ----
 ====
+
+
+== For theme tests only
+
+Check that the small code block `toto` is correctly highlighted in the call out of the block code.
+
+[source, Java]
+----
+while (true) {
+  System.out.println("toto"); <1>
+}
+----
+<1> The word `toto` is commonly used in examples, it probably refers to our inner self.
+
+
+Same check but when code is in a `collapsible`
+.Click to see code
+[%collapsible]
+====
+[source, Java]
+----
+while (true) {
+  System.out.println("toto"); <1>
+}
+----
+<1> The word `toto` is commonly used in examples, it probably refers to our inner self.
+====
