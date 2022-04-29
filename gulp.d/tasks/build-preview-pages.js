@@ -27,7 +27,15 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
     ),
   ])
     .then(([baseUiModel, { layouts }]) => [{ ...baseUiModel, env: process.env }, layouts])
-    .then(([baseUiModel, layouts]) =>
+    .then(([baseUiModel, layouts]) => {
+      // CUSTOM bonita-theme
+      // let override the site.url defined in uid-model.yml with an environment variable
+      const siteUrl = process.env.BONITA_THEME_URL
+      if (siteUrl) {
+        console.info('Overriding site url from %s to %s', baseUiModel.site.url, siteUrl)
+        baseUiModel.site.url = siteUrl
+      }
+      // end of - CUSTOM bonita-theme
       vfs
         .src('**/*.adoc', { base: previewSrc, cwd: previewSrc })
         .pipe(
@@ -68,7 +76,7 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
         .pipe(vfs.dest(previewDest))
         .on('error', (e) => done)
         .pipe(sink())
-    )
+    })
 
 function loadSampleUiModel (src) {
   return fs.readFile(ospath.join(src, 'ui-model.yml'), 'utf8').then((contents) => yaml.safeLoad(contents))

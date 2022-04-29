@@ -28,6 +28,12 @@ jobs:
       - name: Build Setup
         uses: ./.github/actions/build-setup
         if: github.event.action != 'closed'
+      - name: Compute environment variables
+        if: github.event.action != 'closed'
+        run: |
+          # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
+          repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/\//-/g')
+          echo PREVIEW_URL=https://$repo_owner_and_name-"${{github.job}}"-pr-"${{github.event.pull_request.number}}".surge.sh >> $GITHUB_ENV
       - name: Publish preview
         id: preview_step
         uses: afc163/surge-preview@v1
@@ -38,4 +44,4 @@ jobs:
           failOnError: true
           teardown: 'true'
           build: |
-            npm run preview:build
+            BONITA_THEME_URL="${{ env.PREVIEW_URL }}" npm run preview:build

@@ -4,6 +4,7 @@ site:
     nonProduction: false
     hideEditPageLinks: false
     hideNavbarComponentsList: false
+  # can be changed by setting the BONITA_THEME_URL environment variable when building
   url: http://localhost:5252
   title: Bonita Documentation Theme Preview
   # remarks about the urls
