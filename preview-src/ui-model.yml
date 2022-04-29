@@ -111,9 +111,6 @@ page:
     - content: Showcase
       url: *home_url
       urlType: internal
-    - content: 404 error
-      url: /bonita/dev/404.html
-      urlType: internal
     - content: Examples
       items:
       - content: Admonitions
@@ -134,17 +131,22 @@ page:
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
         urlType: internal
-    - content: Message blocks
+    - content: Theme tests
       items:
-        - content: Out of support
-          url: '/bonita/dev/msg-block-out-of-support.html'
+        - content: 404 error page
+          url: /bonita/dev/404.html
           urlType: internal
-        - content: Next version
-          url: '/bonita/dev/msg-block-next-version.html'
-          urlType: internal
-        - content: Custom message
-          url: '/bonita/dev/msg-block-custom-message.html'
-          urlType: internal
+        - content: Message blocks
+          items:
+            - content: Out of support
+              url: '/bonita/dev/msg-block-out-of-support.html'
+              urlType: internal
+            - content: Next version
+              url: '/bonita/dev/msg-block-next-version.html'
+              urlType: internal
+            - content: Custom message
+              url: '/bonita/dev/msg-block-custom-message.html'
+              urlType: internal
 #    - content: Quickstart
 #      url: '#'
 #      urlType: fragment
