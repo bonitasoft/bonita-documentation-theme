@@ -1,0 +1,17 @@
+== Videos
+
+// this fake block is here to add a break line between the title and the video
+{empty} +
+
+video::Hl1thnPla7E[youtube, width=640,height=380]
+
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+// For more details about the videos syntax, see https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
+video::Hl1thnPla7E[youtube, width=640,height=380]
+----
+====

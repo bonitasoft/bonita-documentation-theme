@@ -133,6 +133,9 @@ page:
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
         urlType: internal
+      - content: Videos
+        url: /bonita/dev/videos.html
+        urlType: internal
     - content: Message blocks
       items:
         - content: Out of support
