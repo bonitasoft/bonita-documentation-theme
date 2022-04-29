@@ -1,42 +1,45 @@
-= Bonita BPM Documentation
-Author Name
+= Showcase
+Bonita Documentation Theme authors
 :idprefix:
 :idseparator: -
 :!example-caption:
 :!table-caption:
+// This attribute activates the pagination to previous and next page at the bottom of the page
 :page-pagination:
 
 
-Welcome to the Bonita BPM documentation website.
+Welcome to the Bonita documentation theme preview.
+
+*TODO: explain the purpose of this content*
 
 [.card-section]
-== Explore Bonita
+== Showcase card
 
-Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
+Click on the *links* below to find useful information quickly, or use the *table of contents* to go straight to the information you want to read.
 
-
-[.card.card-index]
---
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
 
 [.card.card-index]
 --
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Process diagram overview# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+xref:troubleshooting.adoc[[.card-title]#Troubleshooting how-to# [.card-body.card-content-overflow]#Learn how to create troubleshooting paragraphs.#]
+--
+
+[.card.card-index]
+--
+xref:code.adoc[[.card-title]#Source Code example# [.card-body.card-content-overflow]#Learn how to create source code example in the documentation.#]
 --
 
 
 [.card-section]
-=== Highlight
+=== Other information
 
 [.card.card-index]
 --
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+xref:asciinema.adoc[[.card-title]#Asciinema# [.card-body.card-content-overflow]#Learn how to embed Asciinema content in your page.#]
 --
 
 [.card.card-index]
 --
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Process diagram overview# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+xref:cards.adoc[[.card-title]#Cards# [.card-body.card-content-overflow]#Learn how to create cards (like this one).#]
 --
 
 == Cu solet
