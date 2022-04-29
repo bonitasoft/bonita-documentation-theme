@@ -6,6 +6,9 @@ site:
     hideNavbarComponentsList: false
   url: http://localhost:5252
   title: Bonita Documentation Theme Preview
+  # remarks about the urls
+  # For url related to AsciiDoc pages, they must be in the form of /bonita/dev/<page>.html for consistency and to make the
+  # navigation opened to the right page. See gulp.d/tasks/build-preview-pages.js for the customization that makes it work.
   homeUrl: &home_url /bonita/dev/index.html
   components:
   - name: abc

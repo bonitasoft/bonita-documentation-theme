@@ -41,6 +41,10 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
             if (file.stem === '404') {
               uiModel.page = { layout: '404', title: 'Page Not Found' }
             } else {
+              // CUSTOM bonita-theme
+              // get rid of the hard coded url, and target the actual url to make the navbar opened to the right page
+              uiModel.page.url = `/bonita/dev/${file.stem}.html`
+              // end of - CUSTOM bonita-theme
               const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
               uiModel.page.attributes = Object.entries(doc.getAttributes())
                 .filter(([name, val]) => name.startsWith('page-'))
