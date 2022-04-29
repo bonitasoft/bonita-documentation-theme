@@ -11,6 +11,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
+      - name: workaround forbidden directory
+        run: git config --global --add safe.directory /github/workspace
       - name: Bump version and push tag
         uses: darioblanco/bump-semver@v1.0.0
         with:
