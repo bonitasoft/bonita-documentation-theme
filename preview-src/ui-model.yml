@@ -105,8 +105,6 @@ page:
   navigation:
   - root: true
     content: Bonita Theme
-#    url: '#'
-#    urlType: fragment
     items:
     - content: Showcase
       url: *home_url
