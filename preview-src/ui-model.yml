@@ -128,11 +128,11 @@ page:
       - content: Code
         url: /bonita/dev/code.html
         urlType: internal
+      - content: Media
+        url: /bonita/dev/media.html
+        urlType: internal
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
-        urlType: internal
-      - content: Videos
-        url: /bonita/dev/videos.html
         urlType: internal
     - content: Message blocks
       items:

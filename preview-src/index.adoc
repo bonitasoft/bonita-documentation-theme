@@ -6,7 +6,6 @@ Author Name
 :!table-caption:
 :page-pagination:
 
-image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 
 Welcome to the Bonita BPM documentation website.
 
@@ -201,6 +200,6 @@ The fog comes
 on little cat feet.
 ____
 
-== Fin
+== End
 
 That's all, folks!

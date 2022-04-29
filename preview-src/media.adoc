@@ -15,3 +15,20 @@ video::Hl1thnPla7E[youtube, width=640,height=380]
 video::Hl1thnPla7E[youtube, width=640,height=380]
 ----
 ====
+
+
+== Images
+
+Here is an image put on the right side of the page.
+
+image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,as
+[source,asciidoc]
+----
+image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
+----
+====
