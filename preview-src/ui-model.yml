@@ -136,6 +136,9 @@ page:
         - content: 404 error page
           url: /bonita/dev/404.html
           urlType: internal
+        - content: Bold titles
+          url: /bonita/dev/test-bold-titles.html
+          urlType: internal
         - content: Message blocks
           items:
             - content: Out of support
