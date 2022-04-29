@@ -37,6 +37,8 @@ jobs:
       - name: Publish preview
         id: preview_step
         uses: afc163/surge-preview@v1
+        env:
+          BONITA_THEME_URL: ${{ env.PREVIEW_URL }}
         with:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -44,4 +46,4 @@ jobs:
           failOnError: true
           teardown: 'true'
           build: |
-            BONITA_THEME_URL="${{ env.PREVIEW_URL }}" npm run preview:build
+            npm run preview:build
