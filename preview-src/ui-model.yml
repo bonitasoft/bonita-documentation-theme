@@ -109,10 +109,8 @@ page:
 #    urlType: fragment
     items:
     - content: Showcase
-      # TODO if set to *home_url, link in navbar doesn't work, but the navbar correctly opens to match this page
       url: *home_url
-#      url: index.html
-      urlType: fragment
+      urlType: internal
     - content: 404 error
       url: /bonita/dev/404.html
       urlType: internal
