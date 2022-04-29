@@ -8,9 +8,12 @@ Bonita Documentation Theme authors
 :page-pagination:
 
 
-Welcome to the Bonita documentation theme preview.
+.Welcome to the Bonita documentation theme preview
+****
+It demonstrates how the Bonita documentation is rendered and provides both examples and tests of the rendering. +
+Check the examples to know the AsciiDoc syntax for various use cases.
+****
 
-*TODO: explain the purpose of this content*
 
 [.card-section]
 == Showcase card
