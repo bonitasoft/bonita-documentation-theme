@@ -113,10 +113,10 @@ page:
       url: *home_url
 #      url: index.html
       urlType: fragment
+    - content: 404 error
+      url: /bonita/dev/404.html
+      urlType: internal
     - content: Examples
-#      TODO put a real link here
-#      url: '#'
-#      urlType: fragment
       items:
       - content: Admonitions
         url: /bonita/dev/admonitions.html
