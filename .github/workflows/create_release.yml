@@ -1,0 +1,27 @@
+name: Releases
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+    inputs:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Setup
+        uses: ./.github/actions/build-setup
+      - name: Bundle documentation theme
+        run: npm run bundle
+      - name: Change bundle name
+        run: mv build/ui-bundle.zip build/bonita-documentation-theme.zip
+      - uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: true
+          artifacts: "build/bonita-documentation-theme.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
