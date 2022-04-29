@@ -78,6 +78,20 @@ Don't forget this step!
 ====
 
 
+[NOTE.bonitacloud,caption=Bonita cloud]
+Bonita Cloud is a great platform.
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[NOTE.bonitacloud,caption=Bonita cloud]
+Bonita Cloud is a great platform.
+----
+====
+
+
 .Key Points to Remember
 [TIP]
 ====
@@ -101,14 +115,9 @@ If you installed the CLI and the default site generator globally, you can upgrad
 ====
 
 
-== Raw admonitions
+== Admonition with link and code
 
 [NOTE]
-====
-*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
-====
-
-[NOTE.bonitacloud,caption=Bonita cloud]
 ====
 *Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
 ====
@@ -118,7 +127,7 @@ If you installed the CLI and the default site generator globally, you can upgrad
 ====
 [source,asciidoc]
 ----
-[NOTE.bonitacloud,caption=Bonita cloud]
+[NOTE]
 ++++
 *Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
 ++++
@@ -126,6 +135,11 @@ If you installed the CLI and the default site generator globally, you can upgrad
 ----
 ====
 
+
+[NOTE.bonitacloud,caption=Bonita cloud]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+====
 
 [TIP]
 ====
@@ -323,13 +337,13 @@ Watch out!
 [WARNING]
 ====
 |===
-| Gens à éviter
+| Activités très cool
 
-| Parisiens
+| VTT
 
-| Bretons
+| Ski de rando
 
-| Sudistes
+| Sieste
 
 |===
 ====
