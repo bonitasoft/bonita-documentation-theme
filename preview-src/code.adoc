@@ -94,10 +94,6 @@ alias ducksort=""du -cks * | sort -n""
 ====
 
 
-Cum dicat #putant# ne.
-Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
 
 == Directory list
 
