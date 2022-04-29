@@ -170,3 +170,48 @@ The logged user has no permission to access the resources.
 --
 ----
 ====
+
+
+== For theme tests only
+
+Here we check the rendering depending on the title level.
+
+[.troubleshooting-title]
+== Troubleshooting 2
+
+=== Troubleshooting 2 Without icon
+
+[.troubleshooting-title]
+=== Troubleshooting 3
+=== Troubleshooting 3 Without icon
+
+[.troubleshooting-title]
+==== Troubleshooting 4
+
+[.troubleshooting-section]
+--
+[.symptom]
+I can't wake up in the morning, 9AM is too early for me!!!
+
+[.symptom-description]
+Here enter a symptom description
+
+[.cause]#Potential cause#
+This is probably because I often go to bed at 3AM :'(
+
+[.solution]#Possible solution#
+I should just stop watching netflix for hours...
+
+[source,java]
+----
+@BonitaTests
+class ProcessIT {
+
+    @Test
+    void should_retrieve_user(BonitaTestToolkit toolkit) {
+        User user = toolkit.getUser("walter.bates");
+        ...
+    }
+}
+----
+--
