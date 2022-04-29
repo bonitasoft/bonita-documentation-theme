@@ -1,0 +1,349 @@
+= Admonitions
+
+[TIP]
+This oughta do it!
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[TIP]
+This oughta do it!
+----
+====
+
+Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+[NOTE]
+You've been down _this_ road before.
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[NOTE]
+You've been down _this_ road before.
+----
+====
+
+Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+[WARNING]
+Watch out!
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[WARNING]
+Watch out!
+----
+====
+
+
+[CAUTION]
+I wouldn't try that if I were you.
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[CAUTION]
+I wouldn't try that if I were you.
+----
+====
+
+
+[IMPORTANT]
+Don't forget this step!
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[IMPORTANT]
+Don't forget this step!
+----
+====
+
+
+[NOTE.bonitacloud,caption=Bonita cloud]
+Bonita Cloud is a great platform.
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[NOTE.bonitacloud,caption=Bonita cloud]
+Bonita Cloud is a great platform.
+----
+====
+
+
+.Key Points to Remember
+[TIP]
+====
+If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
+
+ $ npm i -g @antora/cli @antora/site-generator-default
+====
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,text]
+----
+[TIP]
+++++
+If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
+
+ $ npm i -g @antora/cli @antora/site-generator-default
+++++
+----
+====
+
+
+== Admonition with link and code
+
+[NOTE]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+====
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[NOTE]
+++++
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+++++
+
+----
+====
+
+
+[NOTE.bonitacloud,caption=Bonita cloud]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+====
+
+[TIP]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+[IMPORTANT]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+[WARNING]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+[CAUTION]
+====
+*Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
+``` java
+String a = "TUTU";
+```
+====
+
+
+== Admonition in list
+
+. blabla
++
+[IMPORTANT]
+====
+Don't forget this step!
+====
++
+. blabla
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+. blabla
++
+[IMPORTANT]
+++++
+Don't forget this step!
+++++
++
+. blabla
+----
+====
+
+
+---
+
+
+* blabla
+** Sous blabla
++
+[WARNING]
+====
+Watch out!
+====
++
+** Sous blabla
+* blabla
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+* blabla
+** Sous blabla
++
+[WARNING]
+++++
+Watch out!
+++++
++
+** Sous blabla
+* blabla
+----
+====
+
+
+
+== Admonition with table content
+
+[TIP]
+====
+|===
+| Nom | Couleur de cheveux
+
+| Titeuf
+| Blond
+
+| Mr propre
+| _Chauve :'(_
+|===
+====
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[TIP]
+++++
+|===
+| Nom | Couleur de cheveux
+
+| Titeuf
+| Blond
+
+| Mr propre
+| _Chauve :'(_
+|===
+++++
+----
+====
+
+
+
+. blabla
+. blabla
++
+[CAUTION]
+====
+|===
+| Nourriture | Comestible
+
+| Saucisson
+| Oui
+
+| Brocolis
+| Non
+|===
+====
++
+. blabla
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+. blabla
+. blabla
++
+[CAUTION]
+++++
+|===
+| Nourriture | Comestible
+
+| Saucisson
+| Oui
+
+| Brocolis
+| Non
+|===
+++++
++
+. blabla
+----
+====
+
+
+
+
+[NOTE]
+====
+|===
+| OS | Description
+
+| Windaube
+| Oulala
+
+| Macos
+| Pure gold
+
+| Linoux
+| Truc de geek
+|===
+====
+
+[WARNING]
+====
+|===
+| Activités très cool
+
+| VTT
+
+| Ski de rando
+
+| Sieste
+
+|===
+====

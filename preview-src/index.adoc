@@ -1,50 +1,49 @@
-= Bonita BPM Documentation
-Author Name
+= Showcase
+Bonita Documentation Theme authors
 :idprefix:
 :idseparator: -
 :!example-caption:
 :!table-caption:
+// This attribute activates the pagination to previous and next page at the bottom of the page
 :page-pagination:
 
-image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 
-Welcome to the Bonita BPM documentation website.
-
-[.card-section]
-== Explore Bonita
-
-Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
-
-
-[.card.card-index]
---
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
-
-[.card.card-index]
---
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Process diagram overview# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
---
+.Welcome to the Bonita documentation theme preview
+****
+It demonstrates how the Bonita documentation is rendered and provides both examples and tests of the rendering. +
+Check the examples to know the AsciiDoc syntax for various use cases.
+****
 
 
 [.card-section]
-=== Highlight
+== Showcase card
+
+Click on the *links* below to find useful information quickly, or use the *table of contents* to go straight to the information you want to read.
+
 
 [.card.card-index]
 --
-http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+xref:troubleshooting.adoc[[.card-title]#Troubleshooting how-to# [.card-body.card-content-overflow]#Learn how to create troubleshooting paragraphs.#]
 --
 
 [.card.card-index]
 --
-xref:http://documentation.bonitasoft.com/javadoc/api/${varVersion}/index.html[[.card-title]#Process diagram overview# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+xref:code.adoc[[.card-title]#Source Code example# [.card-body.card-content-overflow]#Learn how to create source code example in the documentation.#]
 --
 
-== Asciinema
 
-++++
-<asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
-++++
+[.card-section]
+=== Other information
+
+[.card.card-index]
+--
+xref:asciinema.adoc[[.card-title]#Asciinema# [.card-body.card-content-overflow]#Learn how to embed Asciinema content in your page.#]
+--
+
+[.card.card-index]
+--
+xref:cards.adoc[[.card-title]#Cards# [.card-body.card-content-overflow]#Learn how to create cards (like this one).#]
+--
 
 == Cu solet
 
@@ -79,62 +78,7 @@ This is an example paragraph.
 [example]
 This is an example paragraph.
 
-=== Some Code
 
-How about some code?
-
-==== JS
-
-[source,js]
-----
-vfs
-  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
-  .pipe(tap((file) => { // <1>
-    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
-  }))
-  .pipe(buffer()) // <2>
-  .pipe(uglify())
-  .pipe(gulp.dest('build'))
-----
-<1> The tap function is used to wiretap the data in the pipe.
-<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
-Uglify can only work with buffers, not streams.
-
-==== Shell
-
-[source,shell]
-----
-alias ducksort=""du -cks * | sort -n""
-----
-
-==== XML
-
-[source,xml]
-----
-<root>
-    <branch>
-        <leafs length="130">
-            <leaf color="yellow" />
-        </leafs>
-    </branch>
-</root>
-----
-
-Cum dicat #putant# ne.
-Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-....
-pom.xml
-src/
-  main/
-    java/
-      HelloWorld.java
-  test/
-    java/
-      HelloWorldTest.java
-....
 
 == Eu mea munere vituperata constituam.
 
@@ -223,46 +167,6 @@ Est in reque homero principes, meis deleniti mediocrem ad has.
 Altera atomorum his ex, has cu elitr melius propriae.
 Eos suscipit scaevola at.
 
-[TIP]
-This oughta do it!
-
-Cum dicat putant ne.
-Est in reque homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-[NOTE]
-====
-You've been down _this_ road before.
-====
-
-Cum dicat putant ne.
-Est in reque homero principes, meis deleniti mediocrem ad has.
-Altera atomorum his ex, has cu elitr melius propriae.
-Eos suscipit scaevola at.
-
-[WARNING]
-====
-Watch out!
-====
-
-[CAUTION]
-====
-[#inline]#I wouldn't try that if I were you.#
-====
-
-[IMPORTANT]
-====
-Don't forget this step!
-====
-
-.Key Points to Remember
-[TIP]
-====
-If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
-
- $ npm i -g @antora/cli @antora/site-generator-default
-====
 
 Nominavi luptatum eos, an vim hinc philosophia intellegebat.
 Eu mea inani iriure.
@@ -278,6 +182,12 @@ Ex nam suas nemore dignissim, vel apeirian democritum et.
 image::multirepo-ssg.svg[Multirepo SSG,250]
 
 Make the switch today!
+
+Cum dicat #putant# ne.
+Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
 
 [#english+中文]
 == English + 中文
@@ -302,6 +212,6 @@ The fog comes
 on little cat feet.
 ____
 
-== Fin
+== End
 
 That's all, folks!
