@@ -1,5 +1,18 @@
 = How to write a clean troubleshooting section
 
+This is how to create a troubleshooting:
+
+* The title should be "Troubleshooting" and not "Troubleshoot"
+* "Symptom": describes what the user experiences
+* "Cause": describes the diagnosis from Bonita perspective
+* "Possible solutions" (if there is still uncertainty about its efficiency depending on the user's context) or "Solutions" (if we know for sure it works): a step-by-step guidance to lead the user to success.
+
+* Depending on the position of the troubleshooting section in the page, you can:
+** Add a separator above the "Troubleshooting" title of the section, if this section appears at the bottom of the page and addresses the whole content of the page
+** Adapt the level of the header; it should be the same than the content it is related to
+
+* Do not add:
+** Additional lines above and below the content of the section. The title already provides a separator between the title and the content.
 
 [.troubleshooting-title]
 == Troubleshooting
