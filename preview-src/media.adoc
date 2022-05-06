@@ -1,7 +1,12 @@
 == Videos
 
-// this fake block is here to add a break line between the title and the video
-{empty} +
+=== Embed videos
+
+It is possible to embed videos as it is done in Bonita 2021.1 index page: https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
+
+* A default/max size is set for the mobile view
+* there is no default for the desktop view at the moment, so you should set the dimensions when declaring the `video` macro
+as in the following example
 
 video::Hl1thnPla7E[youtube, width=640,height=380]
 

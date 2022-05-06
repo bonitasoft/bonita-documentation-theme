@@ -1,5 +1,10 @@
 = Admonitions
 
+More details on admonition https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions[here]
+
+
+WARNING: GitHub may not render admonitions, see this https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/#using-emoji-for-admonition-icons[asciidoc documentation] for more details.
+
 [TIP]
 This oughta do it!
 
@@ -314,9 +319,6 @@ Watch out!
 . blabla
 ----
 ====
-
-
-
 
 [NOTE]
 ====

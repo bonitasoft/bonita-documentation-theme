@@ -1,5 +1,14 @@
 = Cards
 
+You can use card style in your page. Please don't abuse it, and try to only use it on index pages.
+
+.Card display in after HTML generation
+You can update *link*, *title* and description for each card.
+
+WARNING: If description in card body is too long (more than 3 lines), we will hide the excess.
+
+To do it, you need to use this following syntax:
+
 [.card-section]
 == Explore Bonita
 
