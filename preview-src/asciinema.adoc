@@ -4,6 +4,9 @@ https://asciinema.org/[Asciinema] provides a great way for sharing shell session
 
 Once you have created a `.cast` file, you can add it to your document with the following markup
 
+// this fake block is here to add a break line between before the video
+{empty} +
+
 ++++
 <asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
 ++++
