@@ -1,0 +1,45 @@
+name: Generate theme example
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  generate_theme_example:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Setup
+        uses: ./.github/actions/build-setup
+      - name: Compute environment variables
+        run: |
+          echo THEME_URL=https://bonitasoft.github.io/bonita-documentation-theme/ >> $GITHUB_ENV
+      - name: Build preview
+        run: npm run preview:build
+        env:
+          BONITA_THEME_URL: ${{ env.THEME_URL }}
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: theme-example-${{github.sha}}
+          path: public
+
+  push_examples_to_gh_pages:
+    if: github.event.ref == 'refs/heads/master'
+    runs-on: ubuntu-20.04
+    needs: generate_theme_example
+    steps:
+      - name: Download
+        uses: actions/download-artifact@v3
+        with:
+          name: theme-example-${{github.sha}}
+      - name: Push to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          keep_files: true
+          user_name: 'bonita-theme-bot'
+          user_email: 'bonita-theme-bot@users.noreply.github.com'
