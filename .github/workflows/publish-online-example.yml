@@ -1,10 +1,17 @@
 name: Generate theme example
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
-  workflow_dispatch:
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'src/**/*'
+      - 'preview-src/**/*'
+      - '.github/actions/build-setup/**/*'
+      - '.github/workflows/publish-online-example.yml'
 
 jobs:
   generate_theme_example:
