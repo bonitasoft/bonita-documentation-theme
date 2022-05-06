@@ -10,16 +10,13 @@ jobs:
   generate_theme_example:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build Setup
         uses: ./.github/actions/build-setup
-      - name: Compute environment variables
-        run: |
-          echo THEME_URL=https://bonitasoft.github.io/bonita-documentation-theme/ >> $GITHUB_ENV
       - name: Build preview
         run: npm run preview:build
         env:
-          BONITA_THEME_URL: ${{ env.THEME_URL }}
+          BONITA_THEME_URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
