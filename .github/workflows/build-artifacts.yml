@@ -31,7 +31,7 @@ jobs:
       - name: Bundle documentation theme
         run: npm run bundle
       - name: Upload UI bundle
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ui-bundle-${{github.sha}}
           path: build/ui-bundle.zip
@@ -39,7 +39,7 @@ jobs:
       - name: Build preview
         run: npm run preview:build
       - name: Upload preview
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ui-preview-${{github.sha}}
           path: public
