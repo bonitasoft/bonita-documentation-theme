@@ -57,11 +57,14 @@
 
 <script>
   // init toggle state
-  if (localStorage.getItem('theme') === 'dark') {
-    document.getElementById('check').checked = true
-    document.getElementById('check-mobile').checked = true
-  } else {
-    document.getElementById('check').checked = false
-    document.getElementById('check-mobile').checked = false
+  const isDarkThemeEnable = localStorage.getItem('theme') === 'dark';
+  initializeThemeToggleIfAvailable('check', isDarkThemeEnable);
+  initializeThemeToggleIfAvailable('check-mobile', isDarkThemeEnable);
+
+  function initializeThemeToggleIfAvailable(elementId, checked) {
+    const checkElement = document.getElementById(elementId);
+    if(checkElement) {
+      checkElement.checked = checked;
+    }
   }
 </script>
