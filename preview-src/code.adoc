@@ -21,9 +21,9 @@ Uglify can only work with buffers, not streams.
 [%collapsible]
 ====
 [source,asciidoc]
-----
+--------
 [source,js]
-++++
+----
 vfs
   .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
   .pipe(tap((file) => { // <1>
@@ -32,11 +32,11 @@ vfs
   .pipe(buffer()) // <2>
   .pipe(uglify())
   .pipe(gulp.dest('build'))
-++++
+----
 <1> The tap function is used to wiretap the data in the pipe.
 <2> Wrap each streaming file in a buffer so the files can be processed by uglify.
 Uglify can only work with buffers, not streams.
-----
+--------
 [NOTE]
 ****
 <1> should be replaced by `<1>` (same thing for <2>)
@@ -55,12 +55,12 @@ alias ducksort=""du -cks * | sort -n""
 [%collapsible]
 ====
 [source,asciidoc]
-----
+--------
 [source,shell]
-++++
-alias ducksort=""du -cks * | sort -n""
-++++
 ----
+alias ducksort=""du -cks * | sort -n""
+----
+--------
 ====
 
 == XML
@@ -79,9 +79,9 @@ alias ducksort=""du -cks * | sort -n""
 [%collapsible]
 ====
 [source,asciidoc]
-----
+--------
 [source,xml]
-++++
+----
 <root>
     <branch>
         <leafs length="130">
@@ -89,8 +89,8 @@ alias ducksort=""du -cks * | sort -n""
         </leafs>
     </branch>
 </root>
-++++
 ----
+--------
 ====
 
 
@@ -143,11 +143,14 @@ Same check but when code is in a `collapsible`
 .Click to see code
 [%collapsible]
 ====
+[source,asciidoc]
+--------
 [source, Java]
 ----
 while (true) {
   System.out.println("toto"); <1>
 }
 ----
+--------
 <1> The word `toto` is commonly used in examples, it probably refers to our inner self.
 ====

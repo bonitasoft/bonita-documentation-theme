@@ -109,17 +109,17 @@ If you installed the CLI and the default site generator globally, you can upgrad
 
 .Click to see the *source code*
 [%collapsible]
-====
+========
 [source,text]
 ----
 [TIP]
-++++
+====
 If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
 
  $ npm i -g @antora/cli @antora/site-generator-default
-++++
-----
 ====
+----
+========
 
 
 == Admonition with link and code
@@ -131,16 +131,16 @@ If you installed the CLI and the default site generator globally, you can upgrad
 
 .Click to see the *source code*
 [%collapsible]
-====
+========
 [source,asciidoc]
 ----
 [NOTE]
-++++
+====
 *Lorem Ipsum* is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. `And here is some code!`. xref:nothing[And a Link!].
-++++
+====
 
 ----
-====
+========
 
 
 [NOTE.bonitacloud,caption=Bonita cloud]
@@ -194,23 +194,19 @@ Don't forget this step!
 
 .Click to see the *source code*
 [%collapsible]
-====
+========
 [source,asciidoc]
 ----
 . blabla
 +
 [IMPORTANT]
-++++
+====
 Don't forget this step!
-++++
+====
 +
 . blabla
 ----
-====
-
-
----
-
+========
 
 * blabla
 ** Sous blabla
@@ -225,21 +221,21 @@ Watch out!
 
 .Click to see the *source code*
 [%collapsible]
-====
+========
 [source,asciidoc]
 ----
 * blabla
 ** Sous blabla
 +
 [WARNING]
-++++
+====
 Watch out!
-++++
+====
 +
 ** Sous blabla
 * blabla
 ----
-====
+========
 
 
 
@@ -259,11 +255,11 @@ Watch out!
 ====
 .Click to see the *source code*
 [%collapsible]
-====
+========
 [source,asciidoc]
 ----
 [TIP]
-++++
+====
 |===
 | Nom | Couleur de cheveux
 
@@ -273,9 +269,9 @@ Watch out!
 | Mr propre
 | _Chauve :'(_
 |===
-++++
-----
 ====
+----
+========
 
 
 
@@ -299,14 +295,14 @@ Watch out!
 
 .Click to see the *source code*
 [%collapsible]
-====
+========
 [source,asciidoc]
 ----
 . blabla
 . blabla
 +
 [CAUTION]
-++++
+====
 |===
 | Nourriture | Comestible
 
@@ -316,11 +312,11 @@ Watch out!
 | Brocolis
 | Non
 |===
-++++
+====
 +
 . blabla
 ----
-====
+========
 
 [NOTE]
 ====
