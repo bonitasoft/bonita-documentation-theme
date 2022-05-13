@@ -23,5 +23,5 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
-          artifacts: "build/bonita-documentation-theme.zip"
+          artifacts: "build/bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
