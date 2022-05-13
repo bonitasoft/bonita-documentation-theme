@@ -12,12 +12,14 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Build Setup
         uses: ./.github/actions/build-setup
       - name: Bundle documentation theme
         run: npm run bundle
       - name: Change bundle name
-        run: mv build/ui-bundle.zip build/bonita-documentation-theme.zip
+        run: mv build/ui-bundle.zip build/bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip
       - uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
