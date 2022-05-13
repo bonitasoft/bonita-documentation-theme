@@ -17,8 +17,14 @@ const map = (transform) => new Transform({ objectMode: true, transform })
 const through = () => map((file, enc, next) => next(null, file))
 
 const config = {
-  libsJs: ['node_modules/@docsearch/js/dist/umd/index.js','node_modules/asciinema-player/dist/bundle/asciinema-player.min.js'],
-  libsCss: ['node_modules/@docsearch/css/dist/style.css','node_modules/asciinema-player/dist/bundle/asciinema-player.css'],
+  libsJs: [
+    'node_modules/@docsearch/js/dist/umd/index.js',
+    'node_modules/asciinema-player/dist/bundle/asciinema-player.min.js'
+  ],
+  libsCss: [
+    'node_modules/@docsearch/css/dist/style.css',
+    'node_modules/asciinema-player/dist/bundle/asciinema-player.css'
+  ],
 }
 
 module.exports = (src, dest, preview) => () => {
