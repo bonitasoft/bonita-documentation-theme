@@ -528,7 +528,7 @@
       }
     }
   }
-
+  .videoblock,
   .imageblock {
     margin: 1rem 0 0;
     display: flex;
@@ -553,6 +553,11 @@
       margin-top: 0.5rem;
       padding-bottom: 0;
     }
+  }
+
+  .videoblock iframe {
+    max-width: 100%;
+    vertical-align: middle;
   }
 
   .listingblock {
@@ -873,7 +878,7 @@
       }
 
       > {
-      :not(thead) {
+        :not(thead) {
           th {
             border-top-color: var(--color-admonition-caution);
             border-bottom-color: var(--color-admonition-caution);
@@ -922,7 +927,7 @@
       }
 
       > {
-      :not(thead) {
+        :not(thead) {
           th {
             border-top-color: var(--color-admonition-important);
             border-bottom-color: var(--color-admonition-important);
@@ -971,7 +976,7 @@
       }
 
       > {
-      :not(thead) {
+        :not(thead) {
           th {
             border-top-color: var(--color-admonition-note);
             border-bottom-color: var(--color-admonition-note);
@@ -1030,7 +1035,7 @@
       }
 
       > {
-      :not(thead) {
+        :not(thead) {
           th {
             border-top-color: var(--color-admonition-tip);
             border-bottom-color: var(--color-admonition-tip);
@@ -1079,7 +1084,7 @@
       }
 
       > {
-      :not(thead) {
+        :not(thead) {
           th {
             border-top-color: var(--color-admonition-warning);
             border-bottom-color: var(--color-admonition-warning);
