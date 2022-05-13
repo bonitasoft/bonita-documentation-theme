@@ -44,7 +44,6 @@
     "gulp-uglify": "~3.0",
     "gulp-vinyl-zip": "~2.2",
     "handlebars": "~4.7",
-    "highlight.js": "~10.5.0",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
     "open-sans-fonts": "^1.6.2",
@@ -65,6 +64,8 @@
     "vinyl-fs": "~3.0.3"
   },
   "dependencies": {
-    "@docsearch/js": "^3.0.0"
+    "@docsearch/js": "^3.0.0",
+    "asciinema-player": "^2.6.1",
+    "highlight.js": "~10.5.0"
   }
 }

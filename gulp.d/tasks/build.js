@@ -17,8 +17,8 @@ const map = (transform) => new Transform({ objectMode: true, transform })
 const through = () => map((file, enc, next) => next(null, file))
 
 const config = {
-  libsJs: ['node_modules/@docsearch/js/dist/umd/index.js'],
-  libsCss: ['node_modules/@docsearch/css/dist/style.css'],
+  libsJs: ['node_modules/@docsearch/js/dist/umd/index.js','node_modules/asciinema-player/resources/public/js/asciinema-player.js'],
+  libsCss: ['node_modules/@docsearch/css/dist/style.css','node_modules/asciinema-player/resources/public/css/asciinema-player.css'],
 }
 
 module.exports = (src, dest, preview) => () => {
@@ -93,7 +93,7 @@ module.exports = (src, dest, preview) => () => {
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/header-site.js')),
     vfs
-      .src(['js/vendor/*.js', '!js/vendor/*.min.js'], { ...opts, read: false })
+      .src(['js/vendor/*([^.])?(.bundle).js', '!js/vendor/*.min.js'], { ...opts, read: false })
       .pipe(
         // see https://gulpjs.org/recipes/browserify-multiple-destination.html
         map((file, enc, next) => {
