@@ -27,10 +27,10 @@ site:
   - &component
     name: bonita
     title: Bonita Theme
-    url: /bonita/2021.1/index.html
+    url: &bonita_2021-1_url /bonita/2021.1/index.html
     versions:
     - &latest_version_bonita
-      url: /bonita/2021.1/index.html
+      url: *bonita_2021-1_url
       version: '2021.1'
       displayVersion: '2021.1'
     - &component_version
@@ -95,10 +95,10 @@ page:
   versions:
   - version: '2021.1'
     displayVersion: '2021.1'
-    url: '#'
+    url: *bonita_2021-1_url
   - version: 'dev'
     displayVersion: 'dev'
-    url: '#'
+    url: *home_url
   - version: '7.9'
     displayVersion: '7.9'
     url: '#'

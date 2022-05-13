@@ -1,0 +1,5 @@
+This is the home page for version `2021.1`.
+
+It is only intended to test the navigation to this version which is defined as the `latest version` of the `bonita` component.
+
+Links from the navigation section (on the left of this page) will go to the `404` error page.
