@@ -11,12 +11,11 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-      - name: workaround forbidden directory
-        run: git config --global --add safe.directory /github/workspace
       - name: Bump version and push tag
-        uses: darioblanco/bump-semver@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: anothrNick/github-tag-action@1.36.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
       - name: Build Setup
         uses: ./.github/actions/build-setup
       - name: Bundle documentation theme
