@@ -20,8 +20,16 @@ jobs:
         run: npm run bundle
       - name: Change bundle name
         run: mv build/ui-bundle.zip build/bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip
-      - uses: ncipollo/release-action@v1
+      - name: Create release
+        uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
           artifacts: "build/bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.JC_TOKEN }}
+          repository: jeromecambon/bonita-documentation-site
+          event-type: new_theme_bundle
+          client-payload: '{"release": "${{ env.RELEASE_VERSION }}", "file": "bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip", "url": "https://github.com/jeromecambon/bonita-documentation-theme/releases/download/${{ env.RELEASE_VERSION }}/bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip"}'
