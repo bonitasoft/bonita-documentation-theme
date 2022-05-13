@@ -1,8 +1,9 @@
 name: Create release
 
-on:
-  workflow_dispatch:
-    inputs:
+on: 
+  push:
+    tags:
+    - '*'
 
 jobs:
   build:
@@ -11,11 +12,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-      - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.36.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
       - name: Build Setup
         uses: ./.github/actions/build-setup
       - name: Bundle documentation theme
