@@ -23,18 +23,18 @@ site:
     - url: '#'
       version: '1.0'
       displayVersion: '1.0'
-    latestVersion: *latest_version_abc
+    latest: *latest_version_abc
   - &component
     name: bonita
     title: Bonita Theme
-    url: /bonita/2021.1/index.html
+    url: &bonita_2021-1_url /bonita/2021.1/index.html
     versions:
     - &latest_version_bonita
-      url: /bonita/2021.1/index.html
+      url: *bonita_2021-1_url
       version: '2021.1'
       displayVersion: '2021.1'
     - &component_version
-      url: '#'
+      url: *home_url
       version: 'dev'
       displayVersion: 'dev'
     - url: '#'
@@ -43,7 +43,7 @@ site:
     - url: '#'
       version: '0'
       displayVersion: 'archives'
-    latestVersion: *latest_version_bonita
+    latest: *latest_version_bonita
   - name: 123
     title: Project 123
     url: '#'
@@ -58,7 +58,7 @@ site:
     - url: '#'
       version: '2.0'
       displayVersion: '2.0'
-    latestVersion: *latest_version_123
+    latest: *latest_version_123
 page:
   url: *home_url
   home: true
@@ -95,10 +95,10 @@ page:
   versions:
   - version: '2021.1'
     displayVersion: '2021.1'
-    url: '#'
+    url: *bonita_2021-1_url
   - version: 'dev'
     displayVersion: 'dev'
-    url: '#'
+    url: *home_url
   - version: '7.9'
     displayVersion: '7.9'
     url: '#'
