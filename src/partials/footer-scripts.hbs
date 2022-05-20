@@ -53,7 +53,7 @@
 
     let asciinemaPlayers = document.querySelectorAll('asciinema-player');
     asciinemaPlayers.forEach(htmlPlayer => {
-      let options = {};
+      let options = {fit: false};
       htmlPlayer.getAttributeNames().forEach(key => options[key] = htmlPlayer.getAttribute(key));
       AsciinemaPlayer.create(htmlPlayer.getAttribute('src'), htmlPlayer, options);
     });
