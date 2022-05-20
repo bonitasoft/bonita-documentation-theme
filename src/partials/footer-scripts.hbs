@@ -1,5 +1,4 @@
 <script>window.uiRootPath = '{{{uiRootPath}}}'</script>
-<script async src="{{{uiRootPath}}}/js/vendor/asciinema-player.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/highlight.min.js"></script>
 <script src="{{{uiRootPath}}}/js/vendor/libs.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -51,6 +50,14 @@
           apiKey: '16267f96d135c47df8454efd5b448c9a',
           });
       */
+
+    let asciinemaPlayers = document.querySelectorAll('asciinema-player');
+    asciinemaPlayers.forEach(htmlPlayer => {
+      let options = {fit: false};
+      htmlPlayer.getAttributeNames().forEach(key => options[key] = htmlPlayer.getAttribute(key));
+      AsciinemaPlayer.create(htmlPlayer.getAttribute('src'), htmlPlayer, options);
+    });
+
 </script>
 {{/unless}}
 {{/unless}}
