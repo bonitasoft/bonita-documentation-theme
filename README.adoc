@@ -28,18 +28,25 @@ For more details, see the https://docs.antora.org/antora-ui-default/prerequisite
 
 == Usage
 
-This repository produces a zip archive _ui-bundle.zip_. This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonita-documentation-site/blob/master/antora-playbook.yml[configuration file]. +
-Currently, we embed the ui-bundle.zip in the main https://github.com/bonitasoft/bonita-documentation-site/tree/master/resources[documentation site repository], it is used locally at build time.
+This repository produces a zip archive _ui-bundle.zip_.
+This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonita-documentation-site/blob/master/antora-playbook.yml[configuration file]. +
+The process to release a new version of the theme is fully automated with github actions.
 
 [TIP]
 ====
 Simple flow to 'release' a new version of the theme (i.e. use a new version of the UI bundle in the doc site):
 
-- Build locally this repository (type `npm run bundle` at the root of the repository) -> _build/ui-bundle.zip_ is created +
-- Clone the repository https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site], and create a new branch to update the UI bundle
-- Copy the ui-bundle.zip archive in _bonita-documentation-site/resources/_, and rename it into _antora-ui-bundle.zip_ +
-- Push your changes and open a pull request, with details on the changes and eventually some links to the change commits in this repository
+- Go in the https://github.com/bonitasoft/bonita-documentation-theme/actions[Github Actions] section +
+- Select "Start release process" workflow and run the workflow
 ====
+This process will:
+
+- Create a new tag
+- Generate the theme bundle (_ui-bundle.zip_), and rename it with the release version
+- Create a new release
+- Send a Repository Dispatch event to the https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site] repository
+
+When this event is received, a new Pull Request is created in the https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site] repository, with an updated theme bundle URL.
 
 == Development
 
