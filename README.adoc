@@ -43,7 +43,7 @@ This process will:
 
 - Create a new tag
 - Generate the theme bundle (_ui-bundle.zip_), and rename it with the release version
-- Create a new release
+- Create a new release and attach the theme bundle as a release asset
 - Send a Repository Dispatch event to the https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site] repository
 
 When this event is received, a new Pull Request is created in the https://github.com/bonitasoft/bonita-documentation-site[bonita-documentation-site] repository, with an updated theme bundle URL.
