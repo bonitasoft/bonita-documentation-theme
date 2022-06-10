@@ -1405,3 +1405,15 @@
     }
   }
 }
+
+.pagenotfound {
+  text-align: center;
+  margin-bottom: 100px;
+  color: var(--color-red-bonita);
+  font-size:24px;
+}
+
+.pagenotfound > img {
+  width: 500px;
+  height: 374px;
+}
