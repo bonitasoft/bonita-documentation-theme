@@ -23,13 +23,11 @@
     </div>
 
     <div class="navbar-end" id="search-container">
-      {{#unless site.keys.nonProduction}}
-      {{#unless page.attributes.hide-search-bar }}
+      {{#if (isSearchBarDisplayed site page)}}
       <div class="navbar-item search-item hide-for-print">
         <div id="docsearch"></div>
       </div>
-      {{/unless}}
-      {{/unless}}
+      {{/if}}
 
       <div class="theme-switch-wrapper">
         <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
