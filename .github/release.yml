@@ -3,6 +3,7 @@ changelog:
     labels:
       - dependencies
       - github_actions
+      - ignore-for-release-notes
   categories:
     - title: New Features 🎉
       labels:
