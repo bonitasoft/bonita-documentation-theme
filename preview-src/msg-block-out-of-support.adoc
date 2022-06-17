@@ -3,6 +3,8 @@
 :page-out-of-support: true
 :page-hide-search-bar: true
 
+NOTE: This page is configured to hide the search bar.
+
 
 == Title 1
 

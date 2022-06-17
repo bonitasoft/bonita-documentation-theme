@@ -5,8 +5,7 @@
 <script src="{{{uiRootPath}}}/js/site.js"></script>
 
 {{!-- DocSearch only available if the search bar is displayed --}}
-{{#unless site.keys.nonProduction}}
-{{#unless page.attributes.hide-search-bar }}
+{{#if (isSearchBarDisplayed site page)}}
 <script>
   // var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
   //
@@ -51,8 +50,8 @@
           });
       */
 </script>
-{{/unless}}
-{{/unless}}
+{{/if}}
+
 
 <script>
   let asciinemaPlayers = document.querySelectorAll('asciinema-player');
