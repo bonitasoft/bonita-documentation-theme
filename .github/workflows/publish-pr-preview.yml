@@ -22,23 +22,21 @@ jobs:
   build_preview:
     runs-on: ubuntu-20.04
     steps:
+      - uses: bonitasoft/actions/packages/surge-preview-tools@v1.2.0
+        id: surge-preview-tools
+        with:
+          surge-token: ${{ secrets.SURGE_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
         if: github.event.action != 'closed'
       - name: Build Setup
         uses: ./.github/actions/build-setup
         if: github.event.action != 'closed'
-      - name: Compute environment variables
-        if: github.event.action != 'closed'
-        run: |
-          # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
-          repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/\//-/g')
-          echo PREVIEW_URL=https://$repo_owner_and_name-"${{github.job}}"-pr-"${{github.event.pull_request.number}}".surge.sh >> $GITHUB_ENV
       - name: Publish preview
-        id: preview_step
         uses: afc163/surge-preview@v1
+        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
         env:
-          BONITA_THEME_URL: ${{ env.PREVIEW_URL }}
+          BONITA_THEME_URL: ${{ steps.surge-preview-tools.outputs.preview-url }}
         with:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
