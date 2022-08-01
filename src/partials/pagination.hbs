@@ -2,10 +2,16 @@
 {{#if (or page.previous page.next)}}
 <nav class="pagination">
   {{#with page.previous}}
-  <span class="prev"><a href="{{{relativize ./url}}}">{{{./content}}}</a></span>
+  <a class="pagination-nav prev" href="{{{relativize ./url}}}">
+    <div class="pagination-nav__sublabel">Previous</div>
+    <div class="pagination-nav__label">{{{./content}}}</div>
+  </a>
   {{/with}}
   {{#with page.next}}
-  <span class="next"><a href="{{{relativize ./url}}}">{{{./content}}}</a></span>
+  <a class="pagination-nav next" href="{{{relativize ./url}}}">
+     <div class="pagination-nav__sublabel">Next</div>
+     <div class="pagination-nav__label">{{{./content}}}</div>
+  </a>
   {{/with}}
 </nav>
 {{/if}}
