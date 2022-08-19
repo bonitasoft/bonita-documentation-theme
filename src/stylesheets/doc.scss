@@ -1251,6 +1251,10 @@
     width: 1.25em;
     letter-spacing: -0.25ex;
     text-indent: -0.25ex;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: bold;
+    border-color: var(--color-black);
 
     &::after {
       content: attr(data-value);
