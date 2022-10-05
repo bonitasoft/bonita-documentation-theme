@@ -133,6 +133,9 @@ page:
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
         urlType: internal
+      - content: Links
+        url: /bonita/dev/links.html
+        urlType: internal
     - content: Theme tests
       items:
         - content: 404 error page
