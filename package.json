@@ -65,7 +65,6 @@
   },
   "dependencies": {
     "@docsearch/js": "^3.0.0",
-    "asciinema-player": "^3.0.0",
-    "highlight.js": "~10.5.0"
+    "asciinema-player": "^3.0.0"
   }
 }
