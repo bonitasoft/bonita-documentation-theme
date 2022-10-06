@@ -2,20 +2,7 @@
 
 You can adding link between two components or between versions of the same component. To do it, you **must** use the `xref` syntax.
 
-WARNING: **DO NOT** hard code urls with https://documentation.bonitasoft.com/xxxx or ../../my-page.adoc, use xref instead. An automatic check rejects your Pull Request if you hard code such links.
-
-Rationale
-
-* https://opendevise.com/blog/referencing-pages/
-* such hard coded links only target the production environments, links won't work in preview environments
-* not portable, such links cannot work if we want to generate the documentation in PDF format
-
 The general form of a xref is `xref:<version>@<component_name>:<module>:<page>#anchor` and some elements are optional (version, module and anchor).
-
-For more details about the xref syntax, see the Antora documentation to have a better understanding about version, component, module and anchor keyword:
-
-* https://docs.antora.org/antora/3.0/page/xref/
-* https://docs.antora.org/antora/3.0/page/page-links/
 
 **Some example for you:**
 
@@ -38,3 +25,5 @@ For more details about the xref syntax, see the Antora documentation to have a b
 | a page of a given version in the version-update module targeting an anchor
 
 |===
+
+You can find more details in https://github.com/bonitasoft/bonita-documentation-site/blob/master/docs/content/CONTRIBUTING.adoc#adding-link-between-two-components-or-between-versions-of-the-same-component[our contributing documentation guide].

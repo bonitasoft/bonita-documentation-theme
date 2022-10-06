@@ -127,14 +127,14 @@ page:
       - content: Code
         url: /bonita/dev/code.html
         urlType: internal
+      - content: Links
+        url: /bonita/dev/links.html
+        urlType: internal
       - content: Media
         url: /bonita/dev/media.html
         urlType: internal
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
-        urlType: internal
-      - content: Links
-        url: /bonita/dev/links.html
         urlType: internal
     - content: Theme tests
       items:
