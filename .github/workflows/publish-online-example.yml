@@ -15,7 +15,7 @@ on:
 
 jobs:
   generate_theme_example:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - name: Build Setup
@@ -32,7 +32,7 @@ jobs:
 
   push_examples_to_gh_pages:
     if: github.event.ref == 'refs/heads/master'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: generate_theme_example
     steps:
       - name: Download
