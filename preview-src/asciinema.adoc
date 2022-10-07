@@ -1,4 +1,4 @@
-== Asciinema
+= Asciinema
 
 https://asciinema.org/[Asciinema] provides a great way for sharing shell sessions recording, making documentation more lively !
 
