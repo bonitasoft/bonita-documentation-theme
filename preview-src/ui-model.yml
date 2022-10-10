@@ -127,6 +127,9 @@ page:
       - content: Code
         url: /bonita/dev/code.html
         urlType: internal
+      - content: Links
+        url: /bonita/dev/links.html
+        urlType: internal
       - content: Media
         url: /bonita/dev/media.html
         urlType: internal
