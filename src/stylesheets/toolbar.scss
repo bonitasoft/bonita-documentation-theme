@@ -17,11 +17,6 @@
     color: inherit;
   }
 
-  .edit-this-page {
-    a {
-      color: var(--toolbar-muted-color);
-    }
-  }
 }
 
 .toolbar.toolbar-wrap {
@@ -62,9 +57,15 @@
   filter: var(--filter-icon);
 }
 
-.edit-this-page {
+.page-icons {
   display: none;
   padding-right: 0.5rem;
+  -webkit-filter: var(--filter-icon);
+  filter: var(--filter-icon);
+}
+
+.page-icon {
+  padding-left: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,7 +73,7 @@
     display: none;
   }
 
-  .edit-this-page {
+  .page-icons {
     display: block;
   }
 }

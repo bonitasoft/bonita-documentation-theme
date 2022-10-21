@@ -6,6 +6,7 @@ Bonita Documentation Theme authors
 :!table-caption:
 // This attribute activates the pagination to previous and next page at the bottom of the page
 :page-pagination:
+:page-editable: true
 
 
 .Welcome to the Bonita documentation theme preview
