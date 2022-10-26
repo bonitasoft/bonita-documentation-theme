@@ -13,7 +13,7 @@ This is how to create a troubleshooting:
 
 [WARNING]
 ====
-Do not add additional lines above and below the content of the section. The title already provides a separator between the title and the content.
+Do not add extra lines above and below the section content. The title already provides a separator between the title and the content.
 ====
 
 [.troubleshooting-title]
@@ -99,13 +99,13 @@ class ProcessIT {
 [.troubleshooting-section]
 --
 [.symptom]
-My code block is not display on troubleshooting solution section
+My code block is not displayed in the troubleshooting solution section
 
 [.symptom-description]
-When i write some block code example, the display is not correct
+When i write some block code examples, the display is not correct
 
 [.cause]#Cause#
-This is potentially because i miss an ending character after code block.
+This is potentially because I am missing an end character after the code block.
 
 [.solution]#Possible solution#
 [source,java]
