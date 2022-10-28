@@ -12,11 +12,22 @@ This is how to create a troubleshooting:
 ** Add a separator above the "Troubleshooting" title of the section, if this section appears at the bottom of the page and addresses the whole content of the page
 ** Adapt the level of the header; it should be the same than the content it is related to
 
-* Do not add:
-** Additional lines above and below the content of the section. The title already provides a separator between the title and the content.
+[WARNING]
+====
+Do not add extra lines above and below the section content. The title already provides a separator between the title and the content.
+====
 
 [.troubleshooting-title]
 == Troubleshooting
+
+See *code example*
+[source,text]
+----
+[.troubleshooting-title]
+== Troubleshooting
+----
+
+=== Any troubleshooting section example
 
 [.troubleshooting-section]
 --
@@ -85,22 +96,33 @@ class ProcessIT {
 [%collapsible]
 ====
 [source,text]
-----
+--------
 [.troubleshooting-section]
 --
 [.symptom]
-I don't want display potential cause as title
+My code block is not displayed in the troubleshooting solution section
 
 [.symptom-description]
-When i sure about the cause, I want to remove potential on title
+When i write some block code examples, the display is not correct
 
-[.cause]#Potential cause#
-This is probably because I often go to bed at 3AM :'(
+[.cause]#Cause#
+This is potentially because I am missing an end character after the code block.
 
 [.solution]#Possible solution#
-Just write `Cause` as title
---
+[source,java]
 ----
+@BonitaTests
+class ProcessIT {
+
+    @Test
+    void should_retrieve_user(BonitaTestToolkit toolkit) {
+        User user = toolkit.getUser("walter.bates");
+        ...
+    }
+}
+----
+--
+--------
 ====
 
 [.troubleshooting-section]
