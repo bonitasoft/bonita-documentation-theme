@@ -144,6 +144,9 @@ page:
         - content: Bold titles
           url: /bonita/dev/test-bold-titles.html
           urlType: internal
+        - content: Not editable page
+          url: /bonita/dev/test-not-editable-page.html
+          urlType: internal
         - content: Message blocks
           items:
             - content: Out of support
