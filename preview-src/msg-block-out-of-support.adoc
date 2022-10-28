@@ -1,5 +1,5 @@
 = Message block - out of support
-:!page-editable:
+:!page-editable: // keep this test page as non editable. In production, all the pages of "out of support" component versions are not editable
 :page-out-of-support: true
 :page-hide-search-bar: true
 
