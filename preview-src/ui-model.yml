@@ -68,7 +68,7 @@ page:
   version: 'dev'
   displayVersion: 'dev'
   module: ROOT
-  editUrl: https://example.com/project-bonita/blob/master/index.adoc
+  editUrl: https://example.com/project-bonita/edit/master/index.adoc
   origin:
     private: false
   previous:
