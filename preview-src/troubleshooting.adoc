@@ -1,4 +1,5 @@
 = How to write a clean troubleshooting section
+:page-editable: true
 
 This is how to create a troubleshooting:
 

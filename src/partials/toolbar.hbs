@@ -9,9 +9,15 @@
   {{#unless site.keys.hideEditPageLinks}}
   {{#if page.attributes.editable}}
   {{#if (and page.fileUri (not env.CI))}}
-  <div class="edit-this-page"><a href="{{page.fileUri}}">Edit this Page</a></div>
+    <div class="page-icons">
+      <a href="{{page.fileUri}}"><img src="_/img/edit.svg" title="Edit this page" alt="Edit" height="17"></a>
+      {{> page-additional-icons}}
+    </div>
   {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
-  <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
+    <div class="page-icons">
+      <a href="{{page.editUrl}}"><img src="_/img/edit.svg" title="Edit this page" alt="Edit" height="17"></a>
+      {{> page-additional-icons}}
+    </div>
   {{/if}}
   {{/if}}
   </div>
