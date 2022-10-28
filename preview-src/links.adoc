@@ -1,4 +1,5 @@
 = Link between components
+:page-editable: true
 
 You can adding link between two components or between versions of the same component. To do it, you **must** use the `xref` syntax.
 

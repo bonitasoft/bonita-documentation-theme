@@ -1,4 +1,5 @@
 = Cards
+:page-editable: true
 
 You can use card style in your page. Please don't abuse it, and try to only use it on index pages.
 

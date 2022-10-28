@@ -1,4 +1,5 @@
 = MISC **WITH BOLD**
+:page-editable: true
 
 
 == Test title level **WITH BOLD**

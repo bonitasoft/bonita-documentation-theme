@@ -1,4 +1,5 @@
 = Admonitions
+:page-editable: true
 
 More details on admonition https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions[here]
 
