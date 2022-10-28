@@ -1,4 +1,6 @@
+= Media
 :page-editable: true
+
 == Videos
 
 === Embed videos
