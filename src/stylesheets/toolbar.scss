@@ -62,6 +62,9 @@
   padding-right: 0.5rem;
   -webkit-filter: var(--filter-icon);
   filter: var(--filter-icon);
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .page-icon {
