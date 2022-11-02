@@ -68,7 +68,7 @@ page:
   version: 'dev'
   displayVersion: 'dev'
   module: ROOT
-  editUrl: https://example.com/project-bonita/blob/master/index.adoc
+  editUrl: https://example.com/project-bonita/edit/master/index.adoc
   origin:
     private: false
   previous:
@@ -143,6 +143,9 @@ page:
           urlType: internal
         - content: Bold titles
           url: /bonita/dev/test-bold-titles.html
+          urlType: internal
+        - content: Not editable page
+          url: /bonita/dev/test-not-editable-page.html
           urlType: internal
         - content: Message blocks
           items:
