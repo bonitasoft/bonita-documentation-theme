@@ -22,7 +22,7 @@ jobs:
   build_preview:
     runs-on: ubuntu-22.04
     steps:
-      - uses: bonitasoft/actions/packages/surge-preview-tools@v2.1.0
+      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
         id: surge-preview-tools
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
