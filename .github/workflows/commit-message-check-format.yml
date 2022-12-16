@@ -1,15 +1,15 @@
-name: Commit Message format check 
+name: Commit Message format check
 
 on:
-  pull_request:
-    branches: [master]
-    types: [opened, edited, synchronize]
+  pull_request_target:
+    # trigger when the PR title changes
+    types: [opened, edited, reopened]
 
 jobs:
   pr-title:
     runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: write # post comments when the PR title doesn't match the "Conventional Commits" rules
     steps:
-      - name: Lint pull request title
-        uses: jef/conventional-commits-pr-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check Pull Request title
+        uses: bonitasoft/actions/packages/pr-title-conventional-commits@v2
