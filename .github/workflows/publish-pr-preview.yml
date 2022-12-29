@@ -27,11 +27,14 @@ jobs:
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
       - name: Checkout
-        uses: actions/checkout@v3.2.0
+        uses: actions/checkout@v3
         if: github.event.action != 'closed'
       - name: Build Setup
         uses: ./.github/actions/build-setup
         if: github.event.action != 'closed'
+      - name: Build preview
+        if: github.event.action != 'closed'
+        run: npm run preview:build
       - name: Publish preview
         uses: afc163/surge-preview@v1
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
@@ -43,5 +46,4 @@ jobs:
           dist: public
           failOnError: true
           teardown: 'true'
-          build: |
-            npm run preview:build
+          build: echo "site already built"
