@@ -27,7 +27,7 @@ jobs:
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
       - name: Checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3
         if: github.event.action != 'closed'
       - name: Build Setup
         uses: ./.github/actions/build-setup
