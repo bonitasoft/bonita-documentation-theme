@@ -25,6 +25,7 @@
   --color-admonition-link: #0077ff;
   --color-link-hover: #1565c0;
   --color-nav-item: var(--color-blue-bonita);
+  --color-nav-item-hover-background: #ebf2f2;
   --color-admonition-note: #217de7;
   --color-admonition-note-bg: #217de72a;
   --color-admonition-note-text: #0250a9;
@@ -97,6 +98,7 @@
   --nav-muted-color: var(--color-gray-70);
   --nav-panel-divider-color: var(--color-smoke-90);
   --nav-secondary-background: var(--color-smoke-70);
+  --nav-hover-background: var(--color-nav-item-hover-background);
   --toolbar-background: var(--panel-background);
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-gray-70);
@@ -106,6 +108,7 @@
   --toc-font-color: var(--nav-muted-color);
   --toc-heading-font-color: var(--color-higlight);
   --toc-border-color: var(--panel-border-color);
+  --toc-active-background-color: var(--color-smoke-90);
   --toc-line-height: 1.2;
   --doc-font-color: var(--color-jet-50);
   --docsearch-text-color: var(--doc-font-color);
@@ -230,6 +233,7 @@ html[data-theme='dark'] {
   --color-card-border: #9ba9c6;
   --color-code-background: #30334b;
   --color-code-font: #f7962e;
+  --color-nav-item-hover-background: #262a2d;
   --color-troubleshooting-border: #f5c80071;
 
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp

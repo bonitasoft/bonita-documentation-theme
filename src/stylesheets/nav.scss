@@ -213,7 +213,6 @@ html.is-clipped--nav {
 
 .nav-item {
   list-style: none;
-  margin-top: 0.5em;
 
   &:not(.is-active) {
     > .nav-list {
@@ -236,7 +235,7 @@ html.is-clipped--nav {
   position: absolute;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
-  margin-top: -0.05em;
+  margin-top: 0.2em;
   margin-left: calc(var(--nav-line-height) * -1em);
 }
 
@@ -255,18 +254,43 @@ html.is-clipped--nav {
   }
 }
 
-.nav-link:hover {
-  color: var(--color-higlight-link);
+//.nav-link:hover {
+//  color: var(--color-higlight-link);
+//}
+
+.nav-link,
+.nav-text {
+  display: block;
+  padding: 0.2rem 0.3rem;
+  margin: 0 -0.3rem;
+  border-radius: 3px;
 }
 
-.is-current-page {
-  > .nav-link {
-    color: var(--color-higlight-link);
-  }
+.nav-link:hover,
+.nav-text:hover {
+  text-decoration: none;
+  background: var(--nav-hover-background);
+  color: #06c;
+}
 
-  > .nav-text {
-    font-weight: var(--body-font-weight-bold);
-  }
+
+//.is-current-page {
+//  > .nav-link {
+//    color: var(--color-higlight-link);
+//  }
+//
+//  > .nav-text {
+//    font-weight: var(--body-font-weight-bold);
+//  }
+//}
+
+.is-current-page > .nav-link,
+.is-current-page > .nav-text,
+.is-current-page > .nav-link:hover,
+.is-current-page > .nav-text:hover {
+  font-weight: var(--body-font-weight-bold);
+  background:  var(--toc-active-background-color);
+  color: var(--toc-active-font-color);
 }
 
 @media screen and (min-width: 769px) {
