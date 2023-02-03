@@ -16,6 +16,7 @@
   "scripts": {
     "bundle": "gulp bundle",
     "dev": "gulp preview",
+    "devlive": "export LIVERELOAD=true; gulp preview",
     "preview:build": "gulp preview:build"
   },
   "devDependencies": {
