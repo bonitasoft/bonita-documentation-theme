@@ -55,8 +55,9 @@ body {
   background: var(--color-red-bonita);
 
   .navbar-item-nonProduction {
-    align-items: baseline;
-    font-size: 1.2rem;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
     display: flex;
     line-height: var(--doc-line-height);
     padding: 0 0.5rem;
