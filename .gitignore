@@ -1,6 +1,7 @@
 build/
 public/
 .idea/
+*.iml
 node_modules/
 *.DS_Store
 .project
