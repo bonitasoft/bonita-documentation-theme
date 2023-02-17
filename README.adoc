@@ -51,7 +51,7 @@ When this event is received, a new Pull Request is created in the https://github
 == Development
 
 A static or live preview of the theme is available, run `npm run dev`, or `npm rundevlive` to unable the live reload. For more details, see the https://docs.antora.org/antora-ui-default/build-preview-ui/[build-preview-ui] documentation. +
-⚠️ Note that the live reload does not always work, so use it with caution.
+⚠️ Note that the live reload does not always work, so use it with caution. A restart of the browser may help.
 
 To build the bundle to be used in the Antora playbook, run `npm run bundle`.
 
