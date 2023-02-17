@@ -12,7 +12,7 @@ This project produces the Antora UI bundle used by the https://github.com/bonita
 repository to build the Bonita documentation website. +
 It is based on the https://gitlab.com/antora/antora-ui-default[Antora Default UI].
 
-📣 Want to see the them in action? Let's have a look at
+📣 Want to see them in action? Let's have a look at:
 
 - the https://bonitasoft.github.io/bonita-documentation-theme/[theme preview environment]
 - the https://documentation.bonitasoft.com/[Bonita documentation production site]
@@ -50,7 +50,8 @@ When this event is received, a new Pull Request is created in the https://github
 
 == Development
 
-A static or live preview of the theme is available, run `npm run dev`. For more details, see the https://docs.antora.org/antora-ui-default/build-preview-ui/[build-preview-ui] documentation.
+A static or live preview of the theme is available, run `npm run dev`, or `npm rundevlive` to unable the live reload. For more details, see the https://docs.antora.org/antora-ui-default/build-preview-ui/[build-preview-ui] documentation. +
+⚠️ Note that the live reload does not always work, so use it with caution.
 
 To build the bundle to be used in the Antora playbook, run `npm run bundle`.
 
