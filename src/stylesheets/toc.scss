@@ -6,6 +6,7 @@
   .toc-menu {
     margin-right: 0.75rem;
     position: sticky;
+    top: var(--toc-top);
 
     h3 {
       display: flex;
@@ -19,6 +20,9 @@
       overflow-y: auto;
       scrollbar-width: none;
     }
+  }
+  .top-block_message {
+    top: var(--toc-top-header-message);
   }
 }
 

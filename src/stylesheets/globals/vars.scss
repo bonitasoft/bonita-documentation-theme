@@ -160,6 +160,8 @@
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
   --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
+  --toc-top: calc(var(--body-top) + var(--toolbar-height));
+  --toc-top-header-message: calc(var(--toc-top) + var(--header-message-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
   --toc-width: calc(162 / var(--rem-base) * 1rem);
