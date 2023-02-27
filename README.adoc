@@ -34,13 +34,13 @@ This archive is meant to be used by Antora, it is referenced in the main Antora 
 
 == Release process
 
-The process to release a new version of the theme is fully automated with github actions.
+The process to release a new version of the theme is fully automated with GitHub Actions.
 
 [TIP]
 ====
 Simple flow to 'release' a new version of the theme (i.e. use a new version of the UI bundle in the doc site):
 
-- Go in the https://github.com/bonitasoft/bonita-documentation-theme/actions/workflows/create-tag.yml[Github Actions] section
+- Go in the https://github.com/bonitasoft/bonita-documentation-theme/actions/workflows/create-tag.yml[GitHub Actions] section
 - Run the workflow
 ====
 
