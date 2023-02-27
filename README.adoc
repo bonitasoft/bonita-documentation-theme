@@ -29,16 +29,21 @@ For more details, see the https://docs.antora.org/antora-ui-default/prerequisite
 == Usage
 
 This repository produces a zip archive _ui-bundle.zip_.
-This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonita-documentation-site/blob/master/antora-playbook.yml[configuration file]. +
+This archive is meant to be used by Antora, it is referenced in the main Antora https://github.com/bonitasoft/bonita-documentation-site/blob/master/antora-playbook.yml[configuration file].
+
+
+== Release process
+
 The process to release a new version of the theme is fully automated with github actions.
 
 [TIP]
 ====
 Simple flow to 'release' a new version of the theme (i.e. use a new version of the UI bundle in the doc site):
 
-- Go in the https://github.com/bonitasoft/bonita-documentation-theme/actions[Github Actions] section +
-- Select "Start release process" workflow and run the workflow
+- Go in the https://github.com/bonitasoft/bonita-documentation-theme/actions/workflows/create-tag.yml[Github Actions] section
+- Run the workflow
 ====
+
 This process will:
 
 - Create a new tag
