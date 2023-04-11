@@ -14,14 +14,11 @@
     indexName: 'bonitasoft',
     hitsPerPage: 20,
     searchParameters: {
-    {{#if page.attributes.is-latest-release}}
-      facetFilters: [["version:{{page.version}}", "version:latest"], "tags:{{page.component.name}}"],
-    {{else if page.attributes.is-next-release}}
-      facetFilters: [["version:{{page.version}}", "version:next"], "tags:{{page.component.name}}"],
+    {{#if page.attributes.version-alias}}
+      facetFilters: [["version:{{page.version}}", "version:{{page.attributes.version-alias}}"], "tags:{{page.component.name}}"],
     {{else}}
       facetFilters: [["version:{{page.version}}"], "tags:{{page.component.name}}"],
     {{/if}}
-
     }
   });
 </script>
