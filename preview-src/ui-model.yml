@@ -127,6 +127,9 @@ page:
       - content: Code
         url: /bonita/dev/code.html
         urlType: internal
+      - content: Icons
+        url: /bonita/dev/icons.html
+        urlType: internal
       - content: Links
         url: /bonita/dev/links.html
         urlType: internal
@@ -158,3 +161,6 @@ page:
             - content: Custom message
               url: '/bonita/dev/msg-block-custom-message.html'
               urlType: internal
+asciidoc:
+  attributes:
+    icons: font
