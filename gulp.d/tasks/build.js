@@ -28,7 +28,7 @@ const config = {
   ],
   libsFonts: [
     'node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff*(2)}',
-  ]
+  ],
 }
 
 module.exports = (src, dest, preview) => () => {
@@ -95,7 +95,7 @@ module.exports = (src, dest, preview) => () => {
       }))
       .pipe(postcss(postcssPlugins))
   }
-    merge(
+  merge(
     libJs(),
     libCss(),
     scss(),
@@ -170,6 +170,5 @@ module.exports = (src, dest, preview) => () => {
   ).pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
 
   // TODO: perform merge op and font processing sequentially
-  return  libFonts()
-
+  return libFonts()
 }
