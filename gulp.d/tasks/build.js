@@ -70,7 +70,7 @@ module.exports = (src, dest, preview) => () => {
   }
 
   /**
-   * Copy custom fonts
+   * Copy custom fonts (usefully for font-awesome)
    */
   function libFonts () {
     return vfs.src(config.libsFonts)
@@ -95,7 +95,8 @@ module.exports = (src, dest, preview) => () => {
       }))
       .pipe(postcss(postcssPlugins))
   }
-  merge(
+
+  const createOutputBundle = merge(
     libJs(),
     libCss(),
     scss(),
@@ -145,7 +146,7 @@ module.exports = (src, dest, preview) => () => {
     //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
     vfs.src(['js/vendor/*.min.js'], { ...opts }),
     vfs.src('stylesheets/vendor/*.css', { ...opts }),
-    vfs.src(`${dest}/font/*.{ttf,woff*(2)}`, opts),
+    vfs.src('font/*.{ttf,woff*(2)}', opts),
     vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
       preview
         ? through()
@@ -169,6 +170,5 @@ module.exports = (src, dest, preview) => () => {
     vfs.src('partials/*.hbs', opts)
   ).pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
 
-  // TODO: perform merge op and font processing sequentially
-  return libFonts()
+  return merge(createOutputBundle, libFonts())
 }
