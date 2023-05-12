@@ -1,5 +1,7 @@
 'use strict'
 
 module.exports = (site, page) => {
-  return !(site.keys?.nonProduction || page.attributes?.['hide-search-bar'] || page.layout === '404')
+  return page.layout !== '404' &&
+    !page.attributes?.['hide-search-bar'] &&
+    (site.keys?.forceDisplaySearchBar || !site.keys?.nonProduction)
 }
