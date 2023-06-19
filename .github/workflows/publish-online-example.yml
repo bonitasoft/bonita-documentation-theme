@@ -34,6 +34,8 @@ jobs:
     if: github.event.ref == 'refs/heads/master'
     runs-on: ubuntu-22.04
     needs: generate_theme_example
+    permissions:
+      contents: write # Push to gh-pages
     steps:
       - name: Download
         uses: actions/download-artifact@v3
