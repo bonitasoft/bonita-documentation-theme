@@ -57,7 +57,7 @@
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
     "sass": "^1.42.1",
-    "stylelint": "^13.8.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "~20.0",
     "stylelint-scss": "^3.18.0",
     "through2": "~3.0",
