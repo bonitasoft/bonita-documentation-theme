@@ -20,11 +20,13 @@ const config = {
   libsJs: [
     'node_modules/@docsearch/js/dist/umd/index.js',
     'node_modules/asciinema-player/dist/bundle/asciinema-player.min.js',
+    'node_modules/@asciidoctor/tabs/dist/index.js',
   ],
   libsCss: [
     'node_modules/@docsearch/css/dist/style.css',
     'node_modules/asciinema-player/dist/bundle/asciinema-player.css',
     'node_modules/@fortawesome/fontawesome-free/css/all.css',
+    'node_modules/@asciidoctor/tabs/dist/css/tabs.css',
   ],
   libsFonts: [
     'node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff*(2)}',
