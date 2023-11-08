@@ -165,3 +165,5 @@ page:
 asciidoc:
   attributes:
     icons: font
+  extensions:
+    - '@asciidoctor/tabs'

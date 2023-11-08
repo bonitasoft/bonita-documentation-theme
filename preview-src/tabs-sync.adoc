@@ -1,0 +1,18 @@
+= Tabs block with synchronization
+:tabs-sync-option:
+
+Source: https://github.com/asciidoctor/asciidoctor-tabs
+
+[tabs]
+====
+Tab A:: Triggers selection of Tab A in other congruent tabsets.
+Tab B:: Triggers selection of Tab B in other congruent tabsets.
+====
+
+...
+
+[tabs]
+====
+Tab A:: Triggers selection of Tab A in other congruent tabsets.
+Tab B:: Triggers selection of Tab B in other congruent tabsets.
+====

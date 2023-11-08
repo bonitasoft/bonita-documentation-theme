@@ -1,0 +1,20 @@
+= Tabs block
+
+Source: https://github.com/asciidoctor/asciidoctor-tabs
+
+[tabs]
+====
+Tab A:: Contents of Tab A.
+
+Tab B::
++
+Contents of Tab B.
+
+Tab C::
++
+--
+Contents of Tab C.
+
+Contains more than one block.
+--
+====
