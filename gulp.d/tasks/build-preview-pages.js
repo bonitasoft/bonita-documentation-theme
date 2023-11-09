@@ -1,19 +1,14 @@
 'use strict'
 
-// NOTE remove patch after upgrading from asciidoctor.js to @asciidoctor/core
-Error.call = (self, ...args) => {
-  const err = new Error(...args)
-  return Object.assign(self, { message: err.message, stack: err.stack })
-}
-
-const asciidoctor = require('asciidoctor')()
+const Asciidoctor = require('@asciidoctor/core')()
 const fs = require('fs-extra')
 const handlebars = require('handlebars')
-const { obj: map } = require('through2')
 const merge = require('merge-stream')
 const ospath = require('path')
 const path = ospath.posix
 const requireFromString = require('require-from-string')
+const { Transform } = require('stream')
+const map = (transform = () => {}, flush = undefined) => new Transform({ objectMode: true, transform, flush })
 const vfs = require('vinyl-fs')
 const yaml = require('js-yaml')
 
@@ -53,7 +48,7 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
               // get rid of the hard coded url, and target the actual url to make the navbar opened to the right page
               uiModel.page.url = `/bonita/dev/${file.stem}.html`
               // end of - CUSTOM bonita-theme
-              const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
+              const doc = Asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
               uiModel.page.attributes = Object.entries(doc.getAttributes())
                 .filter(([name, val]) => name.startsWith('page-'))
                 .reduce((accum, [name, val]) => {
@@ -136,7 +131,6 @@ function resolvePageURL (spec, context = {}) {
 }
 
 function isApiComponent (value) {
-  console.log('Component: ' + value)
   return value !== 'Bonita REST API'
 }
 
