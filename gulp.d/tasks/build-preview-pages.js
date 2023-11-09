@@ -22,6 +22,21 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
     ),
   ])
     .then(([baseUiModel, { layouts }]) => [{ ...baseUiModel, env: process.env }, layouts])
+    .then(([baseUiModel, { layouts }]) => {
+      const extensions = ((baseUiModel.asciidoc || {}).extensions || []).map((request) => {
+        ASCIIDOC_ATTRIBUTES[request.replace(/^@|\.js$/, '').replace(/[/]/g, '-') + '-loaded'] = ''
+        const extension = require(request)
+        extension.register.call(Asciidoctor.Extensions)
+        return extension
+      })
+      const asciidoc = { extensions }
+      for (const component of baseUiModel.site.components) {
+        for (const version of component.versions || []) version.asciidoc = asciidoc
+      }
+      baseUiModel = { ...baseUiModel, env: process.env }
+      delete baseUiModel.asciidoc
+      return [baseUiModel, layouts]
+    })
     .then(([baseUiModel, layouts]) => {
       // CUSTOM bonita-theme
       // let override the site.url defined in uid-model.yml with an environment variable
