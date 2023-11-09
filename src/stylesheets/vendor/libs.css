@@ -1,0 +1,4 @@
+@import '@docsearch/css/dist/style.css';
+@import 'asciinema-player/dist/bundle/asciinema-player.css';
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import '@asciidoctor/tabs/dist/css/tabs.css';

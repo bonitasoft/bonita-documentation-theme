@@ -138,8 +138,16 @@ page:
         url: /bonita/dev/media.html
         urlType: internal
       - content: Tabs
-        url: /bonita/dev/tabs.html
-        urlType: internal
+        items:
+          - content: Tabs
+            url: /bonita/dev/tabs.html
+            urlType: internal
+          - content: Tabs Sync
+            url: /bonita/dev/tabs-sync.html
+            urlType: internal
+          - content: Tabs Sync Groups
+            url: /bonita/dev/tabs-with-custom-sync-groups.html
+            urlType: internal
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
         urlType: internal
