@@ -137,6 +137,9 @@ page:
       - content: Media
         url: /bonita/dev/media.html
         urlType: internal
+      - content: Tabs
+        url: /bonita/dev/tabs.html
+        urlType: internal
       - content: Troubleshooting
         url: /bonita/dev/troubleshooting.html
         urlType: internal
