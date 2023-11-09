@@ -20,7 +20,6 @@ const config = {
   libsJs: [
     'node_modules/@docsearch/js/dist/umd/index.js',
     'node_modules/asciinema-player/dist/bundle/asciinema-player.min.js',
-    'node_modules/@asciidoctor/tabs/dist/index.js',
   ],
   libsCss: [
     'node_modules/@docsearch/css/dist/style.css',
