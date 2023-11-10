@@ -35,7 +35,7 @@ module.exports = (src, dest, preview) => () => {
     postcssImport,
     autoprefixer(),
     postcssUrl({
-      filter: new RegExp('^src/stylesheets/[~][^/]*(?:font|face)[^/]*/.*/files/.+[.](?:ttf|woff2?)$'),
+      filter: (asset) => /^~[^/]*(?:font|typeface)[^/]*\/files\/.+[.](?:ttf|woff2?)$/.test(asset.url),
       url: (asset) => {
         const relpath = asset.pathname.substr(1)
         const abspath = require.resolve(relpath)
