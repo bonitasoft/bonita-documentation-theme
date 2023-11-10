@@ -21,7 +21,6 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
       merge(compileLayouts(src), registerPartials(src), registerHelpers(src), copyImages(previewSrc, previewDest))
     ),
   ])
-    .then(([baseUiModel, { layouts }]) => [{ ...baseUiModel, env: process.env }, layouts])
     .then(([baseUiModel, { layouts }]) => {
       const extensions = ((baseUiModel.asciidoc || {}).extensions || []).map((request) => {
         ASCIIDOC_ATTRIBUTES[request.replace(/^@|\.js$/, '').replace(/[/]/g, '-') + '-loaded'] = ''
@@ -84,7 +83,7 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
           })
         )
         .pipe(vfs.dest(previewDest))
-        .on('error', (e) => done)
+        .on('error', done)
         .pipe(sink())
     })
 
@@ -146,6 +145,7 @@ function resolvePageURL (spec, context = {}) {
 }
 
 function isApiComponent (value) {
+  console.log('Component: ' + value)
   return value !== 'Bonita REST API'
 }
 
