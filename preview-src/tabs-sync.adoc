@@ -1,6 +1,7 @@
 = Tabs block with synchronization
 :tabs-sync-option:
 
+Add `:tabs-sync-option:` to the page attribute header to enable synchronization of tabs.
 Source: https://github.com/asciidoctor/asciidoctor-tabs
 
 [tabs]
@@ -16,3 +17,25 @@ Tab B:: Triggers selection of Tab B in other congruent tabsets.
 Tab A:: Triggers selection of Tab A in other congruent tabsets.
 Tab B:: Triggers selection of Tab B in other congruent tabsets.
 ====
+
+
+.Click to see the *source code*
+[%collapsible]
+========
+[source,asciidoc]
+----
+[tabs]
+====
+Tab A:: Triggers selection of Tab A in other congruent tabsets.
+Tab B:: Triggers selection of Tab B in other congruent tabsets.
+====
+
+...
+
+[tabs]
+====
+Tab A:: Triggers selection of Tab A in other congruent tabsets.
+Tab B:: Triggers selection of Tab B in other congruent tabsets.
+====
+----
+========
