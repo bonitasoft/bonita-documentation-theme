@@ -6,8 +6,10 @@ on:
     branches:
       - master
     paths:
+      - 'gulpfile.js'
       - 'package.json'
       - 'package-lock.json'
+      - 'gulp.d/**/*'
       - 'src/**/*'
       - 'preview-src/**/*'
       - '.github/actions/build-setup/**/*'
