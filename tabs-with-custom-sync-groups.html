@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How to write a clean troubleshooting section | Bonita Documentation Theme Preview</title>    <meta name="generator" content="Antora dev-for-bonita-documentation-theme">
+<title>Tabs block with groups synchronization | Bonita Documentation Theme Preview</title>    <meta name="generator" content="Antora dev-for-bonita-documentation-theme">
 <link rel="stylesheet" href="_/stylesheets/vendor/libs.css">
 <link rel="stylesheet" href="_/stylesheets/site.css">
 <link id="highlight-style-lnk" rel="stylesheet" href="_/stylesheets/vendor/highlight-light.css">
@@ -117,12 +117,12 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="tabs-sync.html">Tabs Sync</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="tabs-with-custom-sync-groups.html">Tabs Sync Groups</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
   </li>
 </ul>
@@ -236,16 +236,7 @@
     <a class="version is-missing" href="#">archives</a>
   </div>
 </div>
-    <div class="page-icons">
-      <a href="https://example.com/project-bonita/edit/master/index.adoc"><img src="_/img/edit.svg" title="Edit this page" alt="Edit" height="17"></a>
-      <a class="page-icon" href="https://example.com/project-bonita/commits/master/index.adoc">
-  <img src="_/img/history.svg" title="History of this page" alt="History" height="17">
-</a>
-<a class="page-icon" href="https://github.com/bonitasoft/bonita-documentation-site/blob/master/docs/content/CONTRIBUTING.adoc">
-  <img src="_/img/info.svg" title="How to contribute" alt="Contribution" height="17">
-</a>
-    </div>
-    </div>
+  </div>
 
 
 
@@ -253,335 +244,162 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">How to write a clean troubleshooting section</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Tabs block with groups synchronization</h1>
 <div class="paragraph">
-<p>This is how to create a troubleshooting:</p>
+<p>Source: <a href="https://github.com/asciidoctor/asciidoctor-tabs" class="bare">https://github.com/asciidoctor/asciidoctor-tabs</a></p>
 </div>
-<div class="ulist">
+<div id="_tabs_1" class="openblock tabs is-sync data-sync-group-id=group-1 is-loading">
+<div class="content">
+<div class="ulist tablist">
 <ul>
-<li>
-<p>The title should be "Troubleshooting" and not "Troubleshoot"</p>
+<li id="_tabs_1_tab_a" class="tab">
+<p>Tab A</p>
 </li>
-<li>
-<p>"Symptom": describes what the user experiences</p>
-</li>
-<li>
-<p>"Cause": describes the diagnosis from Bonita perspective</p>
-</li>
-<li>
-<p>"Possible solutions" (if there is still uncertainty about its efficiency depending on the user&#8217;s context) or "Solutions" (if we know for sure it works): a step-by-step guidance to lead the user to success.</p>
-</li>
-<li>
-<p>Depending on the position of the troubleshooting section in the page, you can:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Add a separator above the "Troubleshooting" title of the section, if this section appears at the bottom of the page and addresses the whole content of the page</p>
-</li>
-<li>
-<p>Adapt the level of the header; it should be the same than the content it is related to</p>
+<li id="_tabs_1_tab_b" class="tab">
+<p>Tab B</p>
 </li>
 </ul>
 </div>
+<div id="_tabs_1_tab_a--panel" class="tabpanel" aria-labelledby="_tabs_1_tab_a">
+<div class="paragraph">
+<p>Triggers selection of Tab A in second tabset.</p>
+</div>
+</div>
+<div id="_tabs_1_tab_b--panel" class="tabpanel" aria-labelledby="_tabs_1_tab_b">
+<div class="paragraph">
+<p>Triggers selection of Tab B in second tabset.</p>
+</div>
+</div>
+</div>
+</div>
+<details>
+<summary class="title">Click to see the <strong>source code</strong></summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[tabs,sync-group-id=group-1]
+====
+Tab A:: Triggers selection of Tab A in second tabset.
+Tab B:: Triggers selection of Tab B in second tabset.
+====</code></pre>
+</div>
+</div>
+</div>
+</details>
+<div id="_tabs_2" class="openblock tabs is-sync data-sync-group-id=group-1 is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_tab_a" class="tab">
+<p>Tab A</p>
+</li>
+<li id="_tabs_2_tab_b" class="tab">
+<p>Tab B</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
+<div id="_tabs_2_tab_a--panel" class="tabpanel" aria-labelledby="_tabs_2_tab_a">
 <div class="paragraph">
-<p>Do not add extra lines above and below the section content. The title already provides a separator between the title and the content.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Triggers selection of Tab A in first tabset.</p>
 </div>
 </div>
-</div>
-<div class="sect1 troubleshooting-title">
-<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
-<div class="sectionbody">
+<div id="_tabs_2_tab_b--panel" class="tabpanel" aria-labelledby="_tabs_2_tab_b">
 <div class="paragraph">
-<p>See <strong>code example</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[.troubleshooting-title]
-== Troubleshooting</code></pre>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_any_troubleshooting_section_example"><a class="anchor" href="#_any_troubleshooting_section_example"></a>Any troubleshooting section example</h3>
-<div class="openblock troubleshooting-section">
-<div class="content">
-<div class="paragraph symptom">
-<p>I can&#8217;t wake up in the morning, 9AM is too early for me!!!</p>
-</div>
-<div class="paragraph symptom-description">
-<p>When my alarm goes off, I turn it off and go right back to sleep.</p>
-</div>
-<div class="paragraph">
-<p><span class="cause">Potential cause</span>
-This is probably because I often go to bed at 3AM :'(</p>
-</div>
-<div class="paragraph">
-<p><span class="solution">Possible solution</span>
-I should just stop watching netflix for hours&#8230;&#8203;</p>
-</div>
-</div>
-</div>
-<details>
-<summary class="title">Click to see <strong>code example</strong></summary>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[.troubleshooting-section]
---
-[.symptom]
-I can't wake up in the morning, 9AM is too early for me!!!
-
-[.symptom-description]
-When my alarm goes off, I turn it off and go right back to sleep.
-
-[.cause]#Potential cause#
-This is probably because I often go to bed at 3AM :'(
-
-[.solution]#Possible solution#
-I should just stop watching netflix for hours...
---</code></pre>
-</div>
-</div>
-</div>
-</details>
-<div class="openblock troubleshooting-section">
-<div class="content">
-<div class="paragraph symptom">
-<p>My code block is not display on troubleshooting solution section</p>
-</div>
-<div class="paragraph symptom-description">
-<p>When i write some block code example, the display is not correct</p>
-</div>
-<div class="paragraph">
-<p><span class="cause">Cause</span>
-This is potentially because i miss an ending character after code block.</p>
-</div>
-<div class="paragraph">
-<p><span class="solution">Possible solution</span></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@BonitaTests
-class ProcessIT {
-
-    @Test
-    void should_retrieve_user(BonitaTestToolkit toolkit) {
-        User user = toolkit.getUser("walter.bates");
-        ...
-    }
-}</code></pre>
+<p>Triggers selection of Tab B in first tabset.</p>
 </div>
 </div>
 </div>
 </div>
 <details>
-<summary class="title">Click to see <strong>code example</strong></summary>
+<summary class="title">Click to see the <strong>source code</strong></summary>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[.troubleshooting-section]
---
-[.symptom]
-My code block is not displayed in the troubleshooting solution section
-
-[.symptom-description]
-When i write some block code examples, the display is not correct
-
-[.cause]#Cause#
-This is potentially because I am missing an end character after the code block.
-
-[.solution]#Possible solution#
-[source,java]
-----
-@BonitaTests
-class ProcessIT {
-
-    @Test
-    void should_retrieve_user(BonitaTestToolkit toolkit) {
-        User user = toolkit.getUser("walter.bates");
-        ...
-    }
-}
-----
---</code></pre>
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[tabs,sync-group-id=group-1]
+====
+Tab A:: Triggers selection of Tab A in first tabset.
+Tab B:: Triggers selection of Tab B in first tabset.
+====</code></pre>
 </div>
 </div>
 </div>
 </details>
-<div class="openblock troubleshooting-section">
+<div id="_tabs_3" class="openblock tabs is-sync data-sync-group-id=group-2 is-loading">
 <div class="content">
-<div class="paragraph symptom">
-<p>I don&#8217;t want display potential cause as title</p>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_tab_a" class="tab">
+<p>Tab A</p>
+</li>
+<li id="_tabs_3_tab_b" class="tab">
+<p>Tab B</p>
+</li>
+</ul>
 </div>
-<div class="paragraph symptom-description">
-<p>When i sure about the cause, I want to remove potential on title</p>
-</div>
+<div id="_tabs_3_tab_a--panel" class="tabpanel" aria-labelledby="_tabs_3_tab_a">
 <div class="paragraph">
-<p><span class="cause">Cause</span>
-No doubt about the cause</p>
+<p>Triggers selection of Tab A in fourth tabset.</p>
 </div>
+</div>
+<div id="_tabs_3_tab_b--panel" class="tabpanel" aria-labelledby="_tabs_3_tab_b">
 <div class="paragraph">
-<p><span class="solution">Possible solution</span>
-Just write <code>Cause</code> as title</p>
+<p>Triggers selection of Tab B in fourth tabset.</p>
+</div>
 </div>
 </div>
 </div>
 <details>
-<summary class="title">Click to see <strong>code example</strong></summary>
+<summary class="title">Click to see the <strong>source code</strong></summary>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[.troubleshooting-section]
---
-[.symptom]
-I don't want display potential cause as title
-
-[.symptom-description]
-When i sure about the cause, I want to remove potential on title
-
-[.cause]#Cause#
-This is probably because I often go to bed at 3AM :'(
-
-[.solution]#Possible solution#
-Just write `Cause` as title
---</code></pre>
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[tabs,sync-group-id=group-2]
+====
+Tab A:: Triggers selection of Tab A in fourth tabset.
+Tab B:: Triggers selection of Tab B in fourth tabset.
+====</code></pre>
 </div>
 </div>
 </div>
 </details>
-<div class="openblock troubleshooting-section">
+<div id="_tabs_4" class="openblock tabs is-sync data-sync-group-id=group-2 is-loading">
 <div class="content">
-<div class="paragraph symptom">
-<p>HTTP/1.1 401 Unauthorized</p>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_tab_a" class="tab">
+<p>Tab A</p>
+</li>
+<li id="_tabs_4_tab_b" class="tab">
+<p>Tab B</p>
+</li>
+</ul>
 </div>
+<div id="_tabs_4_tab_a--panel" class="tabpanel" aria-labelledby="_tabs_4_tab_a">
 <div class="paragraph">
-<p><span class="cause">Cause</span>
-The logged user has no permission to access the resources.</p>
+<p>Triggers selection of Tab A in third tabset.</p>
 </div>
+</div>
+<div id="_tabs_4_tab_b--panel" class="tabpanel" aria-labelledby="_tabs_4_tab_b">
 <div class="paragraph">
-<p><span class="solution">Possible solution</span></p>
+<p>Triggers selection of Tab B in third tabset.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Make sure that the cookies transferred are the ones generated during the last sucessfull login call</p>
-</li>
-<li>
-<p>If one of the PUT, DELETE or POST method is used, make sure that the X-Bonita-API-Token header is included</p>
-</li>
-<li>
-<p>If the X-Bonita-API-Token header is included, make sure that the value is the same as the one of the cookie generated during the last login</p>
-</li>
-<li>
-<p>Maybe a logout was issued or the session has expired; try to log in again, and re-run the request with the new cookies and the new value for the X-Bonita-API-Token header.</p>
-</li>
-</ol>
 </div>
 </div>
 </div>
 <details>
-<summary class="title">Click to see <strong>code example</strong></summary>
+<summary class="title">Click to see the <strong>source code</strong></summary>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[.troubleshooting-section]
---
-[.symptom]
-HTTP/1.1 401 Unauthorized
-
-[.cause]#Cause#
-The logged user has no permission to access the resources.
-
-[.solution]#Possible solution#
-
-1. Make sure that the cookies transferred are the ones generated during the last sucessfull login call
-
-2. If one of the PUT, DELETE or POST method is used, make sure that the X-Bonita-API-Token header is included
-
-3. If the X-Bonita-API-Token header is included, make sure that the value is the same as the one of the cookie generated during the last login
-
-4. Maybe a logout was issued or the session has expired; try to log in again, and re-run the request with the new cookies and the new value for the X-Bonita-API-Token header.
---</code></pre>
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[tabs,sync-group-id=group-2]
+====
+Tab A:: Triggers selection of Tab A in third tabset.
+Tab B:: Triggers selection of Tab B in third tabset.
+====</code></pre>
 </div>
 </div>
 </div>
 </details>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_for_theme_tests_only"><a class="anchor" href="#_for_theme_tests_only"></a>For theme tests only</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Here we check the rendering depending on the title level.</p>
-</div>
-</div>
-</div>
-<div class="sect1 troubleshooting-title">
-<h2 id="_troubleshooting_2"><a class="anchor" href="#_troubleshooting_2"></a>Troubleshooting 2</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_troubleshooting_2_without_icon"><a class="anchor" href="#_troubleshooting_2_without_icon"></a>Troubleshooting 2 Without icon</h3>
-
-</div>
-<div class="sect2 troubleshooting-title">
-<h3 id="_troubleshooting_3"><a class="anchor" href="#_troubleshooting_3"></a>Troubleshooting 3</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_troubleshooting_3_without_icon"><a class="anchor" href="#_troubleshooting_3_without_icon"></a>Troubleshooting 3 Without icon</h3>
-<div class="sect3 troubleshooting-title">
-<h4 id="_troubleshooting_4"><a class="anchor" href="#_troubleshooting_4"></a>Troubleshooting 4</h4>
-<div class="openblock troubleshooting-section">
-<div class="content">
-<div class="paragraph symptom">
-<p>I can&#8217;t wake up in the morning, 9AM is too early for me!!!</p>
-</div>
-<div class="paragraph symptom-description">
-<p>Here enter a symptom description</p>
-</div>
-<div class="paragraph">
-<p><span class="cause">Potential cause</span>
-This is probably because I often go to bed at 3AM :'(</p>
-</div>
-<div class="paragraph">
-<p><span class="solution">Possible solution</span>
-I should just stop watching netflix for hours&#8230;&#8203;</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@BonitaTests
-class ProcessIT {
-
-    @Test
-    void should_retrieve_user(BonitaTestToolkit toolkit) {
-        User user = toolkit.getUser("walter.bates");
-        ...
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
