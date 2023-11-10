@@ -12,6 +12,7 @@ const sass = require('gulp-sass')(require('sass'))
 const ospath = require('path')
 const path = ospath.posix
 const postcssUrl = require('postcss-url')
+const postcssImport = require('postcss-import')
 const { Transform } = require('stream')
 const map = (transform) => new Transform({ objectMode: true, transform })
 const through = () => map((file, enc, next) => next(null, file))
@@ -20,11 +21,6 @@ const config = {
   libsJs: [
     'node_modules/@docsearch/js/dist/umd/index.js',
     'node_modules/asciinema-player/dist/bundle/asciinema-player.min.js',
-  ],
-  libsCss: [
-    'node_modules/@docsearch/css/dist/style.css',
-    'node_modules/asciinema-player/dist/bundle/asciinema-player.css',
-    'node_modules/@fortawesome/fontawesome-free/css/all.css',
   ],
   libsFonts: [
     'node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff*(2)}',
@@ -36,9 +32,10 @@ module.exports = (src, dest, preview) => () => {
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
   const autoprefixer = require('autoprefixer')
   const postcssPlugins = [require('@csstools/postcss-sass'),
+    postcssImport,
     autoprefixer(),
     postcssUrl({
-      filter: '**/~typeface-*/files/*',
+      filter: new RegExp('^src/stylesheets/[~][^/]*(?:font|face)[^/]*/.*/files/.+[.](?:ttf|woff2?)$'),
       url: (asset) => {
         const relpath = asset.pathname.substr(1)
         const abspath = require.resolve(relpath)
@@ -82,8 +79,8 @@ module.exports = (src, dest, preview) => () => {
    */
   function libCss () {
     const { src } = require('gulp')
-    return src(config.libsCss)
-      .pipe(concat('stylesheets/vendor/libs.css'))
+    return src(['stylesheets/vendor/*.css'], { ...opts, sourcemaps })
+      .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } })))
   }
 
   const buffer = require('vinyl-buffer')
