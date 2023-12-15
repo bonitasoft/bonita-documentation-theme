@@ -39,7 +39,7 @@ jobs:
         run: npm run preview:build
       - name: Upload artifact
         if: github.event.action != 'closed' # Always upload to be able to test it locally
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bonita-theme-preview-pr-${{github.event.pull_request.number}}-${{github.sha}}
           path: public
