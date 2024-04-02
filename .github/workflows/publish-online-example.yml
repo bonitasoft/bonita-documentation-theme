@@ -27,7 +27,7 @@ jobs:
         env:
           BONITA_THEME_URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: theme-example-${{github.sha}}
           path: public
