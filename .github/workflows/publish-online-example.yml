@@ -27,7 +27,7 @@ jobs:
         env:
           BONITA_THEME_URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: theme-example-${{github.sha}}
           path: public
@@ -40,7 +40,7 @@ jobs:
       contents: write # Push to gh-pages
     steps:
       - name: Download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: theme-example-${{github.sha}}
       - name: Push to gh-pages
