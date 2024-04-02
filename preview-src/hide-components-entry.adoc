@@ -4,10 +4,10 @@
 
 == Header entry
 
-In the header, the Bonita Theme and Project ABC should be hide on this page. But if you go on another page, the both entry should be available.
+In the header, the Bonita Theme and Project ABC should be hidden on this page. But if you go on another page, the both entry should be available.
 
 
 == Navigation explore
 
-In the navigation explore section (on the bottom-left of the page), the Bonita Theme and Project ABC should be hide on this page. But if you go on another page, the both entry should be available.
+In the navigation explore section (on the bottom-left of the page), the Bonita Theme and Project ABC should be hidden on this page. But if you go on another page, the both entry should be available.
 
