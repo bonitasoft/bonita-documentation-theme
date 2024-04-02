@@ -1,0 +1,13 @@
+= Hide components
+:page-hide-components: abc, bonita
+
+
+== Header entry
+
+In the header, the Bonita Theme and Project ABC should be hide on this page. But if you go on another page, the both entry should be available.
+
+
+== Navigation explore
+
+In the navigation explore section (on the bottom-left of the page), the Bonita Theme and Project ABC should be hide on this page. But if you go on another page, the both entry should be available.
+

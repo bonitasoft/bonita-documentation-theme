@@ -14,7 +14,7 @@
 
     <div id="topbar-nav" class="navbar-menu">
       {{#unless site.keys.hideNavbarComponentsList}}
-      {{#each site.components}}
+      {{#each (isComponentToHide site.components page) }}      
       <div class="navbar-item is-hoverable">
         <a class="navbar-link" href="{{{./latest.url}}}">{{{./title}}}</a>
       </div>
@@ -27,7 +27,7 @@
       <div class="navbar-item search-item hide-for-print">
         <div id="docsearch"></div>
       </div>
-      {{/if}}
+      {{/if}}    
 
       <div class="theme-switch-wrapper">
         <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
