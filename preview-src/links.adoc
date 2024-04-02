@@ -1,5 +1,7 @@
-= Link between components
+= Links
 :page-editable: true
+
+== Link between components
 
 You can adding link between two components or between versions of the same component. To do it, you **must** use the `xref` syntax.
 
@@ -28,3 +30,8 @@ The general form of a xref is `xref:<version>@<component_name>:<module>:<page>#a
 |===
 
 You can find more details in https://github.com/bonitasoft/bonita-documentation-site/blob/master/docs/content/CONTRIBUTING.adoc#adding-link-between-two-components-or-between-versions-of-the-same-component[our contributing documentation guide].
+
+== Anchors to navigate inside the same document
+
+Internal cross references can be defined using `<<anchor-id, My Anchor Name>>`. To define an anchor, use `[#anchor-id]` at the location you want to navigate.
+
