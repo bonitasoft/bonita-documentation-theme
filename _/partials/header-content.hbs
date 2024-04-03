@@ -14,7 +14,7 @@
 
     <div id="topbar-nav" class="navbar-menu">
       {{#unless site.keys.hideNavbarComponentsList}}
-      {{#each site.components}}
+      {{#each (isComponentToHide site.components page) }}
       <div class="navbar-item is-hoverable">
         <a class="navbar-link" href="{{{./latest.url}}}">{{{./title}}}</a>
       </div>

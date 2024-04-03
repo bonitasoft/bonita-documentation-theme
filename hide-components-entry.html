@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Message block - out of support | Bonita Documentation Theme Preview</title>    <meta name="generator" content="Antora dev-for-bonita-documentation-theme">
+<title>Hide components | Bonita Documentation Theme Preview</title>    <meta name="generator" content="Antora dev-for-bonita-documentation-theme">
 <link rel="stylesheet" href="_/stylesheets/vendor/libs.css">
 <link rel="stylesheet" href="_/stylesheets/site.css">
 <link id="highlight-style-lnk" rel="stylesheet" href="_/stylesheets/vendor/highlight-light.css">
@@ -21,17 +21,14 @@
 
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-item is-hoverable">
-        <a class="navbar-link" href="#">Project ABC</a>
-      </div>
-      <div class="navbar-item is-hoverable">
-        <a class="navbar-link" href="/bonita/2021.1/index.html">Bonita Theme</a>
-      </div>
-      <div class="navbar-item is-hoverable">
         <a class="navbar-link" href="#">Project 123</a>
       </div>
     </div>
 
     <div class="navbar-end" id="search-container">
+      <div class="navbar-item search-item hide-for-print">
+        <div id="docsearch"></div>
+      </div>
 
       <div class="theme-switch-wrapper">
         <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
@@ -137,14 +134,14 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="test-not-editable-page.html">Not editable page</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="hide-components-entry.html">Hide component entry</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Message blocks</span>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="3">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="msg-block-out-of-support.html">Out of support</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -168,34 +165,6 @@
     <span class="version">dev</span>
   </div>
   <ul class="components">
-    <li class="component">
-      <span class="title">Project ABC</span>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="#">1.1</a>
-        </li>
-        <li class="version">
-          <a href="#">1.0</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component is-current">
-      <span class="title">Bonita Theme</span>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../2021.1/index.html">2021.1</a>
-        </li>
-        <li class="version is-current">
-          <a href="index.html">dev</a>
-        </li>
-        <li class="version">
-          <a href="#">7.9</a>
-        </li>
-        <li class="version">
-          <a href="#">archives</a>
-        </li>
-      </ul>
-    </li>
     <li class="component">
       <span class="title">Project 123</span>
       <ul class="versions">
@@ -240,318 +209,24 @@
 
 
 
-    <div class="paragraph message-block out-of-support-block">
-      <p>This documentation is about a version that is <b>out of support</b>, here is the <a
-        href="/bonita/2021.1/index.html">latest documentation
-        version</a>.
-      </p>
-      <p>
-        How about <a href="https://www.bonitasoft.com/downloads">downloading</a> a newer, supported
-        version?
-      </p>
-    </div>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Message block - out of support</h1>
-<div id="preamble">
+<h1 class="page">Hide components</h1>
+<div class="sect1">
+<h2 id="_header_entry"><a class="anchor" href="#_header_entry"></a>Header entry</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This page is configured to hide the search bar and to not be editable.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>In the header, the Bonita Theme and Project ABC should be hidden on this page. But if you go on another page, the both entry should be available.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_title_1"><a class="anchor" href="#_title_1"></a>Title 1</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_paragraph_1_1"><a class="anchor" href="#_paragraph_1_1"></a>Paragraph 1.1</h3>
-<div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nam et scelerisque lacus.
-Sed sed ipsum venenatis, volutpat lacus vitae, laoreet arcu.
-Mauris a ex id erat feugiat imperdiet.
-Morbi sollicitudin vulputate sapien ut malesuada.
-Ut tincidunt risus libero, quis mollis nibh luctus a.
-Nam consequat nibh odio.
-Vestibulum consectetur auctor leo, a accumsan ipsum scelerisque nec.
-Morbi quis libero dui.
-Sed scelerisque malesuada diam, a imperdiet elit porta vitae.
-Praesent a scelerisque augue.
-Fusce pellentesque felis et turpis consectetur pretium.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_paragraph_1_2"><a class="anchor" href="#_paragraph_1_2"></a>Paragraph 1.2</h3>
-<div class="paragraph">
-<p>Aenean sed libero ligula.
-Nulla convallis sit amet leo sit amet venenatis.
-In faucibus nisl felis, efficitur faucibus dolor feugiat quis.
-Sed libero neque, hendrerit quis accumsan quis, iaculis vel urna.
-Morbi auctor eros eu ipsum posuere dignissim.
-Duis ac tellus mi.
-Praesent suscipit, velit egestas porttitor sodales, mi libero placerat nisl, sed tincidunt sem justo ut urna.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_paragraph_1_3"><a class="anchor" href="#_paragraph_1_3"></a>Paragraph 1.3</h3>
-<div class="paragraph">
-<p>Nam finibus eros quam, in auctor ligula suscipit et.
-Nam cursus tempor dapibus.
-Quisque a urna et ipsum auctor faucibus cursus id neque.
-Integer rutrum ac leo varius aliquet.
-Phasellus vel mauris justo.
-Fusce ipsum nisi, viverra at sodales vitae, posuere nec sapien.
-Cras pulvinar lectus augue, non pellentesque erat pharetra nec.</p>
-</div>
-<div class="paragraph">
-<p>Sed hendrerit, risus a commodo tincidunt, tellus metus fringilla quam, quis finibus nulla nisl in orci.
-Morbi libero magna, egestas vel facilisis ac, elementum sed ex.
-Nam ligula purus, lacinia vitae ultrices ut, varius vitae elit.
-Donec nec mauris risus.
-Pellentesque porta lectus vitae egestas semper.
-Pellentesque sed nibh vel leo volutpat sagittis eu in turpis.
-Curabitur purus lectus, gravida a turpis quis, tempus faucibus elit.
-Curabitur et fermentum justo, ac auctor enim.
-Ut sed pharetra justo.
-Donec enim urna, commodo sit amet turpis id, sagittis sollicitudin ante.
-Vestibulum id augue pretium, faucibus lectus ut, finibus risus.
-Pellentesque id porttitor erat.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_paragraph_1_4"><a class="anchor" href="#_paragraph_1_4"></a>Paragraph 1.4</h3>
-<div class="paragraph">
-<p>Nulla quis lacus in turpis viverra gravida.
-Ut scelerisque, libero vel tincidunt dapibus, risus felis ullamcorper velit, a commodo mi velit dictum quam.
-Duis porta sollicitudin nulla non dapibus.
-Nulla faucibus metus condimentum congue porttitor.
-Morbi sed mattis ligula, id iaculis turpis.
-Nullam vitae mi at leo commodo lobortis.
-Aliquam viverra nisl ullamcorper magna convallis tincidunt sit amet eget augue.
-Pellentesque pellentesque ex nec nisi egestas iaculis.
-Aliquam erat volutpat.
-Sed eget imperdiet massa.
-Donec ultricies nisi sit amet elementum tincidunt.
-In blandit nulla urna, vitae tempus ligula gravida quis.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Suspendisse volutpat mattis mauris, a convallis ex laoreet eu.
-Pellentesque augue turpis, elementum quis iaculis at, egestas id dolor.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_title_2"><a class="anchor" href="#_title_2"></a>Title 2</h2>
+<h2 id="_navigation_explore"><a class="anchor" href="#_navigation_explore"></a>Navigation explore</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nam et scelerisque lacus.
-Sed sed ipsum venenatis, volutpat lacus vitae, laoreet arcu.
-Mauris a ex id erat feugiat imperdiet.
-Morbi sollicitudin vulputate sapien ut malesuada.
-Ut tincidunt risus libero, quis mollis nibh luctus a.
-Nam consequat nibh odio.
-Vestibulum consectetur auctor leo, a accumsan ipsum scelerisque nec.
-Morbi quis libero dui.
-Sed scelerisque malesuada diam, a imperdiet elit porta vitae.
-Praesent a scelerisque augue.
-Fusce pellentesque felis et turpis consectetur pretium.</p>
-</div>
-<div class="paragraph">
-<p>Aenean sed libero ligula.
-Nulla convallis sit amet leo sit amet venenatis.
-In faucibus nisl felis, efficitur faucibus dolor feugiat quis.
-Sed libero neque, hendrerit quis accumsan quis, iaculis vel urna.
-Morbi auctor eros eu ipsum posuere dignissim.
-Duis ac tellus mi.
-Praesent suscipit, velit egestas porttitor sodales, mi libero placerat nisl, sed tincidunt sem justo ut urna.</p>
-</div>
-<div class="paragraph">
-<p>Nam finibus eros quam, in auctor ligula suscipit et.
-Nam cursus tempor dapibus.
-Quisque a urna et ipsum auctor faucibus cursus id neque.
-Integer rutrum ac leo varius aliquet.
-Phasellus vel mauris justo.
-Fusce ipsum nisi, viverra at sodales vitae, posuere nec sapien.
-Cras pulvinar lectus augue, non pellentesque erat pharetra nec.</p>
-</div>
-<div class="paragraph">
-<p>Sed hendrerit, risus a commodo tincidunt, tellus metus fringilla quam, quis finibus nulla nisl in orci.
-Morbi libero magna, egestas vel facilisis ac, elementum sed ex.
-Nam ligula purus, lacinia vitae ultrices ut, varius vitae elit.
-Donec nec mauris risus.
-Pellentesque porta lectus vitae egestas semper.
-Pellentesque sed nibh vel leo volutpat sagittis eu in turpis.
-Curabitur purus lectus, gravida a turpis quis, tempus faucibus elit.
-Curabitur et fermentum justo, ac auctor enim.
-Ut sed pharetra justo.
-Donec enim urna, commodo sit amet turpis id, sagittis sollicitudin ante.
-Vestibulum id augue pretium, faucibus lectus ut, finibus risus.
-Pellentesque id porttitor erat.</p>
-</div>
-<div class="paragraph">
-<p>Nulla quis lacus in turpis viverra gravida.
-Ut scelerisque, libero vel tincidunt dapibus, risus felis ullamcorper velit, a commodo mi velit dictum quam.
-Duis porta sollicitudin nulla non dapibus.
-Nulla faucibus metus condimentum congue porttitor.
-Morbi sed mattis ligula, id iaculis turpis.
-Nullam vitae mi at leo commodo lobortis.
-Aliquam viverra nisl ullamcorper magna convallis tincidunt sit amet eget augue.
-Pellentesque pellentesque ex nec nisi egestas iaculis.
-Aliquam erat volutpat.
-Sed eget imperdiet massa.
-Donec ultricies nisi sit amet elementum tincidunt.
-In blandit nulla urna, vitae tempus ligula gravida quis.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Suspendisse volutpat mattis mauris, a convallis ex laoreet eu.
-Pellentesque augue turpis, elementum quis iaculis at, egestas id dolor.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_title_3"><a class="anchor" href="#_title_3"></a>Title 3</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nam et scelerisque lacus.
-Sed sed ipsum venenatis, volutpat lacus vitae, laoreet arcu.
-Mauris a ex id erat feugiat imperdiet.
-Morbi sollicitudin vulputate sapien ut malesuada.
-Ut tincidunt risus libero, quis mollis nibh luctus a.
-Nam consequat nibh odio.
-Vestibulum consectetur auctor leo, a accumsan ipsum scelerisque nec.
-Morbi quis libero dui.
-Sed scelerisque malesuada diam, a imperdiet elit porta vitae.
-Praesent a scelerisque augue.
-Fusce pellentesque felis et turpis consectetur pretium.</p>
-</div>
-<div class="paragraph">
-<p>Aenean sed libero ligula.
-Nulla convallis sit amet leo sit amet venenatis.
-In faucibus nisl felis, efficitur faucibus dolor feugiat quis.
-Sed libero neque, hendrerit quis accumsan quis, iaculis vel urna.
-Morbi auctor eros eu ipsum posuere dignissim.
-Duis ac tellus mi.
-Praesent suscipit, velit egestas porttitor sodales, mi libero placerat nisl, sed tincidunt sem justo ut urna.</p>
-</div>
-<div class="paragraph">
-<p>Nam finibus eros quam, in auctor ligula suscipit et.
-Nam cursus tempor dapibus.
-Quisque a urna et ipsum auctor faucibus cursus id neque.
-Integer rutrum ac leo varius aliquet.
-Phasellus vel mauris justo.
-Fusce ipsum nisi, viverra at sodales vitae, posuere nec sapien.
-Cras pulvinar lectus augue, non pellentesque erat pharetra nec.</p>
-</div>
-<div class="paragraph">
-<p>Sed hendrerit, risus a commodo tincidunt, tellus metus fringilla quam, quis finibus nulla nisl in orci.
-Morbi libero magna, egestas vel facilisis ac, elementum sed ex.
-Nam ligula purus, lacinia vitae ultrices ut, varius vitae elit.
-Donec nec mauris risus.
-Pellentesque porta lectus vitae egestas semper.
-Pellentesque sed nibh vel leo volutpat sagittis eu in turpis.
-Curabitur purus lectus, gravida a turpis quis, tempus faucibus elit.
-Curabitur et fermentum justo, ac auctor enim.
-Ut sed pharetra justo.
-Donec enim urna, commodo sit amet turpis id, sagittis sollicitudin ante.
-Vestibulum id augue pretium, faucibus lectus ut, finibus risus.
-Pellentesque id porttitor erat.</p>
-</div>
-<div class="paragraph">
-<p>Nulla quis lacus in turpis viverra gravida.
-Ut scelerisque, libero vel tincidunt dapibus, risus felis ullamcorper velit, a commodo mi velit dictum quam.
-Duis porta sollicitudin nulla non dapibus.
-Nulla faucibus metus condimentum congue porttitor.
-Morbi sed mattis ligula, id iaculis turpis.
-Nullam vitae mi at leo commodo lobortis.
-Aliquam viverra nisl ullamcorper magna convallis tincidunt sit amet eget augue.
-Pellentesque pellentesque ex nec nisi egestas iaculis.
-Aliquam erat volutpat.
-Sed eget imperdiet massa.
-Donec ultricies nisi sit amet elementum tincidunt.
-In blandit nulla urna, vitae tempus ligula gravida quis.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Suspendisse volutpat mattis mauris, a convallis ex laoreet eu.
-Pellentesque augue turpis, elementum quis iaculis at, egestas id dolor.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_title_4"><a class="anchor" href="#_title_4"></a>Title 4</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nam et scelerisque lacus.
-Sed sed ipsum venenatis, volutpat lacus vitae, laoreet arcu.
-Mauris a ex id erat feugiat imperdiet.
-Morbi sollicitudin vulputate sapien ut malesuada.
-Ut tincidunt risus libero, quis mollis nibh luctus a.
-Nam consequat nibh odio.
-Vestibulum consectetur auctor leo, a accumsan ipsum scelerisque nec.
-Morbi quis libero dui.
-Sed scelerisque malesuada diam, a imperdiet elit porta vitae.
-Praesent a scelerisque augue.
-Fusce pellentesque felis et turpis consectetur pretium.</p>
-</div>
-<div class="paragraph">
-<p>Aenean sed libero ligula.
-Nulla convallis sit amet leo sit amet venenatis.
-In faucibus nisl felis, efficitur faucibus dolor feugiat quis.
-Sed libero neque, hendrerit quis accumsan quis, iaculis vel urna.
-Morbi auctor eros eu ipsum posuere dignissim.
-Duis ac tellus mi.
-Praesent suscipit, velit egestas porttitor sodales, mi libero placerat nisl, sed tincidunt sem justo ut urna.</p>
-</div>
-<div class="paragraph">
-<p>Nam finibus eros quam, in auctor ligula suscipit et.
-Nam cursus tempor dapibus.
-Quisque a urna et ipsum auctor faucibus cursus id neque.
-Integer rutrum ac leo varius aliquet.
-Phasellus vel mauris justo.
-Fusce ipsum nisi, viverra at sodales vitae, posuere nec sapien.
-Cras pulvinar lectus augue, non pellentesque erat pharetra nec.</p>
-</div>
-<div class="paragraph">
-<p>Sed hendrerit, risus a commodo tincidunt, tellus metus fringilla quam, quis finibus nulla nisl in orci.
-Morbi libero magna, egestas vel facilisis ac, elementum sed ex.
-Nam ligula purus, lacinia vitae ultrices ut, varius vitae elit.
-Donec nec mauris risus.
-Pellentesque porta lectus vitae egestas semper.
-Pellentesque sed nibh vel leo volutpat sagittis eu in turpis.
-Curabitur purus lectus, gravida a turpis quis, tempus faucibus elit.
-Curabitur et fermentum justo, ac auctor enim.
-Ut sed pharetra justo.
-Donec enim urna, commodo sit amet turpis id, sagittis sollicitudin ante.
-Vestibulum id augue pretium, faucibus lectus ut, finibus risus.
-Pellentesque id porttitor erat.</p>
-</div>
-<div class="paragraph">
-<p>Nulla quis lacus in turpis viverra gravida.
-Ut scelerisque, libero vel tincidunt dapibus, risus felis ullamcorper velit, a commodo mi velit dictum quam.
-Duis porta sollicitudin nulla non dapibus.
-Nulla faucibus metus condimentum congue porttitor.
-Morbi sed mattis ligula, id iaculis turpis.
-Nullam vitae mi at leo commodo lobortis.
-Aliquam viverra nisl ullamcorper magna convallis tincidunt sit amet eget augue.
-Pellentesque pellentesque ex nec nisi egestas iaculis.
-Aliquam erat volutpat.
-Sed eget imperdiet massa.
-Donec ultricies nisi sit amet elementum tincidunt.
-In blandit nulla urna, vitae tempus ligula gravida quis.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Suspendisse volutpat mattis mauris, a convallis ex laoreet eu.
-Pellentesque augue turpis, elementum quis iaculis at, egestas id dolor.</p>
+<p>In the navigation explore section (on the bottom-left of the page), the Bonita Theme and Project ABC should be hidden on this page. But if you go on another page, the both entry should be available.</p>
 </div>
 </div>
 </div>
@@ -674,6 +349,18 @@ Pellentesque augue turpis, elementum quis iaculis at, egestas id dolor.</p>
 <script src="_/js/site.js"></script>
 <script async src="_/js/vendor/tabs.js" data-sync-storage-key="preferred-tab"></script>
 
+<script type="text/javascript">
+  docsearch({
+    container: '#docsearch',
+    appId: 'LWD25NX3CD',
+    apiKey: '6408f799f329e3a010e6a5ac397210d8',
+    indexName: 'bonitasoft',
+    hitsPerPage: 20,
+    searchParameters: {
+      facetFilters: [["version:dev"], "tags:bonita"],
+    }
+  });
+</script>
 
 
 <script>
