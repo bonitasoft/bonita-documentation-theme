@@ -8,7 +8,7 @@
     "url": "https://github.com/bonitasoft/bonita-documentation-theme"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": "18"
   },
   "browserslist": [
     "last 2 versions"
