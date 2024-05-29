@@ -8,7 +8,7 @@
     "url": "https://github.com/bonitasoft/bonita-documentation-theme"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": "18"
   },
   "browserslist": [
     "last 2 versions"
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@asciidoctor/tabs": "1.0.0-beta.6",
-    "@csstools/postcss-sass": "^4.0.0",
+    "@csstools/postcss-sass": "^5.1.1",
     "asciidoctor": "2.2.6",
     "autoprefixer": "~9.7",
     "browser-pack-flat": "~3.4",
@@ -41,7 +41,7 @@
     "gulp-connect": "~5.7",
     "gulp-eslint": "~6.0",
     "gulp-imagemin": "~6.2",
-    "gulp-postcss": "~8.0",
+    "gulp-postcss": "~10.0",
     "gulp-sass": "^5.0.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "~3.0",
