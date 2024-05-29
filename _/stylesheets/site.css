@@ -672,7 +672,6 @@ html.is-clipped--nav {
   .nav-container {
     width: var(--nav-width);
   }
-
   .nav {
     -webkit-box-shadow: 0.5px 0 3px var(--nav-border-color);
             box-shadow: 0.5px 0 3px var(--nav-border-color);
@@ -688,7 +687,6 @@ html.is-clipped--nav {
     top: 0;
     visibility: visible;
   }
-
   .nav {
     top: var(--navbar-height);
     -webkit-box-shadow: none;
@@ -696,7 +694,6 @@ html.is-clipped--nav {
     position: sticky;
     height: var(--nav-height--desktop);
   }
-
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
   }
@@ -713,17 +710,14 @@ html.is-clipped--nav {
             flex: auto;
     min-width: 0;
   }
-
   main > .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-
   aside.toc.embedded {
     display: none;
   }
-
   aside.toc.sidebar {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 var(--toc-width);
@@ -1019,7 +1013,6 @@ a + .breadcrumbs {
   .toc .toc-menu h3 {
     font-size: calc(15 / var(--rem-base) * 1rem);
   }
-
   .toc .toc-menu ul {
     font-size: calc(13.5 / var(--rem-base) * 1rem);
   }
@@ -1029,9 +1022,8 @@ a + .breadcrumbs {
 .doc {
   color: var(--doc-font-color);
   font-size: var(--doc-font-size);
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
   max-width: var(--doc-max-width);
@@ -1141,9 +1133,8 @@ a + .breadcrumbs {
 .doc h1 {
   color: var(--color-higlight);
   font-weight: var(--heading-font-weight);
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
@@ -1169,9 +1160,8 @@ a + .breadcrumbs {
 .doc h2 {
   color: var(--color-higlight);
   font-weight: var(--heading-font-weight);
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
@@ -1203,9 +1193,8 @@ a + .breadcrumbs {
 .doc h3 {
   color: var(--color-higlight);
   font-weight: var(--heading-font-weight);
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
@@ -1234,9 +1223,8 @@ a + .breadcrumbs {
 .doc h4 {
   color: var(--color-higlight);
   font-weight: var(--alt-heading-font-weight);
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
@@ -1262,9 +1250,8 @@ a + .breadcrumbs {
 .doc h5 {
   color: var(--color-higlight);
   font-weight: var(--alt-heading-font-weight);
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
@@ -1289,9 +1276,8 @@ a + .breadcrumbs {
 }
 .doc h6 {
   font-weight: var(--heading-font-weight);
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
@@ -1349,9 +1335,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -1463,9 +1448,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -1505,9 +1489,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   text-align: left;
   margin-top: 0.5rem;
@@ -1525,9 +1508,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -1548,9 +1530,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -1722,9 +1703,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -1969,9 +1949,8 @@ a + .breadcrumbs {
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -2034,9 +2013,8 @@ a + .breadcrumbs {
 }
 .doc b.button {
   white-space: nowrap;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc b.button::before {
   content: "[";
@@ -2058,9 +2036,8 @@ a + .breadcrumbs {
   vertical-align: text-bottom;
   white-space: nowrap;
   line-height: 1;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc .keyseq {
   line-height: 1;
@@ -2076,9 +2053,8 @@ a + .breadcrumbs {
   margin-right: 0;
 }
 .doc .menuseq {
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc .menuseq i.caret::before {
   content: "›";
@@ -2087,24 +2063,20 @@ a + .breadcrumbs {
   line-height: 0.9090909091;
 }
 .doc a.bare {
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc code {
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc .path {
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc .icon i::after {
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
 }
 .doc th.tableblock {
   word-break: break-word;
@@ -2504,19 +2476,15 @@ body {
   .navbar-menu > .navbar-item {
     color: var(--navbar-unfocused-font-color);
   }
-
   .navbar-menu > .navbar-item:hover {
     border-top: 4px solid var(--color-red-bonita);
   }
-
   .navbar-menu > .navbar-item a:hover {
     color: var(--navbar-focused-font-color);
   }
-
   .navbar-menu .navbar-link {
     color: var(--navbar-unfocused-font-color);
   }
-
   .navbar-menu .navbar-link::after {
     border-color: var(--navbar-unfocused-font-color);
     text-decoration: underline;
@@ -2527,7 +2495,6 @@ body {
   .navbar-menu-mobile {
     background: var(--color-smoke-50);
   }
-
   .navbar-menu-mobile .navbar-item {
     background-color: var(--color-white);
     border: 2px solid var(--color-white);
@@ -2536,30 +2503,25 @@ body {
     -webkit-box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
             box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
   }
-
   .navbar-menu-mobile .navbar-link {
     font-weight: bold;
   }
-
   .navbar-menu-mobile .navbar-link,
-.navbar-menu-mobile .navbar-item a {
+  .navbar-menu-mobile .navbar-item a {
     color: var(--color-nav-item);
   }
-
   .navbar-menu-mobile > a.navbar-item:hover,
-.navbar-menu-mobile .navbar-link:hover,
-.navbar-menu-mobile .navbar-item:hover,
-.navbar-menu-mobile .navbar-menu-mobile .navbar-item:hover a {
+  .navbar-menu-mobile .navbar-link:hover,
+  .navbar-menu-mobile .navbar-item:hover,
+  .navbar-menu-mobile .navbar-menu-mobile .navbar-item:hover a {
     background-color: var(--color-nav-item);
   }
-
   .navbar-menu-mobile > a.navbar-item:hover .navbar-link,
-.navbar-menu-mobile .navbar-link:hover .navbar-link,
-.navbar-menu-mobile .navbar-item:hover .navbar-link,
-.navbar-menu-mobile .navbar-menu-mobile .navbar-item:hover a .navbar-link {
+  .navbar-menu-mobile .navbar-link:hover .navbar-link,
+  .navbar-menu-mobile .navbar-item:hover .navbar-link,
+  .navbar-menu-mobile .navbar-menu-mobile .navbar-item:hover a .navbar-link {
     color: var(--color-white);
   }
-
   .navbar-menu-mobile.is-active {
     -webkit-box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
             box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
@@ -2568,8 +2530,8 @@ body {
 /* Layout for large screens */
 @media screen and (min-width: 1024px) {
   .navbar,
-.navbar-menu,
-.navbar-end {
+  .navbar-menu,
+  .navbar-end {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -2584,21 +2546,17 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
   .navbar-menu {
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
   }
-
   .navbar-menu-mobile {
     display: none;
   }
-
   .navbar-burger {
     display: none;
   }
-
   .navbar-item {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2607,12 +2565,10 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-
   a.navbar-item:hover {
     background-color: var(--navbar-unfocused-font-color);
     color: var(--color-blue-bonita);
   }
-
   .input-container {
     display: none;
   }
@@ -2624,7 +2580,6 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-
   .navbar-end {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2633,7 +2588,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-
   .navbar-brand .navbar-item {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2645,19 +2599,16 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-
   .navbar-brand {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-
   .bonita-logo {
     background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
     opacity: 1;
     background-size: contain;
   }
-
   .search-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2666,77 +2617,62 @@ body {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-
   .navbar-menu {
     display: none;
   }
-
   .navbar-menu-mobile {
     display: none;
   }
-
   .navbar-menu-mobile,
-.navbar-end {
+  .navbar-end {
     padding: 0.5rem 0;
   }
-
   .navbar-menu-mobile.is-active {
     display: block;
     position: fixed;
     width: 100%;
     z-index: var(--z-index-mobile-menu);
   }
-
   summary {
     padding-left: 10px;
     margin-bottom: 10px;
   }
-
   summary:focus {
     outline-style: none;
   }
-
   summary .navbar-link {
     padding: 0;
     display: inline;
   }
-
   .search-bar {
     line-height: 1.8;
     width: 100%;
     opacity: 1;
     border: none;
   }
-
   .search-bar::-webkit-input-placeholder {
     color: var(--color-gray-70);
     font-style: italic;
   }
-
   .search-bar::-moz-placeholder {
     color: var(--color-gray-70);
     font-style: italic;
   }
-
   .search-bar:-ms-input-placeholder {
     color: var(--color-gray-70);
     font-style: italic;
   }
-
   .search-bar::-ms-input-placeholder {
     color: var(--color-gray-70);
     font-style: italic;
   }
-
   .search-bar::placeholder {
     color: var(--color-gray-70);
     font-style: italic;
   }
-
   .label span {
     height: 1rem;
   }
-
   .navbar-nonProduction .hidden-xs {
     display: none;
   }
@@ -2846,15 +2782,12 @@ footer .footer-body .footer-footer .footer-bonita-logo {
   footer {
     padding: 1rem 2rem;
   }
-
   footer .footer-body {
     margin-top: 1rem;
   }
-
   footer .footer-body .footer-content {
     padding: 0;
   }
-
   footer .footer-body .social-links ul {
     padding: 0;
   }
@@ -2866,99 +2799,77 @@ footer .footer-body .footer-footer .footer-bonita-logo {
   .hide-for-print {
     display: none !important;
   }
-
   html {
     font-size: var(--body-font-size--print);
   }
-
   a {
     color: inherit !important;
     text-decoration: underline;
   }
-
   a.bare {
     text-decoration: none;
   }
-
   a[href^="#"] {
     text-decoration: none;
   }
-
   a[href^="mailto:"] {
     text-decoration: none;
   }
-
   tr {
     page-break-inside: avoid;
   }
-
   img {
     page-break-inside: avoid;
   }
-
   object {
     page-break-inside: avoid;
   }
-
   svg {
     page-break-inside: avoid;
   }
-
   thead {
     display: table-header-group;
   }
-
   pre {
-    -webkit-hyphens: none;
-        -ms-hyphens: none;
-            hyphens: none;
+    -ms-hyphens: none;
+        hyphens: none;
     white-space: pre-wrap;
   }
-
   body {
     padding-top: 2rem;
   }
-
   .navbar {
     background: none;
     color: inherit;
     position: absolute;
   }
-
   .navbar * {
     color: inherit !important;
   }
-
   #topbar-nav {
     display: none;
   }
-
   .nav-container {
     display: none;
   }
-
   .toolbar {
     display: none;
   }
-
   .doc {
     color: inherit;
     margin: auto;
     max-width: none;
     padding-bottom: 2rem;
   }
-
   .doc .listingblock code[data-lang] ::before {
     display: block;
   }
-
   footer.footer {
     background: none;
     border-top: 1px solid var(--panel-border-color);
     color: var(--quote-attribution-font-color);
     padding: 0.5rem;
   }
-
   .footer * {
     color: inherit;
   }
@@ -3026,9 +2937,8 @@ footer .footer-body .footer-footer .footer-bonita-logo {
   line-height: 1.4;
 }
 .card a .card-body {
-  -webkit-hyphens: initial;
-      -ms-hyphens: initial;
-          hyphens: initial;
+  -ms-hyphens: initial;
+      hyphens: initial;
 }
 .card a .card-content-overflow {
   --max-lines: 3;
@@ -3044,9 +2954,8 @@ footer .footer-body .footer-footer .footer-bonita-logo {
 .card-index a .card-title {
   font-size: 1.2em;
   text-align: center;
-  -webkit-hyphens: initial;
-      -ms-hyphens: initial;
-          hyphens: initial;
+  -ms-hyphens: initial;
+      hyphens: initial;
 }
 .card-index a::before {
   -webkit-transition: all 0.2s, -webkit-transform 0.2s;
