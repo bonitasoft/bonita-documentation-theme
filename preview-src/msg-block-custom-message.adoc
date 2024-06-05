@@ -2,6 +2,17 @@
 :page-editable: true
 :page-custom-message: This is a custom message. You can use it, for example, for a specific announcement, especially to advertise an upcoming product.
 
+.Click to see the *configuration* that display the message block
+[%collapsible]
+====
+[source,asciidoc]
+----
+// Add the following Asciidoc attribute in the antora.yml file of the component
+page-custom-message: This is a custom message. You can use it, for example, for a specific announcement, especially to advertise an upcoming product.
+----
+====
+
+
 == Title 1
 
 === Paragraph 1.1

@@ -5,6 +5,16 @@
 
 NOTE: This page is configured to hide the search bar and to not be editable.
 
+.Click to see the *configuration* that display the message block
+[%collapsible]
+====
+[source,asciidoc]
+----
+// Add the following Asciidoc attribute in the antora.yml file of the component
+page-out-of-support: true
+----
+====
+
 
 == Title 1
 
