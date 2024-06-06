@@ -2,6 +2,16 @@
 :page-editable: true
 :page-next-release: true
 
+.Click to see the *configuration* that display the message block
+[%collapsible]
+====
+[source,asciidoc]
+----
+// Add the following Asciidoc attribute in the antora.yml file of the component
+page-next-release: true
+----
+====
+
 
 == Title 1
 
