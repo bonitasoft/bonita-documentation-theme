@@ -1,74 +1,44 @@
 /* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+// Need to be on top of the file to avoid the flash after the content loaded
+document.querySelector('html').setAttribute('data-theme', isDarkTheme() ? 'dark' : 'light')
 
-function toDarkTheme (resolve) {
-  localStorage.setItem('theme', 'dark')
-  document.querySelector('html').setAttribute('data-theme', 'dark')
-
-  // Update highlight js theme
-  enableHightLightDarkTheme(true)
-  // Promise.resolve if existing
-  resolve && resolve()
-}
-
-function toLightTheme (resolve) {
-  localStorage.setItem('theme', 'light')
-  document.querySelector('html').setAttribute('data-theme', 'light')
-
-  // Update highlight js theme
-  enableHightLightDarkTheme(false)
-  // Promise.resolve if existing
-  resolve && resolve()
-}
-
-// Update highlight js to dark theme if dark = true
-function enableHightLightDarkTheme (dark) {
-  var hljsCssLink = document.getElementById('highlight-style-lnk')
-  if (hljsCssLink) {
-    var currentHref = hljsCssLink.getAttribute('href')
-    var cssHref = currentHref.replace('-dark', '-light')
-    if (dark) {
-      cssHref = currentHref.replace('-light', '-dark')
-    }
-    hljsCssLink.setAttribute('href', cssHref)
-  } else {
-    console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
-  }
-}
-
-function performThemeSwitch (checkbox, switchBall) {
-  setTimeout(function () {
-    const themeSwitchPromise = new Promise((resolve) => {
-      if (checkbox.checked) {
-        toDarkTheme(resolve)
-      } else {
-        toLightTheme(resolve)
-      }
-    })
-
-    themeSwitchPromise.finally(function () {
-      switchBall.innerHTML = ''
-    })
-  }, 100)
-}
-
-// create the loader div
-const loader = document.createElement('div')
-loader.classList.add('lds-dual-ring')
-
-function toggleDarkThemeMode (checkbox) {
-  const switchBall = document.querySelector('.theme-switch-wrapper .toggle-content .label .ball')
-  switchBall.appendChild(loader)
-  performThemeSwitch(checkbox, switchBall)
-}
-
+// Check if user has set a theme preference in localStorage or in browser preferences
 function isDarkTheme () {
-  return localStorage.getItem('theme') === 'dark' ? 'checked' : 'unchecked'
+  const localThemeSetting = localStorage.getItem('theme')
+  return !localThemeSetting
+    ? window.matchMedia('(prefers-color-scheme: dark)').matches
+    : localThemeSetting === 'dark'
 }
 
-// init
-if (localStorage.getItem('theme') === 'dark') {
-  toDarkTheme()
-} else {
-  toLightTheme()
-}
+document.addEventListener('DOMContentLoaded', () => {
+  function updateTheme (isDarkTheme) {
+    // Switch  HighlightJs to theme
+    function enableHighLightJsTheme (isDarkTheme) {
+      const hljsCssLink = document.getElementById('highlight-style-lnk')
+      if (hljsCssLink) {
+        const currentHref = hljsCssLink.getAttribute('href')
+        let cssHref = currentHref.replace('-dark', '-light')
+        if (isDarkTheme) {
+          cssHref = currentHref.replace('-light', '-dark')
+        }
+        hljsCssLink.setAttribute('href', cssHref)
+      } else {
+        console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
+      }
+    }
+    document.querySelector('html').setAttribute('data-theme', isDarkTheme ? 'dark' : 'light')
+    enableHighLightJsTheme(isDarkTheme)
+  }
+
+  const checkboxTheme = document.getElementById('theme-switch')
+
+  checkboxTheme.addEventListener('change', (event) => {
+    const isDarkTheme = event.currentTarget.checked
+    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light')
+    updateTheme(isDarkTheme)
+  })
+
+  const darkThemeChecked = isDarkTheme()
+  updateTheme(darkThemeChecked)
+  checkboxTheme.checked = darkThemeChecked
+})
