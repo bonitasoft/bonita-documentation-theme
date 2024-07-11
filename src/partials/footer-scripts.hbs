@@ -35,16 +35,3 @@
 });
 
 </script>
-<script>
-  // init toggle state
-  const isDarkThemeEnable = localStorage.getItem('theme') === 'dark';
-  initializeThemeToggleIfAvailable('check', isDarkThemeEnable);
-  initializeThemeToggleIfAvailable('check-mobile', isDarkThemeEnable);
-
-  function initializeThemeToggleIfAvailable(elementId, checked) {
-    const checkElement = document.getElementById(elementId);
-    if(checkElement) {
-      checkElement.checked = checked;
-    }
-  }
-</script>
