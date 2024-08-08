@@ -15,8 +15,13 @@ on:
       - '.github/actions/build-setup/**/*'
       - '.github/workflows/publish-online-example.yml'
 
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  generate_theme_example:
+  build:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -27,27 +32,23 @@ jobs:
         env:
           BONITA_THEME_URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
       - name: Upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: theme-example-${{github.sha}}
           path: public
 
-  push_examples_to_gh_pages:
-    if: github.event.ref == 'refs/heads/master'
-    runs-on: ubuntu-22.04
-    needs: generate_theme_example
+  deploy:
+    needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      contents: write # Push to gh-pages
+      contents: read
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+      actions: read # to download an artifact uploaded by `actions/upload-pages-artifact@v3`
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
     steps:
-      - name: Download
-        uses: actions/download-artifact@v4
-        with:
-          name: theme-example-${{github.sha}}
-      - name: Push to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          keep_files: true
-          user_name: 'bonita-theme-bot'
-          user_email: 'bonita-theme-bot@users.noreply.github.com'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
