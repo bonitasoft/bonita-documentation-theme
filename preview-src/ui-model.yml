@@ -72,6 +72,8 @@ page:
   editUrl: https://example.com/project-bonita/edit/master/index.adoc
   origin:
     private: false
+  latest:
+    url: /bonita/latest/my-page.html
   previous:
     content: Cards
     url: '/bonita/dev/cards.html'
