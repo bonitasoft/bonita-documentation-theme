@@ -25,6 +25,13 @@ body {
   &::after {
     box-sizing: inherit;
   }
+
+  // Smooth transitions between themes
+  --duration: 1s;
+  --timing: ease;
+  transition:
+    color var(--duration) var(--timing),
+    background-color var(--duration) var(--timing);
 }
 
 @media screen and (min-width: 1024px) {
