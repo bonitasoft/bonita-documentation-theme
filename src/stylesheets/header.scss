@@ -188,7 +188,7 @@ body {
 }
 
 /**************************
-********* TOGGLE **********
+********* TOGGLE THEME ****
 ***************************/
 
 .theme-switch-wrapper {
@@ -204,61 +204,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
-}
+  //transition: background 0.1s ease; // TODO check if this is necessary
 
-.checkbox {
-  display: none;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
   background: var(--color-blue-bonita);
-  border: 2px solid var(--color-focused);
   opacity: 0.85;
   border-radius: 5rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.3rem;
-  height: 1.8rem;
-  width: 3.8rem;
+  height: 2.2rem;
+  width: 2.2rem;
   font-size: 0.9rem;
-  transition: background 0.5s ease;
   cursor: pointer;
-  z-index: 1;
 
   &:hover {
     opacity: 1;
-
-    .ball {
-      box-shadow: 0 0 5px 3px var(--color-blue-bright);
-    }
-  }
-}
-
-.label .ball {
-  position: absolute;
-  background-color: var(--color-focused);
-  border-radius: 50%;
-  left: 0.25rem;
-  height: 1.3rem;
-  width: 1.3rem;
-  transform: translateX(0);
-
-  &:hover {
+    //background-color: var(--color-focused); // TODO find the right color
     box-shadow: 0 0 5px 3px var(--color-blue-bright);
   }
 }
 
-.checkbox:checked + .toggle-content .label .ball {
-  transform: translateX(1.7rem);
+// TODO svg fill color candidate var(--color-focused)
+.theme-selector {
+  display: none;
 }
 
-.checkbox:checked + .toggle-content {
-  --dark-opacity: 1;
-  --light-opacity: 0;
+html[data-theme-system="true"] .theme-selector-system {
+  display: block;
 }
+
+html[data-theme-system="false"][data-theme="dark"] .theme-selector-dark,
+html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
+  display: block;
+}
+
 
 /**************************
 ****** Media Queries ******
