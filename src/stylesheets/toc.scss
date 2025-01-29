@@ -22,6 +22,15 @@
     }
   }
 }
+.toc-with-message-block.sidebar {
+  .toc-menu {
+    top: var(--toc-top-with-message-block);
+  }
+
+  ul {
+    max-height: var(--toc-height-with-message-block);
+  }
+}
 
 .toc {
   .toc-menu {

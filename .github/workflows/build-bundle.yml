@@ -1,0 +1,42 @@
+name: Build bundle
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'gulpfile.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'gulp.d/**/*'
+      - 'src/**/*'
+      - 'preview-src/**/*'
+      - '.github/actions/build-setup/**/*'
+      - '.github/workflows/build-bundle.yml'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'gulpfile.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'gulp.d/**/*'
+      - 'src/**/*'
+      - 'preview-src/**/*'
+      - '.github/actions/build-setup/**/*'
+      - '.github/workflows/build-bundle.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Setup
+        uses: ./.github/actions/build-setup
+      - name: Bundle documentation theme
+        run: npm run bundle
+      - name: Upload bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-bundle-${{github.sha}}
+          path: build/ui-bundle.zip
