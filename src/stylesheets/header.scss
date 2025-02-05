@@ -188,7 +188,7 @@ body {
 }
 
 /**************************
-********* TOGGLE **********
+********* TOGGLE THEME ****
 ***************************/
 
 .theme-switch-wrapper {
@@ -198,67 +198,52 @@ body {
   padding: 0.5rem;
 }
 
-.toggle-content {
+.theme-switch-container {
   background-color: transparent;
   color: var(--navbar-menu-font-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
-}
 
-.checkbox {
-  display: none;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
-  background: var(--color-blue-bonita);
-  border: 2px solid var(--color-focused);
   opacity: 0.85;
   border-radius: 5rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.3rem;
-  height: 1.8rem;
-  width: 3.8rem;
+  height: 2.2rem;
+  width: 2.2rem;
   font-size: 0.9rem;
-  transition: background 0.5s ease;
   cursor: pointer;
-  z-index: 1;
 
   &:hover {
     opacity: 1;
-
-    .ball {
-      box-shadow: 0 0 5px 3px var(--color-blue-bright);
-    }
-  }
-}
-
-.label .ball {
-  position: absolute;
-  background-color: var(--color-focused);
-  border-radius: 50%;
-  left: 0.25rem;
-  height: 1.3rem;
-  width: 1.3rem;
-  transform: translateX(0);
-
-  &:hover {
     box-shadow: 0 0 5px 3px var(--color-blue-bright);
   }
 }
 
-.checkbox:checked + .toggle-content .label .ball {
-  transform: translateX(1.7rem);
+.theme-selector {
+  display: none;
+  width: 70%;
+  height: 70%;
+  background-color: var(--navbar-unfocused-font-color);
 }
 
-.checkbox:checked + .toggle-content {
-  --dark-opacity: 1;
-  --light-opacity: 0;
+html[data-theme-system="true"] .theme-selector-system {
+  display: block;
+  // based on https://fonts.google.com/icons?icon.query=routine&icon.set=Material+Symbols&selected=Material+Symbols+Outlined:routine:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M396-396q-32-32-58.5-67T289-537q-5 14-6.5 28.5T281-480q0 83 58 141t141 58q14 0 28.5-2t28.5-6q-39-22-74-48.5T396-396Zm57-56q51 51 114 87.5T702-308q-40 51-98 79.5T481-200q-117 0-198.5-81.5T201-480q0-65 28.5-123t79.5-98q20 72 56.5 135T453-452Zm290 72q-20-5-39.5-11T665-405q8-18 11.5-36.5T680-480q0-83-58.5-141.5T480-680q-20 0-38.5 3.5T405-665q-8-19-13.5-38T381-742q24-9 49-13.5t51-4.5q117 0 198.5 81.5T761-480q0 26-4.5 51T743-380ZM440-840v-120h80v120h-80Zm0 840v-120h80V0h-80Zm323-706-57-57 85-84 57 56-85 85ZM169-113l-57-56 85-85 57 57-85 84Zm671-327v-80h120v80H840ZM0-440v-80h120v80H0Zm791 328-85-85 57-57 84 85-56 57ZM197-706l-84-85 56-57 85 85-57 57Zm199 310Z"/></svg>') no-repeat center / contain;
 }
+
+html[data-theme-system="false"][data-theme="dark"] .theme-selector-dark  {
+  display: block;
+  // based on https://fonts.google.com/icons?icon.query=dark&icon.set=Material+Symbols&selected=Material+Symbols+Outlined:dark_mode:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>') no-repeat center / contain;
+}
+
+html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
+  display: block;
+  // based on https://fonts.google.com/icons?icon.query=sunny&icon.set=Material+Symbols&selected=Material+Symbols+Outlined:wb_sunny:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M440-800v-120h80v120h-80Zm0 760v-120h80v120h-80Zm360-400v-80h120v80H800Zm-760 0v-80h120v80H40Zm708-252-56-56 70-72 58 58-72 70ZM198-140l-58-58 72-70 56 56-70 72Zm564 0-70-72 56-56 72 70-58 58ZM212-692l-72-70 58-58 70 72-56 56Zm268 452q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q67 0 113.5-46.5T640-480q0-67-46.5-113.5T480-640q-67 0-113.5 46.5T320-480q0 67 46.5 113.5T480-320Zm0-160Z"/></svg>') no-repeat center / contain;
+}
+
 
 /**************************
 ****** Media Queries ******
