@@ -21,7 +21,6 @@ function isUsingSystemPreferences () {
 }
 
 const themeOrder = ['system', 'dark', 'light']
-// let currentTheme = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   function updateTheme () {
