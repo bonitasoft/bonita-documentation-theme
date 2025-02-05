@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-function updateHtmlThemeAttribute() {
-  const rootHtmlElement = document.querySelector('html');
+function updateHtmlThemeAttribute () {
+  const rootHtmlElement = document.querySelector('html')
   rootHtmlElement.setAttribute('data-theme', isDarkTheme() ? 'dark' : 'light')
   rootHtmlElement.setAttribute('data-theme-system', isUsingSystemPreferences())
 }
@@ -16,7 +16,7 @@ function isDarkTheme () {
     : localThemeSetting === 'dark'
 }
 
-function isUsingSystemPreferences() {
+function isUsingSystemPreferences () {
   return !localStorage.getItem('theme')
 }
 
@@ -46,14 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const themeSwitcher = document.getElementById('theme-switcher')
   themeSwitcher.addEventListener('click', (_event) => {
-    const currentTheme = isUsingSystemPreferences() ? 'system' : isDarkTheme() ? 'dark' : 'light'
+    function getCurrentTheme () {
+      if (isUsingSystemPreferences()) {
+        return 'system'
+      } else {
+        return isDarkTheme() ? 'dark' : 'light'
+      }
+    }
+
+    const currentTheme = getCurrentTheme()
 
     const newTheme = themeOrder.indexOf(currentTheme) === themeOrder.length - 1
-      ?  themeOrder[0]
-      :  themeOrder[themeOrder.indexOf(currentTheme) + 1]
+      ? themeOrder[0]
+      : themeOrder[themeOrder.indexOf(currentTheme) + 1]
 
-    // 3 states are managed with a single variable. When theme is undefined, it means that the theme is managed by system preferences
-    if(newTheme === 'system') {
+    // 3 states are managed with a single variable
+    // When theme is undefined, it means that the theme is managed by system preferences
+    if (newTheme === 'system') {
       localStorage.removeItem('theme')
     } else {
       localStorage.setItem('theme', newTheme)
