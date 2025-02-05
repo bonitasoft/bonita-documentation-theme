@@ -27,6 +27,19 @@ body {
   }
 }
 
+// Smooth transitions between themes
+.article,
+.navbar,
+.nav-menu,
+.toolbar,
+{
+    --duration: 1s;
+    --timing: ease;
+    transition:
+      color var(--duration) var(--timing),
+      background-color var(--duration) var(--timing);
+}
+
 @media screen and (min-width: 1024px) {
   html {
     font-size: var(--body-font-size--desktop);
