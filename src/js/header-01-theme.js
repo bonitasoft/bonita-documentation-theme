@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // TODO improve this
+    const bodyElement = document.querySelector('body')
+    bodyElement.classList.add('theme-transition')
+
     updateHtmlThemeAttribute()
     enableHighLightJsTheme()
   }

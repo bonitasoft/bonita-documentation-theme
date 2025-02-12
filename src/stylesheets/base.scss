@@ -28,10 +28,12 @@ body {
 }
 
 // Smooth transitions between themes
-.article,
-.navbar,
-.nav-menu,
-.toolbar,
+// TODO test nested selectors body.theme-transition {
+body.theme-transition .article,
+//body.theme-transition .content,
+body.theme-transition .navbar,
+body.theme-transition .nav-menu,
+body.theme-transition .toolbar,
 {
     --duration: 1s;
     --timing: ease;
