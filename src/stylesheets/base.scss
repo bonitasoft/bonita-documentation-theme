@@ -35,6 +35,8 @@ body {
 //.nav-menu, // this seems not apply changes to the
 .toolbar,
 .hljs, // for highligtjs block
+  // TODO AsciiDoc tabs, no configured background color for dark mode
+.content .tabs, // AsciiDoc tabs
 // TODO test nested selectors body.theme-transition {
 //body.theme-transition .article,
 ////body.theme-transition .content,
