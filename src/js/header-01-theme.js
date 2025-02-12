@@ -20,7 +20,9 @@ function isUsingSystemPreferences () {
   return !localStorage.getItem('theme')
 }
 
-const themeOrder = ['system', 'dark', 'light']
+// TODO restore system
+const themeOrder = ['dark', 'light']
+// const themeOrder = ['system', 'dark', 'light']
 
 document.addEventListener('DOMContentLoaded', () => {
   function updateTheme () {
