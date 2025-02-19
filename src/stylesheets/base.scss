@@ -26,7 +26,8 @@ body {
     box-sizing: inherit;
   }
 }
-  // Smooth transitions between themes
+
+// Smooth transitions between themes
 body.theme-transition {
   //.doc,
   //.sidebar,
@@ -38,14 +39,9 @@ body.theme-transition {
 .toolbar,
 .hljs, // for highligtjs block
 .content .tabs, // AsciiDoc tabs
-  // TODO docsearch background
+.DocSearch-Button,  // TODO docsearch background
+  //.DocSearch-Button-Key, // TODO not working
 
-// TODO test nested selectors body.theme-transition {
-//body.theme-transition .article,
-////body.theme-transition .content,
-////body.theme-transition .navbar, // no needed
-//body.theme-transition .nav-menu,
-//body.theme-transition .toolbar,
 {
     --duration: 2s;
     --timing: ease;
