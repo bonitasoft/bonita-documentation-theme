@@ -28,15 +28,18 @@ body {
 }
   // Smooth transitions between themes
 body.theme-transition {
-// TODO remove selector for navbar, the color and background color are the same in both light and dark
+  //.doc,
+  //.sidebar,
 .article,
+// TODO remove selector for navbar, the color and background color are the same in both light and dark
 //.navbar,
-.nav, // TODO we may not apply the transition to the element of the nav
+.nav, // TODO seems that we apply the transition several times in inner elements
 //.nav-menu, // this seems not apply changes to the
 .toolbar,
 .hljs, // for highligtjs block
-  // TODO AsciiDoc tabs, no configured background color for dark mode
 .content .tabs, // AsciiDoc tabs
+  // TODO docsearch background
+
 // TODO test nested selectors body.theme-transition {
 //body.theme-transition .article,
 ////body.theme-transition .content,
