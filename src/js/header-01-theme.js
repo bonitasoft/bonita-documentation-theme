@@ -5,8 +5,26 @@ function updateHtmlThemeAttribute () {
   rootHtmlElement.setAttribute('data-theme-system', isUsingSystemPreferences())
 }
 
+// Switch  HighlightJs to theme
+function enableHighLightJsTheme () {
+  const hljsCssLink = document.getElementById('highlight-style-lnk')
+  if (hljsCssLink) {
+    const currentHref = hljsCssLink.getAttribute('href')
+    let cssHref = currentHref.replace('-dark', '-light')
+    if (isDarkTheme()) {
+      cssHref = currentHref.replace('-light', '-dark')
+    }
+    hljsCssLink.setAttribute('href', cssHref)
+  } else {
+    console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
+  }
+}
+
+// TODO introduce a single function to update the theme (see duplication in updateTheme)
 // Need to be on top of the file (i.e. run at page initialization) to avoid the flash after the content loaded
 updateHtmlThemeAttribute()
+// Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
+enableHighLightJsTheme()
 
 // Check if user has set a theme preference in localStorage or in browser preferences
 function isDarkTheme () {
@@ -26,27 +44,14 @@ const themeOrder = ['dark', 'light']
 
 document.addEventListener('DOMContentLoaded', () => {
   function updateTheme () {
-    // Switch  HighlightJs to theme
-    function enableHighLightJsTheme () {
-      const hljsCssLink = document.getElementById('highlight-style-lnk')
-      if (hljsCssLink) {
-        const currentHref = hljsCssLink.getAttribute('href')
-        let cssHref = currentHref.replace('-dark', '-light')
-        if (isDarkTheme()) {
-          cssHref = currentHref.replace('-light', '-dark')
-        }
-        hljsCssLink.setAttribute('href', cssHref)
-      } else {
-        console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
-      }
-    }
-
     // TODO improve this
     const bodyElement = document.querySelector('body')
     bodyElement.classList.add('theme-transition')
 
     updateHtmlThemeAttribute()
     enableHighLightJsTheme()
+
+    // TODO after a few seconds, remove the theme-transition class
   }
 
   const themeSwitcher = document.getElementById('theme-switcher')
@@ -74,7 +79,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateTheme()
   })
-
-  // Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
-  updateTheme()
 })

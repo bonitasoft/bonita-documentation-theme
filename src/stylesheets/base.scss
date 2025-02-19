@@ -26,8 +26,8 @@ body {
     box-sizing: inherit;
   }
 }
-
-// Smooth transitions between themes
+  // Smooth transitions between themes
+body.theme-transition {
 // TODO remove selector for navbar, the color and background color are the same in both light and dark
 .article,
 //.navbar,
@@ -49,6 +49,7 @@ body {
     transition:
       color var(--duration) var(--timing),
       background-color var(--duration) var(--timing);
+}
 }
 
 @media screen and (min-width: 1024px) {
