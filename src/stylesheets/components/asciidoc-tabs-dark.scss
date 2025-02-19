@@ -1,0 +1,23 @@
+// This is a custom override for the AsciiDoc tabs component which does not provide rules for dark mode in version 1.0.0-beta.6
+
+html[data-theme="dark"] {
+  .tabs {
+    .tablist li {
+      &.is-selected,
+      &.is-selected::after {
+        background-color: var(--color-smoke-90);
+        border-color: var(--color-smoke-90);
+      }
+
+      &:not(.is-selected) {
+        border-color: var(--color-smoke-50);
+        background-color: var(--color-smoke-50);
+      }
+    }
+
+    .tabpanel {
+      background-color: var(--color-smoke-90);
+      border-color: var(--color-smoke-90);
+    }
+  }
+}
