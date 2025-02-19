@@ -47,7 +47,7 @@
   --color-higlight-link: #005889;
   --color-footer: #e6e6e6;
   --color-card-border: #ebf2f2;
-  --color-code-background: #f9f2f4;
+  --color-code-background: var(--pre-background);
   --color-code-font: #c7254e;
   --color-troubleshooting-border: var(--color-admonition-important-bg);
   --color-pagination-border: #dadde1;
