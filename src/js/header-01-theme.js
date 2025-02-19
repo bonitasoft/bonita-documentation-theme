@@ -5,7 +5,7 @@ function updateHtmlThemeAttribute () {
   rootHtmlElement.setAttribute('data-theme-system', isUsingSystemPreferences())
 }
 
-// Switch  HighlightJs to theme
+// Use the HighlightJs CSS file matching the theme
 function enableHighLightJsTheme () {
   const hljsCssLink = document.getElementById('highlight-style-lnk')
   if (hljsCssLink) {
@@ -28,10 +28,6 @@ function updateTheme () {
 
 // Need to be on top of the file (i.e. run at page initialization) to avoid the flash after the content loaded
 updateTheme()
-// // Need to be on top of the file (i.e. run at page initialization) to avoid the flash after the content loaded
-// updateHtmlThemeAttribute()
-// // Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
-// enableHighLightJsTheme()
 
 // Check if user has set a theme preference in localStorage or in browser preferences
 function isDarkTheme () {
@@ -50,19 +46,6 @@ const themeOrder = ['dark', 'light']
 // const themeOrder = ['system', 'dark', 'light']
 
 document.addEventListener('DOMContentLoaded', () => {
-  // function updateTheme () {
-  //   const bodyClassList = document.querySelector('body').classList;
-  //   bodyClassList.add('theme-transition')
-  //
-  //   updateHtmlThemeAttribute()
-  //   enableHighLightJsTheme()
-  //
-  //   // Remove theme-transition class after transition completes to avoid side effects (for example, when hovering over the left menu)
-  //   setTimeout(() => {
-  //     bodyClassList.remove('theme-transition')
-  //   }, 3000) // TODO must be a little larger than the duration of the transition in CSS
-  // }
-
   const themeSwitcher = document.getElementById('theme-switcher')
   themeSwitcher.addEventListener('click', (_event) => {
     function getCurrentTheme () {
@@ -90,8 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const bodyClassList = document.querySelector('body').classList;
     bodyClassList.add('theme-transition')
 
-    // updateHtmlThemeAttribute()
-    // enableHighLightJsTheme()
     updateTheme()
 
     // Remove theme-transition class after transition completes to avoid side effects (for example, when hovering over the left menu)
