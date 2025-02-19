@@ -210,10 +210,11 @@ body {
   border-radius: 5rem;
   height: 2.2rem;
   width: 2.2rem;
-  font-size: 0.9rem;
+  border-width: 0;
+  padding: 0;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &:focus {
     opacity: 1;
     box-shadow: 0 0 5px 3px var(--color-blue-bright);
   }
