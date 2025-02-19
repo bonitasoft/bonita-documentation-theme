@@ -4,7 +4,8 @@ site:
     forceDisplaySearchBar: false
     hideEditPageLinks: false
     hideNavbarComponentsList: false
-    nonProduction: false
+    nonProduction: true
+    prLink: https://github.com/bonitasoft/bonita-documentation-theme/pulls
   # Can be changed by setting the BONITA_THEME_URL environment variable when building
   url: http://localhost:5252
   title: Bonita Documentation Theme Preview
