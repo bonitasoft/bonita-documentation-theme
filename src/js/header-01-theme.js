@@ -5,8 +5,29 @@ function updateHtmlThemeAttribute () {
   rootHtmlElement.setAttribute('data-theme-system', isUsingSystemPreferences())
 }
 
+// Use the HighlightJs CSS file matching the theme
+function enableHighLightJsTheme () {
+  const hljsCssLink = document.getElementById('highlight-style-lnk')
+  if (hljsCssLink) {
+    const currentHref = hljsCssLink.getAttribute('href')
+    let cssHref = currentHref.replace('-dark', '-light')
+    if (isDarkTheme()) {
+      cssHref = currentHref.replace('-light', '-dark')
+    }
+    hljsCssLink.setAttribute('href', cssHref)
+  } else {
+    console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
+  }
+}
+
+function updateTheme () {
+  updateHtmlThemeAttribute()
+  // Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
+  enableHighLightJsTheme()
+}
+
 // Need to be on top of the file (i.e. run at page initialization) to avoid the flash after the content loaded
-updateHtmlThemeAttribute()
+updateTheme()
 
 // Check if user has set a theme preference in localStorage or in browser preferences
 function isDarkTheme () {
@@ -20,29 +41,11 @@ function isUsingSystemPreferences () {
   return !localStorage.getItem('theme')
 }
 
-const themeOrder = ['system', 'dark', 'light']
+// TODO restore system
+const themeOrder = ['dark', 'light']
+// const themeOrder = ['system', 'dark', 'light']
 
 document.addEventListener('DOMContentLoaded', () => {
-  function updateTheme () {
-    // Switch  HighlightJs to theme
-    function enableHighLightJsTheme () {
-      const hljsCssLink = document.getElementById('highlight-style-lnk')
-      if (hljsCssLink) {
-        const currentHref = hljsCssLink.getAttribute('href')
-        let cssHref = currentHref.replace('-dark', '-light')
-        if (isDarkTheme()) {
-          cssHref = currentHref.replace('-light', '-dark')
-        }
-        hljsCssLink.setAttribute('href', cssHref)
-      } else {
-        console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
-      }
-    }
-
-    updateHtmlThemeAttribute()
-    enableHighLightJsTheme()
-  }
-
   const themeSwitcher = document.getElementById('theme-switcher')
   themeSwitcher.addEventListener('click', (_event) => {
     function getCurrentTheme () {
@@ -66,9 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       localStorage.setItem('theme', newTheme)
     }
-    updateTheme()
-  })
 
-  // Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
-  updateTheme()
+    const bodyClassList = document.querySelector('body').classList;
+    bodyClassList.add('theme-transition')
+
+    updateTheme()
+
+    // TODO validate if this is needed
+    // Remove theme-transition class after transition completes to avoid side effects (for example, when hovering over the left menu)
+    // setTimeout(() => {
+    //   bodyClassList.remove('theme-transition')
+    // }, 3000) // TODO must be a little larger than the duration of the transition in CSS
+  })
 })
