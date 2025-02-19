@@ -7,7 +7,15 @@
 
       {{#if site.keys.nonProduction}}
       <div class="navbar-item-nonProduction">
-        <p>{{{site.title}}}</p>
+        <p>
+          {{#if site.keys.prLink}}
+            <a href="{{{site.keys.prLink}}}" target="_blank" rel="noopener noreferrer" class="pr-link" title="View pull request">
+              {{site.title}}
+              </a>
+          {{else}}
+            {{site.title}}
+          {{/if}}
+        </p>
       </div>
       {{/if}}
     </div>
