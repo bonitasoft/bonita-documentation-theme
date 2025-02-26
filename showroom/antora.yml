@@ -1,5 +1,8 @@
 name: showroom
 title: Showroom
 version: 1.0
+asciidoc:
+  attributes:
+    page-hide-search-bar: true
 nav:
   - modules/ROOT/nav.adoc
