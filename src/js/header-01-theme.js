@@ -74,12 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     bodyClassList.add('theme-transition')
 
     updateTheme()
-
-    // TODO validate if this is needed
-    // Remove theme-transition class after transition completes to avoid side effects
-    // (for example, when hovering over the left menu)
-    // setTimeout(() => {
-    //   bodyClassList.remove('theme-transition')
-    // }, 3000) // TODO must be a little larger than the duration of the transition in CSS
   })
 })
