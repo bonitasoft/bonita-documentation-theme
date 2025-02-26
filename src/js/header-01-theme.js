@@ -22,11 +22,11 @@ function enableHighLightJsTheme () {
 
 function updateTheme () {
   updateHtmlThemeAttribute()
-  // Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
   enableHighLightJsTheme()
 }
 
-// Need to be on top of the file (i.e. run at page initialization) to avoid the flash after the content loaded
+// Ensure that the right theme is used when the page loads
+// Must be placed at the head of the page (i.e. executed at page initialization) to avoid flash after content loading
 updateTheme()
 
 // Check if user has set a theme preference in localStorage or in browser preferences
