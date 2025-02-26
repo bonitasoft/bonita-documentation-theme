@@ -35,6 +35,9 @@ body.theme-transition {
 // TODO remove selector for navbar, the color and background color are the same in both light and dark
 //.navbar,
 .nav, // TODO seems that we apply the transition several times in inner elements
+.nav .context, // Components selector (title)
+.nav .components, // Components selector (list)
+
 //.nav-menu, // this seems not apply changes to the
 .toolbar,
 .hljs, // for highligtjs block
