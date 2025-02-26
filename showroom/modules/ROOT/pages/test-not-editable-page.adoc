@@ -1,0 +1,15 @@
+= Not Editable Page
+:!page-editable: // keep this test page as non editable
+
+NOTE: This page is configured to be 'not editable'.
+
+== How to do it
+
+Add this following syntax in Asciidoctor attributes (just after the page title)
+
+[source,asciidoc]
+----
+:!page-editable: // keep this test page as non editable
+----
+
+

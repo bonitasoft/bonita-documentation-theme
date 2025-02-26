@@ -1,0 +1,80 @@
+= Tabs block with groups synchronization
+:tabs-sync-option:
+
+Source: https://github.com/asciidoctor/asciidoctor-tabs
+
+[tabs,sync-group-id=group-1]
+====
+Tab A:: Triggers selection of Tab A in second tabset.
+Tab B:: Triggers selection of Tab B in second tabset.
+====
+
+.Click to see the *source code*
+[%collapsible]
+========
+[source,asciidoc]
+----
+[tabs,sync-group-id=group-1]
+====
+Tab A:: Triggers selection of Tab A in second tabset.
+Tab B:: Triggers selection of Tab B in second tabset.
+====
+----
+========
+
+[tabs,sync-group-id=group-1]
+====
+Tab A:: Triggers selection of Tab A in first tabset.
+Tab B:: Triggers selection of Tab B in first tabset.
+====
+
+.Click to see the *source code*
+[%collapsible]
+========
+[source,asciidoc]
+----
+[tabs,sync-group-id=group-1]
+====
+Tab A:: Triggers selection of Tab A in first tabset.
+Tab B:: Triggers selection of Tab B in first tabset.
+====
+----
+========
+
+[tabs,sync-group-id=group-2]
+====
+Tab A:: Triggers selection of Tab A in fourth tabset.
+Tab B:: Triggers selection of Tab B in fourth tabset.
+====
+
+.Click to see the *source code*
+[%collapsible]
+========
+[source,asciidoc]
+----
+[tabs,sync-group-id=group-2]
+====
+Tab A:: Triggers selection of Tab A in fourth tabset.
+Tab B:: Triggers selection of Tab B in fourth tabset.
+====
+----
+========
+
+[tabs,sync-group-id=group-2]
+====
+Tab A:: Triggers selection of Tab A in third tabset.
+Tab B:: Triggers selection of Tab B in third tabset.
+====
+
+.Click to see the *source code*
+[%collapsible]
+========
+[source,asciidoc]
+----
+[tabs,sync-group-id=group-2]
+====
+Tab A:: Triggers selection of Tab A in third tabset.
+Tab B:: Triggers selection of Tab B in third tabset.
+====
+----
+========

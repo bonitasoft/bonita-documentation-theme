@@ -1,0 +1,28 @@
+= Awesome icons
+:page-editable: true
+
+Antora support the use of a rich icon set (here thanks to font-awesome project). Your can find all the details here : https://docs.asciidoctor.org/asciidoc/latest/macros/icon-macro/
+
+You can explore the free icons here : https://fontawesome.com/search?o=r&m=free
+
+== Anatomy
+
+The icon macro is an inline macro. Like other inline macros, its syntax follows the familiar pattern of the macro name and target separated by a colon followed by an attribute list enclosed in square brackets.
+
+[source, asciidoc]
+----
+icon:<target>[<attrlist>]
+----
+
+The <target> is the icon name or path. The <attrlist> specifies various named attributes to configure how the icon is displayed.
+
+== Example
+
+The following snippet :
+
+[source, asciidoc]
+----
+icon:face-grin-tongue-squint[2x,role=blue] icon:beer[5x,role=green]
+----
+
+should render as :  icon:face-grin-tongue-squint[2x,role=blue] icon:beer[5x,role=green]

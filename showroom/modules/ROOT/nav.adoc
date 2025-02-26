@@ -1,0 +1,23 @@
+* xref::index.adoc[Showcase]
+* Syntax
+** xref::admonitions.adoc[Admonitions]
+** xref::asciinema.adoc[Asciinema]
+** xref::cards.adoc[Cards]
+** xref::code.adoc[Code]
+** xref::icons.adoc[Icons]
+** xref::links.adoc[Links]
+** xref::media.adoc[Media]
+** Tabs
+** xref::tabs.adoc[Tabs]
+** xref::tabs-sync.adoc[Tabs Sync]
+** xref::tabs-with-sync-groups.adoc[Tabs Sync Groups]
+** xref::troubleshooting.adoc[Troubleshooting]
+
+* Message block
+** xref:msg-block-out-of-support.adoc[Out of support]
+** xref:msg-block-custom-message.adoc[Custom message]
+** xref:msg-block-next-version.adoc[Next version]
+
+* Attributes
+** xref:test-not-editable-page.adoc[Not editable page]
+** xref:hide-components-entry.adoc[Hide component entry]

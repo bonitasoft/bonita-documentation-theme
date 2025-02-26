@@ -1,0 +1,215 @@
+= Showcase
+Bonita Documentation Theme authors
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+// This attribute activates the pagination to previous and next page at the bottom of the page
+:page-pagination:
+:page-editable: true
+
+
+.Welcome to the Bonita documentation theme preview
+****
+It demonstrates how the Bonita documentation is rendered and provides both examples and tests of the rendering. +
+Check the examples to know the AsciiDoc syntax for various use cases.
+****
+
+
+[.card-section]
+== Showcase card
+
+Click on the *links* below to find useful information quickly, or use the *table of contents* to go straight to the information you want to read.
+
+
+[.card.card-index]
+--
+xref:troubleshooting.adoc[[.card-title]#Troubleshooting how-to# [.card-body.card-content-overflow]#Learn how to create troubleshooting paragraphs.#]
+--
+
+[.card.card-index]
+--
+xref:code.adoc[[.card-title]#Source Code example# [.card-body.card-content-overflow]#Learn how to create source code example in the documentation.#]
+--
+
+
+[.card-section]
+=== Other information
+
+[.card.card-index]
+--
+xref:asciinema.adoc[[.card-title]#Asciinema# [.card-body.card-content-overflow]#Learn how to embed Asciinema content in your page.#]
+--
+
+[.card.card-index]
+--
+xref:cards.adoc[[.card-title]#Cards# [.card-body.card-content-overflow]#Learn how to create cards (like this one).#]
+--
+
+== Cu solet
+
+Nominavi luptatum eos, an vim hinc philosophia intellegebat.
+Lorem pertinacia `expetenda` et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
+Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
+Eu mea inani iriure.
+
+[source,json]
+----
+{
+  "name": "module-name",
+  "version": "10.0.1",
+  "description": "An example module to illustrate the usage of package.json",
+  "author": "Author Name <author@example.com>",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint"
+  }
+}
+----
+
+.Example paragraph syntax
+[source,asciidoc]
+----
+.Optional title
+[example]
+This is an example paragraph.
+----
+
+.Optional title
+[example]
+This is an example paragraph.
+
+
+
+== Eu mea munere vituperata constituam.
+
+[%autowidth]
+|===
+|Input | Output
+
+m|"foo\nbar"
+l|foo
+bar
+|===
+
+Select menu:File[Open Project] to open the project in your IDE.
+Per ea btn:[Cancel] inimicus.
+Ferri kbd:[F11] tacimates constituam sed ex, eu mea munere vituperata kbd:[Ctrl,T] constituam.
+
+.Sidebar Title
+****
+Platonem complectitur mediocritatem ea eos.
+Ei nonumy deseruisse ius.
+Mel id omnes verear.
+
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+****
+
+=== Liber recusabo
+
+No sea, at invenire voluptaria mnesarchum has.
+Ex nam suas nemore dignissim, vel apeirian democritum et.
+At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.
+
+. potenti donec cubilia tincidunt
+. etiam pulvinar inceptos velit quisque aptent himenaeos
+. lacus volutpat semper porttitor aliquet ornare primis nulla enim
+
+Natum facilisis theophrastus an duo.
+No sea, at invenire voluptaria mnesarchum has.
+
+* ultricies sociosqu tristique integer
+* lacus volutpat semper porttitor aliquet ornare primis nulla enim
+* etiam pulvinar inceptos velit quisque aptent himenaeos
+
+Eu sed antiopam gloriatur.
+Ea mea agam graeci philosophia.
+
+* [ ] todo
+* [x] done!
+
+Vis veri graeci legimus ad.
+
+sed::
+splendide sed
+
+mea::
+agam graeci
+
+At ornatus splendide sed.
+
+.Library dependencies
+[#dependencies%autowidth]
+|===
+|Library |Version
+
+|eslint
+|^1.7.3
+
+|eslint-config-gulp
+|^2.0.0
+
+|expect
+|^1.20.2
+
+|istanbul
+|^0.4.3
+
+|istanbul-coveralls
+|^1.0.3
+
+|jscs
+|^2.3.5
+|===
+
+Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+
+Nominavi luptatum eos, an vim hinc philosophia intellegebat.
+Eu mea inani iriure.
+
+[discrete]
+== Voluptua singulis
+
+Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Ex nam suas nemore dignissim, vel apeirian democritum et.
+
+Make the switch today!
+
+Cum dicat #putant# ne.
+Est in <<inline,reque>> homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+
+[#english+中文]
+== English + 中文
+
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.
+
+[quote, 'Famous Person. Cum dicat putant ne.', 'Cum dicat putant ne. https://example.com[Famous Person Website]']
+____
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
+____
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+[verse]
+____
+The fog comes
+on little cat feet.
+____
+
+== End
+
+That's all, folks!

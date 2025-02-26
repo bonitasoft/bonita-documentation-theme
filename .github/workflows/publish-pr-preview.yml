@@ -34,15 +34,18 @@ jobs:
       - name: Build Setup
         uses: ./.github/actions/build-setup
         if: github.event.action != 'closed'
-      - name: Build preview
+      - name: Build bundle
         if: github.event.action != 'closed'
-        run: npm run preview:build
+        run: npm run bundle
+      - name: Build showroom
+        if: github.event.action != 'closed'
+        run: npm run build:showroom
       - name: Upload artifact
         if: github.event.action != 'closed' # Always upload to be able to test it locally
         uses: actions/upload-artifact@v4
         with:
           name: bonita-theme-preview-pr-${{github.event.pull_request.number}}-${{github.sha}}
-          path: public
+          path: build/site
       - name: Publish preview
         uses: afc163/surge-preview@v1
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
@@ -51,7 +54,7 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: public
+          dist: build/site
           failOnError: true
           teardown: 'true'
           build: echo "site already built"
