@@ -45,7 +45,7 @@ body.theme-transition {
 .DocSearch-Button,  // .DocSearch-Button-Key use filter, so not considered for now
 footer,
 footer a, // Privacy and "Legal notices"
-// TODO home and top right icons
+// home and top right icons in the toolbar/breadcrumb: use filter, so not considered for now
 {
     --duration: 2s;
     --timing: ease;
