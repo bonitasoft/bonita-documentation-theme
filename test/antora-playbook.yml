@@ -1,0 +1,47 @@
+site:
+  keys:
+    forceDisplaySearchBar: false
+    hideEditPageLinks: false
+    hideNavbarComponentsList: false
+    nonProduction: false
+    # Uncomment the prLink attribute to allow to redirect to PR from site title (nonProduction should be set to true)
+    prLink: https://github.com/bonitasoft/bonita-documentation-theme/pulls
+  # Can be changed by setting the BONITA_THEME_URL environment variable when building
+  url: http://localhost:8080
+  title: Bonita Documentation Theme Preview
+  start_page: ROOT:index.adoc
+  # Remarks about the urls
+  # For url related to AsciiDoc pages, they must be in the form of /bonita/dev/<page>.html for consistency and to make the
+  # navigation opened to the right page. See gulp.d/tasks/build-preview-pages.js for the customization that makes it work.
+  # homeUrl: &home_url /bonita/dev/index.html
+
+content:
+  sources:
+    # - url: './'
+    #   branches: [HEAD]
+    #   start_paths: 'showroom'
+
+    - url: ./
+      branches:
+        - HEAD
+      start_paths:
+        - showroom
+
+
+asciidoc:
+  attributes:
+    icons: font
+  extensions:
+    - '@asciidoctor/tabs'
+    - '@springio/asciidoctor-extensions'
+
+antora:
+  extensions:
+    - require: '@springio/antora-extensions/asciinema-extension'
+
+ui:
+  bundle:
+    # url: https://github.com/bonitasoft/bonita-documentation-theme/releases/download/v1.23.0/bonita-documentation-theme-v1.23.0.zip
+    url: ../build/ui-bundle.zip
+
+

@@ -1,0 +1,7 @@
+name: Showroom
+title: Showroom
+version: 1.0
+asciidoc:
+  attributes:
+nav:
+  - modules/ROOT/nav.adoc

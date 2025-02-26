@@ -1,0 +1,157 @@
+= Source Code
+:page-editable: true
+
+== JavaScript
+
+[source,js]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => { // <1>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) // <2>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+<1> The tap function is used to wiretap the data in the pipe.
+<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+--------
+[source,js]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => { // <1>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) // <2>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+<1> The tap function is used to wiretap the data in the pipe.
+<2> Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.
+--------
+[NOTE]
+****
+<1> should be replaced by `<1>` (same thing for <2>)
+****
+
+====
+
+
+== Shell
+
+[source,shell]
+----
+alias ducksort=""du -cks * | sort -n""
+----
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+--------
+[source,shell]
+----
+alias ducksort=""du -cks * | sort -n""
+----
+--------
+====
+
+== XML
+
+[source,xml]
+----
+<root>
+    <branch>
+        <leafs length="130">
+            <leaf color="yellow" />
+        </leafs>
+    </branch>
+</root>
+----
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+--------
+[source,xml]
+----
+<root>
+    <branch>
+        <leafs length="130">
+            <leaf color="yellow" />
+        </leafs>
+    </branch>
+</root>
+----
+--------
+====
+
+
+
+== Directory list
+
+....
+pom.xml
+src/
+  main/
+    java/
+      HelloWorld.java
+  test/
+    java/
+      HelloWorldTest.java
+....
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+....
+pom.xml
+src/
+  main/
+    java/
+      HelloWorld.java
+  test/
+    java/
+      HelloWorldTest.java
+....
+----
+====
+
+
+== For theme tests only
+
+Check that the small code block `toto` is correctly highlighted in the call out of the block code.
+
+[source, Java]
+----
+while (true) {
+  System.out.println("toto"); <1>
+}
+----
+<1> The word `toto` is commonly used in examples, it probably refers to our inner self.
+
+
+Same check but when code is in a `collapsible`
+.Click to see code
+[%collapsible]
+====
+[source,asciidoc]
+--------
+[source, Java]
+----
+while (true) {
+  System.out.println("toto"); <1>
+}
+----
+--------
+<1> The word `toto` is commonly used in examples, it probably refers to our inner self.
+====

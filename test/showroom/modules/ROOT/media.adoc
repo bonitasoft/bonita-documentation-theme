@@ -1,0 +1,44 @@
+= Media
+:page-editable: true
+
+== Videos
+
+=== Embed videos
+
+It is possible to embed videos as it is done in Bonita 2021.1 index page: https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
+
+* A default/max size is set for the mobile view
+* there is no default for the desktop view at the moment, so you should set the dimensions when declaring the `video` macro
+as in the following example
+
+// this fake block is here to add a break line before the video
+{empty} +
+
+video::Hl1thnPla7E[youtube, width=640,height=380]
+
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+// For more details about the videos syntax, see https://docs.asciidoctor.org/asciidoc/latest/macros/audio-and-video/
+video::Hl1thnPla7E[youtube, width=640,height=380]
+----
+====
+
+
+== Images
+
+Here is an image put on the right side of the page.
+
+image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
+----
+====
