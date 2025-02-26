@@ -1,0 +1,34 @@
+= Message block - out of support
+:!page-editable: // keep this test page as non editable. In production, all the pages of "out of support" component versions are not editable
+:page-out-of-support: true
+:page-hide-search-bar: true
+
+NOTE: This page is configured to hide the search bar and to not be editable.
+
+.Click to see the *configuration* that display the message block
+[%collapsible]
+====
+[source,asciidoc]
+----
+// Add the following Asciidoc attribute in the antora.yml file of the component
+page-out-of-support: true
+----
+====
+
+
+== Title 1
+
+=== Paragraph 1.1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nam et scelerisque lacus.
+Sed sed ipsum venenatis, volutpat lacus vitae, laoreet arcu.
+Mauris a ex id erat feugiat imperdiet.
+Morbi sollicitudin vulputate sapien ut malesuada.
+Ut tincidunt risus libero, quis mollis nibh luctus a.
+Nam consequat nibh odio.
+Vestibulum consectetur auctor leo, a accumsan ipsum scelerisque nec.
+Morbi quis libero dui.
+Sed scelerisque malesuada diam, a imperdiet elit porta vitae.
+Praesent a scelerisque augue.
+Fusce pellentesque felis et turpis consectetur pretium.

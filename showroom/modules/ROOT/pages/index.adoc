@@ -179,9 +179,6 @@ Cum dicat putant ne.
 Est in reque homero principes, meis deleniti mediocrem ad has.
 Ex nam suas nemore dignissim, vel apeirian democritum et.
 
-.Antora is a multi-repo documentation site generator
-image::multirepo-ssg.svg[Multirepo SSG,250]
-
 Make the switch today!
 
 Cum dicat #putant# ne.
