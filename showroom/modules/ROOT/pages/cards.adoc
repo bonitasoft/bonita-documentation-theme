@@ -13,7 +13,7 @@ To do it, you need to use this following syntax:
 [.card-section]
 == Explore Bonita
 
-Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
+Click on the *links* below to find useful information quickly, or use the *table of contents* to go straight to the information you want to read.
 
 
 [.card.card-index]
@@ -34,7 +34,7 @@ http://www.bonitasoft.com/how-we-do-it/downloads[[.card-title]#Bonita Studio ins
 [.card-section]
 == Explore Bonita
 
-Click on the *links* below to find useful information quickly, or xref:../taxonomy.adoc[browse the whole content tree], or use the *table of contents* to go straight to the information you want to read.
+Click on the *links* below to find useful information quickly, or use the *table of contents* to go straight to the information you want to read.
 
 
 [.card.card-index]
