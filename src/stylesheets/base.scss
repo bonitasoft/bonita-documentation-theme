@@ -44,6 +44,8 @@ body.theme-transition {
 .content .tabs, // AsciiDoc tabs
 .DocSearch-Button,  // TODO docsearch background
   //.DocSearch-Button-Key, // TODO not working
+footer,
+footer a, // Privacy and "Legal notices"
 // TODO top right icons and search icon on the left of the DocSearch bar
 {
     --duration: 2s;
