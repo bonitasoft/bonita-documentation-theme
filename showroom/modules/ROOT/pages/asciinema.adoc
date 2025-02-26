@@ -8,14 +8,6 @@ Once you have created a `.cast` file, you can add it to your document with the f
 // this fake block is here to add a break line between before the video
 {empty} +
 
-
-[asciinema]
-....
-{"version": 2, "width": 80, "height": 24}
-[1.0, "o", "hello "]
-[2.0, "o", "world!"]
-....
-
 ++++
 <asciinema-player src="_/img/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
 ++++

@@ -34,7 +34,7 @@ jobs:
       - name: Build Setup
         uses: ./.github/actions/build-setup
         if: github.event.action != 'closed'
-      - name: Build preview
+      - name: Build bundle
         if: github.event.action != 'closed'
         run: npm run bundle
       - name: Build showroom
