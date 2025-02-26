@@ -45,7 +45,8 @@ body.theme-transition {
 //.nav-menu, // this seems not apply changes to the
 .toolbar,
 .hljs, // for highligtjs block
-.content .tabs, // AsciiDoc tabs
+.content .tabs .tabpanel, // AsciiDoc tabs
+.content .tabs .tab, // AsciiDoc tabs
 .DocSearch-Button,  // TODO docsearch background
   //.DocSearch-Button-Key, // TODO not working
 footer,
