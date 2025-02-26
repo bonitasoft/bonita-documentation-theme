@@ -41,9 +41,7 @@ function isUsingSystemPreferences () {
   return !localStorage.getItem('theme')
 }
 
-// TODO restore system
-const themeOrder = ['dark', 'light']
-// const themeOrder = ['system', 'dark', 'light']
+const themeOrder = ['system', 'dark', 'light']
 
 document.addEventListener('DOMContentLoaded', () => {
   const themeSwitcher = document.getElementById('theme-switcher')
