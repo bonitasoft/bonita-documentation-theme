@@ -50,8 +50,8 @@ footer,
 footer a, // Privacy and "Legal notices"
 // home and top right icons in the toolbar/breadcrumb: use filter, so not considered for now
   {
-      --duration: 2s;
-      --timing: ease;
+      --duration: .7s;
+      --timing: linear;
       transition:
         color var(--duration) var(--timing),
         background-color var(--duration) var(--timing);
