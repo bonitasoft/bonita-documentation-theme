@@ -31,6 +31,7 @@ body {
 // Smooth transitions between themes
 body.theme-transition {
 .article, // body
+.doc .conum, // AsciiDoc Callouts
 .doc .exampleblock .content, // raw block
 .doc .quoteblock, // raw block
 .doc .sidebarblock, // raw block
