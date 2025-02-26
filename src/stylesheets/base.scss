@@ -27,28 +27,27 @@ body {
   }
 }
 
-// TODO simplify syntax with SCSS
 // Smooth transitions between themes
 body.theme-transition {
-.article, // body
-.doc .conum, // AsciiDoc Callouts
-.doc  code,
-.doc  kbd,
-.doc .exampleblock .content, // raw block
-.doc .quoteblock, // raw block
-.doc .sidebarblock, // raw block
-.doc .verseblock, // raw block
-.nav,
-.nav .context, // Components selector (title)
-.nav .components, // Components selector (list)
-.toolbar,
-.hljs, // for highligtjs block
-.content .tabs .tabpanel, // AsciiDoc tabs
-.content .tabs .tab, // AsciiDoc tabs
-.DocSearch-Button,  // .DocSearch-Button-Key uses a gradient, so not considered for now
-footer,
-footer a, // Privacy and "Legal notices"
-// home and top right icons in the toolbar/breadcrumb: use filter, so not considered for now
+  .article, // body
+  .doc .conum, // AsciiDoc Callouts
+  .doc  code,
+  .doc  kbd,
+  .doc .exampleblock .content, // raw block
+  .doc .quoteblock, // raw block
+  .doc .sidebarblock, // raw block
+  .doc .verseblock, // raw block
+  .nav,
+  .nav .context, // Components selector (title)
+  .nav .components, // Components selector (list)
+  .toolbar,
+  .hljs, // for highligtjs block
+  .content .tabs .tabpanel, // AsciiDoc tabs
+  .content .tabs .tab, // AsciiDoc tabs
+  .DocSearch-Button,  // .DocSearch-Button-Key uses a gradient, so not considered for now
+  footer,
+  footer a, // Privacy and "Legal notices"
+  // home and top right icons in the toolbar/breadcrumb: use filter, so not considered for now
   {
       --duration: .7s;
       --timing: linear;
