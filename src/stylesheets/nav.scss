@@ -103,6 +103,7 @@ html.is-clipped--nav {
   max-height: calc(50% + var(--drawer-height));
 
   .context {
+    background-color: var(--body-background); // needed for smooth theme transition
     font-size: calc(15 / var(--rem-base) * 1rem);
     flex-shrink: 0;
     color: var(--nav-muted-color);

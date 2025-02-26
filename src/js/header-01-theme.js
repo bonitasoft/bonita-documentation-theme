@@ -5,8 +5,29 @@ function updateHtmlThemeAttribute () {
   rootHtmlElement.setAttribute('data-theme-system', isUsingSystemPreferences())
 }
 
-// Need to be on top of the file (i.e. run at page initialization) to avoid the flash after the content loaded
-updateHtmlThemeAttribute()
+// Use the HighlightJs CSS file matching the theme
+function enableHighLightJsTheme () {
+  const hljsCssLink = document.getElementById('highlight-style-lnk')
+  if (hljsCssLink) {
+    const currentHref = hljsCssLink.getAttribute('href')
+    let cssHref = currentHref.replace('-dark', '-light')
+    if (isDarkTheme()) {
+      cssHref = currentHref.replace('-light', '-dark')
+    }
+    hljsCssLink.setAttribute('href', cssHref)
+  } else {
+    console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
+  }
+}
+
+function updateTheme () {
+  updateHtmlThemeAttribute()
+  enableHighLightJsTheme()
+}
+
+// Ensure that the right theme is used when the page loads
+// Must be placed at the head of the page (i.e. executed at page initialization) to avoid flash after content loading
+updateTheme()
 
 // Check if user has set a theme preference in localStorage or in browser preferences
 function isDarkTheme () {
@@ -23,26 +44,6 @@ function isUsingSystemPreferences () {
 const themeOrder = ['system', 'dark', 'light']
 
 document.addEventListener('DOMContentLoaded', () => {
-  function updateTheme () {
-    // Switch  HighlightJs to theme
-    function enableHighLightJsTheme () {
-      const hljsCssLink = document.getElementById('highlight-style-lnk')
-      if (hljsCssLink) {
-        const currentHref = hljsCssLink.getAttribute('href')
-        let cssHref = currentHref.replace('-dark', '-light')
-        if (isDarkTheme()) {
-          cssHref = currentHref.replace('-light', '-dark')
-        }
-        hljsCssLink.setAttribute('href', cssHref)
-      } else {
-        console.log('Failed to find highlight-style-lnk css link element in page, can not swap theme')
-      }
-    }
-
-    updateHtmlThemeAttribute()
-    enableHighLightJsTheme()
-  }
-
   const themeSwitcher = document.getElementById('theme-switcher')
   themeSwitcher.addEventListener('click', (_event) => {
     function getCurrentTheme () {
@@ -66,9 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       localStorage.setItem('theme', newTheme)
     }
+
+    const bodyClassList = document.querySelector('body').classList
+    bodyClassList.add('theme-transition')
+
     updateTheme()
   })
-
-  // Required to ensure that the right theme for the 'highlight.js' library is used when the page loads
-  updateTheme()
 })

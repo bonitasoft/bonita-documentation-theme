@@ -1,10 +1,18 @@
 = Tabs block
+:bonitaVersion: 10.2.1
 
 Source: https://github.com/asciidoctor/asciidoctor-tabs
 
 [tabs]
 ====
 Tab A:: Contents of Tab A.
++
+--
+[source,shell,subs="+macros,+attributes"]
+----
+docker run --name bonita -d -p 8080:8080 bonita:pass:a[{bonitaVersion}]
+----
+--
 
 Tab B::
 +

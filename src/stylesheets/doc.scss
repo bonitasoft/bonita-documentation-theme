@@ -1,3 +1,7 @@
+.article {
+  background-color: var(--body-background); // needed for smooth theme transition
+}
+
 /* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
 /* NOTE assume pre.highlight contains code[data-lang] */
 .doc {
