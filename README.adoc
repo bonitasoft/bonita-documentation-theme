@@ -60,6 +60,18 @@ A static or live preview of the theme is available, run `npm run dev`, or `npm r
 
 To build the bundle to be used in the Antora playbook, run `npm run bundle`.
 
+=== Showroom
+
+An antora project is available to test the theme bundle in a real context. It's allow to use the antora extension (like the asciinema extension).
+
+Run the `npm run build:showroom` script then `npx http-server ./site/build` to start a local server.
+
+The playbook for the *showroom-playboook.yml* is on the root of the project, and the content of the showroom is in the `showroom` folder.
+
+You can found in this folder, some example of syntax available in the Bonita documentation theme.
+
+This showroom is available https://bonitasoft.github.io/bonita-documentation-theme/[here].
+
 === Change some colors in the UI
 
 If you are only here to update some colors in the UI, it should be easy. +
