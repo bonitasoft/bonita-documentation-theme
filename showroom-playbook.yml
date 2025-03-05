@@ -25,6 +25,10 @@ asciidoc:
     icons: font
   extensions:
     - '@asciidoctor/tabs'
+
+antora:
+  extensions:
+    - require: '@springio/antora-extensions/asciinema-extension'
     
 ui:
   bundle:

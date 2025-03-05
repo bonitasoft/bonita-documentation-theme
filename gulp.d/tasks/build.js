@@ -20,7 +20,6 @@ const through = () => map((file, enc, next) => next(null, file))
 const config = {
   libsJs: [
     'node_modules/@docsearch/js/dist/umd/index.js',
-    'node_modules/asciinema-player/dist/bundle/asciinema-player.min.js',
   ],
   libsFonts: [
     'node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff*(2)}',
