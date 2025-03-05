@@ -23,7 +23,6 @@
   "devDependencies": {
     "@asciidoctor/tabs": "1.0.0-beta.6",
     "@csstools/postcss-sass": "^5.1.1",
-    "@springio/antora-extensions": "^1.14.4",
     "asciidoctor": "2.2.6",
     "autoprefixer": "~9.7",
     "browser-pack-flat": "~3.4",
@@ -71,6 +70,6 @@
   "dependencies": {
     "@docsearch/js": "^3.0.0",
     "@fortawesome/fontawesome-free": "^6.4.0",
-    "asciinema-player": "^3.0.0"
+    "@springio/antora-extensions": "^1.14.4"
   }
 }
