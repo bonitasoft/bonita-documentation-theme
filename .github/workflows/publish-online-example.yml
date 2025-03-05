@@ -27,14 +27,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build Setup
         uses: ./.github/actions/build-setup
-      - name: Build preview
+      - name: Build bundle
         run: npm run preview:build
+      - name: Build Showroom site
+        run: npm run build:showroom
         env:
-          BONITA_THEME_URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
+          # override Antora site url, https://docs.antora.org/antora/latest/playbook/environment-variables/#site-url
+          URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: build/site
 
   deploy:
     needs: build

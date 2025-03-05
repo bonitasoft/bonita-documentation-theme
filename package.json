@@ -17,8 +17,9 @@
     "bundle": "gulp bundle",
     "dev": "gulp preview",
     "devlive": "cross-env LIVERELOAD=true gulp preview",
-    "preview:build": "gulp preview:build"
-  },
+    "preview:build": "gulp preview:build",
+    "build:showroom": "npx antora --stacktrace --fetch --clean showroom-playbook.yml"
+    },
   "devDependencies": {
     "@asciidoctor/tabs": "1.0.0-beta.6",
     "@csstools/postcss-sass": "^5.1.1",

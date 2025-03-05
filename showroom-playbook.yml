@@ -1,0 +1,33 @@
+site:
+  url: http://localhost:8080
+  title: Bonita Documentation Theme Preview
+  start_page: showroom::index.adoc
+runtime:
+  log:
+      # use pretty even on CI
+      format: pretty
+      # set to info to get details from the Antora extensions
+      level: info
+      # Antora exits with a non-zero exit code if a warning is logged -> https://docs.antora.org/antora/latest/playbook/runtime-log-failure-level
+      failure_level: warn
+  fetch: false
+content:
+  sources:
+    - url: ./
+      branches:
+        - HEAD
+      start_paths:
+        - showroom
+
+
+asciidoc:
+  attributes:
+    icons: font
+  extensions:
+    - '@asciidoctor/tabs'
+    
+ui:
+  bundle:
+    url: ./build/ui-bundle.zip
+
+
