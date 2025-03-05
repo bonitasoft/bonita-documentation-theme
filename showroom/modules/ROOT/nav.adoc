@@ -7,11 +7,11 @@
 ** xref::icons.adoc[Icons]
 ** xref::links.adoc[Links]
 ** xref::media.adoc[Media]
-** Tabs
-** xref::tabs.adoc[Tabs]
-** xref::tabs-sync.adoc[Tabs Sync]
-** xref::tabs-with-sync-groups.adoc[Tabs Sync Groups]
 ** xref::troubleshooting.adoc[Troubleshooting]
+** Tabs
+*** xref::tabs.adoc[Tabs]
+*** xref::tabs-sync.adoc[Tabs Sync]
+*** xref::tabs-with-sync-groups.adoc[Tabs Sync Groups]
 
 * Message block
 ** xref:msg-block-out-of-support.adoc[Out of support]
