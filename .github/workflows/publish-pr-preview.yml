@@ -40,6 +40,9 @@ jobs:
       - name: Build showroom
         if: github.event.action != 'closed'
         run: npm run build:showroom
+        env:
+          # override Antora site url, https://docs.antora.org/antora/latest/playbook/environment-variables/#site-url
+          URL: ${{ steps.surge-preview-tools.outputs.preview-url }}
       - name: Upload artifact
         if: github.event.action != 'closed' # Always upload to be able to test it locally
         uses: actions/upload-artifact@v4
@@ -49,8 +52,6 @@ jobs:
       - name: Publish preview
         uses: afc163/surge-preview@v1
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
-        env:
-          BONITA_THEME_URL: ${{ steps.surge-preview-tools.outputs.preview-url }}
         with:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
