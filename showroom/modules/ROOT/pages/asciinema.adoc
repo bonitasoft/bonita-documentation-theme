@@ -11,14 +11,43 @@ Once you have created a `.cast` file, you can add it to your document with the f
 include::../images/bcd.cast[]
 ....
 
+
 .Click to see the *source code*
 [%collapsible]
 ====
 [source,asciidoc]
 ----
-[asciinema,rows=30,autoPlay=true]
+[asciinema,rows=30,autoPlay=false]
 ....
-include::../images/bcd.cast[]
+{"version": 2, "width": 80, "height": 24}
+[1.0, "o", "hello "]
+[2.0, "o", "world!"]
+[3.0, "o", "Auto play is disabled"]
+----
+====
+
+
+## AutoPlay disabled
+[asciinema,rows=10]
+....
+{"version": 2, "width": 80, "height": 24}
+[1.0, "o", "hello "]
+[2.0, "o", "world!"]
+[3.0, "o", "Auto play is disabled"]
+....
+
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[asciinema,rows=10]
+....
+{"version": 2, "width": 80, "height": 24}
+[1.0, "o", "hello "]
+[2.0, "o", "world!"]
+[3.0, "o", "Auto play is disabled"]
 ----
 ====
 
