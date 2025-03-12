@@ -17,7 +17,7 @@ include::../images/bcd.cast[]
 ====
 [source,asciidoc]
 ----
-[asciinema,rows=30,autoPlay=false]
+[asciinema,rows=30,autoPlay=true]
 ....
 {"version": 2, "width": 80, "height": 24}
 [1.0, "o", "hello "]
