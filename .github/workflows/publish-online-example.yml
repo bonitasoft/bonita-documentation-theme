@@ -28,7 +28,7 @@ jobs:
       - name: Build Setup
         uses: ./.github/actions/build-setup
       - name: Build bundle
-        run: npm run preview:build
+        run: npm run bundle
       - name: Build Showroom site
         run: npm run build:showroom
         env:
