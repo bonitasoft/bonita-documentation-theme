@@ -3,6 +3,8 @@
 
 https://asciinema.org/[Asciinema] provides a great way for sharing shell sessions recording, making documentation more lively !
 
+
+== Syntax example
 Once you have created a `.cast` file, you can add it to your document with the following markup
 
 
@@ -49,3 +51,18 @@ include::../images/bcd.cast[]
 ----
 ====
 
+
+== Mandatory setup
+
+NOTE: In bonita documentation site, the asciinema extension is already declared. So you can use the previous syntax without more configuration.
+
+To be allowed to use the asciinema extension, you need to add the following configuration to your playbook:
+
+[source,yml]
+----
+antora:
+  extensions:
+    - require: '@springio/antora-extensions/asciinema-extension'
+----
+
+This extension is available in the `@springio/antora-extensions` package.
