@@ -3,22 +3,66 @@
 
 https://asciinema.org/[Asciinema] provides a great way for sharing shell sessions recording, making documentation more lively !
 
+
+== Syntax example
 Once you have created a `.cast` file, you can add it to your document with the following markup
 
-{empty} +
 
-++++
-<asciinema-player src="_images/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
-++++
+[asciinema,rows=30,autoPlay=true]
+....
+include::../examples/bcd.cast[]
+....
+
 
 .Click to see the *source code*
 [%collapsible]
 ====
 [source,asciidoc]
 ----
-++++
-<asciinema-player src="_images/bcd.cast" speed="2" theme="monokai" title="Update case overview console output example" cols="240" rows="32"></asciinema-player>
-++++
+[asciinema,rows=30,autoPlay=true]
+....
+\include::image$bcd.cast[]
+....
 ----
 ====
 
+
+## AutoPlay disabled
+[asciinema,rows=10]
+....
+{"version": 2, "width": 80, "height": 24}
+[1.0, "o", "hello "]
+[2.0, "o", "world!"]
+[3.0, "o", "Auto play is disabled"]
+....
+
+
+.Click to see the *source code*
+[%collapsible]
+====
+[source,asciidoc]
+----
+[asciinema,rows=10]
+....
+{"version": 2, "width": 80, "height": 24}
+[1.0, "o", "hello "]
+[2.0, "o", "world!"]
+[3.0, "o", "Auto play is disabled"]
+----
+====
+
+
+== Mandatory setup
+
+NOTE: In bonita documentation site, the asciinema extension is already declared. So you can use the previous syntax without more configuration.
+
+To be allowed to use the asciinema extension, you need to add the following configuration to your playbook:
+
+[source,yml]
+----
+antora:
+  extensions:
+    - require: '@springio/antora-extensions/asciinema-extension'
+----
+
+This extension is available in the `@springio/antora-extensions` package.

@@ -1,3 +1,6 @@
 <link rel="stylesheet" href="{{{uiRootPath}}}/stylesheets/vendor/libs.css">
 <link rel="stylesheet" href="{{{uiRootPath}}}/stylesheets/site.css">
 <link id="highlight-style-lnk" rel="stylesheet" href="{{{uiRootPath}}}/stylesheets/vendor/highlight-light.css">
+ {{#if env.SITE_ASCIINEMA_PROVIDER}}
+    {{> asciinema-styles}}
+{{/if}}
