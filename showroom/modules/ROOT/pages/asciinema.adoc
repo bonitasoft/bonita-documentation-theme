@@ -10,7 +10,7 @@ Once you have created a `.cast` file, you can add it to your document with the f
 
 [asciinema,rows=30,autoPlay=true]
 ....
-include::image$bcd.cast[]
+include::../examples/bcd.cast[]
 ....
 
 
@@ -21,7 +21,7 @@ include::image$bcd.cast[]
 ----
 [asciinema,rows=30,autoPlay=true]
 ....
-\include::image$images/bcd.cast[]
+\include::image$bcd.cast[]
 ....
 ----
 ====
