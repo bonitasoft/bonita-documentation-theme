@@ -145,4 +145,29 @@
     if (!el) return
     return selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el
   }
+
+  var sidebarToggle = document.getElementById('sidebar-toggle')
+  if (sidebarToggle) {
+    var updateToggleTitle = function () {
+      var isCollapsed = navContainer.classList.contains('is-collapsed')
+      sidebarToggle.title = isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'
+    }
+    // eslint-disable-next-line no-undef
+    if (localStorage.getItem('sidebar-collapsed') === 'true') {
+      navContainer.classList.add('is-collapsed')
+    }
+    updateToggleTitle()
+    sidebarToggle.addEventListener('click', function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      navContainer.classList.add('is-animating')
+      var collapsed = navContainer.classList.toggle('is-collapsed')
+      // eslint-disable-next-line no-undef
+      localStorage.setItem('sidebar-collapsed', collapsed)
+      updateToggleTitle()
+      setTimeout(function () {
+        navContainer.classList.remove('is-animating')
+      }, 300)
+    })
+  }
 })()
