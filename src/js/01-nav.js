@@ -145,4 +145,22 @@
     if (!el) return
     return selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el
   }
+
+  // Sidebar border toggle button logic (persist state in localStorage)
+  console.info('TMP configuration of the sidebar button on border')
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  if (sidebarToggle) {
+    // Restore state from localStorage as soon as possible
+    if (localStorage.getItem('sidebar-collapsed') === 'true') {
+      navContainer.classList.add('is-collapsed');
+    } else {
+      navContainer.classList.remove('is-collapsed');
+    }
+    sidebarToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const collapsed = navContainer.classList.toggle('is-collapsed');
+      localStorage.setItem('sidebar-collapsed', collapsed);
+    });
+  }
 })()
