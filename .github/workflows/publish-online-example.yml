@@ -35,7 +35,7 @@ jobs:
           # override Antora site url, https://docs.antora.org/antora/latest/playbook/environment-variables/#site-url
           URL: 'https://bonitasoft.github.io/bonita-documentation-theme/'
       - name: Upload
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: build/site
 
