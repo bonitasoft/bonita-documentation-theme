@@ -29,7 +29,7 @@ jobs:
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: github.event.action != 'closed'
       - name: Build Setup
         uses: ./.github/actions/build-setup
@@ -45,7 +45,7 @@ jobs:
           URL: ${{ steps.surge-preview-tools.outputs.preview-url }}
       - name: Upload artifact
         if: github.event.action != 'closed' # Always upload to be able to test it locally
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: bonita-theme-preview-pr-${{github.event.pull_request.number}}-${{github.sha}}
           path: build/site
