@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write # create the GH release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set env
         run: |
           echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
@@ -30,7 +30,7 @@ jobs:
           artifacts: "build/bonita-documentation-theme-${{ env.RELEASE_VERSION }}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.GH_TOKEN_DOC_TRIGGER_WF }}
           repository: bonitasoft/bonita-documentation-site
