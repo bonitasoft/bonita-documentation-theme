@@ -325,7 +325,8 @@ html.is-clipped--nav {
   }
 }
 
-.nav-container.is-collapsed .sidebar-toggle {
+.nav-container.is-collapsed .sidebar-toggle,
+html.sidebar-collapsed .nav-container .sidebar-toggle {
   right: 6px;
 
   @media screen and (min-width: 1024px) {
@@ -343,7 +344,8 @@ html.is-clipped--nav {
   transition: transform 0.3s ease;
 }
 
-.nav-container.is-collapsed .sidebar-toggle-icon {
+.nav-container.is-collapsed .sidebar-toggle-icon,
+html.sidebar-collapsed .nav-container .sidebar-toggle-icon {
   transform: rotate(180deg);
 }
 
@@ -366,14 +368,16 @@ html.is-clipped--nav {
     box-shadow: 0.5px 0 3px var(--nav-border-color);
   }
 
-  .nav-container.is-collapsed {
+  .nav-container.is-collapsed,
+  html.sidebar-collapsed .nav-container {
     width: 40px;
     min-width: 40px;
     max-width: 40px;
     background: var(--nav-background);
   }
 
-  .nav-container.is-collapsed .nav {
+  .nav-container.is-collapsed .nav,
+  html.sidebar-collapsed .nav-container .nav {
     opacity: 0;
     visibility: hidden;
   }

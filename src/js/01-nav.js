@@ -148,12 +148,13 @@
 
   var sidebarToggle = document.getElementById('sidebar-toggle')
   if (sidebarToggle) {
+    var htmlEl = document.documentElement
     var updateToggleTitle = function () {
-      var isCollapsed = navContainer.classList.contains('is-collapsed')
+      var isCollapsed = htmlEl.classList.contains('sidebar-collapsed')
       sidebarToggle.title = isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'
     }
-    // eslint-disable-next-line no-undef
-    if (localStorage.getItem('sidebar-collapsed') === 'true') {
+    // Sync nav-container class with html class (set early by inline script)
+    if (htmlEl.classList.contains('sidebar-collapsed')) {
       navContainer.classList.add('is-collapsed')
     }
     updateToggleTitle()
@@ -161,7 +162,8 @@
       e.preventDefault()
       e.stopPropagation()
       navContainer.classList.add('is-animating')
-      var collapsed = navContainer.classList.toggle('is-collapsed')
+      var collapsed = htmlEl.classList.toggle('sidebar-collapsed')
+      navContainer.classList.toggle('is-collapsed')
       // eslint-disable-next-line no-undef
       localStorage.setItem('sidebar-collapsed', collapsed)
       updateToggleTitle()
