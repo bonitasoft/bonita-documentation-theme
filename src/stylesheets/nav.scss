@@ -370,7 +370,7 @@ html.is-clipped--nav {
     width: 40px;
     min-width: 40px;
     max-width: 40px;
-    border-right: 1px solid var(--nav-border-color);
+    background: var(--nav-background);
   }
 
   .nav-container.is-collapsed .nav {
