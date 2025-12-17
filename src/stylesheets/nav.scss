@@ -297,25 +297,41 @@ html.is-clipped--nav {
   z-index: 10;
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s;
   padding: 0;
+
+  @media screen and (min-width: 1024px) {
+    position: fixed;
+    top: calc(var(--navbar-height) + 2.5rem);
+    left: calc(var(--nav-width) - 14px);
+    right: auto;
+  }
+
+  &:hover {
+    background: var(--nav-hover-background, #f0f4f8);
+    border-color: #06c;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: scale(1.08);
+  }
+
+  &:focus {
+    outline: 2px solid var(--nav-border-color);
+  }
 }
 
 .nav-container.is-animating .sidebar-toggle {
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s, right 0.3s ease;
+
+  @media screen and (min-width: 1024px) {
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s, left 0.3s ease;
+  }
 }
 
 .nav-container.is-collapsed .sidebar-toggle {
   right: 6px;
-}
 
-.sidebar-toggle:hover {
-  background: var(--nav-hover-background, #f0f4f8);
-  border-color: #06c;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  transform: scale(1.08);
-}
-
-.sidebar-toggle:focus {
-  outline: 2px solid var(--nav-border-color);
+  @media screen and (min-width: 1024px) {
+    left: 26px;
+    right: auto;
+  }
 }
 
 .sidebar-toggle-icon {
@@ -381,17 +397,5 @@ html.is-clipped--nav {
 
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
-  }
-
-  .nav-container.is-collapsed {
-    width: 40px;
-    min-width: 40px;
-    max-width: 40px;
-    border-right: 1px solid var(--nav-border-color);
-  }
-
-  .nav-container.is-collapsed .nav {
-    opacity: 0;
-    visibility: hidden;
   }
 }
