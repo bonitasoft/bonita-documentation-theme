@@ -279,13 +279,103 @@ html.is-clipped--nav {
   color: var(--toc-active-font-color);
 }
 
+// Sidebar toggle button styles
+.sidebar-toggle {
+  position: absolute;
+  top: 2.5rem;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background: var(--body-background);
+  border: 1px solid var(--nav-border-color);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  padding: 0;
+
+  @media screen and (min-width: 1024px) {
+    position: fixed;
+    top: calc(var(--navbar-height) + 2.5rem);
+    left: calc(var(--nav-width) - 14px);
+    right: auto;
+  }
+
+  &:hover {
+    background: var(--nav-hover-background, #f0f4f8);
+    border-color: #06c;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: scale(1.08);
+  }
+
+  &:focus {
+    outline: 2px solid var(--nav-border-color);
+  }
+}
+
+.nav-container.is-animating .sidebar-toggle {
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s, right 0.3s ease;
+
+  @media screen and (min-width: 1024px) {
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s, left 0.3s ease;
+  }
+}
+
+.nav-container.is-collapsed .sidebar-toggle {
+  right: 6px;
+
+  @media screen and (min-width: 1024px) {
+    left: 26px;
+    right: auto;
+  }
+}
+
+.sidebar-toggle-icon {
+  font-size: 14px;
+  color: var(--nav-muted-color);
+}
+
+.nav-container.is-animating .sidebar-toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-container.is-collapsed .sidebar-toggle-icon {
+  transform: rotate(180deg);
+}
+
 @media screen and (min-width: 769px) {
   .nav-container {
     width: var(--nav-width);
+    min-width: var(--nav-width);
+    max-width: var(--nav-width);
+  }
+
+  .nav-container.is-animating {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-container.is-animating .nav {
+    transition: opacity 0.25s ease 0.1s;
   }
 
   .nav {
     box-shadow: 0.5px 0 3px var(--nav-border-color);
+  }
+
+  .nav-container.is-collapsed {
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    background: var(--nav-background);
+  }
+
+  .nav-container.is-collapsed .nav {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -293,7 +383,7 @@ html.is-clipped--nav {
   .nav-container {
     font-size: calc(15.5 / var(--rem-base) * 1rem);
     flex: none;
-    position: static;
+    position: relative;
     top: 0;
     visibility: visible;
   }
