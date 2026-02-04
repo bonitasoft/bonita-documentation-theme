@@ -315,6 +315,10 @@ html.is-clipped--nav {
   &:focus {
     outline: 2px solid var(--nav-border-color);
   }
+
+  .status-404 & {
+    display: none;
+  }
 }
 
 .nav-container.is-animating .sidebar-toggle {
