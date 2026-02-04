@@ -2,3 +2,5 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id={{this}}"></script>
 <script>function gtag() { dataLayer.push(arguments) }; window.dataLayer = window.dataLayer || []; gtag('js', new Date()); gtag('config', '{{this}}')</script>
 {{/with}}
+
+<script>if(localStorage.getItem('sidebar-collapsed')==='true')document.documentElement.classList.add('sidebar-collapsed')</script>
