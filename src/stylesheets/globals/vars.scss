@@ -17,10 +17,12 @@
   --color-jet-70: #222;
   --color-jet-80: #191919;
   --color-black: #000;
-  --color-plum-bonita: #723253;
+  --color-plum-bonita: #723254;
   --color-purple-bonita: #a98be1;
-  --color-pink-bonita: #fcd5db;
+  --color-pink-bonita: #fdd6db;
   --color-cream-bonita: #f3f3f1;
+  --color-charcoal-bonita: #35302c;
+  --color-green-bonita: #b0f99d;
   --color-unfocused: #ffffffc2;
   --color-focused: #fff;
   --color-link: #104d92;
@@ -72,7 +74,7 @@
   --body-font-size--desktop: 1.125em;
   --body-font-size--print: 0.9375em;
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-70);
+  --body-font-color: var(--color-charcoal-bonita);
   --body-font-family: "Open Sans", sans-serif;
   --body-font-weight-bold: 550;
   --monospace-font-family: "Roboto Mono", monospace;
@@ -119,7 +121,7 @@
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --heading-font-color: var(--color-jet-80);
+  --heading-font-color: var(--color-charcoal-bonita);
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
@@ -210,6 +212,10 @@ html[data-theme='dark'] {
   --color-purple-bonita: #a98be1;
   --color-pink-bonita: #5a3a45;
   --color-cream-bonita: #1f1622;
+  --color-charcoal-bonita: #35302c;
+  --color-green-bonita: #b0f99d;
+  --body-font-color: #f3f3f1;
+  --heading-font-color: #f3f3f1;
   --color-unfocused: #dcdcdcc2;
   --color-focused: #fff;
   --color-link: #00d9ff;
