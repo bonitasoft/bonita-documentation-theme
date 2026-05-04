@@ -56,7 +56,7 @@ body {
 }
 
 .navbar-nonProduction {
-  background: var(--color-red-bonita);
+  background: var(--color-purple-bonita);
 
   .navbar-item-nonProduction {
     align-items: center;
@@ -261,7 +261,7 @@ html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
       color: var(--navbar-unfocused-font-color);
 
       &:hover {
-        border-top: 4px solid var(--color-red-bonita);
+        border-top: 4px solid var(--color-purple-bonita);
       }
 
       a:hover {
@@ -350,7 +350,7 @@ html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
 
   a.navbar-item:hover {
     background-color: var(--navbar-unfocused-font-color);
-    color: var(--color-blue-bonita);
+    color: var(--color-plum-bonita);
   }
 
   .input-container {
