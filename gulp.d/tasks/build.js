@@ -142,7 +142,7 @@ module.exports = (src, dest, preview) => () => {
     //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
     vfs.src(['js/vendor/*.min.js'], { ...opts }),
     vfs.src('stylesheets/vendor/*.css', { ...opts }),
-    vfs.src('font/*.{ttf,woff*(2)}', opts),
+    vfs.src('font/*.{ttf,otf,woff*(2)}', opts),
     vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
       preview
         ? through()
