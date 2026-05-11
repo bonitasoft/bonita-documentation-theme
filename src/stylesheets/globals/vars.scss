@@ -196,13 +196,14 @@
 
 
 html[data-theme='dark'] {
-  --color-white: #1a1015;
+  // Inverted neutrals — warm dark browns derived from OFELIA Dark brown (#36302C)
+  --color-white: #1a1611;
   --color-text-light: #556;
-  --color-smoke-10: #1c1117;
-  --color-smoke-30: #1f1319;
-  --color-smoke-50: #2a1a22;
-  --color-smoke-70: #321f29;
-  --color-smoke-90: #3a2530;
+  --color-smoke-10: #221e19;
+  --color-smoke-30: #2a2520;
+  --color-smoke-50: #36302c;
+  --color-smoke-70: #3d3731;
+  --color-smoke-90: #4a423d;
   --color-gray-10: #5d5d5d;
   --color-gray-30: #808080;
   --color-gray-50: #8e8e8e;
@@ -213,23 +214,22 @@ html[data-theme='dark'] {
   --color-jet-70: #ddd;
   --color-jet-80: #eee;
   --color-black: #fff;
-  --color-plum-ofelia: #3a1929;
-  --color-purple-ofelia: #a98be1;
-  --color-pink-ofelia: #5a3a45;
-  --color-cream-ofelia: #1f1622;
-  --color-charcoal-ofelia: #36302c;
-  --color-green-ofelia: #b1f99d;
-  --color-burgundy-ofelia: #5c1932;
-  --color-black-ofelia: #101010;
-  --color-medium-grey-ofelia: #e0e0e0;
-  --body-font-color: #f3f3f1;
-  --heading-font-color: #f3f3f1;
+
+  // OFELIA brand colors are immutable — defined once in :root, never overridden here
+
+  // Semantic mappings — anchored to OFELIA brand
+  --body-font-color: var(--color-cream-ofelia);
+  --heading-font-color: var(--color-cream-ofelia);
   --color-unfocused: #dcdcdcc2;
   --color-focused: #fff;
-  --color-link: #00d9ff;
+  --color-link: var(--color-purple-ofelia);
   --color-admonition-link: var(--color-link);
-  --color-link-hover: #00d9ffb5;
-  --color-nav-item: var(--color-black);
+  --color-link-hover: #c5afef;
+  --color-nav-item: var(--color-cream-ofelia);
+  --color-nav-item-hover-background: var(--color-plum-ofelia);
+  --color-nav-item-active-background: var(--color-burgundy-ofelia);
+  --color-nav-item-active-font: var(--color-purple-ofelia);
+  --navbar-background: var(--color-burgundy-ofelia);
   --color-admonition-note: #11386a;
   --color-admonition-note-bg: #11386a4f;
   --color-admonition-note-text: #8abbfb;
@@ -246,14 +246,13 @@ html[data-theme='dark'] {
   --color-admonition-caution-bg: #652e7c4f;
   --color-admonition-caution-text: #fb8af6;
   --color-blue-bright: #0fe;
-  --color-card-shadow: #2e2e2e;
+  --color-card-shadow: #00000080;
   --color-higlight: var(--color-purple-ofelia);
   --color-higlight-link: var(--color-higlight);
-  --color-footer: var(--color-plum-ofelia);
-  --color-card-border: #9ba9c6;
-  --color-code-background: #30334b;
-  --color-code-font: #f7962e;
-  --color-nav-item-hover-background: #262a2d;
+  --color-footer: var(--color-burgundy-ofelia);
+  --color-card-border: var(--color-plum-ofelia);
+  --color-code-background: var(--color-smoke-30);
+  --color-code-font: var(--color-green-ofelia);
   --color-troubleshooting-border: #f5c80071;
 
   //Icon filter definitions, generated from https://codepen.io/sosuke/pen/Pjoqqp
