@@ -18,14 +18,12 @@ Click on the *links* below to find useful information quickly, or use the *table
 
 [.card.card-index]
 --
-https://www.ofelia.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body
-.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
+https://www.ofelia.com/how-we-do-it/downloads[[.card-title]#Getting started tutorial# [.card-body.card-content-overflow]#pass:q[A JavaScript library of common assertions for testing smart contracts.]#]
 --
 
 [.card.card-index]
 --
-https://www.ofelia.com/how-we-do-it/downloads[[.card-title]#Bonita Studio installation# [.card-body
-.card-content-overflow]#pass:q[The very first step to start your Bonita project]#]
+https://www.ofelia.com/how-we-do-it/downloads[[.card-title]#Bonita Studio installation# [.card-body.card-content-overflow]#pass:q[The very first step to start your Bonita project]#]
 --
 
 .Click to see the *source code*
