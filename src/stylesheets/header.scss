@@ -11,7 +11,7 @@ body {
 ********************/
 
 .bonita-logo {
-  background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
+  background: url(../img/ofelia-logo.svg) no-repeat 50% 45%;
   background-size: contain;
   display: block;
   height: 3.5rem;
@@ -52,11 +52,11 @@ body {
   .pr-link{
     color: var(--navbar-unfocused-font-color);
   }
-  
+
 }
 
 .navbar-nonProduction {
-  background: var(--color-red-bonita);
+  background: var(--color-purple-ofelia);
 
   .navbar-item-nonProduction {
     align-items: center;
@@ -261,7 +261,7 @@ html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
       color: var(--navbar-unfocused-font-color);
 
       &:hover {
-        border-top: 4px solid var(--color-red-bonita);
+        border-top: 4px solid var(--color-purple-ofelia);
       }
 
       a:hover {
@@ -350,7 +350,7 @@ html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
 
   a.navbar-item:hover {
     background-color: var(--navbar-unfocused-font-color);
-    color: var(--color-blue-bonita);
+    color: var(--color-plum-ofelia);
   }
 
   .input-container {
@@ -382,7 +382,7 @@ html[data-theme-system="false"][data-theme="light"] .theme-selector-light {
   }
 
   .bonita-logo {
-    background: url(../img/bonitasoft-logo.svg) no-repeat 50% 45%;
+    background: url(../img/ofelia-logo.svg) no-repeat 50% 45%;
     opacity: 1;
     background-size: contain;
   }
