@@ -15,7 +15,7 @@ It is based on the https://gitlab.com/antora/antora-ui-default[Antora Default UI
 📣 Want to see them in action? Let's have a look at:
 
 - the https://bonitasoft.github.io/bonita-documentation-theme/[theme preview environment]
-- the https://documentation.bonitasoft.com/[Bonita documentation production site]
+- the https://documentation.ofelia.com/[Bonita documentation production site]
 
 To report a Bug or submit a Feature Request, go to the https://github.com/bonitasoft/bonita-documentation-site/issues/[bonita-documentation-site issues].
 
