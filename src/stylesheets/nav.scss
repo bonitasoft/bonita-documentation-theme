@@ -275,8 +275,8 @@ html.is-clipped--nav {
 .is-current-page > .nav-link:hover,
 .is-current-page > .nav-text:hover {
   font-weight: var(--body-font-weight-bold);
-  background:  var(--toc-active-background-color);
-  color: var(--toc-active-font-color);
+  background: var(--color-nav-item-active-background);
+  color: var(--color-nav-item-active-font);
 }
 
 @media screen and (min-width: 769px) {
