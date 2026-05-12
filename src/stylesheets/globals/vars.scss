@@ -23,6 +23,7 @@
   --color-cream-ofelia: #f3f3f1;
   --color-charcoal-ofelia: #36302c;
   --color-green-ofelia: #b1f99d;
+  --color-dark-brown-ofelia: #36302C;
   --color-burgundy-ofelia: #5c1932;
   --color-black-ofelia: #101010;
   --color-medium-grey-ofelia: #e0e0e0;
@@ -31,7 +32,7 @@
   --color-link: #104d92;
   --color-admonition-link: #0077ff;
   --color-link-hover: #1565c0;
-  --color-nav-item: var(--color-plum-ofelia);
+  --color-nav-item: var(--color-burgundy-ofelia);
   --color-nav-item-hover-background: var(--color-pink-ofelia);
   --color-nav-item-active-background: #d8c9f1;
   --color-nav-item-active-font: var(--color-black-ofelia);
@@ -52,7 +53,7 @@
   --color-admonition-caution-text: #5c1759;
   --color-blue-bright: #0fe;
   --color-card-shadow: #876c6c;
-  --color-higlight: var(--color-plum-ofelia);
+  --color-higlight: var(--color-burgundy-ofelia);
   --color-higlight-link: #005889;
   --color-footer: var(--color-cream-ofelia);
   --color-card-border: var(--color-pink-ofelia);
@@ -62,8 +63,8 @@
   --color-pagination-border: #dadde1;
 
   // Search colors
-  --docsearch-primary-color: var(--color-plum-ofelia);
-  --docsearch-logo-color: var(--color-plum-ofelia);
+  --docsearch-primary-color: var(--color-burgundy-ofelia);
+  --docsearch-logo-color: var(--color-burgundy-ofelia);
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --color-search-mark-highlight: #518bcd;
   --color-search-hit-source-highlight: var(--docsearch-highlight-color);
@@ -88,7 +89,7 @@
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-thumb-color: var(--color-gray-10);
-  --navbar-background: var(--color-plum-ofelia);
+  --navbar-background: var(--color-burgundy-ofelia);
   --navbar-font-color: var(--color-focused);
   --navbar-unfocused-font-color: var(--color-unfocused);
   --navbar-focused-font-color: var(--color-focused);
@@ -250,7 +251,7 @@ html[data-theme='dark'] {
   --color-higlight: var(--color-purple-ofelia);
   --color-higlight-link: var(--color-higlight);
   --color-footer: var(--color-burgundy-ofelia);
-  --color-card-border: var(--color-plum-ofelia);
+  --color-card-border: var(--color-burgundy-ofelia);
   --color-code-background: var(--color-smoke-30);
   --color-code-font: var(--color-green-ofelia);
   --color-troubleshooting-border: #f5c80071;
