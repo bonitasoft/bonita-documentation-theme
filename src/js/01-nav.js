@@ -145,4 +145,31 @@
     if (!el) return
     return selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el
   }
+
+  var sidebarToggle = document.getElementById('sidebar-toggle')
+  if (sidebarToggle) {
+    var htmlEl = document.documentElement
+    var updateToggleTitle = function () {
+      var isCollapsed = htmlEl.classList.contains('sidebar-collapsed')
+      sidebarToggle.title = isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'
+    }
+    // Sync nav-container class with html class (set early by inline script)
+    if (htmlEl.classList.contains('sidebar-collapsed')) {
+      navContainer.classList.add('is-collapsed')
+    }
+    updateToggleTitle()
+    sidebarToggle.addEventListener('click', function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      navContainer.classList.add('is-animating')
+      var collapsed = htmlEl.classList.toggle('sidebar-collapsed')
+      navContainer.classList.toggle('is-collapsed')
+      // eslint-disable-next-line no-undef
+      localStorage.setItem('sidebar-collapsed', collapsed)
+      updateToggleTitle()
+      setTimeout(function () {
+        navContainer.classList.remove('is-animating')
+      }, 300)
+    })
+  }
 })()
